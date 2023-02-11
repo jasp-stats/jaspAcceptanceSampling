@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-06 17:12+0000\n"
+"PO-Revision-Date: 2023-02-07 18:44+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-qml/gl/>\n"
@@ -146,11 +146,11 @@ msgstr "Tamaño mostral (n)"
 
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
-msgstr "Número de aceptación (c)"
+msgstr "Número de admisións (c)"
 
 msgctxt "PlanMultiple|"
 msgid "Rejection number (r)"
-msgstr "Número de rexeitamento (r)"
+msgstr "Número de rexeitamentos (r)"
 
 msgctxt "PlanMultiple|"
 msgid "n %d"
@@ -174,11 +174,11 @@ msgstr "Tamaño mostral (n)"
 
 msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
-msgstr "Número de aceptación (c)"
+msgstr "Número de admisións (c)"
 
 msgctxt "PlanSingle|"
 msgid "Rejection number (r)"
-msgstr "Número de rexeitamento (r)"
+msgstr "Número de rexeitamentos (r)"
 
 msgctxt "ProbDefect|"
 msgid "Proportion non-conforming items"
