@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.17.1\n"
 "POT-Creation-Date: 2023-02-11 04:42\n"
-"PO-Revision-Date: 2023-04-29 04:38+0000\n"
+"PO-Revision-Date: 2023-05-12 15:52+0000\n"
 "Last-Translator: Tomasz Misiuro <tomaszmisiuro@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/pl/>\n"
@@ -27,13 +27,13 @@ msgid "Value"
 msgstr "Wartość"
 
 msgid "Sample"
-msgstr ""
+msgstr "Próba"
 
 msgid "Sample Size"
-msgstr ""
+msgstr "Wielkość próby"
 
 msgid "Cum. Sample Size"
-msgstr ""
+msgstr "Skum. wielkość próby"
 
 msgid "Acc. Number"
 msgstr ""
@@ -70,6 +70,9 @@ msgstr ""
 
 msgid "%s\n\n%s"
 msgstr ""
+"%s\n"
+"\n"
+"%s"
 
 msgid "Sample size (n) cannot be larger than the lot size (N)."
 msgstr ""
@@ -94,6 +97,8 @@ msgstr ""
 
 msgid "%s\n%s"
 msgstr ""
+"%s\n"
+"%s"
 
 msgid "Acceptance numbers (c) are cumulative, so they need to be in a non-decreasing sequence."
 msgstr ""
@@ -156,7 +161,7 @@ msgid "Average Outgoing Quality"
 msgstr ""
 
 msgid "AOQL: %.3f"
-msgstr ""
+msgstr "AOQL: %.3f"
 
 msgid "ATI (Average Total Inspection) Curve"
 msgstr ""
@@ -210,10 +215,10 @@ msgid "Accept or Reject Lot %s"
 msgstr ""
 
 msgid "Sample Mean"
-msgstr ""
+msgstr "Średnia dla próby"
 
 msgid "Sample Standard Deviation"
-msgstr ""
+msgstr "Odchylenie standardowe próby"
 
 msgid "Historical Standard Deviation"
 msgstr ""
@@ -225,13 +230,13 @@ msgid "Upper Specification Limit (USL)"
 msgstr ""
 
 msgid "Z.LSL"
-msgstr ""
+msgstr "Z.LSL"
 
 msgid "Z.USL"
-msgstr ""
+msgstr "Z.USL"
 
 msgid "Sample standard deviation has to be greater than 0."
-msgstr ""
+msgstr "Odchylenie standardowe próby musi być większe niż 0."
 
 msgid "Sample mean is invalid."
 msgstr ""
