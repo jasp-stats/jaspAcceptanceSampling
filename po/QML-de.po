@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-05-13 04:38+0000\n"
+"Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18-dev\n"
 "X-Language: de\n"
 "X-Qt-Contexts: true\n"
 
@@ -219,6 +225,8 @@ msgstr "Messung"
 msgctxt "DecideVariableLots|"
 msgid "Specify sample statistics directly (used if dataset is not available)"
 msgstr ""
+"Stichprobenstatistiken direkt angeben (wird verwendet, wenn kein Datensatz "
+"verfügbar ist)"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
@@ -234,23 +242,25 @@ msgstr "Stichproben-Standardabweichung"
 
 msgctxt "DecideVariableLots|"
 msgid "k                        "
-msgstr ""
+msgstr "k                        "
 
 msgctxt "DecideVariableLots|"
 msgid "Specification limits"
 msgstr "Spezifikationsgrenzen"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "Untere Spezifikationsgrenze (LSL)"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "Obere Spezifikationsgrenze (USL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Quality constraints"
-msgstr ""
+msgstr "Qualitätsbeschränkungen"
 
 msgctxt "DecideVariableLots|"
 msgid "Acceptable Quality Level (AQL)"
@@ -260,9 +270,10 @@ msgctxt "DecideVariableLots|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
 msgstr "Rückzuweisende Qualitätsgrenzlage (RQL / LTPD)"
 
+#, fuzzy
 msgctxt "AnalyzeVariablePlan|"
 msgid "Standard deviation (historical) known"
-msgstr ""
+msgstr "Standardabweichung (historisch) bekannt"
 
 msgctxt "RiskPoints|"
 msgid "Producer's risk (α)"
@@ -272,6 +283,7 @@ msgctxt "RiskPoints|"
 msgid "Consumer's risk (β)"
 msgstr "Abnehmerrisiko (β)"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Standard deviation (historical)"
-msgstr ""
+msgstr "Standardabweichung (historisch)"
