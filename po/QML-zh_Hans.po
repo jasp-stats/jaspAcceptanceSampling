@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-07-04 14:43+0000\n"
+"PO-Revision-Date: 2023-07-07 07:52+0000\n"
 "Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "jasp/jaspacceptancesampling-qml/zh_Hans/>\n"
@@ -75,7 +75,7 @@ msgstr "样本批量 (N)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "样本容量 (n)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "k"
@@ -123,55 +123,55 @@ msgstr "ATI 曲线（修正方案）"
 
 msgctxt "OutputOptions|"
 msgid "ASN curve"
-msgstr ""
+msgstr "ASN 曲线"
 
 msgctxt "PlanMultiple|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "样本批量 (N)"
 
 msgctxt "PlanMultiple|"
 msgid "Number of stages"
-msgstr ""
+msgstr "阶段数"
 
 msgctxt "PlanMultiple|"
 msgid "Stage"
-msgstr ""
+msgstr "阶段"
 
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "样本容量 (n)"
 
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "验收数量 (c)"
 
 msgctxt "PlanMultiple|"
 msgid "Rejection number (r)"
-msgstr ""
+msgstr "拒绝数 (r)"
 
 msgctxt "PlanMultiple|"
 msgid "n %d"
-msgstr ""
+msgstr "n %d"
 
 msgctxt "PlanMultiple|"
 msgid "c %d"
-msgstr ""
+msgstr "c %d"
 
 msgctxt "PlanMultiple|"
 msgid "r %d"
-msgstr ""
+msgstr "r %d"
 
 msgctxt "PlanSingle|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "样本批量 (N)"
 
 msgctxt "PlanSingle|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "样本容量 (n)"
 
 msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "验收数量 (c)"
 
 msgctxt "PlanSingle|"
 msgid "Rejection number (r)"
