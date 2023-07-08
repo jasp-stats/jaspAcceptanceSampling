@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-07-07 07:52+0000\n"
-"Last-Translator: Shun Wang <shuonwang@gmail.com>\n"
-"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
-"jasp/jaspacceptancesampling-qml/zh_Hans/>\n"
-"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0-dev\n"
 "X-Language: zh_Hans\n"
 "X-Qt-Contexts: true\n"
 
@@ -173,9 +167,10 @@ msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
 msgstr "验收数量 (c)"
 
+#, fuzzy
 msgctxt "PlanSingle|"
 msgid "Rejection number (r)"
-msgstr ""
+msgstr "拒绝数 (r)"
 
 msgctxt "ProbDefect|"
 msgid "Proportion non-conforming items"
@@ -205,13 +200,15 @@ msgctxt "RiskPoints|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
 msgstr ""
 
+#, fuzzy
 msgctxt "CreateAttributePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "样本批量 (N)"
 
+#, fuzzy
 msgctxt "CreateVariablePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "样本批量 (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Standard Deviation (Historical) known"
@@ -225,9 +222,10 @@ msgctxt "DecideVariableLots|"
 msgid "Specify sample statistics directly (used if dataset is not available)"
 msgstr ""
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "样本容量 (n)"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample mean"
