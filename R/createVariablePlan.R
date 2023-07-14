@@ -38,7 +38,7 @@ CreateVariablePlan <- function(jaspResults, dataset = NULL, options, ...) {
   }
 
   # Description of the plan
-  plan_op <- createJaspHtml(text = gettextf("%s\n\n%s", "Z.LSL = (mean - LSL) / historical standard deviation", "Accept lot if Z.LSL >= k, otherwise reject."),
+  plan_op <- createJaspHtml(text = gettext("Z.LSL = (mean - LSL) / historical standard deviation\n\nAccept lot if Z.LSL >= k, otherwise reject."),
                            dependencies=risk_vars, position=1)
   createVarContainer[["decision_info"]] <- plan_op
 

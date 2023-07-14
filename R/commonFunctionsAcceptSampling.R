@@ -81,7 +81,7 @@ checkHypergeom <- function(jaspContainer, pd_vars, options, type, aql=NULL, rql=
     N <- options[[paste0("lotSize", type)]]
     D <- N * pd
     if (!all(is.wholenumber(N), is.wholenumber(D))) {
-      jaspContainer$setError(gettextf("%s\n\n%s", "For hypergeometric distribution, N * proportion non-conforming should all be integer values.", "Check the values of N and proportion non-conforming."))
+      jaspContainer$setError(gettext("For hypergeometric distribution, N * proportion non-conforming should all be integer values.\n\nCheck the values of N and proportion non-conforming."))
     }
   }
 }
@@ -154,8 +154,8 @@ checkErrorsMultiplePlan <- function(jaspContainer, N, n, c, r) {
   }
   if (any(c[1:(num_stages-1)] > r[1:(num_stages-1)] - 2)) {
     # Check for r[i] > c[i] + 1 for i in 1:stages-1
-    jaspContainer$setError(gettextf("%s\n%s", "For all stages except the last stage, rejection numbers (r) have to be at at least 2 greater than the acceptance numbers (c).",
-                                   "Else, subsequent stages become redundant."))
+    jaspContainer$setError(gettext("For all stages except the last stage, rejection numbers (r) have to be at at least 2 greater than the acceptance numbers (c).\n
+                                   Else, subsequent stages become redundant."))
     return ()
   }
   if (any(c != sort(c))) {
