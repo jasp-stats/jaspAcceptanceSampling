@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.17.2\n"
-"POT-Creation-Date: 2023-04-22 04:39\n"
+"POT-Creation-Date: 2023-07-15 04:43\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,7 +64,7 @@ msgstr ""
 msgid "Step size of 0 is allowed only if the lower and upper limits of proportion non-conforming items are identical."
 msgstr ""
 
-msgid "%s\n\n%s"
+msgid "For hypergeometric distribution, N * proportion non-conforming should all be integer values.\n\nCheck the values of N and proportion non-conforming."
 msgstr ""
 
 msgid "Sample size (n) cannot be larger than the lot size (N)."
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Rejection number (r) for every stage has to be larger than the corresponding acceptance number (c)."
 msgstr ""
 
-msgid "%s\n%s"
+msgid "For all stages except the last stage, rejection numbers (r) have to be at at least 2 greater than the acceptance numbers (c).\n\n                                   Else, subsequent stages become redundant."
 msgstr ""
 
 msgid "Acceptance numbers (c) are cumulative, so they need to be in a non-decreasing sequence."
@@ -188,6 +188,9 @@ msgid "If the number of defective items out of %1$d sampled is <= %2$d, accept t
 msgstr ""
 
 msgid "Create Variable Plan"
+msgstr ""
+
+msgid "Z.LSL = (mean - LSL) / historical standard deviation\n\nAccept lot if Z.LSL >= k, otherwise reject."
 msgstr ""
 
 msgid "Variable plan generated for the current quality constraints is invalid. Modify the quality constraints."
