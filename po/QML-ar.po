@@ -1,0 +1,282 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-10-28 04:16+0000\n"
+"Last-Translator: Sulaiman A <67igltrpe@mozmail.com>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 5.2-dev\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "Acceptance Sampling"
+msgstr "أخذ عينات القبول"
+
+msgctxt "Description|"
+msgid "Sampling for acceptance"
+msgstr "أخذ العينات للقبول"
+
+msgctxt "Description|"
+msgid "Attribute Sampling"
+msgstr "أخذ عينات السمات"
+
+msgctxt "Description|"
+msgid "Create Attribute Plan"
+msgstr "إنشاء خطة السمات"
+
+msgctxt "Description|"
+msgid "Analyze Attribute Plan"
+msgstr "تحليل خطة السمات"
+
+msgctxt "Description|"
+msgid "Variable Sampling"
+msgstr "أخذ العينات المتغيرة"
+
+msgctxt "Description|"
+msgid "Create Variable Plan"
+msgstr "إنشاء خطة متغير"
+
+msgctxt "Description|"
+msgid "Analyze Variable Plan"
+msgstr "تحليل خطة متغير"
+
+msgctxt "Description|"
+msgid "Accept/Reject Lots"
+msgstr "قبول / رفض الكميات"
+
+msgctxt "Description|"
+msgid "Accept/Reject Lots (k-method)"
+msgstr ""
+
+msgctxt "AnalyzeAttributePlan|"
+msgid "Single Sampling Plan"
+msgstr "خطة أخذ عينات واحدة"
+
+msgctxt "AnalyzeAttributePlan|"
+msgid "Assess attribute plan"
+msgstr "تقييم خطة السمات"
+
+msgctxt "AnalyzeAttributePlan|"
+msgid "Multiple Sampling Plan"
+msgstr "خطة أخذ العينات المتعددة"
+
+msgctxt "AnalyzeAttributePlan|"
+msgid "Assess sampling plan"
+msgstr "تقييم خطة أخذ العينات"
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "Lot size (N)"
+msgstr ""
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "Sample size (n)"
+msgstr "حجم العينة (ن)"
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "k"
+msgstr ""
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "Assess variable plan"
+msgstr "تقييم خطة المتغير"
+
+msgctxt "Distribution|"
+msgid "Distribution"
+msgstr "توزيع"
+
+msgctxt "Distribution|"
+msgid "Binomial"
+msgstr "ذو الحدين"
+
+msgctxt "Distribution|"
+msgid "Hypergeometric"
+msgstr ""
+
+msgctxt "Distribution|"
+msgid "Poisson"
+msgstr ""
+
+msgctxt "OutputOptions|"
+msgid "Output options"
+msgstr "خيارات المخرجات"
+
+msgctxt "OutputOptions|"
+msgid "Summary table"
+msgstr "جدول التلخيص"
+
+msgctxt "OutputOptions|"
+msgid "OC curve"
+msgstr ""
+
+msgctxt "OutputOptions|"
+msgid "AOQ curve (plan with rectification)"
+msgstr ""
+
+msgctxt "OutputOptions|"
+msgid "ATI curve (plan with rectification)"
+msgstr ""
+
+msgctxt "OutputOptions|"
+msgid "ASN curve"
+msgstr ""
+
+msgctxt "PlanMultiple|"
+msgid "Lot size (N)"
+msgstr ""
+
+msgctxt "PlanMultiple|"
+msgid "Number of stages"
+msgstr "عدد المراحل"
+
+msgctxt "PlanMultiple|"
+msgid "Stage"
+msgstr "مرحلة"
+
+msgctxt "PlanMultiple|"
+msgid "Sample size (n)"
+msgstr "حجم العينة (ن)"
+
+msgctxt "PlanMultiple|"
+msgid "Acceptance number (c)"
+msgstr "رقم القبول (ج)"
+
+msgctxt "PlanMultiple|"
+msgid "Rejection number (r)"
+msgstr "رقم الرفض (ص)"
+
+msgctxt "PlanMultiple|"
+msgid "n %d"
+msgstr ""
+
+msgctxt "PlanMultiple|"
+msgid "c %d"
+msgstr ""
+
+msgctxt "PlanMultiple|"
+msgid "r %d"
+msgstr ""
+
+msgctxt "PlanSingle|"
+msgid "Lot size (N)"
+msgstr ""
+
+msgctxt "PlanSingle|"
+msgid "Sample size (n)"
+msgstr "حجم العينة (ن)"
+
+msgctxt "PlanSingle|"
+msgid "Acceptance number (c)"
+msgstr "رقم القبول (ج)"
+
+msgctxt "PlanSingle|"
+msgid "Rejection number (r)"
+msgstr "رقم الرفض (ص)"
+
+msgctxt "ProbDefect|"
+msgid "Proportion non-conforming items"
+msgstr "نسبة العناصر غير المطابقة"
+
+msgctxt "ProbDefect|"
+msgid "From"
+msgstr "من"
+
+msgctxt "ProbDefect|"
+msgid "To"
+msgstr "الى"
+
+msgctxt "ProbDefect|"
+msgid "Step size"
+msgstr "حجم الخطوة"
+
+msgctxt "RiskPoints|"
+msgid "Quality constraints"
+msgstr "قيود الجودة"
+
+msgctxt "RiskPoints|"
+msgid "Acceptable Quality Level (AQL)"
+msgstr "مستوى الجودة المقبول (AQL)"
+
+msgctxt "RiskPoints|"
+msgid "Rejectable Quality Level (RQL / LTPD)"
+msgstr "مستوى الجودة المرفوض (RQL / LTPD)"
+
+msgctxt "CreateAttributePlan|"
+msgid "Lot size (N)"
+msgstr ""
+
+msgctxt "CreateVariablePlan|"
+msgid "Lot size (N)"
+msgstr ""
+
+msgctxt "CreateVariablePlan|"
+msgid "Standard Deviation (Historical) known"
+msgstr "الانحراف المعياري (التاريخي) معروف"
+
+msgctxt "DecideVariableLots|"
+msgid "Measurement"
+msgstr "قياس"
+
+msgctxt "DecideVariableLots|"
+msgid "Specify sample statistics directly (used if dataset is not available)"
+msgstr "تحديد إحصائيات العينة مباشرة (تُستخدم في حالة عدم توفر مجموعة البيانات)"
+
+msgctxt "DecideVariableLots|"
+msgid "Sample size (n)"
+msgstr "حجم العينة (ن)"
+
+msgctxt "DecideVariableLots|"
+msgid "Sample mean"
+msgstr "متوسط العينة"
+
+msgctxt "DecideVariableLots|"
+msgid "Sample standard deviation"
+msgstr "الانحراف المعياري للعينة"
+
+msgctxt "DecideVariableLots|"
+msgid "k                        "
+msgstr ""
+
+msgctxt "DecideVariableLots|"
+msgid "Specification limits"
+msgstr "حدود المواصفات"
+
+msgctxt "DecideVariableLots|"
+msgid "Lower Specification Limit (LSL)"
+msgstr "الحد الأدنى للمواصفات (LSL)"
+
+msgctxt "DecideVariableLots|"
+msgid "Upper Specification Limit (USL)"
+msgstr "حد المواصفات الأعلى (USL)"
+
+msgctxt "DecideVariableLots|"
+msgid "Quality constraints"
+msgstr "قيود الجودة"
+
+msgctxt "DecideVariableLots|"
+msgid "Acceptable Quality Level (AQL)"
+msgstr "مستوى الجودة المقبول (AQL)"
+
+msgctxt "DecideVariableLots|"
+msgid "Rejectable Quality Level (RQL / LTPD)"
+msgstr "مستوى الجودة المرفوض (RQL / LTPD)"
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "Standard deviation (historical) known"
+msgstr "الانحراف المعياري (التاريخي) معروف"
+
+msgctxt "RiskPoints|"
+msgid "Producer's risk (α)"
+msgstr "مخاطر المنتج (α)"
+
+msgctxt "RiskPoints|"
+msgid "Consumer's risk (β)"
+msgstr "مخاطر المستهلك (β)"
+
+msgctxt "DecideVariableLots|"
+msgid "Standard deviation (historical)"
+msgstr "الانحراف المعياري (التاريخي)"
