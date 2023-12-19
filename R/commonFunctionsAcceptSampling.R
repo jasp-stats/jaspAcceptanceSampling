@@ -32,7 +32,7 @@ checkPdErrors <- function(jaspContainer, pd_lower, pd_upper, pd_step) {
     return ()
   }
   if (pd_step > (pd_upper - pd_lower)) {
-    jaspContainer$setError(gettext("Step size for proportion non-conforming items needs to be smaller than the difference between the upper and limits."))
+    jaspContainer$setError(gettext("Step size for proportion non-conforming items needs to be smaller than the difference between the upper and lower limits."))
     return ()
   }
   is.zero <- function(x, tol = .Machine$double.eps^0.5) {
