@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.18.2\n"
-"POT-Creation-Date: 2023-11-18 04:40\n"
+"POT-Creation-Date: 2023-12-23 04:39\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgstr ""
 msgid "Lower limit for proportion non-conforming items needs to be smaller than the upper limit."
 msgstr ""
 
-msgid "Step size for proportion non-conforming items needs to be smaller than the difference between the upper and limits."
+msgid "Step size for proportion non-conforming items needs to be smaller than the difference between the upper and lower limits."
 msgstr ""
 
 msgid "Step size of 0 is allowed only if the lower and upper limits of proportion non-conforming items are identical."
