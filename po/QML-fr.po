@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-21 19:01+0000\n"
+"PO-Revision-Date: 2024-01-22 18:11+0000\n"
 "Last-Translator: robachowyk <kaya.robach@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-qml/fr/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 msgctxt "Description|"
 msgid "Acceptance Sampling"
-msgstr "échantillonage d'acceptation"
+msgstr "Echantillonage d'Acceptation"
 
 msgctxt "Description|"
 msgid "Sampling for acceptance"
@@ -30,11 +30,11 @@ msgstr ""
 
 msgctxt "Description|"
 msgid "Analyze Attribute Plan"
-msgstr ""
+msgstr "Analyse du Plan par Attributs"
 
 msgctxt "Description|"
 msgid "Variable Sampling"
-msgstr ""
+msgstr "Echantillonage Variable"
 
 msgctxt "Description|"
 msgid "Create Variable Plan"
