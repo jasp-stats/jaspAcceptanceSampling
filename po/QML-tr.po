@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2024-02-23 12:02+0000\n"
+"Last-Translator: Fatih Aktaş <besyofatih10@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/tr/>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5-dev\n"
 "X-Language: tr\n"
 "X-Qt-Contexts: true\n"
 
@@ -13,47 +19,47 @@ msgstr "Kabul Örneklemesi"
 
 msgctxt "Description|"
 msgid "Sampling for acceptance"
-msgstr ""
+msgstr "Kabul için örnekleme"
 
 msgctxt "Description|"
 msgid "Attribute Sampling"
-msgstr ""
+msgstr "Öznitelik Örnekleme"
 
 msgctxt "Description|"
 msgid "Create Attribute Plan"
-msgstr ""
+msgstr "Öznitelik Planı Oluşturma"
 
 msgctxt "Description|"
 msgid "Analyze Attribute Plan"
-msgstr ""
+msgstr "Öznitelik Planını Analiz Et"
 
 msgctxt "Description|"
 msgid "Variable Sampling"
-msgstr ""
+msgstr "Değişken Örnekleme"
 
 msgctxt "Description|"
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "Değişken Planı Oluşturma"
 
 msgctxt "Description|"
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "Değişken Planı Analiz Etme"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots"
-msgstr ""
+msgstr "Lotları Kabul Et/Reddet"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots (k-method)"
-msgstr ""
+msgstr "Lotları Kabul Et/Reddet (k-yöntemi)"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Single Sampling Plan"
-msgstr ""
+msgstr "Tekli Örnekleme Planı"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess attribute plan"
-msgstr ""
+msgstr "Öznitelik planını değerlendirme"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Multiple Sampling Plan"
@@ -61,11 +67,11 @@ msgstr "Çoklu Örnekleme Planı"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess sampling plan"
-msgstr ""
+msgstr "Örnekleme planını değerlendirme"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "Lot büyüklüğü (N)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Sample size (n)"
@@ -73,11 +79,11 @@ msgstr "Örneklem büyüklüğü (n)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "k"
-msgstr ""
+msgstr "k"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Assess variable plan"
-msgstr ""
+msgstr "Değişken planı değerlendirme"
 
 msgctxt "Distribution|"
 msgid "Distribution"
@@ -85,11 +91,11 @@ msgstr "Dağılım"
 
 msgctxt "Distribution|"
 msgid "Binomial"
-msgstr ""
+msgstr "Binom"
 
 msgctxt "Distribution|"
 msgid "Hypergeometric"
-msgstr "hipergeometrik"
+msgstr "Hipergeometrik"
 
 msgctxt "Distribution|"
 msgid "Poisson"
@@ -97,7 +103,7 @@ msgstr "Poisson"
 
 msgctxt "OutputOptions|"
 msgid "Output options"
-msgstr ""
+msgstr "Çıktı seçenekleri"
 
 msgctxt "OutputOptions|"
 msgid "Summary table"
@@ -105,31 +111,31 @@ msgstr "Özet tablo"
 
 msgctxt "OutputOptions|"
 msgid "OC curve"
-msgstr ""
+msgstr "OC eğrisi"
 
 msgctxt "OutputOptions|"
 msgid "AOQ curve (plan with rectification)"
-msgstr ""
+msgstr "AOQ eğrisi (düzeltme ile plan)"
 
 msgctxt "OutputOptions|"
 msgid "ATI curve (plan with rectification)"
-msgstr ""
+msgstr "ATI eğrisi (düzeltmeli plan)"
 
 msgctxt "OutputOptions|"
 msgid "ASN curve"
-msgstr ""
+msgstr "ASN eğrisi"
 
 msgctxt "PlanMultiple|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "Lot büyüklüğü (N)"
 
 msgctxt "PlanMultiple|"
 msgid "Number of stages"
-msgstr ""
+msgstr "Aşama sayısı"
 
 msgctxt "PlanMultiple|"
 msgid "Stage"
-msgstr ""
+msgstr "Aşama"
 
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
@@ -137,27 +143,27 @@ msgstr "Örneklem büyüklüğü (n)"
 
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "Kabul sayısı (c)"
 
 msgctxt "PlanMultiple|"
 msgid "Rejection number (r)"
-msgstr ""
+msgstr "Ret sayısı (r)"
 
 msgctxt "PlanMultiple|"
 msgid "n %d"
-msgstr ""
+msgstr "n %d"
 
 msgctxt "PlanMultiple|"
 msgid "c %d"
-msgstr ""
+msgstr "c %d"
 
 msgctxt "PlanMultiple|"
 msgid "r %d"
-msgstr ""
+msgstr "r %d"
 
 msgctxt "PlanSingle|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "Lot büyüklüğü (N)"
 
 msgctxt "PlanSingle|"
 msgid "Sample size (n)"
@@ -165,51 +171,51 @@ msgstr "Örneklem büyüklüğü (n)"
 
 msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "Kabul sayısı (c)"
 
 msgctxt "PlanSingle|"
 msgid "Rejection number (r)"
-msgstr ""
+msgstr "Ret sayısı (r)"
 
 msgctxt "ProbDefect|"
 msgid "Proportion non-conforming items"
-msgstr ""
+msgstr "Uygun olmayan ürün oranı"
 
 msgctxt "ProbDefect|"
 msgid "From"
-msgstr ""
+msgstr "Kimden"
 
 msgctxt "ProbDefect|"
 msgid "To"
-msgstr ""
+msgstr "ve"
 
 msgctxt "ProbDefect|"
 msgid "Step size"
-msgstr ""
+msgstr "Basamak boyutu"
 
 msgctxt "RiskPoints|"
 msgid "Quality constraints"
-msgstr ""
+msgstr "Kalite kısıtları"
 
 msgctxt "RiskPoints|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "Kabul Edilebilir Kalite Düzeyi (AQL)"
 
 msgctxt "RiskPoints|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
-msgstr ""
+msgstr "Reddedilebilir Kalite Düzeyi (RQL / LTPD)"
 
 msgctxt "CreateAttributePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "Lot büyüklüğü (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "Lot büyüklüğü (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Standard Deviation (Historical) known"
-msgstr "Standart Sapma (Tarihsel) biliniyor"
+msgstr "Standart Sapma (Tarihsel) bilinen"
 
 msgctxt "DecideVariableLots|"
 msgid "Measurement"
@@ -235,43 +241,43 @@ msgstr "Örnek standart sapması"
 
 msgctxt "DecideVariableLots|"
 msgid "k                        "
-msgstr ""
+msgstr "k                        "
 
 msgctxt "DecideVariableLots|"
 msgid "Specification limits"
-msgstr ""
+msgstr "Şartname limitleri"
 
 msgctxt "DecideVariableLots|"
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "Alt Şartname Sınırı (LSL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "Üst Teknik Özellik Limiti (USL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Quality constraints"
-msgstr ""
+msgstr "Kalite kısıtları"
 
 msgctxt "DecideVariableLots|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "Kabul Edilebilir Kalite Düzeyi (AQL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
-msgstr ""
+msgstr "Reddedilebilir Kalite Düzeyi (RQL / LTPD)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Standard deviation (historical) known"
-msgstr "Standart sapma (tarihsel) biliniyor"
+msgstr "Standart sapma (tarihsel) bilinen"
 
 msgctxt "RiskPoints|"
 msgid "Producer's risk (α)"
-msgstr ""
+msgstr "Üretici riski (α)"
 
 msgctxt "RiskPoints|"
 msgid "Consumer's risk (β)"
-msgstr ""
+msgstr "Tüketici riski (β)"
 
 msgctxt "DecideVariableLots|"
 msgid "Standard deviation (historical)"
