@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-19 17:01+0000\n"
+"PO-Revision-Date: 2024-04-10 11:01+0000\n"
 "Last-Translator: robachowyk <kaya.robach@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-qml/fr/>\n"
@@ -70,7 +70,7 @@ msgstr ""
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "Taille du lot (N)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Sample size (n)"
@@ -86,7 +86,7 @@ msgstr ""
 
 msgctxt "Distribution|"
 msgid "Distribution"
-msgstr ""
+msgstr "Distribution"
 
 msgctxt "Distribution|"
 msgid "Binomial"
@@ -94,7 +94,7 @@ msgstr ""
 
 msgctxt "Distribution|"
 msgid "Hypergeometric"
-msgstr ""
+msgstr "Hypergéométrique"
 
 msgctxt "Distribution|"
 msgid "Poisson"
