@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.17.0\n"
 "POT-Creation-Date: 2023-12-23 04:39\n"
-"PO-Revision-Date: 2024-05-23 16:43+0000\n"
+"PO-Revision-Date: 2024-05-23 21:53+0000\n"
 "Last-Translator: Koen Derks <koen-derks@hotmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/nl/>\n"
@@ -20,7 +20,7 @@ msgid "Multiple Sampling Plan"
 msgstr "Meervoudig Sampling Plan"
 
 msgid "Acceptance Sampling Plan"
-msgstr "Acceptance Sampling Plan"
+msgstr "Acceptatie Steekproefplan"
 
 msgid "Value"
 msgstr "Waarde"
@@ -202,13 +202,13 @@ msgid "P(accept)"
 msgstr "P(accepteer)"
 
 msgid "OC (Operating Characteristics) Curve"
-msgstr "OC (Operating Characteristics) Curve"
+msgstr "OC (Opererende Karateristieken) Kromme"
 
 msgid "Probability of Acceptance"
 msgstr "Kans op Accepteren"
 
 msgid "AOQ (Average Outgoing Quality) Curve"
-msgstr "AOQ (Average Outgoing Quality) Curve"
+msgstr "AOQ (gemiddelde uitgaande kwaliteit) Kromme"
 
 msgid "Can not calculate AOQ. Check the plan parameters."
 msgstr "Kan de AOQ niet berekenen. Controleer de parameters van het plan."
