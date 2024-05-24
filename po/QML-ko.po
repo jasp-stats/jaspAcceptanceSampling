@@ -1,46 +1,61 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2024-05-25 04:38+0000\n"
+"Last-Translator: 김삿갓 <tktrktrla@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.6-dev\n"
 "X-Qt-Contexts: true\n"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Acceptance Sampling"
-msgstr ""
+msgstr "인수 표본 추출"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Sampling for acceptance"
-msgstr ""
+msgstr "인수 표본 추출하기"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Attribute Sampling"
-msgstr ""
+msgstr "속성 표본 추출"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Create Attribute Plan"
-msgstr ""
+msgstr "속성 계획 만들기"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Analyze Attribute Plan"
-msgstr ""
+msgstr "속성 계획 분석하기"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Variable Sampling"
-msgstr ""
+msgstr "변수 표본 추출"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "변수 계획 만들기"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "변수 계획 분석하기"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Accept/Reject Lots"
-msgstr ""
+msgstr "승인/거절  할당"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots (k-method)"
