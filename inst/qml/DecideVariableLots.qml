@@ -27,7 +27,7 @@ Form
 	VariablesForm
 	{
 		AvailableVariablesList	{ name: "allVariablesList"; id: allVariablesList }
-		AssignedVariablesList	{ name: "variables"; title: qsTr("Measurement"); id: variables; singleVariable: true; suggestedColumns: ["scale"]; allowedColumns: ["scale"] }
+		AssignedVariablesList	{ name: "variables"; title: qsTr("Measurement"); id: variables; singleVariable: true; allowedColumns: ["scale"] }
 	}
 
 	Group
