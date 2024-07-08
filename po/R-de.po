@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.16.4\n"
 "POT-Creation-Date: 2023-12-23 04:39\n"
-"PO-Revision-Date: 2023-07-01 04:39+0000\n"
+"PO-Revision-Date: 2024-07-08 23:46+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/de/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 msgid "Single Sampling Plan"
 msgstr "Einfacher Stichprobenplan"
@@ -211,7 +211,7 @@ msgstr ""
 
 #, fuzzy
 msgid "Average Outgoing Quality"
-msgstr "Kurve des Durchschlupfs (AOQ)"
+msgstr "Mittlere Ausgangs-Qualität"
 
 msgid "AOQL: %.3f"
 msgstr ""
@@ -229,14 +229,16 @@ msgstr "Kurve der durchschnittlichen Gesamtprüfung (ATI)"
 msgid "ASN (Average Sample Number) Curve"
 msgstr ""
 
+#, fuzzy
 msgid "Can not calculate ASN. Check the plan parameters."
-msgstr ""
+msgstr "Kann ASN nicht berechnen. Prüfen Sie die Planparameter."
 
 msgid "Average Sample Number"
 msgstr ""
 
+#, fuzzy
 msgid "Generated Sampling Plan"
-msgstr ""
+msgstr "Generierte Stichprobenansweisung"
 
 msgid "Acceptance probabilities at AQL and RQL"
 msgstr "Annahmewahrscheinlichkeiten bei AQL und RQL"
