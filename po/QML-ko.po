@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-05-25 04:38+0000\n"
-"Last-Translator: 김삿갓 <tktrktrla@gmail.com>\n"
+"PO-Revision-Date: 2024-08-09 06:48+0000\n"
+"Last-Translator: maxx <windogs09@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-qml/ko/>\n"
 "Language: ko\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 "X-Qt-Contexts: true\n"
 
 #, fuzzy
@@ -83,7 +83,7 @@ msgstr ""
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "샘플 사이즈(n)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "k"
@@ -95,11 +95,11 @@ msgstr ""
 
 msgctxt "Distribution|"
 msgid "Distribution"
-msgstr ""
+msgstr "분포"
 
 msgctxt "Distribution|"
 msgid "Binomial"
-msgstr ""
+msgstr "이항"
 
 msgctxt "Distribution|"
 msgid "Hypergeometric"
@@ -107,19 +107,19 @@ msgstr ""
 
 msgctxt "Distribution|"
 msgid "Poisson"
-msgstr ""
+msgstr "푸아송"
 
 msgctxt "OutputOptions|"
 msgid "Output options"
-msgstr ""
+msgstr "출력 옵션"
 
 msgctxt "OutputOptions|"
 msgid "Summary table"
-msgstr ""
+msgstr "요약표"
 
 msgctxt "OutputOptions|"
 msgid "OC curve"
-msgstr ""
+msgstr "검사특성곡선"
 
 msgctxt "OutputOptions|"
 msgid "AOQ curve (plan with rectification)"
@@ -147,7 +147,7 @@ msgstr ""
 
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "샘플 사이즈 (n)"
 
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
@@ -175,7 +175,7 @@ msgstr ""
 
 msgctxt "PlanSingle|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "샘플 사이즈 (n)"
 
 msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
@@ -235,15 +235,15 @@ msgstr ""
 
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "샘플 사이즈 (n)"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample mean"
-msgstr ""
+msgstr "샘플 평균"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample standard deviation"
-msgstr ""
+msgstr "표본 표준편차"
 
 msgctxt "DecideVariableLots|"
 msgid "k                        "
