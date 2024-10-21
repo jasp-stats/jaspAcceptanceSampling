@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REPO_KEY: ${{ secrets.REPOS_KEY }}
-      WEBLATE_KEY: ${{ secrets.WEBLATE_KEY }}
+      WEBLATE_KEY: "HOI" #${{ secrets.WEBLATE_KEY }}
       QML_REPO: jaspacceptancesampling-qml
       R_REPO: jaspacceptancesampling-r
       
     steps:
-      - uses: jasp-stats/jasp-actions/wlcLock@master
+      - uses: jasp-stats/jasp-actions/wlcLock@testWeblate
       
-      - uses: jasp-stats/jasp-actions/translations@master
+      #- uses: jasp-stats/jasp-actions/translations@master
