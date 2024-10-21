@@ -4,10 +4,10 @@ on:
     
   workflow_dispatch:
 
-name: generate-translations
+name: test-generate-translations
 
 jobs:
-  generate-translations:
+  test-generate-translations:
     runs-on: ubuntu-latest
     env:
       REPO_KEY: ${{ secrets.REPOS_KEY }}
