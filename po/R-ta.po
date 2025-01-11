@@ -1,0 +1,303 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: jaspAcceptanceSampling 0.19.2\n"
+"POT-Creation-Date: 2024-10-19 04:41\n"
+"PO-Revision-Date: 2025-01-04 21:55+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-r/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
+
+msgid "Single Sampling Plan"
+msgstr "ஒற்றை மாதிரி திட்டம்"
+
+msgid "Multiple Sampling Plan"
+msgstr "பல மாதிரி திட்டம்"
+
+msgid "Acceptance Sampling Plan"
+msgstr "ஏற்றுக்கொள்ளும் மாதிரி திட்டம்"
+
+msgid "Value"
+msgstr "மதிப்பு"
+
+msgid "Sample"
+msgstr "மாதிரி"
+
+msgid "Sample Size"
+msgstr "மாதிரி அளவு"
+
+msgid "Cum. Sample Size"
+msgstr "கம். மாதிரி அளவு"
+
+msgid "Acc. Number"
+msgstr "அக். எண்"
+
+msgid "Rej. Number"
+msgstr "Rex. எண்"
+
+msgid "Analyze Variable Plan"
+msgstr "மாறி திட்டத்தை பகுப்பாய்வு செய்யுங்கள்"
+
+msgid "Variable Sampling Plan (Standard deviation assumed to be <b>%s</b>)"
+msgstr "மாறி மாதிரி திட்டம் (நிலையான விலகல் <b>%s </b> என்று கருதப்படுகிறது)"
+
+msgid "Sample size"
+msgstr "மாதிரி அளவு"
+
+msgid "Critical Distance (k)"
+msgstr "சிக்கலான தூரம் (கே)"
+
+msgid "If historical standard deviation is unknown, sample size has to be > 1."
+msgstr ""
+"வரலாற்று தர விலகல் தெரியவில்லை என்றால், மாதிரி அளவு> 1 ஆக இருக்க வேண்டும்."
+
+msgid "Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of the generated variable plan."
+msgstr ""
+"உருவாக்கப்பட்ட மாறி திட்டத்தின் மாதிரி அளவை (n = %2 $ .0f) விட நிறைய அளவு (n = %1 $"
+" .0f) சிறியதாக இருக்க முடியாது."
+
+msgid "Lower limit for proportion non-conforming items needs to be smaller than the upper limit."
+msgstr ""
+"விகிதாச்சாரத்திற்கான குறைந்த வரம்பு இணக்கமற்ற உருப்படிகள் மேல் வரம்பை விட சிறியதாக இருக்"
+"க வேண்டும்."
+
+msgid "Step size for proportion non-conforming items needs to be smaller than the difference between the upper and lower limits."
+msgstr ""
+"விகிதாச்சாரத்திற்கான படி அளவு மேல் மற்றும் குறைந்த வரம்புகளுக்கு இடையிலான வேறுபாட்டை வி"
+"ட இணங்காத உருப்படிகள் சிறியதாக இருக்க வேண்டும்."
+
+msgid "Step size of 0 is allowed only if the lower and upper limits of proportion non-conforming items are identical."
+msgstr ""
+"விகிதாச்சாரத்தின் கீழ் மற்றும் மேல் வரம்புகள் இணக்கமற்ற பொருட்களின் ஒரே மாதிரியாக இருந்தால் "
+"மட்டுமே 0 இன் படி அளவு அனுமதிக்கப்படுகிறது."
+
+msgid "For hypergeometric distribution, N * proportion non-conforming should all be integer values.\n\nCheck the values of N and proportion non-conforming."
+msgstr ""
+"ஐப்பர்சோமெட்ரிக் விநியோகத்திற்கு, N * விகிதம் இணக்கமற்றது அனைத்தும் முழு மதிப்புகளாக இருக்"
+"க வேண்டும்.\n"
+"\n"
+" N இன் மதிப்புகளைச் சரிபார்க்கவும் மற்றும் விகிதாச்சாரம் இணக்கமற்றது."
+
+msgid "Sample size (n) cannot be larger than the lot size (N)."
+msgstr "மாதிரி அளவு (n) நிறைய அளவு (n) ஐ விட பெரியதாக இருக்க முடியாது."
+
+msgid "Acceptance number (c) cannot be larger than the sample size (n)."
+msgstr ""
+"ஏற்றுக்கொள்ளும் எண் (சி) மாதிரி அளவு (n) ஐ விட பெரியதாக இருக்க முடியாது."
+
+msgid "Rejection number (r) cannot be larger than the sample size (n)."
+msgstr "நிராகரிப்பு எண் (ஆர்) மாதிரி அளவு (n) ஐ விட பெரியதாக இருக்க முடியாது."
+
+msgid "Rejection number (r) has to be larger than the acceptance number (c)."
+msgstr ""
+"நிராகரிப்பு எண் (ஆர்) ஏற்றுக்கொள்ளும் எண்ணை (சி) விட பெரியதாக இருக்க வேண்டும்."
+
+msgid "Cumulative sample size (n1+n2+...) cannot be larger than the lot size (N)."
+msgstr ""
+"ஒட்டுமொத்த மாதிரி அளவு (n1+n2+...) நிறைய அளவு (n) ஐ விட பெரியதாக இருக்க "
+"முடியாது."
+
+msgid "Final rejection number (r) needs to be 1 more than the final acceptance number (c)."
+msgstr ""
+"இறுதி நிராகரிப்பு எண் (ஆர்) இறுதி ஏற்றுக்கொள்ளும் எண்ணை (சி) ஐ விட 1 அதிகமாக இருக்க "
+"வேண்டும்."
+
+msgid "Rejection number (r) for every stage has to be larger than the corresponding acceptance number (c)."
+msgstr ""
+"ஒவ்வொரு கட்டத்திற்கும் நிராகரிப்பு எண் (ஆர்) தொடர்புடைய ஏற்றுக்கொள்ளும் எண் (சி) ஐ விட "
+"பெரியதாக இருக்க வேண்டும்."
+
+msgid "For all stages except the last stage, rejection numbers (r) have to be at at least 2 greater than the acceptance numbers (c).\n\n                                   Else, subsequent stages become redundant."
+msgstr ""
+"கடைசி கட்டத்தைத் தவிர அனைத்து நிலைகளுக்கும், நிராகரிப்பு எண்கள் (ஆர்) ஏற்றுக்கொள்ளும் எண்களை"
+" (சி) விட குறைந்தது 2 அதிகமாக இருக்க வேண்டும்.\n"
+"\n"
+" வேறு, அடுத்தடுத்த கட்டங்கள் தேவையற்றதாக மாறும்."
+
+msgid "Acceptance numbers (c) are cumulative, so they need to be in a non-decreasing sequence."
+msgstr ""
+"ஏற்றுக்கொள்ளும் எண்கள் (சி) ஒட்டுமொத்தமாக உள்ளன, எனவே அவை சீரழிந்த வரிசையில் இருக்க "
+"வேண்டும்."
+
+msgid "Rejection numbers (r) are cumulative, so they need to be in a non-decreasing sequence."
+msgstr ""
+"நிராகரிப்பு எண்கள் (ஆர்) ஒட்டுமொத்தமாக உள்ளன, எனவே அவை நிராகரிக்கப்படாத வரிசையில் இருக்"
+"க வேண்டும்."
+
+msgid "No valid values found in the plan. Check the inputs."
+msgstr ""
+"திட்டத்தில் செல்லுபடியாகும் மதிப்புகள் எதுவும் காணப்படவில்லை. உள்ளீடுகளை சரிபார்க்கவும்."
+
+msgid "AQL (Acceptable Quality Level) value should be lower than RQL (Rejectable Quality Level) value."
+msgstr ""
+"AQL (ஏற்றுக்கொள்ளக்கூடிய தர நிலை) மதிப்பு RQL (நிராகரிக்கக்கூடிய தர நிலை) மதிப்பை வி"
+"ட குறைவாக இருக்க வேண்டும்."
+
+msgid "1 - α (Producer's risk) has to be greater than β (consumer's risk)."
+msgstr ""
+"1 - α (தயாரிப்பாளரின் ஆபத்து) β ஐ விட அதிகமாக இருக்க வேண்டும் (நுகர்வோரின் ஆபத்து)."
+
+msgid "Current plan <b>CAN %s</b> meet the specified risk point(s)."
+msgstr ""
+"தற்போதைய திட்டம் <b> %s </b> குறிப்பிட்ட இடர் புள்ளியை (களை) நிறைவு செய்ய முடியும்."
+
+msgid "Proportion Non-conforming"
+msgstr "விகிதம் இணக்கமற்றது"
+
+msgid "Required P(accept)"
+msgstr "தேவையான பி (ஏற்றுக்கொள்)"
+
+msgid "Actual P(accept)"
+msgstr "உண்மையான பி (ஏற்றுக்கொள்)"
+
+msgid "Probability of acceptance (%.3f) at AQL (%.3f) is <b>lower</b> than the required probability of acceptance (%.3f) at AQL."
+msgstr ""
+"AQL (%.3f) இல் ஏற்றுக்கொள்ளும் நிகழ்தகவு (%.3f) AQL இல் ஏற்றுக்கொள்ளும் (%.3f) தேவையான "
+"நிகழ்தகவை விட <b> கீழ் </b> ஆகும்."
+
+msgid "Probability of acceptance (%.3f) at RQL (%.3f) is <b>higher</b> than the required probability of acceptance (%.3f) at RQL."
+msgstr ""
+"RQL (%.3f) இல் ஏற்றுக்கொள்ளும் நிகழ்தகவு (%.3f) RQL இல் ஏற்றுக்கொள்ளும் (%.3f) தேவையான "
+"நிகழ்தகவை விட <b> அதிக </b> ஆகும்."
+
+msgid "Acceptance Probabilities"
+msgstr "ஏற்றுக்கொள்ளும் நிகழ்தகவுகள்"
+
+msgid "Prop. Non-conforming"
+msgstr "முட்டு. இணக்கமற்றது"
+
+msgid "P(accept)"
+msgstr "பி (ஏற்றுக்கொள்)"
+
+msgid "OC (Operating Characteristics) Curve"
+msgstr "OC (இயக்க பண்புகள்) வளைவு"
+
+msgid "Probability of Acceptance"
+msgstr "ஏற்றுக்கொள்ளும் நிகழ்தகவு"
+
+msgid "AOQ (Average Outgoing Quality) Curve"
+msgstr "AOQ (சராசரி வெளிச்செல்லும் தரம்) வளைவு"
+
+msgid "Can not calculate AOQ. Check the plan parameters."
+msgstr "AOQ ஐ கணக்கிட முடியாது. திட்ட அளவுருக்களை சரிபார்க்கவும்."
+
+msgid "(Incoming) Proportion Non-conforming"
+msgstr "(உள்வரும்) விகிதம் இணக்கமற்றது"
+
+msgid "Average Outgoing Quality"
+msgstr "சராசரி வெளிச்செல்லும் தகுதி"
+
+msgid "AOQL: %.3f"
+msgstr "குறைவாக: %"
+
+msgid "ATI (Average Total Inspection) Curve"
+msgstr "ஏடிஐ (சராசரி மொத்த ஆய்வு) வளைவு"
+
+msgid "Can not calculate ATI. Check the plan parameters."
+msgstr "அட்டி ஐ கணக்கிட முடியாது. திட்ட அளவுருக்களை சரிபார்க்கவும்."
+
+msgid "Average Total Inspection"
+msgstr "சராசரி மொத்த ஆய்வு"
+
+msgid "ASN (Average Sample Number) Curve"
+msgstr "ASN (சராசரி மாதிரி எண்) வளைவு"
+
+msgid "Can not calculate ASN. Check the plan parameters."
+msgstr "ASN ஐ கணக்கிட முடியாது. திட்ட அளவுருக்களை சரிபார்க்கவும்."
+
+msgid "Average Sample Number"
+msgstr "சராசரி மாதிரி எண்"
+
+msgid "Generated Sampling Plan"
+msgstr "உருவாக்கப்பட்ட மாதிரி திட்டம்"
+
+msgid "Acceptance probabilities at AQL and RQL"
+msgstr "AQL மற்றும் RQL இல் ஏற்றுக்கொள்ளும் நிகழ்தகவுகள்"
+
+msgid "Acceptance Probability"
+msgstr "ஏற்றுக்கொள்ளும் நிகழ்தகவு"
+
+msgid "Rejection Probability"
+msgstr "நிராகரிப்பு நிகழ்தகவு"
+
+msgid "If the number of defective items out of %1$d sampled is <= %2$d, accept the lot. Reject otherwise."
+msgstr ""
+"%1$d மாதிரியில் குறைபாடுள்ள பொருட்களின் எண்ணிக்கை <= %2$d எனில், நிறைய ஏற்றுக்கொள்ளுங்கள்"
+". இல்லையெனில் நிராகரிக்கவும்."
+
+msgid "Create Variable Plan"
+msgstr "மாறி திட்டத்தை உருவாக்கவும்"
+
+msgid "Z.LSL = (mean - LSL) / historical standard deviation\n\nAccept lot if Z.LSL >= k, otherwise reject."
+msgstr ""
+"Z.LSL = (சராசரி - LSL) / வரலாற்று தர விலகல்\n"
+"\n"
+" Z.LSL> = K என்றால் நிறைய ஏற்றுக்கொள்ளுங்கள், இல்லையெனில் நிராகரிக்கவும்."
+
+msgid "Variable plan generated for the current quality constraints is invalid. Modify the quality constraints."
+msgstr ""
+"தற்போதைய தரக் கட்டுப்பாடுகளுக்கு உருவாக்கப்பட்ட மாறி திட்டம் தவறானது. தரக் கட்டுப்பாடுகளை "
+"மாற்றவும்."
+
+msgid "Variable plan generated for the current quality constraints has an invalid sample size (n). Modify the quality constraints."
+msgstr ""
+"தற்போதைய தரக் கட்டுப்பாடுகளுக்காக உருவாக்கப்பட்ட மாறி திட்டம் தவறான மாதிரி அளவு (n) ஐக் "
+"கொண்டுள்ளது. தரக் கட்டுப்பாடுகளை மாற்றவும்."
+
+msgid "Variable plan generated for the current quality constraints has an invalid k value. Modify the quality constraints."
+msgstr ""
+"தற்போதைய தரக் கட்டுப்பாடுகளுக்காக உருவாக்கப்பட்ட மாறி திட்டம் தவறான கே மதிப்பைக் "
+"கொண்டுள்ளது. தரக் கட்டுப்பாடுகளை மாற்றவும்."
+
+msgid "Lot size (N = %.0f) cannot be smaller than the sample size (n = %.0f) of the generated variable plan."
+msgstr ""
+"உருவாக்கப்பட்ட மாறி திட்டத்தின் மாதிரி அளவை (n = %.0f) விட நிறைய அளவு (n = %.0f) "
+"சிறியதாக இருக்க முடியாது."
+
+msgid "Accept or Reject Lot %s"
+msgstr "நிறைய %களை ஏற்றுக்கொள்ளுங்கள் அல்லது நிராகரிக்கவும்"
+
+msgid "Sample Mean"
+msgstr "மாதிரி சராசரி"
+
+msgid "Sample Standard Deviation"
+msgstr "மாதிரி நிலையான விலகல்"
+
+msgid "Historical Standard Deviation"
+msgstr "வரலாற்று தர விலகல்"
+
+msgid "Lower Specification Limit (LSL)"
+msgstr "குறைந்த விவரக்குறிப்பு வரம்பு (எல்.எச்.எல்)"
+
+msgid "Upper Specification Limit (USL)"
+msgstr "மேல் விவரக்குறிப்பு வரம்பு (யு.எச்.எல்)"
+
+msgid "Z.LSL"
+msgstr "Z.lsl"
+
+msgid "Z.USL"
+msgstr "Z.usl"
+
+msgid "Sample standard deviation has to be greater than 0."
+msgstr "மாதிரி நிலையான விலகல் 0 ஐ விட அதிகமாக இருக்க வேண்டும்."
+
+msgid "Sample mean is invalid."
+msgstr "மாதிரி சராசரி தவறானது."
+
+msgid "Can not accept or reject lot: sample size has to be greater than 1."
+msgstr ""
+"நிறைய ஏற்றுக்கொள்ளவோ நிராகரிக்கவோ முடியாது: மாதிரி அளவு 1 ஐ விட அதிகமாக இருக்க "
+"வேண்டும்."
+
+msgid "Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, and historical standard deviation is <b>unknown</b>."
+msgstr ""
+"எல்எச்எல் மற்றும் யுஎச்எல் <b>இரண்டும்</b> வழங்கப்பட்டு, வரலாற்று நியமச்சாய்வு "
+"<b>தெரியாததாக</b> இருந்தால், மாதிரி அளவு <b>>1</b> ஆக இருக்க வேண்டும்."
+
+msgid "<u>Decision:</u> <b>%s</b> lot."
+msgstr "<u> முடிவு: </u> <b>%s </b> நிறைய."
