@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.19.2\n"
 "POT-Creation-Date: 2024-10-19 04:41\n"
-"PO-Revision-Date: 2025-03-23 18:50+0000\n"
+"PO-Revision-Date: 2025-03-23 20:15+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/sr/>\n"
@@ -62,6 +62,8 @@ msgstr ""
 
 msgid "Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of the generated variable plan."
 msgstr ""
+"Величина низа (N = %1$.0f) не може бити мања од величине узорка (n = %2$.0f) "
+"генерисаног плана варијабли."
 
 msgid "Lower limit for proportion non-conforming items needs to be smaller than the upper limit."
 msgstr ""
@@ -150,130 +152,150 @@ msgid "Required P(accept)"
 msgstr "Потребна P(прихватање)"
 
 msgid "Actual P(accept)"
-msgstr ""
+msgstr "Стварни P(прихватање)"
 
 msgid "Probability of acceptance (%.3f) at AQL (%.3f) is <b>lower</b> than the required probability of acceptance (%.3f) at AQL."
 msgstr ""
+"Вероватноћа прихватања (%.3f) на AQL (%.3f) је <b>нижа</b> од захтеване "
+"вероватноће прихватања (%.3f) на AQL."
 
 msgid "Probability of acceptance (%.3f) at RQL (%.3f) is <b>higher</b> than the required probability of acceptance (%.3f) at RQL."
 msgstr ""
+"Вероватноћа прихватања (%.3f) на RQL (%.3f) је <b>већа</b> од захтеване "
+"вероватноће прихватања (%.3f) на RQL."
 
 msgid "Acceptance Probabilities"
-msgstr ""
+msgstr "Вероватноће прихватања"
 
 msgid "Prop. Non-conforming"
-msgstr ""
+msgstr "Пропорција неисправних ставки"
 
 msgid "P(accept)"
-msgstr ""
+msgstr "P(прихватити)"
 
 msgid "OC (Operating Characteristics) Curve"
-msgstr ""
+msgstr "OC (оперативних карактеристика) крива"
 
 msgid "Probability of Acceptance"
-msgstr ""
+msgstr "Вероватноћа прихватања"
 
 msgid "AOQ (Average Outgoing Quality) Curve"
-msgstr ""
+msgstr "AOQ (просечног излазног квалитета) крива"
 
 msgid "Can not calculate AOQ. Check the plan parameters."
-msgstr ""
+msgstr "Није могуће израчунати AOQ. Проверите параметре плана."
 
 msgid "(Incoming) Proportion Non-conforming"
-msgstr ""
+msgstr "(Долазна) пропорција неисправних ставки"
 
 msgid "Average Outgoing Quality"
-msgstr ""
+msgstr "Просечни излазни квалитет"
 
 msgid "AOQL: %.3f"
-msgstr ""
+msgstr "AOQL: %.3f"
 
 msgid "ATI (Average Total Inspection) Curve"
-msgstr ""
+msgstr "ATI (просечне укупне инспекције) крива"
 
 msgid "Can not calculate ATI. Check the plan parameters."
-msgstr ""
+msgstr "Није могуће израчунати ATI. Проверите параметре плана."
 
 msgid "Average Total Inspection"
-msgstr ""
+msgstr "Просечна укупна инспекција"
 
 msgid "ASN (Average Sample Number) Curve"
-msgstr ""
+msgstr "ASN (просечног броја узорака) крива"
 
 msgid "Can not calculate ASN. Check the plan parameters."
-msgstr ""
+msgstr "Није могуће израчунати ASN. Проверите параметре плана."
 
 msgid "Average Sample Number"
-msgstr ""
+msgstr "Просечан број узорака"
 
 msgid "Generated Sampling Plan"
-msgstr ""
+msgstr "Генерисани план узорковања"
 
 msgid "Acceptance probabilities at AQL and RQL"
-msgstr ""
+msgstr "Вероватноће прихватања на AQL и RQL"
 
 msgid "Acceptance Probability"
-msgstr ""
+msgstr "Вероватноћа прихватања"
 
 msgid "Rejection Probability"
-msgstr ""
+msgstr "Вероватноћа одбијања"
 
 msgid "If the number of defective items out of %1$d sampled is <= %2$d, accept the lot. Reject otherwise."
 msgstr ""
+"Ако је број неисправних артикала од %1$d узрокованих <= %2$d, прихватите "
+"партију. Одбијте у супротном."
 
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "Креирајте променљиви план"
 
 msgid "Z.LSL = (mean - LSL) / historical standard deviation\n\nAccept lot if Z.LSL >= k, otherwise reject."
 msgstr ""
+"Z.LSL = (аритметичка средина - LSL) / историјска стандардна девијација\n"
+"\n"
+"Прихватите низ ако је Z.LSL >= k, у супротном одбаци."
 
 msgid "Variable plan generated for the current quality constraints is invalid. Modify the quality constraints."
 msgstr ""
+"Генерисани план променљиве за тренутна ограничења квалитета је неважећи. "
+"Измените ограничења квалитета."
 
 msgid "Variable plan generated for the current quality constraints has an invalid sample size (n). Modify the quality constraints."
 msgstr ""
+"Генерисани план променљиве за тренутна ограничења квалитета има неважећу "
+"величину узорка (n). Измените ограничења квалитета."
 
 msgid "Variable plan generated for the current quality constraints has an invalid k value. Modify the quality constraints."
 msgstr ""
+"Генерисани план променљиве за тренутна ограничења квалитета има неважећу k "
+"вредност. Измените ограничења квалитета."
 
 msgid "Lot size (N = %.0f) cannot be smaller than the sample size (n = %.0f) of the generated variable plan."
 msgstr ""
+"Величина серије (N = %.0f) не може бити мања од величине узорка (n = %.0f) "
+"генерисаног плана променљиве."
 
 msgid "Accept or Reject Lot %s"
-msgstr ""
+msgstr "Прихвати или одбаци серију %s"
 
 msgid "Sample Mean"
-msgstr ""
+msgstr "Средњи узорак"
 
 msgid "Sample Standard Deviation"
-msgstr ""
+msgstr "Стандардна девијација узорка"
 
 msgid "Historical Standard Deviation"
-msgstr ""
+msgstr "Историјска стандардна девијација"
 
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "Доња граница спецификације (LSL)"
 
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "Горња граница спецификације (USL)"
 
 msgid "Z.LSL"
-msgstr ""
+msgstr "Z.LSL"
 
 msgid "Z.USL"
-msgstr ""
+msgstr "Z.USL"
 
 msgid "Sample standard deviation has to be greater than 0."
-msgstr ""
+msgstr "Стандардна девијација узорка мора бити већа од 0."
 
 msgid "Sample mean is invalid."
-msgstr ""
+msgstr "Средња вредност узорка је неважећа."
 
 msgid "Can not accept or reject lot: sample size has to be greater than 1."
 msgstr ""
+"Не може се прихватити или одбити серију: величина узорка мора бити већа од 1."
 
 msgid "Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, and historical standard deviation is <b>unknown</b>."
 msgstr ""
+"Величина узорка мора бити <b>> 1</b> ако <b> и </b> LSL и USL су обезбеђене, "
+"а историјска стандардна девијација је <b>непозната</b>."
 
 msgid "<u>Decision:</u> <b>%s</b> lot."
-msgstr ""
+msgstr "<u>Одлука:</u> <b>%s</b> низа."
