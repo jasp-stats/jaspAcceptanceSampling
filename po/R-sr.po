@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.19.2\n"
 "POT-Creation-Date: 2024-10-19 04:41\n"
-"PO-Revision-Date: 2025-03-23 18:29+0000\n"
+"PO-Revision-Date: 2025-03-23 18:50+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/sr/>\n"
@@ -53,73 +53,101 @@ msgid "Sample size"
 msgstr "Величина узорка"
 
 msgid "Critical Distance (k)"
-msgstr ""
+msgstr "Критично растојање (к)"
 
 msgid "If historical standard deviation is unknown, sample size has to be > 1."
 msgstr ""
+"Ако је историјска стандардна девијација непозната, величина узорка мора бити "
+"> 1."
 
 msgid "Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of the generated variable plan."
 msgstr ""
 
 msgid "Lower limit for proportion non-conforming items needs to be smaller than the upper limit."
 msgstr ""
+"Доња граница за пропорцију неисправних ставки мора бити мања од горње "
+"границе."
 
 msgid "Step size for proportion non-conforming items needs to be smaller than the difference between the upper and lower limits."
 msgstr ""
+"Величина корака за пропорције неусаглашених ставки треба да буде мања од "
+"разлике између горње и доње границе."
 
 msgid "Step size of 0 is allowed only if the lower and upper limits of proportion non-conforming items are identical."
 msgstr ""
+"Величина корака од 0 је дозвољена само ако су доња и горња граница "
+"пропорција неусклађених ставки идентичне."
 
 msgid "For hypergeometric distribution, N * proportion non-conforming should all be integer values.\n\nCheck the values of N and proportion non-conforming."
 msgstr ""
+"За хипергеометријску дистрибуцију, Н * пропорција неусаглашених треба да "
+"буду целобројне вредности.\n"
+"\n"
+"Проверите да су вредности Н и пропорција неусаглашени."
 
 msgid "Sample size (n) cannot be larger than the lot size (N)."
-msgstr ""
+msgstr "Величина узорка (н) не може бити већа од величине серије (Н)."
 
 msgid "Acceptance number (c) cannot be larger than the sample size (n)."
-msgstr ""
+msgstr "Број прихватања (ц) не може бити већи од величине узорка (н)."
 
 msgid "Rejection number (r) cannot be larger than the sample size (n)."
-msgstr ""
+msgstr "Број одбијања (р) не може бити већи од величине узорка (н)."
 
 msgid "Rejection number (r) has to be larger than the acceptance number (c)."
-msgstr ""
+msgstr "Одбијени број (р) мора бити већи од броја прихватања (ц)."
 
 msgid "Cumulative sample size (n1+n2+...) cannot be larger than the lot size (N)."
 msgstr ""
+"Кумулативна величина узорка (н1+н2+...) не може бити већа од величине серије "
+"(Н)."
 
 msgid "Final rejection number (r) needs to be 1 more than the final acceptance number (c)."
 msgstr ""
+"Коначни број одбијања (р) треба да буде 1 већи од коначног броја прихватања "
+"(ц)."
 
 msgid "Rejection number (r) for every stage has to be larger than the corresponding acceptance number (c)."
 msgstr ""
+"Број одбијања (р) за сваки степен мора бити већи од одговарајућег броја "
+"прихватања (ц)."
 
 msgid "For all stages except the last stage, rejection numbers (r) have to be at at least 2 greater than the acceptance numbers (c).\n\n                                   Else, subsequent stages become redundant."
 msgstr ""
+"За све фазе осим последње фазе, бројеви одбијања (р) морају бити најмање 2 "
+"већи од бројева прихватања (ц).\n"
+"\n"
+"                                   У супротном, наредне фазе постају сувишне."
 
 msgid "Acceptance numbers (c) are cumulative, so they need to be in a non-decreasing sequence."
 msgstr ""
+"Бројеви прихватања (ц) су кумулативни, тако да морају бити у неопадајућем "
+"низу."
 
 msgid "Rejection numbers (r) are cumulative, so they need to be in a non-decreasing sequence."
 msgstr ""
+"Бројеви одбијања (r) су кумулативни, тако да треба да буду у неопадајућем "
+"низу."
 
 msgid "No valid values found in the plan. Check the inputs."
-msgstr ""
+msgstr "Нису пронађене важеће вредности у плану. Проверите уносе."
 
 msgid "AQL (Acceptable Quality Level) value should be lower than RQL (Rejectable Quality Level) value."
 msgstr ""
+"AQL (ниво прихватљивог квалитета) вредност треба да буде нижа од RQL (ниво "
+"одбијеног квалитета) вредности."
 
 msgid "1 - α (Producer's risk) has to be greater than β (consumer's risk)."
-msgstr ""
+msgstr "1 - α (Producer's risk) мора бити већи од β (consumer's risk)."
 
 msgid "Current plan <b>CAN %s</b> meet the specified risk point(s)."
-msgstr ""
+msgstr "Тренутни план <b>МОЖЕ %s</b> задовољити наведене тачке ризика."
 
 msgid "Proportion Non-conforming"
-msgstr ""
+msgstr "Пропорција неисправних ставки"
 
 msgid "Required P(accept)"
-msgstr ""
+msgstr "Потребна P(прихватање)"
 
 msgid "Actual P(accept)"
 msgstr ""
