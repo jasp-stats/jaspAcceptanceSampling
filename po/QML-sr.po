@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-23 18:29+0000\n"
+"PO-Revision-Date: 2025-03-23 20:15+0000\n"
 "Last-Translator: Marko Bojović <bojovicmarko@outlook.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-qml/sr/>\n"
@@ -199,11 +199,11 @@ msgstr "Ограничења квалитета"
 
 msgctxt "RiskPoints|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr "Прихватљиви ниво квалитета („AQL“)"
+msgstr "Прихватљиви ниво квалитета (AQL)"
 
 msgctxt "RiskPoints|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
-msgstr "Ниво квалитета који се може одбити („RQL / LTPD“)"
+msgstr "Ниво квалитета који се може одбити (RQL / LTPD)"
 
 msgctxt "CreateAttributePlan|"
 msgid "Lot size (N)"
@@ -253,7 +253,7 @@ msgstr "Доња граница спецификације („LSL“)"
 
 msgctxt "DecideVariableLots|"
 msgid "Upper Specification Limit (USL)"
-msgstr "Горња граница спецификације („USL“)"
+msgstr "Горња граница спецификације (USL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Quality constraints"
@@ -261,7 +261,7 @@ msgstr "Ограничења квалитета"
 
 msgctxt "DecideVariableLots|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr "Прихватљиви ниво квалитета („ AQL“)"
+msgstr "Прихватљиви ниво квалитета (AQL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
