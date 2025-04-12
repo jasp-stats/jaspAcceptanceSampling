@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-08-09 06:48+0000\n"
-"Last-Translator: maxx <windogs09@gmail.com>\n"
+"PO-Revision-Date: 2025-04-07 02:38+0000\n"
+"Last-Translator: ji <jinyst0ry@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-qml/ko/>\n"
 "Language: ko\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 "X-Qt-Contexts: true\n"
 
 #, fuzzy
@@ -52,10 +52,9 @@ msgctxt "Description|"
 msgid "Analyze Variable Plan"
 msgstr "변수 계획 분석하기"
 
-#, fuzzy
 msgctxt "Description|"
 msgid "Accept/Reject Lots"
-msgstr "승인/거절  할당"
+msgstr "승인/거절 할당"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots (k-method)"
