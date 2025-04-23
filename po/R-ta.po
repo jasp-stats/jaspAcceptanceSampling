@@ -155,14 +155,14 @@ msgstr "தேவையான பி (ஏற்றுக்கொள்)"
 msgid "Actual P(accept)"
 msgstr "உண்மையான பி (ஏற்றுக்கொள்)"
 
-msgid "Probability of acceptance (%.3f) at AQL (%.3f) is <b>lower</b> than the required probability of acceptance (%.3f) at AQL."
+msgid "Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the required probability of acceptance (%3$.3f) at AQL."
 msgstr ""
-"AQL (%.3f) இல் ஏற்றுக்கொள்ளும் நிகழ்தகவு (%.3f) AQL இல் ஏற்றுக்கொள்ளும் (%.3f) தேவையான "
+"AQL (%1$.3f) இல் ஏற்றுக்கொள்ளும் நிகழ்தகவு (%2$.3f) AQL இல் ஏற்றுக்கொள்ளும் (%3$.3f) தேவையான "
 "நிகழ்தகவை விட <b> கீழ் </b> ஆகும்."
 
-msgid "Probability of acceptance (%.3f) at RQL (%.3f) is <b>higher</b> than the required probability of acceptance (%.3f) at RQL."
+msgid "Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the required probability of acceptance (%3$.3f) at RQL."
 msgstr ""
-"RQL (%.3f) இல் ஏற்றுக்கொள்ளும் நிகழ்தகவு (%.3f) RQL இல் ஏற்றுக்கொள்ளும் (%.3f) தேவையான "
+"RQL (%1$.3f) இல் ஏற்றுக்கொள்ளும் நிகழ்தகவு (%2$.3f) RQL இல் ஏற்றுக்கொள்ளும் (%3$.3f) தேவையான "
 "நிகழ்தகவை விட <b> அதிக </b> ஆகும்."
 
 msgid "Acceptance Probabilities"

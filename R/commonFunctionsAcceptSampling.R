@@ -327,9 +327,9 @@ assessPlan <- function(jaspContainer, pos, depend_vars, oc_plan, options, type) 
   # If the current plan CANNOT satisfy the constraints, provide explanation.
   if (!assess$OK) {
     if (pa_prod_actual < pa_prod) {
-      text <- gettextf("Probability of acceptance (%.3f) at AQL (%.3f) is <b>lower</b> than the required probability of acceptance (%.3f) at AQL.", pa_prod_actual, aql, pa_prod)
+	  text <- gettextf("Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the required probability of acceptance (%3$.3f) at AQL.", pa_prod_actual, aql, pa_prod)
     } else if (pa_cons_actual > pa_cons) {
-      text <- gettextf("Probability of acceptance (%.3f) at RQL (%.3f) is <b>higher</b> than the required probability of acceptance (%.3f) at RQL.", pa_cons_actual, rql, pa_cons)
+	  text <- gettextf("Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the required probability of acceptance (%3$.3f) at RQL.", pa_cons_actual, rql, pa_cons)
     }
     explanation <- createJaspHtml(text = text, position=pos+1, dependencies=depend_vars)
     if (is.null(jaspContainer[["explanation"]])) {

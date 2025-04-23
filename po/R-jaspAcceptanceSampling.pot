@@ -118,10 +118,10 @@ msgstr ""
 msgid "Actual P(accept)"
 msgstr ""
 
-msgid "Probability of acceptance (%.3f) at AQL (%.3f) is <b>lower</b> than the required probability of acceptance (%.3f) at AQL."
+msgid "Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the required probability of acceptance (%3$.3f) at AQL."
 msgstr ""
 
-msgid "Probability of acceptance (%.3f) at RQL (%.3f) is <b>higher</b> than the required probability of acceptance (%.3f) at RQL."
+msgid "Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the required probability of acceptance (%3$.3f) at RQL."
 msgstr ""
 
 msgid "Acceptance Probabilities"
