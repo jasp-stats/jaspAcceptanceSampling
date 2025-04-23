@@ -7,7 +7,7 @@ Description
 	title		: qsTr("Acceptance Sampling")
 	description	: qsTr("Sampling for acceptance")
 	icon		: "acceptance_sampling.svg"
-	version			: "0.19.2"
+	version			: "0.20.0"
 	author		: "JASP Team"
 	maintainer	: "JASP Team <info@jasp-stats.org>"
 	website		: "jasp-stats.org"
