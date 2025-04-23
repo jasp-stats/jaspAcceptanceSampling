@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.18.1\n"
-"POT-Creation-Date: 2023-12-23 04:39\n"
+"POT-Creation-Date: 2025-04-23 11:06\n"
 "PO-Revision-Date: 2024-11-12 06:48+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
@@ -295,13 +295,6 @@ msgstr ""
 "O plan de variables xerado para as restriccións de calidade vixentes, non "
 "ten un valor k válido. Modifica as restriccións de calidade."
 
-msgid ""
-"Lot size (N = %.0f) cannot be smaller than the sample size (n = %.0f) of the "
-"generated variable plan."
-msgstr ""
-"O tamaño do lote (N = %.0f) non pode ser menor que o tamaño da mostra (n = "
-"%.0f) do plan de variables xerado."
-
 msgid "Accept or Reject Lot %s"
 msgstr "Aceptar ou Rexeitar Lote %s"
 
@@ -346,3 +339,10 @@ msgstr ""
 
 msgid "<u>Decision:</u> <b>%s</b> lot."
 msgstr "<u>Decisión:</u> <b>%s</b> lote."
+
+#~ msgid ""
+#~ "Lot size (N = %.0f) cannot be smaller than the sample size (n = %.0f) of "
+#~ "the generated variable plan."
+#~ msgstr ""
+#~ "O tamaño do lote (N = %.0f) non pode ser menor que o tamaño da mostra (n "
+#~ "= %.0f) do plan de variables xerado."

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: jaspAcceptanceSampling 0.19.2\n"
-"POT-Creation-Date: 2024-10-19 04:41\n"
+"Project-Id-Version: jaspAcceptanceSampling 0.20.0\n"
+"POT-Creation-Date: 2025-04-23 11:06\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -200,9 +200,6 @@ msgid "Variable plan generated for the current quality constraints has an invali
 msgstr ""
 
 msgid "Variable plan generated for the current quality constraints has an invalid k value. Modify the quality constraints."
-msgstr ""
-
-msgid "Lot size (N = %.0f) cannot be smaller than the sample size (n = %.0f) of the generated variable plan."
 msgstr ""
 
 msgid "Accept or Reject Lot %s"
