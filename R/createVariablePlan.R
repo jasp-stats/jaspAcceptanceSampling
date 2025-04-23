@@ -115,7 +115,7 @@ CreateVariablePlan <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Error check for lot size
   if (N < n) {
-    createVarContainer$setError(gettextf("Lot size (N = %.0f) cannot be smaller than the sample size (n = %.0f) of the generated variable plan.", N, n))
+	createVarContainer$setError(gettextf("Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of the generated variable plan.", N, n))
     return ()
   }
 
