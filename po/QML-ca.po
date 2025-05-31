@@ -1,0 +1,287 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-30 08:01+0000\n"
+"Last-Translator: David Barroso Iglesias <davidbarrosoiglesias@gmail.com>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12-dev\n"
+"X-Qt-Contexts: true\n"
+
+msgctxt "Description|"
+msgid "Acceptance Sampling"
+msgstr "Mostreig d'acceptació"
+
+msgctxt "Description|"
+msgid "Sampling for acceptance"
+msgstr "Mostreig per acceptació"
+
+msgctxt "Description|"
+msgid "Attribute Sampling"
+msgstr "Mostreig d'atributs"
+
+msgctxt "Description|"
+msgid "Create Attribute Plan"
+msgstr "Crear pla d'atributs"
+
+msgctxt "Description|"
+msgid "Analyze Attribute Plan"
+msgstr "Analitzar pla d'atributs"
+
+msgctxt "Description|"
+msgid "Variable Sampling"
+msgstr "Mostreig de variables"
+
+msgctxt "Description|"
+msgid "Create Variable Plan"
+msgstr "Crear pla de variables"
+
+msgctxt "Description|"
+msgid "Analyze Variable Plan"
+msgstr "Analitzar pla de variables"
+
+msgctxt "Description|"
+msgid "Accept/Reject Lots"
+msgstr "Acceptar/Rebutjar lots"
+
+msgctxt "Description|"
+msgid "Accept/Reject Lots (k-method)"
+msgstr "Acceptar/Rebutjar lots (mètode k)"
+
+msgctxt "AnalyzeAttributePlan|"
+msgid "Single Sampling Plan"
+msgstr "Pla únic de mostreig"
+
+msgctxt "AnalyzeAttributePlan|"
+msgid "Assess attribute plan"
+msgstr "Avaluar pla d'atributs"
+
+msgctxt "AnalyzeAttributePlan|"
+msgid "Multiple Sampling Plan"
+msgstr "Pla de mostreig múltiple"
+
+msgctxt "AnalyzeAttributePlan|"
+msgid "Assess sampling plan"
+msgstr "Avaluar pla de mostreig"
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "Lot size (N)"
+msgstr "Mida del lot (N)"
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "Sample size (n)"
+msgstr "Mida de la mostra (n)"
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "k"
+msgstr "k"
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "Assess variable plan"
+msgstr "Avaluar pla de variables"
+
+msgctxt "Distribution|"
+msgid "Distribution"
+msgstr "Distribució"
+
+msgctxt "Distribution|"
+msgid "Binomial"
+msgstr "Binomial"
+
+msgctxt "Distribution|"
+msgid "Hypergeometric"
+msgstr "Hipergeomètrica"
+
+msgctxt "Distribution|"
+msgid "Poisson"
+msgstr "Poisson"
+
+msgctxt "OutputOptions|"
+msgid "Output options"
+msgstr "Opcions de sortida"
+
+msgctxt "OutputOptions|"
+msgid "Summary table"
+msgstr "Taula resum"
+
+msgctxt "OutputOptions|"
+msgid "OC curve"
+msgstr "Corba OC"
+
+msgctxt "OutputOptions|"
+msgid "AOQ curve (plan with rectification)"
+msgstr "Corva AOQ (pla amb rectificació)"
+
+msgctxt "OutputOptions|"
+msgid "ATI curve (plan with rectification)"
+msgstr "Corba ATI (pla amb rectificació)"
+
+msgctxt "OutputOptions|"
+msgid "ASN curve"
+msgstr "Corba ASN"
+
+msgctxt "PlanMultiple|"
+msgid "Lot size (N)"
+msgstr "Mida del lot (N)"
+
+msgctxt "PlanMultiple|"
+msgid "Number of stages"
+msgstr "Nombre d'etapes"
+
+msgctxt "PlanMultiple|"
+msgid "Stage"
+msgstr "Etapa"
+
+msgctxt "PlanMultiple|"
+msgid "Sample size (n)"
+msgstr "Mida de la mostra (n)"
+
+msgctxt "PlanMultiple|"
+msgid "Acceptance number (c)"
+msgstr "Nombre d'acceptacions (c)"
+
+msgctxt "PlanMultiple|"
+msgid "Rejection number (r)"
+msgstr "Nombre de rebutjos (r)"
+
+#, fuzzy
+msgctxt "PlanMultiple|"
+msgid "n %d"
+msgstr "n %d"
+
+#, fuzzy
+msgctxt "PlanMultiple|"
+msgid "c %d"
+msgstr "c %d"
+
+#, fuzzy
+msgctxt "PlanMultiple|"
+msgid "r %d"
+msgstr "r %d"
+
+msgctxt "PlanSingle|"
+msgid "Lot size (N)"
+msgstr "Mida del lot (N)"
+
+msgctxt "PlanSingle|"
+msgid "Sample size (n)"
+msgstr "Mida de la mostra (n)"
+
+msgctxt "PlanSingle|"
+msgid "Acceptance number (c)"
+msgstr "Nombre d'acceptacions (c)"
+
+msgctxt "PlanSingle|"
+msgid "Rejection number (r)"
+msgstr "Nombre de rebutjos (r)"
+
+msgctxt "ProbDefect|"
+msgid "Proportion non-conforming items"
+msgstr "Proporció d'elements no conformes"
+
+msgctxt "ProbDefect|"
+msgid "From"
+msgstr "De"
+
+msgctxt "ProbDefect|"
+msgid "To"
+msgstr "A"
+
+msgctxt "ProbDefect|"
+msgid "Step size"
+msgstr "Mida del pas"
+
+msgctxt "RiskPoints|"
+msgid "Quality constraints"
+msgstr "Restriccions de qualitat"
+
+msgctxt "RiskPoints|"
+msgid "Acceptable Quality Level (AQL)"
+msgstr "Nivell de Qualitat Acceptable (NQA, AQL)"
+
+msgctxt "RiskPoints|"
+msgid "Rejectable Quality Level (RQL / LTPD)"
+msgstr "Nivell de Qualitat Rebutjable (RQL, LTPD)"
+
+msgctxt "CreateAttributePlan|"
+msgid "Lot size (N)"
+msgstr "Mida de lot (N)"
+
+msgctxt "CreateVariablePlan|"
+msgid "Lot size (N)"
+msgstr "Mida de lot (N)"
+
+msgctxt "CreateVariablePlan|"
+msgid "Standard Deviation (Historical) known"
+msgstr "Desviació Estàndard (Històrica) coneguda"
+
+msgctxt "DecideVariableLots|"
+msgid "Measurement"
+msgstr "Mesura"
+
+msgctxt "DecideVariableLots|"
+msgid "Specify sample statistics directly (used if dataset is not available)"
+msgstr ""
+"Especificar directament les estadístiques mostrals (utilitzat si no es "
+"disposa de conjunt de dades)"
+
+msgctxt "DecideVariableLots|"
+msgid "Sample size (n)"
+msgstr "Mida de mostra (n)"
+
+msgctxt "DecideVariableLots|"
+msgid "Sample mean"
+msgstr "Mitjana mostral"
+
+msgctxt "DecideVariableLots|"
+msgid "Sample standard deviation"
+msgstr "Desviació estàndard mostral"
+
+#, fuzzy
+msgctxt "DecideVariableLots|"
+msgid "k                        "
+msgstr "k                        "
+
+msgctxt "DecideVariableLots|"
+msgid "Specification limits"
+msgstr "Límits de l'especificació"
+
+msgctxt "DecideVariableLots|"
+msgid "Lower Specification Limit (LSL)"
+msgstr "Límit Inferior d'Especificació (LIE, LSL)"
+
+msgctxt "DecideVariableLots|"
+msgid "Upper Specification Limit (USL)"
+msgstr "Límit Superior d'Especificació (LSU,USL)"
+
+msgctxt "DecideVariableLots|"
+msgid "Quality constraints"
+msgstr "Restriccions de qualitat"
+
+msgctxt "DecideVariableLots|"
+msgid "Acceptable Quality Level (AQL)"
+msgstr "Nivell de Qualitat Acceptable (NQA, AQL)"
+
+msgctxt "DecideVariableLots|"
+msgid "Rejectable Quality Level (RQL / LTPD)"
+msgstr "Nivell de Qualitat Rebutjable (RQL, LTPD)"
+
+msgctxt "AnalyzeVariablePlan|"
+msgid "Standard deviation (historical) known"
+msgstr "Desviació estàndard (històrica) coneguda"
+
+msgctxt "RiskPoints|"
+msgid "Producer's risk (α)"
+msgstr "Risc del productor (α)"
+
+msgctxt "RiskPoints|"
+msgid "Consumer's risk (β)"
+msgstr "Risc del consumidor (β)"
+
+msgctxt "DecideVariableLots|"
+msgid "Standard deviation (historical)"
+msgstr "Desviació estàndard (històrica)"
