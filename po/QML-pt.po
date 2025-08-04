@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-08-05 16:02+0000\n"
+"Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13-dev\n"
 "X-Language: pt\n"
 "X-Qt-Contexts: true\n"
 
@@ -119,7 +125,6 @@ msgctxt "OutputOptions|"
 msgid "ASN curve"
 msgstr ""
 
-#, fuzzy
 msgctxt "PlanMultiple|"
 msgid "Lot size (N)"
 msgstr "Tamanho do Lote (N)"
@@ -132,10 +137,9 @@ msgctxt "PlanMultiple|"
 msgid "Stage"
 msgstr ""
 
-#, fuzzy
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
-msgstr "Tamanho da Amostra (n)"
+msgstr "Tamanho de Amostra (n)"
 
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
@@ -157,12 +161,10 @@ msgctxt "PlanMultiple|"
 msgid "r %d"
 msgstr ""
 
-#, fuzzy
 msgctxt "PlanSingle|"
 msgid "Lot size (N)"
 msgstr "Tamanho do Lote (N)"
 
-#, fuzzy
 msgctxt "PlanSingle|"
 msgid "Sample size (n)"
 msgstr "Tamanho da Amostra (n)"
@@ -203,12 +205,10 @@ msgctxt "RiskPoints|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
 msgstr ""
 
-#, fuzzy
 msgctxt "CreateAttributePlan|"
 msgid "Lot size (N)"
 msgstr "Tamanho do Lote (N)"
 
-#, fuzzy
 msgctxt "CreateVariablePlan|"
 msgid "Lot size (N)"
 msgstr "Tamanho do Lote (N)"
@@ -225,7 +225,6 @@ msgctxt "DecideVariableLots|"
 msgid "Specify sample statistics directly (used if dataset is not available)"
 msgstr ""
 
-#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
 msgstr "Tamanho da Amostra (n)"
