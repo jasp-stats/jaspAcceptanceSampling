@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-05 16:02+0000\n"
+"PO-Revision-Date: 2025-08-08 21:01+0000\n"
 "Last-Translator: Wendel Paulo Silvestre <wpsilvestre@ucs.br>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-qml/pt/>\n"
@@ -55,7 +55,7 @@ msgstr "Aceitar/Rejeitar Lotes (k-method)"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Single Sampling Plan"
-msgstr "Plano de Amostragem Simples"
+msgstr "Plano de Amostragem Único"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess attribute plan"
@@ -103,27 +103,27 @@ msgstr "Poisson"
 
 msgctxt "OutputOptions|"
 msgid "Output options"
-msgstr ""
+msgstr "Opções de saída"
 
 msgctxt "OutputOptions|"
 msgid "Summary table"
-msgstr ""
+msgstr "Tabela resumo"
 
 msgctxt "OutputOptions|"
 msgid "OC curve"
-msgstr ""
+msgstr "Curva OC"
 
 msgctxt "OutputOptions|"
 msgid "AOQ curve (plan with rectification)"
-msgstr ""
+msgstr "Curva AOQ (plana com retificação)"
 
 msgctxt "OutputOptions|"
 msgid "ATI curve (plan with rectification)"
-msgstr ""
+msgstr "Curva ATI (plana com retificação)"
 
 msgctxt "OutputOptions|"
 msgid "ASN curve"
-msgstr ""
+msgstr "Curva ASN"
 
 msgctxt "PlanMultiple|"
 msgid "Lot size (N)"
@@ -131,11 +131,11 @@ msgstr "Tamanho do Lote (N)"
 
 msgctxt "PlanMultiple|"
 msgid "Number of stages"
-msgstr ""
+msgstr "Número de estágios"
 
 msgctxt "PlanMultiple|"
 msgid "Stage"
-msgstr ""
+msgstr "Estágio"
 
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
@@ -143,23 +143,23 @@ msgstr "Tamanho de Amostra (n)"
 
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "Número de aceitações (c)"
 
 msgctxt "PlanMultiple|"
 msgid "Rejection number (r)"
-msgstr ""
+msgstr "Número de rejeições (r)"
 
 msgctxt "PlanMultiple|"
 msgid "n %d"
-msgstr ""
+msgstr "n %d"
 
 msgctxt "PlanMultiple|"
 msgid "c %d"
-msgstr ""
+msgstr "c %d"
 
 msgctxt "PlanMultiple|"
 msgid "r %d"
-msgstr ""
+msgstr "r %d"
 
 msgctxt "PlanSingle|"
 msgid "Lot size (N)"
@@ -171,39 +171,39 @@ msgstr "Tamanho da Amostra (n)"
 
 msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "Número de aceitações (c)"
 
 msgctxt "PlanSingle|"
 msgid "Rejection number (r)"
-msgstr ""
+msgstr "Número de rejeições (r)"
 
 msgctxt "ProbDefect|"
 msgid "Proportion non-conforming items"
-msgstr ""
+msgstr "Proporção de itens não conformes"
 
 msgctxt "ProbDefect|"
 msgid "From"
-msgstr ""
+msgstr "De"
 
 msgctxt "ProbDefect|"
 msgid "To"
-msgstr ""
+msgstr "Para"
 
 msgctxt "ProbDefect|"
 msgid "Step size"
-msgstr ""
+msgstr "Tamanho do passo"
 
 msgctxt "RiskPoints|"
 msgid "Quality constraints"
-msgstr ""
+msgstr "Restrições de qualidade"
 
 msgctxt "RiskPoints|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "Nível de Qualidade Aceitável (NQA, AQL)"
 
 msgctxt "RiskPoints|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
-msgstr ""
+msgstr "Nível de Qualidade Rejeitável (RQL / LTPD)"
 
 msgctxt "CreateAttributePlan|"
 msgid "Lot size (N)"
@@ -215,15 +215,17 @@ msgstr "Tamanho do Lote (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Standard Deviation (Historical) known"
-msgstr ""
+msgstr "Desvio Padrão (Histórico) conhecido"
 
 msgctxt "DecideVariableLots|"
 msgid "Measurement"
-msgstr ""
+msgstr "Medição"
 
 msgctxt "DecideVariableLots|"
 msgid "Specify sample statistics directly (used if dataset is not available)"
 msgstr ""
+"Especificar a estatística da amostra diretamente (usado se o conjunto de "
+"dados não estiver disponível)"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
@@ -231,52 +233,52 @@ msgstr "Tamanho da Amostra (n)"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample mean"
-msgstr ""
+msgstr "Média amostral"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample standard deviation"
-msgstr ""
+msgstr "Desvio padrão amostral"
 
 msgctxt "DecideVariableLots|"
 msgid "k                        "
-msgstr ""
+msgstr "k                        "
 
 msgctxt "DecideVariableLots|"
 msgid "Specification limits"
-msgstr ""
+msgstr "Limites de especificação"
 
 msgctxt "DecideVariableLots|"
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "Limite Inferior de Especificação (LIE)"
 
 msgctxt "DecideVariableLots|"
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "Limite Superior de Especificação (LSE)"
 
 msgctxt "DecideVariableLots|"
 msgid "Quality constraints"
-msgstr ""
+msgstr "Restrições de qualidade"
 
 msgctxt "DecideVariableLots|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "Nível de Qualidade Aceitável (NQA, AQL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
-msgstr ""
+msgstr "Nível de Qualidade Rejeitável (RQL / LTPD)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Standard deviation (historical) known"
-msgstr ""
+msgstr "Desvio Padrão (histórico) conhecido"
 
 msgctxt "RiskPoints|"
 msgid "Producer's risk (α)"
-msgstr ""
+msgstr "Risco do produtor (α)"
 
 msgctxt "RiskPoints|"
 msgid "Consumer's risk (β)"
-msgstr ""
+msgstr "Risco do consumidor (β)"
 
 msgctxt "DecideVariableLots|"
 msgid "Standard deviation (historical)"
-msgstr ""
+msgstr "Desvio padrão (histórico)"
