@@ -3,15 +3,12 @@ import JASP.Module
 
 Description
 {
-	name		: "jaspAcceptanceSampling"
 	title		: qsTr("Acceptance Sampling")
 	description	: qsTr("Sampling for acceptance")
 	icon		: "acceptance_sampling.svg"
-	version			: "0.95.0"
-	author		: "JASP Team"
-	maintainer	: "JASP Team <info@jasp-stats.org>"
-	website		: "jasp-stats.org"
-	license		: "GPL (>= 2)"
+	requiresData: false
+	hasWrappers:  false
+	
 
 	GroupTitle
 	{
@@ -24,7 +21,6 @@ Description
 		title:	qsTr("Create Attribute Plan")
 		qml:	"CreateAttributePlan.qml"
 		func:	"CreateAttributePlan"
-		requiresData: false
 	}
 
 	Analysis
@@ -32,7 +28,6 @@ Description
 		title:	qsTr("Analyze Attribute Plan")
 		qml:	"AnalyzeAttributePlan.qml"
 		func:	"AnalyzeAttributePlan"
-		requiresData: false
 	}
 
 	Separator {}
@@ -48,7 +43,6 @@ Description
 		title:	qsTr("Create Variable Plan")
 		qml:	"CreateVariablePlan.qml"
 		func:	"CreateVariablePlan"
-		requiresData: false
 	}
 
 	Analysis
@@ -56,7 +50,6 @@ Description
 		title:	qsTr("Analyze Variable Plan")
 		qml:	"AnalyzeVariablePlan.qml"
 		func:	"AnalyzeVariablePlan"
-		requiresData: false
 	}
 
 	Analysis
@@ -65,6 +58,5 @@ Description
 		title:	qsTr("Accept/Reject Lots (k-method)")
 		qml:	"DecideVariableLots.qml"
 		func:	"DecideVariableLots"
-		requiresData: false
 	}
 }
