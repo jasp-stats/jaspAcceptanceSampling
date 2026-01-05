@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.95.5\n"
 "POT-Creation-Date: 2025-11-15 04:42\n"
-"PO-Revision-Date: 2025-12-25 15:37+0000\n"
+"PO-Revision-Date: 2026-01-06 14:01+0000\n"
 "Last-Translator: Zev Oster <zevelijah@gmail.com>\n"
 "Language-Team: Tibetan <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/bo/>\n"
@@ -13,14 +13,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15.1\n"
 
+#, fuzzy
 msgid "Single Sampling Plan"
-msgstr ""
+msgstr "དཔེ་འདེམས་འཆར་གཞི་རྐྱང་པ།"
 
+#, fuzzy
 msgid "Multiple Sampling Plan"
-msgstr ""
+msgstr "དཔེ་འདེམས་འཆར་གཞི་མང་པོ།"
 
+#, fuzzy
 msgid "Acceptance Sampling Plan"
-msgstr ""
+msgstr "ངོས་ལེན་དཔེ་འདེམས་འཆར་གཞི།"
 
 msgid "Value"
 msgstr "གྲངས་ཐང"
@@ -34,26 +37,33 @@ msgstr "དཔེ་ཚད་གྲངས"
 msgid "Cum. Sample Size"
 msgstr "བསྡུས་པའི་དཔེ་ཚད་གྲངས"
 
+#, fuzzy
 msgid "Acc. Number"
-msgstr ""
+msgstr "ངོས་ལེན་ཨང་།"
 
 msgid "Rej. Number"
 msgstr ""
 
+#, fuzzy
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "འགྱུར་ཚད་འཆར་གཞི་དབྱེ་ཞིབ།"
 
+#, fuzzy
 msgid "Variable Sampling Plan (Standard deviation assumed to be <b>%s</b>)"
 msgstr ""
+"འགྱུར་ཚད་དཔེ་འདེམས་འཆར་གཞི། (ཚད་ལྡན་ཁྱད་འགྱུར་ <b>%s</b> ཡིན་པར་ཆ་འཇོག་བྱས་པ།)"
 
 msgid "Sample size"
 msgstr "དཔེ་ཚད་གྲངས"
 
+#, fuzzy
 msgid "Critical Distance (k)"
-msgstr ""
+msgstr "གཉན་འགག་གི་བར་ཐག (k)"
 
+#, fuzzy
 msgid "If historical standard deviation is unknown, sample size has to be > 1."
 msgstr ""
+"གལ་ཏེ་ལོ་རྒྱུས་ཀྱི་ཚད་ལྡན་ཁྱད་འགྱུར་མི་ཤེས་ན། མ་དཔེའི་ཆེ་ཆུང་དེ་ > ༡ ཡིན་དགོས།"
 
 msgid "Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of the generated variable plan."
 msgstr ""
@@ -73,8 +83,9 @@ msgstr ""
 msgid "Sample size (n) cannot be larger than the lot size (N)."
 msgstr ""
 
+#, fuzzy
 msgid "Acceptance number (c) cannot be larger than the sample size (n)."
-msgstr ""
+msgstr "ངོས་ལེན་ཨང་། (c) དེ་མ་དཔེའི་ཆེ་ཆུང་། (n) ལས་ཆེ་མི་རུང་།"
 
 msgid "Rejection number (r) cannot be larger than the sample size (n)."
 msgstr ""
@@ -94,14 +105,17 @@ msgstr ""
 msgid "For all stages except the last stage, rejection numbers (r) have to be at at least 2 greater than the acceptance numbers (c).\n\n                                   Else, subsequent stages become redundant."
 msgstr ""
 
+#, fuzzy
 msgid "Acceptance numbers (c) are cumulative, so they need to be in a non-decreasing sequence."
 msgstr ""
+"ངོས་ལེན་ཨང་། (c) དག་བསྡོམས་རྩིས་ཡིན་པས། དེ་དག་མི་འགྲིབ་པའི་རིམ་པ་ཞིག་ནང་ཡོད་དགོས།"
 
 msgid "Rejection numbers (r) are cumulative, so they need to be in a non-decreasing sequence."
 msgstr ""
 
+#, fuzzy
 msgid "No valid values found in the plan. Check the inputs."
-msgstr ""
+msgstr "འཆར་གཞི་ནང་ནུས་ལྡན་རིན་ཐང་རྙེད་མ་སོང་།ནང་འཇུག་དག་ཞིབ་བཤེར་བྱེད་པ།"
 
 msgid "AQL (Acceptable Quality Level) value should be lower than RQL (Rejectable Quality Level) value."
 msgstr ""
@@ -109,80 +123,109 @@ msgstr ""
 msgid "1 - α (Producer's risk) has to be greater than β (consumer's risk)."
 msgstr ""
 
+#, fuzzy
 msgid "Current plan <b>CAN %s</b> meet the specified risk point(s)."
-msgstr ""
+msgstr "འཆར་གཞི་འདིས་ <b>%s</b> གསལ་བཀོད་བྱས་པའི་ཉེན་ཁའི་གནས་ས་དག་སྐོང་ཐུབ།"
 
+#, fuzzy
 msgid "Proportion Non-conforming"
-msgstr ""
+msgstr "མི་མཐུན་པའི་བསྡུར་ཚད།"
 
+#, fuzzy
 msgid "Required P(accept)"
-msgstr ""
+msgstr "དགོས་ངེས་ཀྱི་ P(ངོས་ལེན།)"
 
+#, fuzzy
 msgid "Actual P(accept)"
-msgstr ""
+msgstr "དངོས་ཡོད་ཀྱི་ P(ངོས་ལེན།)"
 
+#, fuzzy
 msgid "Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the required probability of acceptance (%3$.3f) at AQL."
 msgstr ""
+"AQL (%2$.3f) ནང་གི་ངོས་ལེན་གྱི་སྲིད་ཕྱོད། (%1$.3f) དེ་ AQL ནང་གི་དགོས་ངེས་ཀྱི་ངོས་ལེན་གྱི་སྲིད་ཕྱོད"
+"། (%3$.3f) ལས་ <b>དམའ་བ།</b>"
 
+#, fuzzy
 msgid "Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the required probability of acceptance (%3$.3f) at RQL."
 msgstr ""
+"RQL (%2$.3f) ནང་གི་ངོས་ལེན་གྱི་སྲིད་ཕྱོད། (%1$.3f) དེ་ RQL ནང་གི་དགོས་ངེས་ཀྱི་ངོས་ལེན་གྱི་སྲིད་ཕྱོད"
+"། (%3$.3f) ལས་ <b>མཐོ་བ།</b>"
 
+#, fuzzy
 msgid "Acceptance Probabilities"
-msgstr ""
+msgstr "ངོས་ལེན་གྱི་སྲིད་ཕྱོད།"
 
+#, fuzzy
 msgid "Prop. Non-conforming"
-msgstr ""
+msgstr "མི་མཐུན་པའི་བསྡུར་ཚད།"
 
+#, fuzzy
 msgid "P(accept)"
-msgstr ""
+msgstr "P(ངོས་ལེན།)"
 
+#, fuzzy
 msgid "OC (Operating Characteristics) Curve"
-msgstr ""
+msgstr "OC (Operating Characteristics) འཁྱོག་ཐིག"
 
+#, fuzzy
 msgid "Probability of Acceptance"
-msgstr ""
+msgstr "ངོས་ལེན་གྱི་སྲིད་ཕྱོད།"
 
+#, fuzzy
 msgid "AOQ (Average Outgoing Quality) Curve"
-msgstr ""
+msgstr "AOQ (ཆ་སྙོམས་ཕྱིར་འགྲོའི་སྤུས་ཚད།) འཁྱོག་ཐིག"
 
+#, fuzzy
 msgid "Can not calculate AOQ. Check the plan parameters."
-msgstr ""
+msgstr "AOQ རྩིས་རྒྱག་མི་ཐུབ།འཆར་གཞིའི་ཞུགས་གྲངས་དག་ཞིབ་བཤེར་བྱེད་པ།"
 
+#, fuzzy
 msgid "(Incoming) Proportion Non-conforming"
-msgstr ""
+msgstr "(ནང་འཇུག) མི་མཐུན་པའི་བསྡུར་ཚད།"
 
+#, fuzzy
 msgid "Average Outgoing Quality"
-msgstr ""
+msgstr "ཆ་སྙོམས་ཕྱིར་འགྲོའི་སྤུས་ཚད།"
 
+#, fuzzy
 msgid "AOQL: %.3f"
-msgstr ""
+msgstr "AOQL: %.3f"
 
+#, fuzzy
 msgid "ATI (Average Total Inspection) Curve"
-msgstr ""
+msgstr "ATI (ཆ་སྙོམས་ཁྱོན་བསྡོམས་ཞིབ་བཤེར།) འཁྱོག་ཐིག"
 
+#, fuzzy
 msgid "Can not calculate ATI. Check the plan parameters."
-msgstr ""
+msgstr "ATI རྩིས་རྒྱག་མི་ཐུབ།འཆར་གཞིའི་ཞུགས་གྲངས་དག་ཞིབ་བཤེར་བྱེད་པ།"
 
+#, fuzzy
 msgid "Average Total Inspection"
-msgstr ""
+msgstr "ཆ་སྙོམས་ཁྱོན་བསྡོམས་ཞིབ་བཤེར།"
 
+#, fuzzy
 msgid "ASN (Average Sample Number) Curve"
-msgstr ""
+msgstr "ASN (ཆ་སྙོམས་མ་དཔེའི་ཨང་།) འཁྱོག་ཐིག"
 
+#, fuzzy
 msgid "Can not calculate ASN. Check the plan parameters."
-msgstr ""
+msgstr "ASN རྩིས་རྒྱག་མི་ཐུབ།འཆར་གཞིའི་ཞུགས་གྲངས་དག་ཞིབ་བཤེར་བྱེད་པ།"
 
+#, fuzzy
 msgid "Average Sample Number"
-msgstr ""
+msgstr "ཆ་སྙོམས་མ་དཔེའི་ཨང་།"
 
+#, fuzzy
 msgid "Generated Sampling Plan"
-msgstr ""
+msgstr "བཟོས་པའི་དཔེ་འདེམས་འཆར་གཞི།"
 
+#, fuzzy
 msgid "Acceptance probabilities at AQL and RQL"
-msgstr ""
+msgstr "AQL དང་ RQL ནང་གི་ངོས་ལེན་གྱི་སྲིད་ཕྱོད།"
 
+#, fuzzy
 msgid "Acceptance Probability"
-msgstr ""
+msgstr "ངོས་ལེན་གྱི་སྲིད་ཕྱོད།"
 
 msgid "Rejection Probability"
 msgstr ""
@@ -190,56 +233,78 @@ msgstr ""
 msgid "If the number of defective items out of %1$d sampled is <= %2$d, accept the lot. Reject otherwise."
 msgstr ""
 
+#, fuzzy
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "འགྱུར་ཚད་འཆར་གཞི་བཟོ་བ།"
 
 msgid "Z.LSL = (mean - LSL) / historical standard deviation\n\nAccept lot if Z.LSL >= k, otherwise reject."
 msgstr ""
 
+#, fuzzy
 msgid "Variable plan generated for the current quality constraints is invalid. Modify the quality constraints."
 msgstr ""
+"ད་ལྟའི་སྤུས་ཚད་ཚད་བཀག་གི་ཆེད་དུ་བཟོས་པའི་འགྱུར་ཚད་འཆར་གཞི་དེ་ནུས་མེད་རེད།སྤུས་ཚད་ཚད་བཀག་དག་བཟོ་"
+"བཅོས་བྱེད་པ།"
 
+#, fuzzy
 msgid "Variable plan generated for the current quality constraints has an invalid sample size (n). Modify the quality constraints."
 msgstr ""
+"ད་ལྟའི་སྤུས་ཚད་ཚད་བཀག་གི་ཆེད་དུ་བཟོས་པའི་འགྱུར་ཚད་འཆར་གཞི་ལ་ནུས་མེད་ཀྱི་མ་དཔེའི་ཆེ་ཆུང་། (n) ཡོད།"
+"སྤུས་ཚད་ཚད་བཀག་དག་བཟོ་བཅོས་བྱེད་པ།"
 
+#, fuzzy
 msgid "Variable plan generated for the current quality constraints has an invalid k value. Modify the quality constraints."
 msgstr ""
+"ད་ལྟའི་སྤུས་ཚད་ཚད་བཀག་གི་ཆེད་དུ་བཟོས་པའི་འགྱུར་ཚད་འཆར་གཞི་ལ་ནུས་མེད་ཀྱི་ k རིན་ཐང་ཡོད།སྤུས་ཚད་ཚད་"
+"བཀག་དག་བཟོ་བཅོས་བྱེད་པ།"
 
 msgid "Accept or Reject Lot %s"
 msgstr ""
 
+#, fuzzy
 msgid "Sample Mean"
-msgstr ""
+msgstr "མ་དཔེའི་ཆ་སྙོམས།"
 
+#, fuzzy
 msgid "Sample Standard Deviation"
-msgstr ""
+msgstr "མ་དཔེའི་ཚད་ལྡན་ཁྱད་འགྱུར།"
 
+#, fuzzy
 msgid "Historical Standard Deviation"
-msgstr ""
+msgstr "ལོ་རྒྱུས་ཀྱི་ཚད་ལྡན་ཁྱད་འགྱུར།"
 
+#, fuzzy
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "འོག་མའི་གསལ་བཀོད་ཚད་བཀག (LSL)"
 
+#, fuzzy
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "གོང་མའི་གསལ་བཀོད་ཚད་བཀག (USL)"
 
+#, fuzzy
 msgid "Z.LSL"
-msgstr ""
+msgstr "Z.LSL"
 
+#, fuzzy
 msgid "Z.USL"
-msgstr ""
+msgstr "Z.USL"
 
+#, fuzzy
 msgid "Sample standard deviation has to be greater than 0."
-msgstr ""
+msgstr "མ་དཔེའི་ཚད་ལྡན་ཁྱད་འགྱུར་དེ་ ༠ ལས་ཆེ་དགོས།"
 
+#, fuzzy
 msgid "Sample mean is invalid."
-msgstr ""
+msgstr "མ་དཔེའི་ཆ་སྙོམས་ནུས་མེད་རེད།"
 
 msgid "Can not accept or reject lot: sample size has to be greater than 1."
 msgstr ""
 
+#, fuzzy
 msgid "Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, and historical standard deviation is <b>unknown</b>."
 msgstr ""
+"གལ་ཏེ་ LSL དང་ USL <b>གཉིས་ཀ་</b> མཁོ་སྤྲོད་བྱས་ཡོད་པ་དང་། ལོ་རྒྱུས་ཀྱི་ཚད་ལྡན་ཁྱད་འགྱུར་ <b>མི་"
+"ཤེས་པ་</b> ཡིན་ན། མ་དཔེའི་ཆེ་ཆུང་དེ་ <b>> ༡</b> ཡིན་དགོས།"
 
 msgid "<u>Decision:</u> <b>%s</b> lot."
 msgstr ""
