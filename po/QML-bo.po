@@ -1,45 +1,56 @@
 msgid ""
 msgstr ""
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-01-06 14:01+0000\n"
+"Last-Translator: Zev Oster <zevelijah@gmail.com>\n"
+"Language-Team: Tibetan <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/bo/>\n"
 "Language: bo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15.1\n"
 "X-Qt-Contexts: true\n"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Acceptance Sampling"
-msgstr ""
+msgstr "ངོས་ལེན་དཔེ་འདེམ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Sampling for acceptance"
-msgstr ""
+msgstr "ངོས་ལེན་གྱི་དཔེ་འདེམ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Attribute Sampling"
-msgstr ""
+msgstr "ཁྱད་ཆོས་དཔེ་འདེམ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Create Attribute Plan"
-msgstr ""
+msgstr "ཁྱད་ཆོས་འཆར་གཞི་བཟོ་བ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Analyze Attribute Plan"
-msgstr ""
+msgstr "ཁྱད་ཆོས་འཆར་གཞི་དབྱེ་ཞིབ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Variable Sampling"
-msgstr ""
+msgstr "འགྱུར་ཚད་དཔེ་འདེམ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "འགྱུར་ཚད་འཆར་གཞི་བཟོ་བ།"
 
+#, fuzzy
 msgctxt "Description|"
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "འགྱུར་ཚད་འཆར་གཞི་དབྱེ་ཞིབ།"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots"
@@ -49,17 +60,19 @@ msgctxt "Description|"
 msgid "Accept/Reject Lots (k-method)"
 msgstr ""
 
+#, fuzzy
 msgctxt "AnalyzeAttributePlan|"
 msgid "Single Sampling Plan"
-msgstr ""
+msgstr "དཔེ་འདེམས་འཆར་གཞི་རྐྱང་པ།"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess attribute plan"
 msgstr ""
 
+#, fuzzy
 msgctxt "AnalyzeAttributePlan|"
 msgid "Multiple Sampling Plan"
-msgstr ""
+msgstr "དཔེ་འདེམས་འཆར་གཞི་མང་པོ།"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess sampling plan"
@@ -69,57 +82,69 @@ msgctxt "AnalyzeVariablePlan|"
 msgid "Lot size (N)"
 msgstr ""
 
+#, fuzzy
 msgctxt "AnalyzeVariablePlan|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "མ་དཔེའི་ཆེ་ཆུང་། (n)"
 
+#, fuzzy
 msgctxt "AnalyzeVariablePlan|"
 msgid "k"
-msgstr ""
+msgstr "k"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Assess variable plan"
 msgstr ""
 
+#, fuzzy
 msgctxt "Distribution|"
 msgid "Distribution"
-msgstr ""
+msgstr "ཁྱབ་ཚུལ།"
 
+#, fuzzy
 msgctxt "Distribution|"
 msgid "Binomial"
-msgstr ""
+msgstr "ཉིས་ཚན།"
 
+#, fuzzy
 msgctxt "Distribution|"
 msgid "Hypergeometric"
-msgstr ""
+msgstr "Hypergeometric"
 
+#, fuzzy
 msgctxt "Distribution|"
 msgid "Poisson"
-msgstr ""
+msgstr "པོ་སུང་།"
 
+#, fuzzy
 msgctxt "OutputOptions|"
 msgid "Output options"
-msgstr ""
+msgstr "ཕྱིར་འདོན་འདེམས་ཀ"
 
+#, fuzzy
 msgctxt "OutputOptions|"
 msgid "Summary table"
-msgstr ""
+msgstr "སྙིང་བསྡུས་རེའུ་མིག"
 
+#, fuzzy
 msgctxt "OutputOptions|"
 msgid "OC curve"
-msgstr ""
+msgstr "OC འཁྱོག་ཐིག"
 
+#, fuzzy
 msgctxt "OutputOptions|"
 msgid "AOQ curve (plan with rectification)"
-msgstr ""
+msgstr "AOQ འཁྱོག་ཐིག (rectification ཡོད་པའི་འཆར་གཞི།)"
 
+#, fuzzy
 msgctxt "OutputOptions|"
 msgid "ATI curve (plan with rectification)"
-msgstr ""
+msgstr "ATI འཁྱོག་ཐིག (rectification ཡོད་པའི་འཆར་གཞི།)"
 
+#, fuzzy
 msgctxt "OutputOptions|"
 msgid "ASN curve"
-msgstr ""
+msgstr "ASN འཁྱོག་ཐིག"
 
 msgctxt "PlanMultiple|"
 msgid "Lot size (N)"
@@ -133,41 +158,48 @@ msgctxt "PlanMultiple|"
 msgid "Stage"
 msgstr ""
 
+#, fuzzy
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "མ་དཔེའི་ཆེ་ཆུང་། (n)"
 
+#, fuzzy
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "ངོས་ལེན་ཨང་། (c)"
 
 msgctxt "PlanMultiple|"
 msgid "Rejection number (r)"
 msgstr ""
 
+#, fuzzy
 msgctxt "PlanMultiple|"
 msgid "n %d"
-msgstr ""
+msgstr "n %d"
 
+#, fuzzy
 msgctxt "PlanMultiple|"
 msgid "c %d"
-msgstr ""
+msgstr "c %d"
 
+#, fuzzy
 msgctxt "PlanMultiple|"
 msgid "r %d"
-msgstr ""
+msgstr "r %d"
 
 msgctxt "PlanSingle|"
 msgid "Lot size (N)"
 msgstr ""
 
+#, fuzzy
 msgctxt "PlanSingle|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "མ་དཔེའི་ཆེ་ཆུང་། (n)"
 
+#, fuzzy
 msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "ངོས་ལེན་ཨང་། (c)"
 
 msgctxt "PlanSingle|"
 msgid "Rejection number (r)"
@@ -177,25 +209,30 @@ msgctxt "ProbDefect|"
 msgid "Proportion non-conforming items"
 msgstr ""
 
+#, fuzzy
 msgctxt "ProbDefect|"
 msgid "From"
-msgstr ""
+msgstr "ནས།"
 
+#, fuzzy
 msgctxt "ProbDefect|"
 msgid "To"
-msgstr ""
+msgstr "བར།"
 
+#, fuzzy
 msgctxt "ProbDefect|"
 msgid "Step size"
-msgstr ""
+msgstr "གོམ་པའི་ཆེ་ཆུང་།"
 
+#, fuzzy
 msgctxt "RiskPoints|"
 msgid "Quality constraints"
-msgstr ""
+msgstr "སྤུས་ཚད་ཀྱི་ཚད་བཀག"
 
+#, fuzzy
 msgctxt "RiskPoints|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "ངོས་ལེན་རུང་བའི་སྤུས་ཚད་རིམ་པ། (AQL)"
 
 msgctxt "RiskPoints|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
@@ -209,61 +246,75 @@ msgctxt "CreateVariablePlan|"
 msgid "Lot size (N)"
 msgstr ""
 
+#, fuzzy
 msgctxt "CreateVariablePlan|"
 msgid "Standard Deviation (Historical) known"
-msgstr ""
+msgstr "ཚད་ལྡན་ཁྱད་འགྱུར། (ལོ་རྒྱུས།) ཤེས་པ།"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Measurement"
-msgstr ""
+msgstr "འཇལ་བ།"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Specify sample statistics directly (used if dataset is not available)"
 msgstr ""
+"མ་དཔེའི་སྡོམ་རྩིས་ཐད་ཀར་གསལ་བཀོད་བྱེད་པ། (གཞི་གྲངས་ཚོགས་པ་མེད་ན་བེད་སྤྱོད་བྱེད།)"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "མ་དཔེའི་ཆེ་ཆུང་། (n)"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Sample mean"
-msgstr ""
+msgstr "མ་དཔེའི་ཆ་སྙོམས།"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Sample standard deviation"
-msgstr ""
+msgstr "མ་དཔེའི་ཚད་ལྡན་ཁྱད་འགྱུར།"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "k                        "
-msgstr ""
+msgstr "k                        "
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Specification limits"
-msgstr ""
+msgstr "གསལ་བཀོད་ཚད་བཀག"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "འོག་མའི་གསལ་བཀོད་ཚད་བཀག (LSL)"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "གོང་མའི་གསལ་བཀོད་ཚད་བཀག (USL)"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Quality constraints"
-msgstr ""
+msgstr "སྤུས་ཚད་ཀྱི་ཚད་བཀག"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "ངོས་ལེན་རུང་བའི་སྤུས་ཚད་རིམ་པ། (AQL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
 msgstr ""
 
+#, fuzzy
 msgctxt "AnalyzeVariablePlan|"
 msgid "Standard deviation (historical) known"
-msgstr ""
+msgstr "ཚད་ལྡན་ཁྱད་འགྱུར། (ལོ་རྒྱུས།) ཤེས་པ།"
 
 msgctxt "RiskPoints|"
 msgid "Producer's risk (α)"
@@ -273,6 +324,7 @@ msgctxt "RiskPoints|"
 msgid "Consumer's risk (β)"
 msgstr ""
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Standard deviation (historical)"
-msgstr ""
+msgstr "ཚད་ལྡན་ཁྱད་འགྱུར། (ལོ་རྒྱུས།)"
