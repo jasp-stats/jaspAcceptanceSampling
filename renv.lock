@@ -1,10 +1,10 @@
 {
   "R": {
-    "Version": "4.5.0",
+    "Version": "4.5.2",
     "Repositories": [
       {
         "Name": "CRAN",
-        "URL": "https://cran.rstudio.com"
+        "URL": "https://cloud.r-project.org"
       }
     ]
   },
@@ -14,10 +14,10 @@
       "Version": "1.0.11",
       "Source": "Repository",
       "Requirements": [
+        "graphics",
         "methods",
         "R",
         "stats",
-        "graphics",
         "utils"
       ]
     },
@@ -26,19 +26,19 @@
       "Version": "0.9.12-4.7",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "coda",
-        "Matrix",
-        "pbapply",
-        "mvtnorm",
-        "stringr",
-        "utils",
         "graphics",
-        "MatrixModels",
-        "Rcpp",
-        "methods",
         "hypergeo",
-        "RcppEigen"
+        "Matrix",
+        "MatrixModels",
+        "methods",
+        "mvtnorm",
+        "pbapply",
+        "R",
+        "Rcpp",
+        "RcppEigen",
+        "stringr",
+        "utils"
       ]
     },
     "MASS": {
@@ -46,12 +46,12 @@
       "Version": "7.3-65",
       "Source": "Repository",
       "Requirements": [
+        "methods",
         "R",
         "grDevices",
         "graphics",
         "stats",
-        "utils",
-        "methods"
+        "utils"
       ]
     },
     "Matrix": {
@@ -59,14 +59,14 @@
       "Version": "1.7-4",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "methods",
         "grDevices",
         "graphics",
         "grid",
         "lattice",
         "stats",
-        "utils"
+        "utils",
+        "R",
+        "methods"
       ]
     },
     "MatrixModels": {
@@ -74,10 +74,10 @@
       "Version": "0.5-4",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "stats",
+        "Matrix",
         "methods",
-        "Matrix"
+        "R",
+        "stats"
       ]
     },
     "R6": {
@@ -98,10 +98,22 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.1.0",
+      "Version": "1.1.1",
       "Source": "Repository",
       "Requirements": [
         "methods",
+        "R",
+        "utils"
+      ]
+    },
+    "RcppEigen": {
+      "Package": "RcppEigen",
+      "Version": "0.3.4.0.2",
+      "Source": "Repository",
+      "Requirements": [
+        "R",
+        "Rcpp",
+        "stats",
         "utils"
       ]
     },
@@ -119,9 +131,9 @@
       "Version": "1.84-2",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "methods",
         "graphics",
+        "methods",
+        "R",
         "stats",
         "utils"
       ]
@@ -131,9 +143,9 @@
       "Version": "0.24.4",
       "Source": "Repository",
       "Requirements": [
+        "curl",
         "xts",
-        "zoo",
-        "curl"
+        "zoo"
       ]
     },
     "abtest": {
@@ -141,17 +153,17 @@
       "Version": "1.0.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "Rcpp",
-        "mvtnorm",
-        "sn",
-        "qgam",
-        "truncnorm",
-        "plotrix",
         "grDevices",
-        "RColorBrewer",
         "Matrix",
-        "parallel"
+        "mvtnorm",
+        "parallel",
+        "plotrix",
+        "qgam",
+        "R",
+        "RColorBrewer",
+        "Rcpp",
+        "sn",
+        "truncnorm"
       ]
     },
     "askpass": {
@@ -175,7 +187,6 @@
       "Version": "0.9.0",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "base64enc",
         "cachem",
         "fastmap",
@@ -186,6 +197,7 @@
         "lifecycle",
         "memoise",
         "mime",
+        "R",
         "rlang",
         "sass"
       ]
@@ -203,8 +215,8 @@
       "Version": "1.1.0",
       "Source": "Repository",
       "Requirements": [
-        "rlang",
-        "fastmap"
+        "fastmap",
+        "rlang"
       ]
     },
     "callr": {
@@ -212,8 +224,8 @@
       "Version": "3.7.6",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "processx",
+        "R",
         "R6",
         "utils"
       ]
@@ -232,8 +244,8 @@
       "Version": "0.19-4.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "lattice"
+        "lattice",
+        "R"
       ]
     },
     "codetools": {
@@ -249,10 +261,10 @@
       "Version": "2.1-2",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "methods",
         "graphics",
         "grDevices",
+        "methods",
+        "R",
         "stats"
       ]
     },
@@ -285,6 +297,14 @@
       "RemoteRepo": "conting",
       "RemoteSha": "03a4eb9a687e015d602022a01d4e638324c110c8"
     },
+    "cpp11": {
+      "Package": "cpp11",
+      "Version": "0.5.2",
+      "Source": "Repository",
+      "Requirements": [
+        "R"
+      ]
+    },
     "crosstalk": {
       "Package": "crosstalk",
       "Version": "1.2.2",
@@ -309,8 +329,8 @@
       "Version": "1.18.0",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "methods"
+        "methods",
+        "R"
       ]
     },
     "deSolve": {
@@ -318,10 +338,10 @@
       "Version": "1.40",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "methods",
         "graphics",
         "grDevices",
+        "methods",
+        "R",
         "stats"
       ]
     },
@@ -330,8 +350,8 @@
       "Version": "1.4.3",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
+        "R",
         "R6",
         "utils"
       ]
@@ -350,10 +370,10 @@
       "Version": "1.0.17",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "foreach",
         "iterators",
         "parallel",
+        "R",
         "utils"
       ]
     },
@@ -362,7 +382,6 @@
       "Version": "1.1.4",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "generics",
         "glue",
@@ -370,6 +389,7 @@
         "magrittr",
         "methods",
         "pillar",
+        "R",
         "R6",
         "rlang",
         "tibble",
@@ -383,8 +403,8 @@
       "Version": "1.5-1",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "MASS"
+        "MASS",
+        "R"
       ]
     },
     "evaluate": {
@@ -428,9 +448,9 @@
       "Version": "0.5.3",
       "Source": "Repository",
       "Requirements": [
+        "htmltools",
         "R",
-        "rlang",
-        "htmltools"
+        "rlang"
       ]
     },
     "fontquiver": {
@@ -438,9 +458,9 @@
       "Version": "0.2.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "fontBitstreamVera",
-        "fontLiberation"
+        "fontLiberation",
+        "R"
       ]
     },
     "foreach": {
@@ -448,10 +468,10 @@
       "Version": "1.5.2",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "codetools",
-        "utils",
-        "iterators"
+        "iterators",
+        "R",
+        "utils"
       ]
     },
     "fs": {
@@ -459,8 +479,8 @@
       "Version": "1.6.6",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "methods"
+        "methods",
+        "R"
       ]
     },
     "gdtools": {
@@ -468,9 +488,9 @@
       "Version": "0.4.4",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "fontquiver",
         "htmltools",
+        "R",
         "Rcpp",
         "systemfonts",
         "tools"
@@ -481,8 +501,8 @@
       "Version": "0.1.4",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "methods"
+        "methods",
+        "R"
       ]
     },
     "ggplot2": {
@@ -490,13 +510,13 @@
       "Version": "4.0.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "grDevices",
         "grid",
         "gtable",
         "isoband",
         "lifecycle",
+        "R",
         "rlang",
         "S7",
         "scales",
@@ -510,8 +530,8 @@
       "Version": "1.8.0",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "methods"
+        "methods",
+        "R"
       ]
     },
     "gnm": {
@@ -519,7 +539,6 @@
       "Version": "1.1-5",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "graphics",
         "grDevices",
         "MASS",
@@ -527,6 +546,7 @@
         "methods",
         "nnet",
         "qvcalc",
+        "R",
         "relimp",
         "stats",
         "utils"
@@ -537,10 +557,10 @@
       "Version": "2.3",
       "Source": "Repository",
       "Requirements": [
-        "gtable",
-        "grid",
-        "grDevices",
         "graphics",
+        "grDevices",
+        "grid",
+        "gtable",
         "utils"
       ]
     },
@@ -549,9 +569,9 @@
       "Version": "0.5-1",
       "Source": "Repository",
       "Requirements": [
-        "grid",
         "graphics",
-        "grDevices"
+        "grDevices",
+        "grid"
       ]
     },
     "gtable": {
@@ -559,11 +579,11 @@
       "Version": "0.3.6",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "glue",
         "grid",
         "lifecycle",
+        "R",
         "rlang",
         "stats"
       ]
@@ -592,11 +612,11 @@
       "Version": "0.5.9",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "base64enc",
         "digest",
         "fastmap",
         "grDevices",
+        "R",
         "rlang",
         "utils"
       ]
@@ -619,9 +639,9 @@
       "Version": "1.6.16",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "later",
         "promises",
+        "R",
         "R6",
         "Rcpp",
         "utils"
@@ -632,11 +652,11 @@
       "Version": "1.4.7",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "curl",
         "jsonlite",
         "mime",
         "openssl",
+        "R",
         "R6"
       ]
     },
@@ -645,10 +665,10 @@
       "Version": "1.2-14",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "elliptic",
         "contfrac",
-        "deSolve"
+        "deSolve",
+        "elliptic",
+        "R"
       ]
     },
     "isoband": {
@@ -657,10 +677,10 @@
       "Source": "Repository",
       "Requirements": [
         "cli",
+        "cpp11",
         "grid",
         "rlang",
-        "utils",
-        "cpp11"
+        "utils"
       ]
     },
     "iterators": {
@@ -701,7 +721,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspBase",
-      "RemoteSha": "8644ec49b334edebe234c0b3134236adc4521627"
+      "RemoteSha": "8ea347b9ba06aa607c3c6ecea00bae24fe8cd7bf"
     },
     "jaspGraphs": {
       "Package": "jaspGraphs",
@@ -725,7 +745,7 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspGraphs",
-      "RemoteSha": "8e81aa94693dde74ceba2681158362ef648c6d8d"
+      "RemoteSha": "db2ef8b8a74c9ce63a11002f3dd32073d67b18ad"
     },
     "jquerylib": {
       "Package": "jquerylib",
@@ -748,10 +768,10 @@
       "Version": "1.51",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "evaluate",
         "highr",
         "methods",
+        "R",
         "tools",
         "xfun",
         "yaml"
@@ -762,8 +782,8 @@
       "Version": "0.4.3",
       "Source": "Repository",
       "Requirements": [
-        "stats",
-        "graphics"
+        "graphics",
+        "stats"
       ]
     },
     "later": {
@@ -781,12 +801,12 @@
       "Version": "0.22-7",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "grid",
         "grDevices",
         "graphics",
         "stats",
-        "utils"
+        "utils",
+        "R"
       ]
     },
     "lazyeval": {
@@ -802,8 +822,8 @@
       "Version": "1.0.5",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
+        "R",
         "rlang"
       ]
     },
@@ -812,10 +832,10 @@
       "Version": "0.9-40",
       "Source": "Repository",
       "Requirements": [
+        "graphics",
         "R",
         "stats",
-        "zoo",
-        "graphics"
+        "zoo"
       ]
     },
     "magrittr": {
@@ -831,8 +851,8 @@
       "Version": "2.0.1",
       "Source": "Repository",
       "Requirements": [
-        "rlang",
-        "cachem"
+        "cachem",
+        "rlang"
       ]
     },
     "mgcv": {
@@ -840,13 +860,13 @@
       "Version": "1.9-4",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "nlme",
-        "methods",
-        "stats",
         "graphics",
         "Matrix",
+        "methods",
+        "nlme",
+        "R",
         "splines",
+        "stats",
         "utils"
       ]
     },
@@ -880,11 +900,11 @@
       "Version": "3.1-168",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "graphics",
         "stats",
         "utils",
-        "lattice"
+        "lattice",
+        "R"
       ]
     },
     "nnet": {
@@ -946,8 +966,8 @@
       "Version": "1.7-4",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "parallel"
+        "parallel",
+        "R"
       ]
     },
     "pillar": {
@@ -969,11 +989,11 @@
       "Version": "1.4.8",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "callr",
         "cli",
         "desc",
         "processx",
+        "R",
         "R6"
       ]
     },
@@ -990,29 +1010,29 @@
       "Version": "4.11.0",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "ggplot2",
-        "tools",
-        "scales",
-        "httr",
-        "jsonlite",
-        "magrittr",
-        "digest",
-        "viridisLite",
         "base64enc",
+        "crosstalk",
+        "data.table",
+        "digest",
+        "dplyr",
+        "ggplot2",
         "htmltools",
         "htmlwidgets",
-        "tidyr",
-        "RColorBrewer",
-        "dplyr",
-        "vctrs",
-        "tibble",
+        "httr",
+        "jsonlite",
         "lazyeval",
-        "rlang",
-        "crosstalk",
+        "magrittr",
+        "promises",
         "purrr",
-        "data.table",
-        "promises"
+        "R",
+        "RColorBrewer",
+        "rlang",
+        "scales",
+        "tibble",
+        "tidyr",
+        "tools",
+        "vctrs",
+        "viridisLite"
       ]
     },
     "plotrix": {
@@ -1020,9 +1040,9 @@
       "Version": "3.8-13",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "grDevices",
         "graphics",
+        "grDevices",
+        "R",
         "stats",
         "utils"
       ]
@@ -1041,8 +1061,8 @@
       "Version": "3.8.6",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "ps",
+        "R",
         "R6",
         "utils"
       ]
@@ -1052,12 +1072,12 @@
       "Version": "1.5.0",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "fastmap",
         "later",
         "lifecycle",
         "magrittr",
         "otel",
+        "R",
         "R6",
         "rlang"
       ]
@@ -1073,13 +1093,13 @@
     },
     "purrr": {
       "Package": "purrr",
-      "Version": "1.2.0",
+      "Version": "1.2.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "lifecycle",
         "magrittr",
+        "R",
         "rlang",
         "vctrs"
       ]
@@ -1089,13 +1109,13 @@
       "Version": "2.0.0",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "mgcv",
-        "shiny",
-        "plyr",
         "doParallel",
+        "grDevices",
+        "mgcv",
         "parallel",
-        "grDevices"
+        "plyr",
+        "R",
+        "shiny"
       ]
     },
     "quadprog": {
@@ -1111,13 +1131,13 @@
       "Version": "0.4.28",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "xts",
-        "zoo",
-        "TTR",
-        "methods",
         "curl",
-        "jsonlite"
+        "jsonlite",
+        "methods",
+        "R",
+        "TTR",
+        "xts",
+        "zoo"
       ]
     },
     "quantreg": {
@@ -1125,15 +1145,15 @@
       "Version": "6.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "stats",
-        "SparseM",
-        "methods",
         "graphics",
+        "MASS",
         "Matrix",
         "MatrixModels",
-        "survival",
-        "MASS"
+        "methods",
+        "R",
+        "SparseM",
+        "stats",
+        "survival"
       ]
     },
     "qvcalc": {
@@ -1174,24 +1194,24 @@
       "Version": "1.3.31",
       "Source": "Repository",
       "Requirements": [
-        "R",
+        "base64enc",
         "graphics",
         "grDevices",
-        "stats",
-        "utils",
-        "htmlwidgets",
         "htmltools",
-        "knitr",
+        "htmlwidgets",
         "jsonlite",
+        "knitr",
         "magrittr",
+        "mime",
+        "R",
         "R6",
-        "base64enc",
-        "mime"
+        "stats",
+        "utils"
       ]
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "1.1.6",
+      "Version": "1.1.7",
       "Source": "Repository",
       "Requirements": [
         "R",
@@ -1203,7 +1223,6 @@
       "Version": "2.30",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "bslib",
         "evaluate",
         "fontawesome",
@@ -1212,6 +1231,7 @@
         "jsonlite",
         "knitr",
         "methods",
+        "R",
         "tinytex",
         "tools",
         "utils",
@@ -1224,10 +1244,10 @@
       "Version": "0.4.0",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "gdtools",
         "grDevices",
         "officer",
+        "R",
         "Rcpp",
         "rlang",
         "systemfonts",
@@ -1240,10 +1260,10 @@
       "Source": "Repository",
       "Requirements": [
         "fs",
-        "rlang",
         "htmltools",
         "R6",
-        "rappdirs"
+        "rappdirs",
+        "rlang"
       ]
     },
     "scales": {
@@ -1251,12 +1271,12 @@
       "Version": "1.4.0",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "farver",
         "glue",
         "labeling",
         "lifecycle",
+        "R",
         "R6",
         "RColorBrewer",
         "rlang",
@@ -1268,8 +1288,6 @@
       "Version": "1.12.1",
       "Source": "Repository",
       "Requirements": [
-        "methods",
-        "R",
         "bslib",
         "cachem",
         "cli",
@@ -1283,9 +1301,11 @@
         "jsonlite",
         "later",
         "lifecycle",
+        "methods",
         "mime",
         "otel",
         "promises",
+        "R",
         "R6",
         "rlang",
         "sourcetools",
@@ -1300,13 +1320,13 @@
       "Version": "2.1.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "methods",
-        "stats4",
         "mnormt",
         "numDeriv",
-        "utils",
-        "quantreg"
+        "quantreg",
+        "R",
+        "stats4",
+        "utils"
       ]
     },
     "sourcetools": {
@@ -1323,9 +1343,9 @@
       "Source": "Repository",
       "Requirements": [
         "R",
+        "stats",
         "tools",
-        "utils",
-        "stats"
+        "utils"
       ]
     },
     "stringr": {
@@ -1333,11 +1353,11 @@
       "Version": "1.6.0",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "glue",
         "lifecycle",
         "magrittr",
+        "R",
         "rlang",
         "stringi",
         "vctrs"
@@ -1348,13 +1368,13 @@
       "Version": "3.8-3",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "graphics",
         "Matrix",
         "methods",
         "splines",
         "stats",
-        "utils"
+        "utils",
+        "R"
       ]
     },
     "svglite": {
@@ -1362,14 +1382,14 @@
       "Version": "2.2.2",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "base64enc",
         "cli",
+        "cpp11",
         "lifecycle",
+        "R",
         "rlang",
         "systemfonts",
-        "textshaping",
-        "cpp11"
+        "textshaping"
       ]
     },
     "sys": {
@@ -1383,14 +1403,14 @@
       "Version": "1.3.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "base64enc",
+        "cpp11",
         "grid",
         "jsonlite",
         "lifecycle",
+        "R",
         "tools",
-        "utils",
-        "cpp11"
+        "utils"
       ]
     },
     "textshaping": {
@@ -1398,27 +1418,27 @@
       "Version": "1.0.4",
       "Source": "Repository",
       "Requirements": [
-        "R",
+        "cpp11",
         "lifecycle",
+        "R",
         "stats",
         "stringi",
         "systemfonts",
-        "utils",
-        "cpp11"
+        "utils"
       ]
     },
     "tibble": {
       "Package": "tibble",
-      "Version": "3.3.0",
+      "Version": "3.3.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "lifecycle",
         "magrittr",
         "methods",
         "pillar",
         "pkgconfig",
+        "R",
         "rlang",
         "utils",
         "vctrs"
@@ -1429,20 +1449,20 @@
       "Version": "1.3.2",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
+        "cpp11",
         "dplyr",
         "glue",
         "lifecycle",
         "magrittr",
         "purrr",
+        "R",
         "rlang",
         "stringr",
         "tibble",
         "tidyselect",
         "utils",
-        "vctrs",
-        "cpp11"
+        "vctrs"
       ]
     },
     "tidyselect": {
@@ -1450,10 +1470,10 @@
       "Version": "1.2.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "glue",
         "lifecycle",
+        "R",
         "rlang",
         "vctrs",
         "withr"
@@ -1477,17 +1497,17 @@
     },
     "tseries": {
       "Package": "tseries",
-      "Version": "0.10-58",
+      "Version": "0.10-59",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "graphics",
+        "jsonlite",
+        "quadprog",
+        "quantmod",
+        "R",
         "stats",
         "utils",
-        "quadprog",
-        "zoo",
-        "quantmod",
-        "jsonlite"
+        "zoo"
       ]
     },
     "utf8": {
@@ -1511,14 +1531,14 @@
       "Version": "1.4-13",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "grid",
-        "stats",
-        "utils",
-        "MASS",
-        "grDevices",
         "colorspace",
-        "lmtest"
+        "grDevices",
+        "grid",
+        "lmtest",
+        "MASS",
+        "R",
+        "stats",
+        "utils"
       ]
     },
     "vcdExtra": {
@@ -1526,16 +1546,16 @@
       "Version": "0.8.7",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "vcd",
+        "ca",
         "gnm",
-        "MASS",
         "grDevices",
         "grid",
+        "MASS",
+        "R",
+        "rgl",
         "stats",
         "utils",
-        "ca",
-        "rgl"
+        "vcd"
       ]
     },
     "vctrs": {
@@ -1543,10 +1563,10 @@
       "Version": "0.6.5",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "glue",
         "lifecycle",
+        "R",
         "rlang"
       ]
     },
@@ -1563,9 +1583,9 @@
       "Version": "3.0.2",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "graphics",
-        "grDevices"
+        "grDevices",
+        "R"
       ]
     },
     "xfun": {
@@ -1573,8 +1593,8 @@
       "Version": "0.55",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "grDevices",
+        "R",
         "stats",
         "tools"
       ]
@@ -1584,9 +1604,9 @@
       "Version": "1.5.1",
       "Source": "Repository",
       "Requirements": [
-        "R",
         "cli",
         "methods",
+        "R",
         "rlang"
       ]
     },
@@ -1605,9 +1625,9 @@
       "Version": "0.14.1",
       "Source": "Repository",
       "Requirements": [
+        "methods",
         "R",
-        "zoo",
-        "methods"
+        "zoo"
       ]
     },
     "yaml": {
@@ -1627,12 +1647,12 @@
       "Version": "1.8-15",
       "Source": "Repository",
       "Requirements": [
-        "R",
-        "stats",
-        "utils",
         "graphics",
         "grDevices",
-        "lattice"
+        "lattice",
+        "R",
+        "stats",
+        "utils"
       ]
     }
   }
