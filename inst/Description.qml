@@ -8,6 +8,7 @@ Description
 	icon		: "acceptance_sampling.svg"
 	requiresData: false
 	hasWrappers:  false
+	preloadData:  false
 	
 
 	GroupTitle
