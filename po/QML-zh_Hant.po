@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-03-01 13:09+0000\n"
+"Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
+"projects/jasp/jaspacceptancesampling-qml/zh_Hant/>\n"
+"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 "X-Language: zh_Hant\n"
 "X-Qt-Contexts: true\n"
 
@@ -189,7 +195,7 @@ msgstr "陣列數"
 
 msgctxt "RiskPoints|"
 msgid "Quality constraints"
-msgstr "Quality constraints"
+msgstr "品質限制"
 
 msgctxt "RiskPoints|"
 msgid "Acceptable Quality Level (AQL)"
@@ -199,15 +205,13 @@ msgctxt "RiskPoints|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
 msgstr ""
 
-#, fuzzy
 msgctxt "CreateAttributePlan|"
 msgid "Lot size (N)"
 msgstr "批量(N)"
 
-#, fuzzy
 msgctxt "CreateVariablePlan|"
 msgid "Lot size (N)"
-msgstr "批量(N)"
+msgstr "批量 (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Standard Deviation (Historical) known"
@@ -249,10 +253,9 @@ msgctxt "DecideVariableLots|"
 msgid "Upper Specification Limit (USL)"
 msgstr ""
 
-#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Quality constraints"
-msgstr "Quality constraints"
+msgstr "品質限制"
 
 msgctxt "DecideVariableLots|"
 msgid "Acceptable Quality Level (AQL)"
