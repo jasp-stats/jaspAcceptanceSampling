@@ -242,7 +242,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
   if (!is.finite(f_lower) || !is.finite(f_upper) || f_lower * f_upper > 0) {
     stop(
       gettextf(
-        "Could not construct the impartial prior for mode %.4f and RQL %.4f. Please choose a lower mode, a lower RQL, or a different prior.",
+        "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. Please choose a lower mode, a lower RQL, or a different prior.",
         mode, rql
       ),
       call. = FALSE
@@ -254,7 +254,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
     error = function(e) {
       stop(
         gettextf(
-          "Could not construct the impartial prior for mode %.4f and RQL %.4f. Please choose a lower mode, a lower RQL, or a different prior.",
+          "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. Please choose a lower mode, a lower RQL, or a different prior.",
           mode, rql
         ),
         call. = FALSE
