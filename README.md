@@ -8,6 +8,8 @@ Currently, the module supports:
 - Creation of single stage variable sampling plans that satisfy risk constraints
 - Analysis of single stage variable sampling plans
 - Comparing data from lots against single stage variable sampling plans and deciding whether to accept or to reject the lot(s)
+- Bayesian planning and inference for acceptance sampling
+- Bayesian state-space model based acceptance sampling
 
 ## Module Structure
 
@@ -22,4 +24,7 @@ The analyses in the Acceptance Sampling module in JASP are structured in the fol
        - Create Variable Plan
        - Analyze Variable Plan
        - Accept/Reject Lots
+    -- Bayesian Sampling
+       - Bayesian Sampling
+       - Bayesian State-Space Sampling
 ```
