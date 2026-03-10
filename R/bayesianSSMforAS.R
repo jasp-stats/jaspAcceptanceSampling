@@ -266,32 +266,42 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
 
 .asSSM_createSummaryTable <- function(jaspResults, dataset, options) {
-  if (!is.null(jaspResults[["summaryTable"]])) return()
+  table <- jaspResults[["summaryTable"]]
+  if (is.null(table)) {
+    table <- createJaspTable(title = gettext("Posterior Summary (Current Lot)"))
+    table$dependOn(c(
+      "ssm_postHocCorrection", "ssm_postHocCorrectionWeight",
+      "ssm_controlLimitsLower", "ssm_controlLimitsUpper",
+      "ssm_count", "ssm_total", "ssm_sampleSize", "ssm_time",
+      "ssm_scaleModel", "ssm_predictor",
+      "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
+      "ssm_priorSigmaSD", "ssm_priorBetaScale",
+      "ssm_advancedMcmcBurnin", "ssm_advancedMcmcSamples",
+      "ssm_advancedMcmcChains", "ssm_advancedMcmcThin",
+      "ssm_advancedMcmcSeed",
+      "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth",
+      "ssm_decisionAcceptThreshold", "ssm_decisionRejectThreshold"
+    ))
+    table$position <- 0
 
-  table <- createJaspTable(title = gettext("Posterior Summary (Current Lot)"))
-  table$dependOn(c(
-    "ssm_postHocCorrection", "ssm_postHocCorrectionWeight",
-    "ssm_controlLimitsLower", "ssm_controlLimitsUpper",
-    "ssm_count", "ssm_total", "ssm_sampleSize", "ssm_time",
-    "ssm_scaleModel", "ssm_predictor",
-    "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
-    "ssm_priorSigmaSD", "ssm_priorBetaScale",
-    "ssm_advancedMcmcBurnin", "ssm_advancedMcmcSamples",
-    "ssm_advancedMcmcChains", "ssm_advancedMcmcThin",
-    "ssm_advancedMcmcSeed",
-    "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth",
-    "ssm_decisionAcceptThreshold", "ssm_decisionRejectThreshold"
+    table$addColumnInfo(name = "t",        title = gettext("Lot Number"),              type = "integer")
+    table$addColumnInfo(name = "y",        title = gettext("Observed Defects"),         type = "integer")
+    table$addColumnInfo(name = "pred",     title = gettext("Median Predicted Defects"), type = "number")
+    table$addColumnInfo(name = "massAQL",  title = gettext("P(Defects < AQL Limit)"),   type = "number", format = "dp:3")
+    table$addColumnInfo(name = "massRQL",  title = gettext("P(Defects > RQL Limit)"),   type = "number", format = "dp:3")
+    table$addColumnInfo(name = "decision", title = gettext("Decision"),                 type = "string")
+
+    jaspResults[["summaryTable"]] <- table
+  }
+
+  table$setData(list(
+    t = integer(0),
+    y = integer(0),
+    pred = numeric(0),
+    massAQL = numeric(0),
+    massRQL = numeric(0),
+    decision = character(0)
   ))
-  table$position <- 0
-
-  table$addColumnInfo(name = "t",       title = gettext("Lot Number"),                          type = "integer")
-  table$addColumnInfo(name = "y",       title = gettext("Observed Defects"),                     type = "integer")
-  table$addColumnInfo(name = "pred",    title = gettext("Median Predicted Defects"),             type = "number")
-  table$addColumnInfo(name = "massAQL", title = gettext("P(Defects < AQL Limit)"),               type = "number", format = "dp:3")
-  table$addColumnInfo(name = "massRQL", title = gettext("P(Defects > RQL Limit)"),               type = "number", format = "dp:3")
-  table$addColumnInfo(name = "decision", title = gettext("Decision"),                            type = "string")
-
-  jaspResults[["summaryTable"]] <- table
 
   if (is.null(jaspResults[["fit"]]$object)) return()
 
@@ -331,7 +341,7 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
     decision <- gettext("Reject")
   }
 
-  table$addRows(list(
+  table$setData(list(
     t = T_idx,
     y = yT,
     pred = .asSSM_pmfMedian(pmf),
@@ -342,20 +352,21 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 }
 
 .asSSM_plotState <- function(jaspResults, dataset, options) {
-  if (!is.null(jaspResults[["ssm_statePlot"]])) return()
-
-  plot <- createJaspPlot(title = gettext("Defect Rate Over Time"), width = 600, height = 400)
-  plot$dependOn(c(
-    "ssm_statePlot",
-    "ssm_count", "ssm_total", "ssm_sampleSize", "ssm_time",
-    "ssm_scaleModel", "ssm_predictor",
-    "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
-    "ssm_priorSigmaSD", "ssm_priorBetaScale",
-    "ssm_advancedMcmcSamples", "ssm_advancedMcmcSeed",
-    "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth"
-  ))
-  plot$position <- 1
-  jaspResults[["ssm_statePlot"]] <- plot
+  plot <- jaspResults[["ssm_statePlot"]]
+  if (is.null(plot)) {
+    plot <- createJaspPlot(title = gettext("Defect Rate Over Time"), width = 600, height = 400)
+    plot$dependOn(c(
+      "ssm_statePlot",
+      "ssm_count", "ssm_total", "ssm_sampleSize", "ssm_time",
+      "ssm_scaleModel", "ssm_predictor",
+      "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
+      "ssm_priorSigmaSD", "ssm_priorBetaScale",
+      "ssm_advancedMcmcSamples", "ssm_advancedMcmcSeed",
+      "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth"
+    ))
+    plot$position <- 1
+    jaspResults[["ssm_statePlot"]] <- plot
+  }
 
   if (is.null(jaspResults[["fit"]]$object)) return()
 
@@ -389,8 +400,6 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 }
 
 .asSSM_plotPrediction <- function(jaspResults, dataset, options) {
-  if (!is.null(jaspResults[["predPlot"]])) return()
-
   depVars <- c(
     "ssm_predictionPlot",
     "ssm_postHocCorrection", "ssm_postHocCorrectionWeight",
@@ -403,10 +412,13 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
     "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth"
   )
 
-  plot <- createJaspPlot(title = gettext("Posterior Predictive"), width = 500, height = 400)
-  plot$dependOn(depVars)
-  plot$position <- 2
-  jaspResults[["predPlot"]] <- plot
+  plot <- jaspResults[["predPlot"]]
+  if (is.null(plot)) {
+    plot <- createJaspPlot(title = gettext("Posterior Predictive"), width = 500, height = 400)
+    plot$dependOn(depVars)
+    plot$position <- 2
+    jaspResults[["predPlot"]] <- plot
+  }
 
   if (is.null(jaspResults[["fit"]]$object)) return()
 
@@ -499,19 +511,21 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
 
 .asSSM_plotPosteriorDist <- function(jaspResults, dataset, options) {
-  if (!is.null(jaspResults[["postDist"]])) return()
-  plot <- createJaspPlot(title = gettext("Posterior Defect Rate"), width = 500, height = 400)
-  plot$dependOn(c(
-    "ssm_posteriorDistPlot",
-    "ssm_count", "ssm_total", "ssm_sampleSize",
-    "ssm_scaleModel", "ssm_predictor",
-    "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
-    "ssm_priorSigmaSD", "ssm_priorBetaScale",
-    "ssm_advancedMcmcSamples", "ssm_advancedMcmcSeed",
-    "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth"
-  ))
-  plot$position <- 3
-  jaspResults[["postDist"]] <- plot
+  plot <- jaspResults[["postDist"]]
+  if (is.null(plot)) {
+    plot <- createJaspPlot(title = gettext("Posterior Defect Rate"), width = 500, height = 400)
+    plot$dependOn(c(
+      "ssm_posteriorDistPlot",
+      "ssm_count", "ssm_total", "ssm_sampleSize",
+      "ssm_scaleModel", "ssm_predictor",
+      "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
+      "ssm_priorSigmaSD", "ssm_priorBetaScale",
+      "ssm_advancedMcmcSamples", "ssm_advancedMcmcSeed",
+      "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth"
+    ))
+    plot$position <- 3
+    jaspResults[["postDist"]] <- plot
+  }
 
   if (is.null(jaspResults[["fit"]]$object)) return()
 
@@ -540,22 +554,23 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
 .asSSM_plotBetaCoefficient <- function(jaspResults, dataset, options) {
   if (options[["ssm_scaleModel"]] != "WithPredictor") return()
-  if (!is.null(jaspResults[["betaPlot"]])) return()
+  plot <- jaspResults[["betaPlot"]]
+  if (is.null(plot)) {
+    plot <- createJaspPlot(title = gettext("Beta Coefficient"), width = 500, height = 400)
+    plot$dependOn(c(
+      "ssm_plotBeta",
+      "ssm_predictor",
+      "ssm_count", "ssm_total", "ssm_sampleSize",
+      "ssm_scaleModel",
+      "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
+      "ssm_priorSigmaSD", "ssm_priorBetaScale",
+      "ssm_advancedMcmcSamples", "ssm_advancedMcmcSeed",
+      "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth"
+    ))
 
-  plot <- createJaspPlot(title = gettext("Beta Coefficient"), width = 500, height = 400)
-  plot$dependOn(c(
-    "ssm_plotBeta",
-    "ssm_predictor",
-    "ssm_count", "ssm_total", "ssm_sampleSize",
-    "ssm_scaleModel",
-    "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
-    "ssm_priorSigmaSD", "ssm_priorBetaScale",
-    "ssm_advancedMcmcSamples", "ssm_advancedMcmcSeed",
-    "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth"
-  ))
-
-  plot$position <- 4
-  jaspResults[["betaPlot"]] <- plot
+    plot$position <- 4
+    jaspResults[["betaPlot"]] <- plot
+  }
 
   if (is.null(jaspResults[["fit"]]$object)) return()
 
@@ -646,31 +661,39 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
   if (!isTRUE(options[["ssm_showMcmcSummary"]])) return()
 
-  if (!is.null(jaspResults[["mcmcSummary"]])) return()
+  table <- jaspResults[["mcmcSummary"]]
+  if (is.null(table)) {
+    table <- createJaspTable(title = gettext("MCMC Diagnostics"))
+    table$dependOn(c(
+      "ssm_showMcmcSummary",
+      "ssm_showTheta", "ssm_showSigma", "ssm_showYpred", "ssm_showBeta",
+      "ssm_scaleModel", "ssm_predictor",
+      "ssm_count", "ssm_total", "ssm_sampleSize", "ssm_time",
+      "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
+      "ssm_priorSigmaSD", "ssm_priorBetaScale",
+      "ssm_advancedMcmcBurnin", "ssm_advancedMcmcSamples",
+      "ssm_advancedMcmcChains", "ssm_advancedMcmcThin", "ssm_advancedMcmcSeed",
+      "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth"
+    ))
+    table$position <- 5   # after the other tables/plots
+    table$addColumnInfo(name = "parameter", title = gettext("Parameter"), type = "string")
+    table$addColumnInfo(name = "mean",      title = gettext("Mean"),      type = "number")
+    table$addColumnInfo(name = "sd",        title = gettext("SD"),        type = "number")
+    table$addColumnInfo(name = "n_eff",     title = gettext("ESS"),       type = "number")
+    table$addColumnInfo(name = "Rhat",      title = gettext("R-hat"),     type = "number")
 
-  table <- createJaspTable(title = gettext("MCMC Diagnostics"))
-  table$dependOn(c(
-    "ssm_showMcmcSummary",
-    "ssm_showTheta", "ssm_showSigma", "ssm_showYpred", "ssm_showBeta",
-    "ssm_scaleModel", "ssm_predictor",
-    "ssm_count", "ssm_total", "ssm_sampleSize", "ssm_time",
-    "ssm_priorTheta1Shape1", "ssm_priorTheta1Shape2",
-    "ssm_priorSigmaSD", "ssm_priorBetaScale",
-    "ssm_advancedMcmcBurnin", "ssm_advancedMcmcSamples",
-    "ssm_advancedMcmcChains", "ssm_advancedMcmcThin", "ssm_advancedMcmcSeed",
-    "ssm_advancedMcmcAdaptDelta", "ssm_advancedMcmcMaxTreeDepth"
+    jaspResults[["mcmcSummary"]] <- table
+  }
+
+  table$setData(list(
+    parameter = character(0),
+    mean = numeric(0),
+    sd = numeric(0),
+    n_eff = numeric(0),
+    Rhat = numeric(0)
   ))
-  table$position <- 5   # after the other tables/plots
-  table$addColumnInfo(name = "parameter", title = gettext("Parameter"), type = "string")
-  table$addColumnInfo(name = "mean",      title = gettext("Mean"),      type = "number")
-  table$addColumnInfo(name = "sd",        title = gettext("SD"),        type = "number")
-  table$addColumnInfo(name = "n_eff",     title = gettext("ESS"),       type = "number")
-  table$addColumnInfo(name = "Rhat",      title = gettext("R-hat"),     type = "number")
-
-  jaspResults[["mcmcSummary"]] <- table
 
   if (is.null(jaspResults[["fit"]]$object)) return()
-  fit <- jaspResults[["fit"]]$object
 
   sm <- jaspResults[["fit"]]$object$summary
   allNames <- rownames(sm)
@@ -699,13 +722,11 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
   smSel <- sm[pars, , drop = FALSE]
 
-  rows <- lapply(seq_len(nrow(smSel)), function(i) list(
-    parameter = rownames(smSel)[i],
-    mean      = smSel[i, "mean"],
-    sd        = smSel[i, "sd"],
-    n_eff     = smSel[i, "n_eff"],
-    Rhat      = smSel[i, "Rhat"]
+  table$setData(list(
+    parameter = rownames(smSel),
+    mean = smSel[, "mean"],
+    sd = smSel[, "sd"],
+    n_eff = smSel[, "n_eff"],
+    Rhat = smSel[, "Rhat"]
   ))
-
-  table$addRows(rows)
 }
