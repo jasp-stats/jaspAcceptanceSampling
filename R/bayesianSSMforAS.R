@@ -32,6 +32,9 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
   if (ready)
     .asSSM_fitModel(jaspResults, dataset, options)
 
+  if (!is.null(jaspResults[["placeholder"]]))
+    return()
+
   .asSSM_createSummaryTable(jaspResults, dataset, options)
   .asSSM_createMcmcSummaryTable(jaspResults, dataset, options)
 
@@ -48,56 +51,11 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
     .asSSM_plotBetaCoefficient(jaspResults, dataset, options)
 }
 
-.asSSM_runtimeFitCache <- new.env(parent = emptyenv())
-
-.asSSM_colSignature <- function(x) {
-  x <- as.numeric(x)
-  x <- x[is.finite(x)]
-  if (length(x) == 0L)
-    return("empty")
-  paste(
-    length(x),
-    signif(sum(x), 10),
-    signif(sum(x * x), 10),
-    signif(min(x), 10),
-    signif(max(x), 10),
-    sep = ":"
-  )
-}
-
-.asSSM_fitCacheKey <- function(dataset, options) {
-  parts <- c(
-    paste0("count=", options[["ssm_count"]]),
-    paste0("sampleSize=", options[["ssm_sampleSize"]]),
-    paste0("total=", options[["ssm_total"]]),
-    paste0("time=", options[["ssm_time"]]),
-    paste0("model=", options[["ssm_scaleModel"]]),
-    paste0("predictor=", options[["ssm_predictor"]]),
-    paste0("priorTheta1a=", options[["ssm_priorTheta1Shape1"]]),
-    paste0("priorTheta1b=", options[["ssm_priorTheta1Shape2"]]),
-    paste0("priorSigmaSD=", options[["ssm_priorSigmaSD"]]),
-    paste0("priorBetaScale=", options[["ssm_priorBetaScale"]]),
-    paste0("burnin=", options[["ssm_advancedMcmcBurnin"]]),
-    paste0("samples=", options[["ssm_advancedMcmcSamples"]]),
-    paste0("chains=", options[["ssm_advancedMcmcChains"]]),
-    paste0("thin=", options[["ssm_advancedMcmcThin"]]),
-    paste0("seed=", options[["ssm_advancedMcmcSeed"]]),
-    paste0("adaptDelta=", options[["ssm_advancedMcmcAdaptDelta"]]),
-    paste0("treeDepth=", options[["ssm_advancedMcmcMaxTreeDepth"]]),
-    paste0("nRows=", nrow(dataset))
-  )
-
-  cols <- c(options[["ssm_count"]], options[["ssm_sampleSize"]], options[["ssm_total"]], options[["ssm_time"]])
-  if (options[["ssm_scaleModel"]] == "WithPredictor" && options[["ssm_predictor"]] != "")
-    cols <- c(cols, options[["ssm_predictor"]])
-  cols <- unique(cols[nzchar(cols)])
-
-  for (col in cols) {
-    if (col %in% names(dataset))
-      parts <- c(parts, paste0("sig_", col, "=", .asSSM_colSignature(dataset[[col]])))
-  }
-
-  paste(parts, collapse = "|")
+.asSSM_setAnalysisError <- function(jaspResults, message) {
+  errorContainer <- createJaspContainer(title = "")
+  errorContainer$setError(message)
+  errorContainer$position <- 0
+  jaspResults[["placeholder"]] <- errorContainer
 }
 
 .asSSMReady <- function(options, dataset) {
@@ -126,13 +84,88 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
   if (is.null(dataset)) {
     dataset <- .readDataSetToEnd(columns.as.numeric = colsNumeric)
+  }
 
-    if (options[["ssm_time"]] != "" && options[["ssm_time"]] %in% colnames(dataset)) {
-      dataset <- dataset[order(dataset[[options[["ssm_time"]]]]), ]
-    }
+  if (!is.null(dataset) && options[["ssm_time"]] != "" && options[["ssm_time"]] %in% colnames(dataset)) {
+    dataset <- dataset[order(dataset[[options[["ssm_time"]]]]), , drop = FALSE]
   }
 
   return(dataset)
+}
+
+.asSSM_isWholeNumber <- function(x, tol = .Machine$double.eps^0.5) {
+  abs(x - round(x)) < tol
+}
+
+.asSSM_validateInputs <- function(dataset, options) {
+  if (is.null(dataset) || nrow(dataset) == 0L) {
+    return(gettext("The dataset is empty."))
+  }
+
+  usePredictor <- options[["ssm_scaleModel"]] == "WithPredictor" && options[["ssm_predictor"]] != ""
+  requiredCols <- c(
+    options[["ssm_count"]],
+    options[["ssm_sampleSize"]],
+    options[["ssm_total"]],
+    options[["ssm_time"]]
+  )
+  if (usePredictor)
+    requiredCols <- c(requiredCols, options[["ssm_predictor"]])
+  requiredCols <- unique(requiredCols[nzchar(requiredCols)])
+
+  missingCols <- setdiff(requiredCols, names(dataset))
+  if (length(missingCols) > 0L) {
+    return(gettextf(
+      "The following assigned variables are missing from the dataset: %1$s.",
+      paste(missingCols, collapse = ", ")
+    ))
+  }
+
+  count <- dataset[[options[["ssm_count"]]]]
+  sampleSize <- dataset[[options[["ssm_sampleSize"]]]]
+  lotSize <- dataset[[options[["ssm_total"]]]]
+  time <- dataset[[options[["ssm_time"]]]]
+
+  validateNumeric <- function(x, label, mustBeWhole = FALSE, mustBeNonNegative = FALSE) {
+    if (any(!is.finite(x))) {
+      return(gettextf("%1$s cannot contain missing or non-finite values.", label))
+    }
+    if (mustBeWhole && any(!.asSSM_isWholeNumber(x))) {
+      return(gettextf("%1$s must contain whole numbers only.", label))
+    }
+    if (mustBeNonNegative && any(x < 0)) {
+      return(gettextf("%1$s cannot contain negative values.", label))
+    }
+    NULL
+  }
+
+  msg <- validateNumeric(count, gettext("Defect Count"), mustBeWhole = TRUE, mustBeNonNegative = TRUE)
+  if (!is.null(msg)) return(msg)
+
+  msg <- validateNumeric(sampleSize, gettext("Sample Size"), mustBeWhole = TRUE, mustBeNonNegative = TRUE)
+  if (!is.null(msg)) return(msg)
+
+  msg <- validateNumeric(lotSize, gettext("Lot Size"), mustBeWhole = TRUE, mustBeNonNegative = TRUE)
+  if (!is.null(msg)) return(msg)
+
+  msg <- validateNumeric(time, gettext("Time"))
+  if (!is.null(msg)) return(msg)
+
+  if (usePredictor) {
+    predictor <- dataset[[options[["ssm_predictor"]]]]
+    msg <- validateNumeric(predictor, gettext("Predictor"))
+    if (!is.null(msg)) return(msg)
+  }
+
+  if (any(count > sampleSize)) {
+    return(gettext("Observed defects cannot exceed the sample size for any lot."))
+  }
+
+  if (any(sampleSize > lotSize)) {
+    return(gettext("Sample size cannot exceed the lot size for any lot."))
+  }
+
+  NULL
 }
 
 .asSSM_fitModel <- function(jaspResults, dataset, options) {
@@ -154,9 +187,9 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
   if (!is.null(jaspResults[["fit"]]$object)) return()
 
-  cacheKey <- .asSSM_fitCacheKey(dataset, options)
-  if (exists(cacheKey, envir = .asSSM_runtimeFitCache, inherits = FALSE)) {
-    jaspResults[["fit"]]$object <- get(cacheKey, envir = .asSSM_runtimeFitCache, inherits = FALSE)
+  validationError <- .asSSM_validateInputs(dataset, options)
+  if (!is.null(validationError)) {
+    .asSSM_setAnalysisError(jaspResults, validationError)
     return()
   }
 
@@ -222,16 +255,10 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
       samples = samples,
       summary = summary
     )
-    assign(cacheKey, jaspResults[["fit"]]$object, envir = .asSSM_runtimeFitCache)
 
   }, error = function(e) {
     msg <- gettextf("Estimation failed: %s", e$message)
-    fitObj <- jaspResults[["fit"]]
-    if (!is.null(fitObj) && is.function(fitObj$setError)) {
-      fitObj$setError(msg)
-      return()
-    }
-    stop(msg, call. = FALSE)
+    .asSSM_setAnalysisError(jaspResults, msg)
   })
 
   jaspBase::progressbarTick()
@@ -276,37 +303,38 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
   yT <- dataset[[options[["ssm_count"]]]][T_idx]
 
   if (is.na(sT) || is.na(yT)) {
-    table$setError("The Lot Size or Defect Count is missing (NA) for the last lot.")
+    table$setError(gettext("The Lot Size or Defect Count is missing (NA) for the last lot."))
     return()
   }
 
   y_pred <- samples$y_pred
+  pmf <- .asSSM_predictivePMF(y_pred, sT)
 
   if (options[["ssm_postHocCorrection"]]) {
-    y_pred <- .asSSM_applyAdHocCorrection(y_pred, sT, options[["ssm_postHocCorrectionWeight"]])
+    pmf <- .asSSM_correctedPredictivePMF(y_pred, sT, options[["ssm_postHocCorrectionWeight"]])
   }
 
   limit_AQL <- options[["ssm_controlLimitsLower"]] * sT
   limit_RQL <- options[["ssm_controlLimitsUpper"]] * sT
 
-  mass_below_AQL <- mean(y_pred < limit_AQL, na.rm = TRUE)
-  mass_above_RQL <- mean(y_pred > limit_RQL, na.rm = TRUE)
+  mass_below_AQL <- .asSSM_pmfMassBelow(pmf, limit_AQL)
+  mass_above_RQL <- .asSSM_pmfMassAbove(pmf, limit_RQL)
 
   acceptThreshold <- options[["ssm_decisionAcceptThreshold"]]
   rejectThreshold <- options[["ssm_decisionRejectThreshold"]]
 
-  decision <- "Continue"
+  decision <- gettext("Continue")
   if (!is.na(mass_above_RQL) && mass_above_RQL < acceptThreshold) {
-    decision <- "Accept"
+    decision <- gettext("Accept")
   } else if (!is.na(mass_above_RQL) && !is.na(mass_below_AQL) &&
              mass_above_RQL > acceptThreshold && mass_below_AQL < rejectThreshold) {
-    decision <- "Reject"
+    decision <- gettext("Reject")
   }
 
   table$addRows(list(
     t = T_idx,
     y = yT,
-    pred = median(y_pred, na.rm = TRUE),
+    pred = .asSSM_pmfMedian(pmf),
     massAQL = mass_below_AQL,
     massRQL = mass_above_RQL,
     decision = decision
@@ -350,7 +378,7 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
     ggplot2::geom_line(linewidth = 1) +
     ggplot2::labs(
       x = gettext("Lot"),
-      y = gettext("Defect Rate (%)")
+      y = gettextf("Defect Rate (%%)")
     ) +
     ggplot2::scale_x_continuous(breaks = xBreaks, limits = range(xBreaks)) +
     ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks)) +
@@ -384,19 +412,18 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
   samples <- jaspResults[["fit"]]$object$samples
   y_pred_raw <- samples$y_pred
-  y_pred     <- y_pred_raw
 
   sT <- dataset[[options[["ssm_total"]]]][nrow(dataset)]
-
+  pmf <- .asSSM_predictivePMF(y_pred_raw, sT)
   if (options[["ssm_postHocCorrection"]])
-    y_pred <- .asSSM_applyAdHocCorrection(y_pred, sT, options[["ssm_postHocCorrectionWeight"]])
+    pmf <- .asSSM_correctedPredictivePMF(y_pred_raw, sT, options[["ssm_postHocCorrectionWeight"]])
 
   limit_AQL <- options[["ssm_controlLimitsLower"]] * sT
   limit_RQL <- options[["ssm_controlLimitsUpper"]] * sT
 
   # Posterior probabilities for AQL / RQL regions
-  mass_below_AQL <- mean(y_pred < limit_AQL, na.rm = TRUE)
-  mass_above_RQL <- mean(y_pred > limit_RQL, na.rm = TRUE)
+  mass_below_AQL <- .asSSM_pmfMassBelow(pmf, limit_AQL)
+  mass_above_RQL <- .asSSM_pmfMassAbove(pmf, limit_RQL)
 
   # Plot range is based on the uncorrected predictive draws so the distribution
   # remains visible even when correction adds diffuse mass across the full lot size.
@@ -413,18 +440,24 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
   xLower <- min(xBreaks)
   xUpper <- max(xBreaks)
 
-  # Use the same plotting window as the axis ticks so bars can reach the edge ticks.
-  y_plot <- y_pred[y_pred >= xLower & y_pred <= xUpper]
-  if (length(y_plot) == 0L)
-    y_plot <- y_pred
+  # Aggregate the deterministic PMF into coarser display bins to keep the
+  # predictive plot visually similar to the original histogram-style output.
+  pmf_plot <- pmf[pmf$defects >= xLower & pmf$defects <= xUpper, , drop = FALSE]
+  if (nrow(pmf_plot) == 0L)
+    pmf_plot <- pmf
 
   breaks <- seq(xLower, xUpper, length.out = 31)
-  h <- hist(y_plot, breaks = breaks, plot = FALSE, include.lowest = TRUE, right = TRUE)
-  binWidth <- if (length(h$breaks) > 1L) (h$breaks[2] - h$breaks[1]) else 1
+  bin_ids <- cut(pmf_plot$defects, breaks = breaks, include.lowest = TRUE, right = TRUE, labels = FALSE)
+  mids <- head(breaks, -1L) + diff(breaks) / 2
+  probs <- tapply(pmf_plot$prob, bin_ids, sum)
   df_hist <- data.frame(
-    x = h$mids,
-    prob = if (length(y_pred) > 0) h$counts / length(y_pred) else h$counts
+    x = mids,
+    prob = 0
   )
+  if (length(probs) > 0L)
+    df_hist$prob[as.integer(names(probs))] <- as.numeric(probs)
+
+  binWidth <- if (length(breaks) > 1L) (breaks[2] - breaks[1]) else 1
 
   yBreaks <- jaspGraphs::getPrettyAxisBreaks(c(0, max(df_hist$prob)))
 
@@ -494,7 +527,7 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
   p <- ggplot2::ggplot(df, ggplot2::aes(x = .data$x)) +
     ggplot2::geom_density(fill = "#b3b3b3") +
     ggplot2::labs(
-      x = gettext("Defect Rate (%)"),
+      x = gettextf("Defect Rate (%%)"),
       y = gettext("Density")
     ) +
     ggplot2::scale_x_continuous(breaks = xBreaks, limits = range(xBreaks)) +
@@ -549,29 +582,64 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
   plot$plotObject <- p
 }
-.asSSM_applyAdHocCorrection <- function(y_pred_draws, sT, weightPercent) {
-  if (length(y_pred_draws) == 0L)
-    return(y_pred_draws)
 
+.asSSM_predictivePMF <- function(y_pred_draws, sT) {
   sMax <- floor(sT)
-  if (!is.finite(sMax) || sMax < 0)
-    return(y_pred_draws)
+  if (!is.finite(sMax) || sMax < 0) {
+    return(data.frame(defects = integer(0), prob = numeric(0)))
+  }
+
+  draws <- as.numeric(y_pred_draws)
+  draws <- draws[is.finite(draws)]
+  if (length(draws) == 0L) {
+    return(data.frame(defects = 0:sMax, prob = rep(0, sMax + 1L)))
+  }
+
+  draws <- as.integer(round(draws))
+  draws <- pmin(pmax(draws, 0L), as.integer(sMax))
+
+  probs <- tabulate(draws + 1L, nbins = sMax + 1L)
+  probs <- probs / sum(probs)
+
+  data.frame(defects = 0:sMax, prob = probs)
+}
+
+.asSSM_correctedPredictivePMF <- function(y_pred_draws, sT, weightPercent = 0) {
+  pmf <- .asSSM_predictivePMF(y_pred_draws, sT)
+  if (nrow(pmf) == 0L)
+    return(pmf)
 
   x <- weightPercent / 100
   if (!is.finite(x))
     x <- 0
   x <- max(0, min(1, x))
 
-  # Eq. (10): (1-x) * p_pred + x * Uniform{0,...,s_l}
-  # Draw-wise mixture sampling is equivalent to sampling from p_corrected.
-  corrected <- as.integer(round(y_pred_draws))
-  corrected <- pmin(pmax(corrected, 0L), as.integer(sMax))
+  pmf$prob <- (1 - x) * pmf$prob + x / nrow(pmf)
+  pmf
+}
 
-  mixIdx <- stats::runif(length(corrected)) < x
-  if (any(mixIdx))
-    corrected[mixIdx] <- sample.int(as.integer(sMax) + 1L, size = sum(mixIdx), replace = TRUE) - 1L
+.asSSM_pmfMassBelow <- function(pmf, threshold) {
+  if (nrow(pmf) == 0L)
+    return(NA_real_)
+  sum(pmf$prob[pmf$defects < threshold])
+}
 
-  corrected
+.asSSM_pmfMassAbove <- function(pmf, threshold) {
+  if (nrow(pmf) == 0L)
+    return(NA_real_)
+  sum(pmf$prob[pmf$defects > threshold])
+}
+
+.asSSM_pmfMedian <- function(pmf) {
+  if (nrow(pmf) == 0L)
+    return(NA_real_)
+
+  cumProb <- cumsum(pmf$prob)
+  idx <- which(cumProb >= 0.5)[1]
+  if (is.na(idx))
+    return(NA_real_)
+
+  pmf$defects[idx]
 }
 
 .asSSM_createMcmcSummaryTable <- function(jaspResults, dataset, options) {

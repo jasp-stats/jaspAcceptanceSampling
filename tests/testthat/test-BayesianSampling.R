@@ -63,3 +63,24 @@ test_that("Bayesian sampling - inference decision table is generated", {
   expect_equal(as.numeric(inf_table[[7]]$col_2), 0.110, tolerance = 1e-6)
   expect_equal(as.numeric(inf_table[[8]]$col_2), 0.001, tolerance = 1e-6)
 })
+
+test_that("Bayesian sampling - invalid impartial prior fails gracefully", {
+  options <- jaspTools::analysisOptions("BayesianSampling")
+
+  options$showPlansplan <- TRUE
+  options$priorPlotplan <- FALSE
+  options$showThreeBFplan <- FALSE
+  options$inferPosteriorinfer <- FALSE
+
+  options$aqlplan <- 0.5
+  options$rqlplan <- 0.9
+  options$priorplan <- "impartial"
+  options$impartialCustomModeplan <- TRUE
+  options$impartialModeplan <- 0.8
+
+  results <- jaspTools::runAnalysis("BayesianSampling", "test.csv", options)
+
+  expect_equal(results$status, "complete")
+  expect_true("planContainer" %in% names(results$results))
+  expect_false("planData" %in% names(results$results))
+})

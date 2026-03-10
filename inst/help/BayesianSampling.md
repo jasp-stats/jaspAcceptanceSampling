@@ -6,8 +6,8 @@ Bayesian Sampling
 -------
 ### 1. Planning
 - **Quality constraints**
- - *Acceptable Quality Level (AQL)*: lower defect-rate threshold for acceptable quality.
- - *Rejectable Quality Level (RQL)*: defect-rate threshold for unacceptable quality.
+ - *Acceptable Quality Level (AQL)*: used for the Good/Middle/Bad partition in the three-hypothesis workflow and as the default mode anchor for the impartial two-hypothesis prior.
+ - *Rejectable Quality Level (RQL)*: defect-rate threshold for unacceptable quality and the main threshold used in the two-hypothesis planning and inference workflow.
 - **Prior distribution (Beta)**
  - *Impartial (Around RQL)*: prior calibrated around RQL.
  - *Uniform*: Beta(1, 1).
@@ -41,3 +41,5 @@ Bayesian Sampling
 -------
 - The posterior uses Beta-Binomial updating from the selected prior and observed `(n, d)`.
 - Posterior predictive results are computed for lot-level defects conditional on observed sample data.
+- In the standard two-hypothesis workflow, planning targets evidence about whether the lot defect proportion is below the RQL.
+- AQL directly affects the three-hypothesis summaries and can also affect the two-hypothesis analysis indirectly through the default impartial prior mode.

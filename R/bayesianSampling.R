@@ -121,7 +121,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
   if (prior == "impartial") {
     mode <- if (isTRUE(impartialCustomMode) && !is.null(impartialMode)) impartialMode else aql
     if (mode <= 0 || mode >= rql)
-      stop(gettextf("The prior mode (%.4f) must be between 0 and the RQL (%.4f).", mode, rql))
+      stop(gettextf("The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f).", mode, rql))
     params <- .bsSolveImpartial(mode, rql)
     alpha  <- params$alpha
     beta   <- params$beta
@@ -236,7 +236,31 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
   # But alpha(1/mode) = 1 gives Beta(1, 1/mode) which may still be valid.
   # We search from just above where alpha > 0: b > (2*mode - 1)/mode.
   b_min <- max(1e-8, (2 * mode - 1) / mode + 1e-8)
-  result <- stats::uniroot(f, lower = b_min, upper = 1e4, tol = .Machine$double.eps)
+  f_lower <- suppressWarnings(tryCatch(f(b_min), error = function(e) NA_real_))
+  f_upper <- suppressWarnings(tryCatch(f(1e4), error = function(e) NA_real_))
+
+  if (!is.finite(f_lower) || !is.finite(f_upper) || f_lower * f_upper > 0) {
+    stop(
+      gettextf(
+        "Could not construct the impartial prior for mode %.4f and RQL %.4f. Please choose a lower mode, a lower RQL, or a different prior.",
+        mode, rql
+      ),
+      call. = FALSE
+    )
+  }
+
+  result <- tryCatch(
+    stats::uniroot(f, lower = b_min, upper = 1e4, tol = .Machine$double.eps),
+    error = function(e) {
+      stop(
+        gettextf(
+          "Could not construct the impartial prior for mode %.4f and RQL %.4f. Please choose a lower mode, a lower RQL, or a different prior.",
+          mode, rql
+        ),
+        call. = FALSE
+      )
+    }
+  )
   beta  <- result$root
   alpha <- alpha_from_beta(beta)
   list(alpha = alpha, beta = beta)
@@ -381,13 +405,22 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
     return()
   }
 
-  priorParams <- .bsCalculatePriorParams(
-    options$priorplan, aql, rql,
-    options$alphaplan, options$betaplan,
-    impartialCustomMode = options$impartialCustomModeplan,
-    impartialMode = options$impartialModeplan,
-    impartialThreeConstraint = options$impartialThreeConstraintplan
+  priorParams <- tryCatch(
+    .bsCalculatePriorParams(
+      options$priorplan, aql, rql,
+      options$alphaplan, options$betaplan,
+      impartialCustomMode = options$impartialCustomModeplan,
+      impartialMode = options$impartialModeplan,
+      impartialThreeConstraint = options$impartialThreeConstraintplan
+    ),
+    error = function(e) {
+      container$setError(conditionMessage(e))
+      return(NULL)
+    }
   )
+
+  if (is.null(priorParams))
+    return()
 
   if (!is.finite(priorParams$alpha) || !is.finite(priorParams$beta) ||
       priorParams$alpha <= 0 || priorParams$beta <= 0) {
@@ -445,13 +478,22 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
   # Always use prior from planning stage
   aql <- options$aqlplan
   rql <- options$rqlplan
-  priorParams <- .bsCalculatePriorParams(
-    options$priorplan, aql, rql,
-    options$alphaplan, options$betaplan,
-    impartialCustomMode = options$impartialCustomModeplan,
-    impartialMode = options$impartialModeplan,
-    impartialThreeConstraint = options$impartialThreeConstraintplan
+  priorParams <- tryCatch(
+    .bsCalculatePriorParams(
+      options$priorplan, aql, rql,
+      options$alphaplan, options$betaplan,
+      impartialCustomMode = options$impartialCustomModeplan,
+      impartialMode = options$impartialModeplan,
+      impartialThreeConstraint = options$impartialThreeConstraintplan
+    ),
+    error = function(e) {
+      container$setError(conditionMessage(e))
+      return(NULL)
+    }
   )
+
+  if (is.null(priorParams))
+    return()
 
   if (!is.finite(aql) || !is.finite(rql) || aql <= 0 || rql <= 0 || aql >= rql || rql >= 1) {
     container$setError(gettext("Please ensure 0 < AQL < RQL < 1."))
@@ -519,10 +561,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
 
     summaryText <- createJaspHtml(
       text = gettextf(
-        paste0(
-          "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL of <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>",
-          "Based on the observed sample, there is a <b>%4$.1f%%</b> predicted probability that the current lot of %5$d items contains at most %6$d total defects."
-        ),
+        "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL of <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>Based on the observed sample, there is a <b>%4$.1f%%</b> predicted probability that the current lot of %5$d items contains at most %6$d total defects.",
         rql, bf, bfInterpretation,
         ppdGoodMiddle * 100, as.integer(N), rql_count
       ),
@@ -808,9 +847,9 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
   aql_count <- floor(aql * N)
   rql_count <- floor(rql * N)
   
-  ppd_good_label   <- gettextf("PPD Good (\u2264 %d defects in Lot)", aql_count)
-  ppd_middle_label  <- gettextf("PPD Middle (> %d & \u2264 %d defects)", aql_count, rql_count)
-  ppd_bad_label     <- gettextf("PPD Bad (> %d defects in Lot)", rql_count)
+  ppd_good_label   <- gettextf("PPD Good (\u2264 %1$d defects in Lot)", aql_count)
+  ppd_middle_label  <- gettextf("PPD Middle (> %1$d & \u2264 %2$d defects)", aql_count, rql_count)
+  ppd_bad_label     <- gettextf("PPD Bad (> %1$d defects in Lot)", rql_count)
   
   table[["col_1"]] <- c(
     gettext("Sample Size (n)"),
@@ -837,38 +876,6 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
   table$addFootnote(gettext("Bayes factor interpretation: BF \u2265 10 (strong evidence for H\u2212), BF \u2265 3 (moderate evidence for H\u2212), BF < 0.33 (evidence for H+), 0.33 \u2264 BF < 3 (inconclusive)."))
   
   container[["inferenceDecisionTable"]] <- table
-}
-
-.bsInferenceTable <- function(container, alpha_prior, beta_prior, n, d, alpha_post, beta_post, position, isUpdate = FALSE) {
-
-  title <- if (isUpdate) gettext("Current Knowledge Summary") else gettext("Posterior Parameter Summary")
-  table <- createJaspTable(title = title, position = position)
-
-  table$addColumnInfo(name = "type",  title = "",                  type = "string")
-  table$addColumnInfo(name = "alpha", title = gettext("\u03B1"),   type = "number", format = "dp:3")
-  table$addColumnInfo(name = "beta",  title = gettext("\u03B2"),    type = "number", format = "dp:3")
-
-  if (isUpdate) {
-    # Use a nested list for addRows to ensure perfect column mapping
-    rowFinal <- list(
-      type  = gettext("Updated Posterior"),
-      alpha = alpha_post,
-      beta  = beta_post
-    )
-    table$addRows(rowFinal)
-
-    table$addFootnote(gettext("These are the parameters of your current belief after all data. Use these as a 'Custom' prior if you start a completely new analysis file."))
-
-  } else {
-    rows <- list(
-      list(type = gettext("Prior"),           alpha = alpha_prior, beta = beta_prior),
-      list(type = gettext("Data (d, n-d)"),   alpha = d,           beta = n - d),
-      list(type = gettext("Posterior"),       alpha = alpha_post,  beta = beta_post)
-    )
-    table$setData(rows)
-  }
-
-  container[["summaryTable"]] <- table
 }
 
 .bsProcedure <- function(jaspResults, options, position) {
