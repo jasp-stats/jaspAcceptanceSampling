@@ -4,6 +4,13 @@ context("Example: BaySSM")
 # The JASP file is stored in the module's examples/ folder.
 
 test_that("BayesianSSMforAS runs without error", {
+  old_module_dirs <- jaspTools:::getPkgOption("module.dirs")
+  old_reinstall_modules <- jaspTools:::getPkgOption("reinstall.modules")
+  on.exit({
+    jaspTools::setPkgOption("module.dirs", old_module_dirs)
+    jaspTools::setPkgOption("reinstall.modules", old_reinstall_modules)
+  }, add = TRUE)
+
   jaspTools::setPkgOption("module.dirs", normalizePath(testthat::test_path("..", "..")))
   jaspTools::setPkgOption("reinstall.modules", FALSE)
 

@@ -34,10 +34,10 @@
     }
 
     module_obj <- NULL
-    class_name <- NULL
     module_class <- NULL
 
     for (module_name in module_candidates) {
+      class_name <- NULL
       module_obj <- tryCatch(
         Rcpp::Module(module_name, PACKAGE = "jaspAcceptanceSampling", mustStart = TRUE),
         error = function(e) NULL

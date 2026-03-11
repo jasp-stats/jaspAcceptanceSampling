@@ -873,7 +873,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options) {
     sprintf("%.3f", ppd$bad)
   )
   
-  table$addFootnote(gettext("Bayes factor interpretation: BF \u2265 10 (strong evidence for H\u2212), BF \u2265 3 (moderate evidence for H\u2212), BF < 0.33 (evidence for H+), 0.33 \u2264 BF < 3 (inconclusive)."))
+  table$addFootnote(gettext("Bayes factor interpretation: BF \u2265 10 (strong evidence for H\u2212), 3 \u2264 BF < 10 (moderate evidence for H\u2212), 0.33 \u2264 BF < 3 (inconclusive), 0.10 \u2264 BF < 0.33 (moderate evidence for H+), BF < 0.10 (strong evidence for H+)."))
   
   container[["inferenceDecisionTable"]] <- table
 }

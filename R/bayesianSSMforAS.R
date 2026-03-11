@@ -303,9 +303,10 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
     decision = character(0)
   ))
 
-  if (is.null(jaspResults[["fit"]]$object)) return()
+  fit <- jaspResults[["fit"]]
+  if (is.null(fit) || is.null(fit$object)) return()
 
-  samples <- jaspResults[["fit"]]$object$samples
+  samples <- fit$object$samples
 
   T_idx <- nrow(dataset)
   sT <- dataset[[options[["ssm_total"]]]][T_idx]        # total lot size
@@ -694,9 +695,10 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
     Rhat = numeric(0)
   ))
 
-  if (is.null(jaspResults[["fit"]]$object)) return()
+  fit <- jaspResults[["fit"]]
+  if (is.null(fit) || is.null(fit$object)) return()
 
-  sm <- jaspResults[["fit"]]$object$summary
+  sm <- fit$object$summary
   allNames <- rownames(sm)
   pars <- character(0)
 
