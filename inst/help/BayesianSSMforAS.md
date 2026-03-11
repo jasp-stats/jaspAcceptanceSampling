@@ -12,7 +12,7 @@ Bayesian State-Space Sampling
 - **Predictor** (optional): external covariate when model type includes predictor.
 
 ### Settings
-- **Acceptance limits**: lower (AQL-like) and upper (RQL-like) defect-rate limits.
+- **Acceptance limits**: lower (AQL) and upper (RQL) defect-rate limits.
 - **Sudden jump tail correction**: optional post hoc correction and weight.
 - **Decision rule**: thresholds for accept/reject decisions based on posterior probabilities.
 

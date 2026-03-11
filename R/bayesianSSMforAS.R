@@ -284,11 +284,11 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
     ))
     table$position <- 0
 
-    table$addColumnInfo(name = "t",        title = gettext("Lot Number"),              type = "integer")
-    table$addColumnInfo(name = "y",        title = gettext("Observed Defects"),         type = "integer")
-    table$addColumnInfo(name = "pred",     title = gettext("Median Predicted Defects"), type = "number")
-    table$addColumnInfo(name = "massAQL",  title = gettext("P(Defects < AQL Limit)"),   type = "number", format = "dp:3")
-    table$addColumnInfo(name = "massRQL",  title = gettext("P(Defects > RQL Limit)"),   type = "number", format = "dp:3")
+    table$addColumnInfo(name = "t",        title = gettext("Lot Nr."),              type = "integer")
+    table$addColumnInfo(name = "y",        title = gettext("Obs. Defects"),         type = "integer")
+    table$addColumnInfo(name = "pred",     title = gettext("Median Pred. Defects"), type = "number")
+    table$addColumnInfo(name = "massAQL",  title = gettext("Mass < AQL"),           type = "number", format = "dp:3")
+    table$addColumnInfo(name = "massRQL",  title = gettext("Mass > RQL"),           type = "number", format = "dp:3")
     table$addColumnInfo(name = "decision", title = gettext("Decision"),                 type = "string")
 
     jaspResults[["summaryTable"]] <- table
@@ -333,12 +333,12 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
   acceptThreshold <- options[["ssm_decisionAcceptThreshold"]]
   rejectThreshold <- options[["ssm_decisionRejectThreshold"]]
 
-  decision <- gettext("Continue")
+  decision <- gettext("Consider to Continue")
   if (!is.na(mass_above_RQL) && mass_above_RQL < acceptThreshold) {
-    decision <- gettext("Accept")
+    decision <- gettext("Consider to Accept")
   } else if (!is.na(mass_above_RQL) && !is.na(mass_below_AQL) &&
              mass_above_RQL > acceptThreshold && mass_below_AQL < rejectThreshold) {
-    decision <- gettext("Reject")
+    decision <- gettext("Consider to Reject")
   }
 
   table$setData(list(
@@ -372,9 +372,10 @@ bayesianSSMforASInternal <- function(jaspResults, dataset, options) {
 
   samples <- jaspResults[["fit"]]$object$samples
   theta <- samples$theta * 100
+  timeValues <- dataset[[options[["ssm_time"]]]]
 
   df <- data.frame(
-    time  = 1:ncol(theta),
+    time  = timeValues,
     mean  = colMeans(theta),
     lower = apply(theta, 2, quantile, 0.025),
     upper = apply(theta, 2, quantile, 0.975)

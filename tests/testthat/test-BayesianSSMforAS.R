@@ -73,7 +73,7 @@ test_that("BayesianSSMforAS - summary table is generated", {
 
   summaryRows <- results$results$summaryTable$data
   expect_equal(length(summaryRows), 1)
-  expect_true(summaryRows[[1]]$decision %in% c("Accept", "Reject", "Continue"))
+  expect_true(summaryRows[[1]]$decision %in% c("Consider to Accept", "Consider to Reject", "Consider to Continue"))
   expect_true(is.numeric(summaryRows[[1]]$massAQL))
   expect_true(is.numeric(summaryRows[[1]]$massRQL))
 })

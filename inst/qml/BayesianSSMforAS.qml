@@ -13,7 +13,7 @@ Form
 		AssignedVariablesList { name: "ssm_count"; title: qsTr("Defect Count"); allowedColumns: ["scale"]; singleVariable: true }
 		AssignedVariablesList { name: "ssm_sampleSize"; title: qsTr("Sample Size (tested items)"); allowedColumns: ["scale"]; singleVariable: true }
 		AssignedVariablesList { name: "ssm_total"; title: qsTr("Lot Size (total items)"); allowedColumns: ["scale"]; singleVariable: true }
-		AssignedVariablesList { name: "ssm_time"; title: qsTr("Time"); allowedColumns: ["scale", "ordinal"]; singleVariable: true }
+		AssignedVariablesList { name: "ssm_time"; title: qsTr("Lot Number"); allowedColumns: ["scale", "ordinal"]; singleVariable: true }
 		AssignedVariablesList { name: "ssm_predictor"; title: qsTr("Predictor"); allowedColumns: ["scale"]; singleVariable: true; visible: scaleModel.currentValue === "WithPredictor" }
 	}
 
@@ -37,8 +37,8 @@ Form
 		Group
 		{
 			title: qsTr("Acceptance Limits")
-			DoubleField { id: lowerLimit; name: "ssm_controlLimitsLower"; label: qsTr("Lower limit (AQL-like)"); defaultValue: 0.05; min: 0; max: upperLimit.value }
-			DoubleField { id: upperLimit; name: "ssm_controlLimitsUpper"; label: qsTr("Upper limit (RQL-like)"); defaultValue: 0.10; min: lowerLimit.value; max: 1 }
+			DoubleField { id: lowerLimit; name: "ssm_controlLimitsLower"; label: qsTr("Lower limit (AQL)"); defaultValue: 0.05; min: 0; max: upperLimit.value }
+			DoubleField { id: upperLimit; name: "ssm_controlLimitsUpper"; label: qsTr("Upper limit (RQL)"); defaultValue: 0.10; min: lowerLimit.value; max: 1 }
 		}
 
 		Group
