@@ -1,14 +1,27 @@
 # Tests for Bayesian State-Space Sampling
 
-test_that("BayesianSSMforAS - readData sorts preloaded data by time", {
-  options <- list(
-    ssm_count = "count",
-    ssm_sampleSize = "n",
-    ssm_total = "N",
-    ssm_time = "time",
-    ssm_scaleModel = "WithoutPredictor",
-    ssm_predictor = ""
-  )
+test_that("BayesianSSMforAS - analysis uses time-sorted data", {
+  options <- jaspTools::analysisOptions("BayesianSSMforAS")
+
+  options$ssm_count <- "count"
+  options$ssm_sampleSize <- "n"
+  options$ssm_total <- "N"
+  options$ssm_time <- "time"
+  options$ssm_scaleModel <- "WithoutPredictor"
+
+  options$ssm_statePlot <- FALSE
+  options$ssm_predictionPlot <- FALSE
+  options$ssm_posteriorDistPlot <- FALSE
+  options$ssm_plotBeta <- FALSE
+  options$ssm_showMcmcSummary <- FALSE
+
+  options$ssm_advancedMcmcBurnin <- 100
+  options$ssm_advancedMcmcSamples <- 100
+  options$ssm_advancedMcmcChains <- 1
+  options$ssm_advancedMcmcThin <- 1
+  options$ssm_advancedMcmcSeed <- 123
+  options$ssm_advancedMcmcAdaptDelta <- 0.9
+  options$ssm_advancedMcmcMaxTreeDepth <- 8
 
   ssmData <- data.frame(
     count = c(3, 1, 2),
@@ -17,10 +30,15 @@ test_that("BayesianSSMforAS - readData sorts preloaded data by time", {
     time  = c(3, 1, 2)
   )
 
-  sortedData <- jaspAcceptanceSampling:::.asSSM_readData(ssmData, options)
+  csvPath <- tempfile(fileext = ".csv")
+  utils::write.csv(ssmData, csvPath, row.names = FALSE)
 
-  expect_equal(sortedData$time, c(1, 2, 3))
-  expect_equal(sortedData$count, c(1, 2, 3))
+  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options)
+
+  expect_equal(results$status, "complete")
+  expect_true("summaryTable" %in% names(results$results))
+  expect_equal(results$results$summaryTable$data[[1]]$t, 3)
+  expect_equal(results$results$summaryTable$data[[1]]$y, 3)
 })
 
 test_that("BayesianSSMforAS - options load", {
