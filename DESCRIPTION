@@ -9,6 +9,7 @@ Maintainer: JASP Team <info@jasp-stats.org>
 Description: Lot sampling for acceptance/rejection of lots
 License: GPL (>= 2)
 Encoding: UTF-8
+NeedsCompilation: yes
 Imports:
   abtest (>= 0.2.1),
   AcceptanceSampling,
