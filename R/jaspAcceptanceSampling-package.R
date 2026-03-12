@@ -1,15 +1,14 @@
 #' jaspAcceptanceSampling: Lot Sampling for Acceptance/Rejection of Lots
 #'
 #' Package-level imports and shared registration for the Acceptance Sampling
-#' module. The Stan toolchain is bootstrapped via rstantools configure scripts
-#' to keep the generated build configuration aligned across platforms.
+#' module. RcppParallel runtime libraries are imported explicitly so the
+#' package DLL can resolve its TBB dependency during loading on Windows.
 #'
 #' @keywords internal
 #' @docType package
 #' @name jaspAcceptanceSampling-package
 #' @aliases jaspAcceptanceSampling jaspAcceptanceSampling-package
 #' @import Rcpp
-#' @import rstantools
 #' @importFrom RcppParallel RcppParallelLibs
 #' @useDynLib jaspAcceptanceSampling, .registration = TRUE
 "_PACKAGE"

@@ -1,7 +1,6 @@
 import(jaspBase)
 import(methods)
 import(Rcpp)
-import(rstantools)
 importFrom(RcppParallel,RcppParallelLibs)
 export(AnalyzeAttributePlan)
 export(CreateAttributePlan)
