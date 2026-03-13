@@ -27,7 +27,7 @@ test_that("BayesianSSMforAS - analysis uses time-sorted data", {
     count = c(3, 1, 2),
     n     = c(20, 20, 20),
     N     = c(100, 100, 100),
-    time  = c(3, 1, 2)
+    time  = c(30, 10, 20)
   )
 
   csvPath <- tempfile(fileext = ".csv")
@@ -37,7 +37,7 @@ test_that("BayesianSSMforAS - analysis uses time-sorted data", {
 
   expect_equal(results$status, "complete")
   expect_true("summaryTable" %in% names(results$results))
-  expect_equal(results$results$summaryTable$data[[1]]$t, 3)
+  expect_equal(results$results$summaryTable$data[[1]]$t, 30)
   expect_equal(results$results$summaryTable$data[[1]]$y, 3)
 })
 

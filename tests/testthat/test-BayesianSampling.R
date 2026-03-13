@@ -84,3 +84,37 @@ test_that("Bayesian sampling - invalid impartial prior fails gracefully", {
   expect_true("planContainer" %in% names(results$results))
   expect_false("planData" %in% names(results$results))
 })
+
+test_that("Bayesian sampling - three-hypothesis probabilities remain a valid partition", {
+  options <- jaspTools::analysisOptions("BayesianSampling")
+
+  options$showPlansplan <- FALSE
+  options$priorPlotplan <- FALSE
+  options$showThreeBFplan <- TRUE
+  options$inferPosteriorinfer <- FALSE
+  options$priorplan <- "impartial_three"
+  options$aqlplan <- 0.05
+  options$rqlplan <- 0.15
+
+  results <- jaspTools::runAnalysis("BayesianSampling", "test.csv", options)
+
+  expect_equal(results$status, "complete")
+
+  three_bf_table <- results[["results"]][["planContainer"]][["collection"]][["planContainer_threeBFTable"]][["data"]]
+  expect_true(length(three_bf_table) >= 1)
+
+  first_row <- three_bf_table[[1]]
+  expect_equal(
+    as.numeric(first_row$prior_good) + as.numeric(first_row$prior_middle) + as.numeric(first_row$prior_bad),
+    1,
+    tolerance = 1e-10
+  )
+  expect_equal(
+    as.numeric(first_row$post_good) + as.numeric(first_row$post_middle) + as.numeric(first_row$post_bad),
+    1,
+    tolerance = 1e-10
+  )
+  expect_true(is.finite(as.numeric(first_row$BF_GB)))
+  expect_true(is.finite(as.numeric(first_row$BF_GM)))
+  expect_true(is.finite(as.numeric(first_row$BF_MB)))
+})

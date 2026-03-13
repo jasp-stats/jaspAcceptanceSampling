@@ -60,6 +60,26 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   pmax(pmin(p, 1 - eps), eps)
 }
 
+.bsNormalizeProbTriplet <- function(p_good, p_middle, p_bad) {
+  p_good   <- pmax(p_good, 0)
+  p_middle <- pmax(p_middle, 0)
+  p_bad    <- pmax(p_bad, 0)
+
+  total <- p_good + p_middle + p_bad
+  if (!is.finite(total) || total <= 0)
+    return(c(good = NA_real_, middle = NA_real_, bad = NA_real_))
+
+  c(
+    good = p_good / total,
+    middle = p_middle / total,
+    bad = p_bad / total
+  )
+}
+
+.bsSafeLogProb <- function(p, eps = 1e-12) {
+  log(pmax(p, eps))
+}
+
 # Beta-Binomial PMF: P(X = x | n_trials, alpha, beta)
 .bsBetaBinomPMF <- function(x, n_trials, alpha, beta) {
   exp(lchoose(n_trials, x) +
@@ -290,11 +310,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   p_middle <- pR - pA
   p_bad    <- 1 - pR
 
-  p_good   <- .bsClipProb(p_good, eps)
-  p_middle <- .bsClipProb(p_middle, eps)
-  p_bad    <- .bsClipProb(p_bad, eps)
-
-  c(good = p_good, middle = p_middle, bad = p_bad)
+  .bsNormalizeProbTriplet(p_good, p_middle, p_bad)
 }
 
 .bsLogBFThreeHyp <- function(aql, rql, n, d, alpha, beta, eps = 1e-12) {
@@ -305,9 +321,12 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   post  <- .bsThreeRegionProbs(aql, rql, alpha + d, beta + n - d, eps)
 
   # log BF_ij = log( (post_i/post_j) / (prior_i/prior_j) )
-  logBF_GB <- (log(post["good"])   - log(post["bad"]))   - (log(prior["good"])   - log(prior["bad"]))
-  logBF_GM <- (log(post["good"])   - log(post["middle"]))- (log(prior["good"])   - log(prior["middle"]))
-  logBF_MB <- (log(post["middle"]) - log(post["bad"]))   - (log(prior["middle"]) - log(prior["bad"]))
+  logBF_GB <- (.bsSafeLogProb(post["good"], eps)   - .bsSafeLogProb(post["bad"], eps))    -
+              (.bsSafeLogProb(prior["good"], eps)  - .bsSafeLogProb(prior["bad"], eps))
+  logBF_GM <- (.bsSafeLogProb(post["good"], eps)   - .bsSafeLogProb(post["middle"], eps)) -
+              (.bsSafeLogProb(prior["good"], eps)  - .bsSafeLogProb(prior["middle"], eps))
+  logBF_MB <- (.bsSafeLogProb(post["middle"], eps) - .bsSafeLogProb(post["bad"], eps))    -
+              (.bsSafeLogProb(prior["middle"], eps)- .bsSafeLogProb(prior["bad"], eps))
 
   c(
     logBF_GB = as.numeric(logBF_GB),

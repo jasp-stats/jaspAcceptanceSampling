@@ -284,7 +284,7 @@ bayesianSSMforASInternal <- function(jaspResults, dataset = NULL, options) {
     ))
     table$position <- 0
 
-    table$addColumnInfo(name = "t",        title = gettext("Lot Nr."),              type = "integer")
+    table$addColumnInfo(name = "t",        title = gettext("Lot Nr."),              type = "number")
     table$addColumnInfo(name = "y",        title = gettext("Obs. Defects"),         type = "integer")
     table$addColumnInfo(name = "pred",     title = gettext("Median Pred. Defects"), type = "number")
     table$addColumnInfo(name = "massAQL",  title = gettext("Mass < AQL"),           type = "number", format = "dp:3")
@@ -309,12 +309,13 @@ bayesianSSMforASInternal <- function(jaspResults, dataset = NULL, options) {
   samples <- fit$object$samples
 
   T_idx <- nrow(dataset)
+  tT <- dataset[[options[["ssm_time"]]]][T_idx]
   sT <- dataset[[options[["ssm_total"]]]][T_idx]        # total lot size
   nT <- dataset[[options[["ssm_sampleSize"]]]][T_idx]   # sample size
   yT <- dataset[[options[["ssm_count"]]]][T_idx]
 
-  if (is.na(sT) || is.na(yT)) {
-    table$setError(gettext("The Lot Size or Defect Count is missing (NA) for the last lot."))
+  if (is.na(tT) || is.na(sT) || is.na(yT)) {
+    table$setError(gettext("The Lot Number, Lot Size, or Defect Count is missing (NA) for the last lot."))
     return()
   }
 
@@ -343,7 +344,7 @@ bayesianSSMforASInternal <- function(jaspResults, dataset = NULL, options) {
   }
 
   table$setData(list(
-    t = T_idx,
+    t = tT,
     y = yT,
     pred = .asSSM_pmfMedian(pmf),
     massAQL = mass_below_AQL,
