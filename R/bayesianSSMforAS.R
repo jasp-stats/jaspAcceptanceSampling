@@ -155,6 +155,10 @@ bayesianSSMforASInternal <- function(jaspResults, dataset = NULL, options) {
     predictor <- dataset[[options[["ssm_predictor"]]]]
     msg <- validateNumeric(predictor, gettext("Predictor"))
     if (!is.null(msg)) return(msg)
+    predictorSD <- stats::sd(predictor)
+    if (!is.finite(predictorSD) || predictorSD <= .Machine$double.eps^0.5) {
+      return(gettext("Predictor must vary across lots when using the predictor model."))
+    }
   }
 
   if (any(count > sampleSize)) {

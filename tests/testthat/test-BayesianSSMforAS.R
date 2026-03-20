@@ -182,3 +182,45 @@ test_that("BayesianSSMforAS - invalid lot inputs fail gracefully before Stan", {
   expect_true("placeholder" %in% names(results$results))
   expect_false("summaryTable" %in% names(results$results))
 })
+
+test_that("BayesianSSMforAS - constant predictor fails gracefully before Stan", {
+  options <- jaspTools::analysisOptions("BayesianSSMforAS")
+
+  options$ssm_count <- "count"
+  options$ssm_sampleSize <- "n"
+  options$ssm_total <- "N"
+  options$ssm_time <- "time"
+  options$ssm_scaleModel <- "WithPredictor"
+  options$ssm_predictor <- "temp"
+
+  options$ssm_statePlot <- FALSE
+  options$ssm_predictionPlot <- FALSE
+  options$ssm_posteriorDistPlot <- FALSE
+  options$ssm_plotBeta <- FALSE
+  options$ssm_showMcmcSummary <- FALSE
+
+  options$ssm_advancedMcmcBurnin <- 100
+  options$ssm_advancedMcmcSamples <- 100
+  options$ssm_advancedMcmcChains <- 1
+  options$ssm_advancedMcmcThin <- 1
+  options$ssm_advancedMcmcSeed <- 123
+  options$ssm_advancedMcmcAdaptDelta <- 0.9
+  options$ssm_advancedMcmcMaxTreeDepth <- 8
+
+  invalidData <- data.frame(
+    count = c(1, 0, 2, 1, 1),
+    n     = c(20, 20, 20, 20, 20),
+    N     = c(100, 100, 100, 100, 100),
+    time  = 1:5,
+    temp  = rep(20, 5)
+  )
+
+  csvPath <- tempfile(fileext = ".csv")
+  utils::write.csv(invalidData, csvPath, row.names = FALSE)
+
+  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options)
+
+  expect_equal(results$status, "complete")
+  expect_true("placeholder" %in% names(results$results))
+  expect_false("summaryTable" %in% names(results$results))
+})

@@ -683,14 +683,15 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   plans2$prior_bad    <- unname(prior["bad"])
 
   # Posterior region probs at d = c (row-wise)
-  post_good   <- pbeta(aql, alpha + plans2$c, beta + plans2$n - plans2$c)
-  post_rql    <- pbeta(rql, alpha + plans2$c, beta + plans2$n - plans2$c)
-  post_middle <- post_rql - post_good
-  post_bad    <- 1 - post_rql
+  post_matrix <- t(mapply(
+    FUN = function(a_post, b_post) .bsThreeRegionProbs(aql, rql, a_post, b_post),
+    a_post = alpha + plans2$c,
+    b_post = beta + plans2$n - plans2$c
+  ))
 
-  plans2$post_good   <- .bsClipProb(post_good)
-  plans2$post_middle <- .bsClipProb(post_middle)
-  plans2$post_bad    <- .bsClipProb(post_bad)
+  plans2$post_good   <- unname(post_matrix[, "good"])
+  plans2$post_middle <- unname(post_matrix[, "middle"])
+  plans2$post_bad    <- unname(post_matrix[, "bad"])
 
   table <- createJaspTable(
     title = gettext("Three-Hypothesis Bayes Factors (at d = c)"),
