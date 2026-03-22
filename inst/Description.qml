@@ -60,4 +60,28 @@ Description
 		qml:	"DecideVariableLots.qml"
 		func:	"DecideVariableLots"
 	}
+
+	Separator {}
+
+	GroupTitle
+	{
+		title:	qsTr("Bayesian Sampling")
+		icon:	"acceptance_sampling.svg"
+	}
+
+	Analysis
+	{
+		title:	qsTr("Bayesian Sampling")
+		qml:	"BayesianSampling.qml"
+		func:	"BayesianSampling"
+		preloadData: true
+	}
+
+	Analysis
+	{
+		title:	qsTr("Bayesian State-Space Sampling")
+		qml:	"BayesianSSMforAS.qml"
+		func:	"BayesianSSMforAS"
+		preloadData: true
+	}
 }
