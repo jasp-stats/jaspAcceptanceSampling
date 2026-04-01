@@ -95,6 +95,7 @@ Form
 					label: qsTr("\u03B1")
 					defaultValue: 1
 					min: 0
+					max: 10000
 				}
 
 				DoubleField {
@@ -102,6 +103,7 @@ Form
 					label: qsTr("\u03B2")
 					defaultValue: 1
 					min: 0
+					max: 10000
 				}
 
 			}
@@ -168,17 +170,18 @@ Form
 		columns: 1
 		id: infer
 
-		CheckBox
-		{
-			id: inferPosterior
-			name: "inferPosteriorinfer"
-			label: qsTr("Use data to create posterior distribution")
-		}
-
 		Group
 		{
-			enabled: inferPosterior.checked
+			CheckBox
+			{
+				id: inferPosterior
+				name: "inferPosteriorinfer"
+				label: qsTr("Use data to create posterior distribution")
+			}
 
+			Group
+			{
+				enabled: inferPosterior.checked
 
 				IntegerField {
 					id: data_n
@@ -210,11 +213,12 @@ Form
 			Group
 			{
 				title: qsTr("Output Options")
+				enabled: inferPosterior.checked
 
 				CheckBox { name: "showInferenceTableinfer"; label: qsTr("Inference decision table") }
 				CheckBox { name: "posteriorPlotinfer"; label: qsTr("Posterior plot") }
 				CheckBox { name: "ppdPlotinfer"; label: qsTr("Posterior predictive distribution plot") }
+			}
 		}
 	}
 }
-

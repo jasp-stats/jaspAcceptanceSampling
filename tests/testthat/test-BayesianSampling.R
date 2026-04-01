@@ -85,6 +85,105 @@ test_that("Bayesian sampling - invalid impartial prior fails gracefully", {
   expect_false("planData" %in% names(results$results))
 })
 
+test_that("Bayesian sampling - extreme custom prior values do not crash plan generation", {
+  plans <- jaspAcceptanceSampling:::.bsGeneratePlans(
+    aql = 0.05,
+    rql = 0.10,
+    max_n = 5,
+    min_bf = 30,
+    alpha = 100000,
+    beta = 100000
+  )
+
+  expect_true(is.data.frame(plans))
+})
+
+test_that("Bayesian sampling - uniform prior ignores stale custom mode values", {
+  priorParams <- jaspAcceptanceSampling:::.bsCalculatePriorParams(
+    prior = "uniform",
+    aql = 0.05,
+    rql = 0.10,
+    impartialCustomMode = TRUE,
+    impartialMode = 0.50
+  )
+
+  expect_equal(priorParams$alpha, 1)
+  expect_equal(priorParams$beta, 1)
+})
+
+test_that("Bayesian sampling - posterior predictive x-axis covers full support", {
+  xScale <- jaspAcceptanceSampling:::.bsPPDXScale(0:67)
+
+  expect_true(all(diff(xScale$breaks) >= 0))
+  expect_lte(xScale$limits[1], 0)
+  expect_gte(xScale$limits[2], 67)
+})
+
+test_that("Bayesian sampling - y-axis scale covers the full plotted range", {
+  yScale <- jaspAcceptanceSampling:::.bsYScale(c(0, 12.5))
+
+  expect_true(all(diff(yScale$breaks) >= 0))
+  expect_equal(yScale$limits[1], 0)
+  expect_gte(yScale$limits[2], 12.5)
+  expect_lt(yScale$label_y, yScale$limits[2])
+})
+
+test_that("Bayesian sampling - off-range predictive thresholds are hidden", {
+  expect_null(
+    jaspAcceptanceSampling:::.bsVisibleThreshold(
+      x = 10,
+      label = "AQL",
+      side = "left",
+      lower = 39.5,
+      upper = 95.5,
+      min_offset = 0.75
+    )
+  )
+})
+
+test_that("Bayesian sampling - errored containers are refreshed before reuse", {
+  staleContainer <- list(getError = function() TRUE)
+
+  refreshed <- jaspAcceptanceSampling:::.bsReuseOrRefreshContainer(
+    staleContainer,
+    "Planning",
+    jaspAcceptanceSampling:::.bsPlanningDeps()
+  )
+
+  cleanContainer <- list(getError = function() FALSE)
+  reused <- jaspAcceptanceSampling:::.bsReuseOrRefreshContainer(
+    cleanContainer,
+    "Planning",
+    jaspAcceptanceSampling:::.bsPlanningDeps()
+  )
+
+  expect_false(identical(refreshed, staleContainer))
+  expect_identical(reused, cleanContainer)
+})
+
+test_that("Bayesian sampling - plot outputs are generated", {
+  options <- jaspTools::analysisOptions("BayesianSampling")
+
+  options$showPlansplan <- FALSE
+  options$priorPlotplan <- TRUE
+  options$showThreeBFplan <- FALSE
+
+  options$inferPosteriorinfer <- TRUE
+  options$showInferenceTableinfer <- FALSE
+  options$posteriorPlotinfer <- TRUE
+  options$ppdPlotinfer <- TRUE
+
+  results <- jaspTools::runAnalysis("BayesianSampling", "test.csv", options)
+
+  priorPlotName <- results[["results"]][["planContainer"]][["collection"]][["planContainer_distPlotPrior"]][["data"]]
+  posteriorPlotName <- results[["results"]][["infContainer"]][["collection"]][["infContainer_distPlotPosterior"]][["data"]]
+  ppdPlotName <- results[["results"]][["infContainer"]][["collection"]][["infContainer_ppdPlot"]][["data"]]
+
+  expect_true(priorPlotName %in% names(results[["state"]][["figures"]]))
+  expect_true(posteriorPlotName %in% names(results[["state"]][["figures"]]))
+  expect_true(ppdPlotName %in% names(results[["state"]][["figures"]]))
+})
+
 test_that("Bayesian sampling - three-hypothesis probabilities remain a valid partition", {
   options <- jaspTools::analysisOptions("BayesianSampling")
 

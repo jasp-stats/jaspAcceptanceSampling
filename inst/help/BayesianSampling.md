@@ -24,7 +24,7 @@ Bayesian Sampling
 ### 2. Inference
 - **Use data to create posterior distribution**
  - *Sample size (n)*
- - *Observed defects (d)*
+ - *Observed defects in the sample (d)*
  - *Lot size (N)*
 - **Output options**
  - *Inference decision table*

@@ -125,10 +125,17 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 
 
 .bsCalculateBF <- function(rql, n, c, alpha, beta, prior_odds) {
-  posterior_in_favor <- pbeta(rql, alpha + c, beta + n - c)
+  if (!is.finite(prior_odds) || prior_odds <= 0)
+    return(NA_real_)
+
+  posterior_in_favor <- .bsClipProb(pbeta(rql, alpha + c, beta + n - c))
   posterior_odds <- posterior_in_favor / (1 - posterior_in_favor)
   bf <- posterior_odds / prior_odds
-  return(bf)
+
+  if (!is.finite(bf))
+    return(NA_real_)
+
+  bf
 }
 
 # Utility functions
@@ -338,7 +345,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 .bsGeneratePlans <- function(aql, rql, max_n, min_bf, alpha, beta,
                              add_three_hyp = FALSE, eps = 1e-12) {
 
-  prior_cdf_rql <- pbeta(rql, alpha, beta)
+  prior_cdf_rql <- .bsClipProb(pbeta(rql, alpha, beta))
   prior_odds <- prior_cdf_rql / (1 - prior_cdf_rql)
 
   plans <- data.frame(n = integer(), c = integer(), bf = numeric())
@@ -347,7 +354,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
     c <- n
     while (c >= 0) {
       bf <- .bsCalculateBF(rql, n, c, alpha, beta, prior_odds)
-      if (bf >= min_bf) {
+      if (is.finite(bf) && bf >= min_bf) {
         plans <- rbind(plans, data.frame(n = n, c = c, bf = bf))
         break
       }
@@ -382,6 +389,67 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   return(na.omit(plans))
 }
 
+.bsCreateStateContainer <- function(title, deps) {
+  createJaspContainer(title = title) |>
+    createJaspState(jaspDeps(deps))
+}
+
+.bsReuseOrRefreshContainer <- function(container, title, deps) {
+  if (is.null(container) || !isTRUE(container$getError()))
+    return(container)
+
+  .bsCreateStateContainer(title, deps)
+}
+
+.bsPPDXScale <- function(d_tot) {
+  xMin <- min(d_tot, na.rm = TRUE)
+  xMax <- max(d_tot, na.rm = TRUE)
+  breaks <- jaspGraphs::getPrettyAxisBreaks(c(xMin, xMax))
+
+  list(
+    breaks = breaks,
+    limits = c(xMin - 0.5, xMax + 0.5)
+  )
+}
+
+.bsYScale <- function(values, expansion = 1.08) {
+  yMax <- max(values, na.rm = TRUE)
+  if (!is.finite(yMax) || yMax <= 0)
+    yMax <- 1
+
+  upperTarget <- yMax * expansion
+  breaks <- jaspGraphs::getPrettyAxisBreaks(c(0, upperTarget))
+  limits <- c(0, max(c(breaks, upperTarget), na.rm = TRUE))
+
+  list(
+    breaks = breaks,
+    limits = limits,
+    label_y = limits[2] * 0.97
+  )
+}
+
+.bsThresholdLabelX <- function(x, side = c("left", "right"), lower, upper, min_offset = 0) {
+  side <- match.arg(side)
+  offset <- max((upper - lower) * 0.02, min_offset)
+
+  if (side == "left")
+    return(max(lower, x - offset))
+
+  min(upper, x + offset)
+}
+
+.bsVisibleThreshold <- function(x, label, side, lower, upper, min_offset = 0) {
+  if (!is.finite(x) || x < lower || x > upper)
+    return(NULL)
+
+  data.frame(
+    x = x,
+    label = label,
+    label_x = .bsThresholdLabelX(x, side, lower, upper, min_offset = min_offset),
+    hjust = if (identical(side, "left")) 1 else 0
+  )
+}
+
 
 # Section 1: Planning
 .bsPlanningAnalysis <- function(jaspResults, options, position) {
@@ -393,12 +461,16 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   }
 
   container <- jaspResults[["planContainer"]] %setOrRetrieve% (
-    createJaspContainer(title = gettext("Planning")) |>
-      createJaspState(jaspDeps(.bsPlanningDeps()))
+    .bsCreateStateContainer(gettext("Planning"), .bsPlanningDeps())
   )
 
-  if (is.null(container) || container$getError())
+  if (is.null(container))
     return()
+
+  # JASP can reuse an errored container across UI updates; rebuild it so a
+  # corrected AQL/RQL pair can render fresh outputs instead of keeping a stale
+  # error banner.
+  container <- .bsReuseOrRefreshContainer(container, gettext("Planning"), .bsPlanningDeps())
 
   on.exit({
     jaspResults[["planContainer"]] <- container
@@ -482,12 +554,13 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Create/retrieve container + state
   container <- jaspResults[["infContainer"]] %setOrRetrieve% (
-    createJaspContainer(title = gettext("Inference")) |>
-      createJaspState(jaspDeps(.bsInferenceDeps()))
+    .bsCreateStateContainer(gettext("Inference"), .bsInferenceDeps())
   )
 
-  if (is.null(container) || container$getError())
+  if (is.null(container))
     return()
+
+  container <- .bsReuseOrRefreshContainer(container, gettext("Inference"), .bsInferenceDeps())
 
   # Always write container back, even if we return early later
   on.exit({
@@ -729,11 +802,12 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 .bsDistributionPlot <- function(container, aql, rql, alpha, beta, type,
                                 position, base, alpha_prior = NULL, beta_prior = NULL) {
   plotName <- paste0("distPlot", type)
+  hasPriorOverlay <- identical(type, "Posterior") && !is.null(alpha_prior) && !is.null(beta_prior)
 
   plot <- createJaspPlot(
     title = if (type == "Posterior") gettext("Posterior Distribution") else gettext("Prior Distribution"),
-    width = 570,
-    height = 320,
+    width = 500,
+    height = 400,
     position = position,
     dependencies = jaspDeps(base)
   )
@@ -751,7 +825,6 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   )
 
   df <- df_post
-  hasPriorOverlay <- identical(type, "Posterior") && !is.null(alpha_prior) && !is.null(beta_prior)
   if (hasPriorOverlay) {
     dens_prior <- dbeta(xValue, alpha_prior, beta_prior)
     dens_prior[!is.finite(dens_prior)] <- NA_real_
@@ -767,34 +840,45 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
     df$dist <- factor(df$dist)
   }
 
-  yMax <- max(df$dens, na.rm = TRUE)
-
-  if (!is.finite(yMax) || yMax <= 0) yMax <- 1
-
   xBreaks <- jaspGraphs::getPrettyAxisBreaks(c(0, 1))
-  yBreaks <- jaspGraphs::getPrettyAxisBreaks(c(0, yMax))
+  yScale <- .bsYScale(df$dens)
+  aqlLabelX <- .bsThresholdLabelX(aql, "left", 0, 1, min_offset = 0.015)
+  rqlLabelX <- .bsThresholdLabelX(rql, "right", 0, 1, min_offset = 0.015)
 
   p <- ggplot2::ggplot() +
     ggplot2::geom_vline(xintercept = aql, linetype = "dashed", linewidth = 0.6) +
     ggplot2::geom_vline(xintercept = rql, linetype = "dashed", linewidth = 0.6) +
-    ggplot2::annotate("text", x = aql, y = yMax, label = "AQL", vjust = -0.5, hjust = -0.1, size = 3) +
-    ggplot2::annotate("text", x = rql, y = yMax, label = "RQL", vjust = -0.5, hjust = -0.1, size = 3) +
+    ggplot2::annotate("text", x = aqlLabelX, y = yScale$label_y, label = "AQL", vjust = 1, hjust = 1, size = 3) +
+    ggplot2::annotate("text", x = rqlLabelX, y = yScale$label_y, label = "RQL", vjust = 1, hjust = 0, size = 3) +
+    ggplot2::geom_area(
+      data = df_post,
+      ggplot2::aes(x = .data$x, y = .data$dens),
+      fill = "#b3b3b3",
+      alpha = 0.8
+    ) +
     ggplot2::geom_line(
       data = df,
       ggplot2::aes(x = .data$x, y = .data$dens, linetype = .data$dist),
       color = "black",
-      linewidth = 0.9
+      linewidth = 0.9,
+      show.legend = hasPriorOverlay
     ) +
-    ggplot2::scale_linetype_manual(values = if (hasPriorOverlay) c(Posterior = "solid", Prior = "dashed") else setNames("dashed", type)) +
+    ggplot2::scale_linetype_manual(values = if (hasPriorOverlay) c(Posterior = "solid", Prior = "dashed") else setNames("solid", type)) +
     ggplot2::labs(
       x = gettext("Lot Proportion Defective"),
       y = gettext("Density"),
       linetype = NULL
     ) +
+    ggplot2::guides(linetype = ggplot2::guide_legend(ncol = 1)) +
     jaspGraphs::geom_rangeframe() +
-    jaspGraphs::themeJaspRaw(legend.position = if (hasPriorOverlay) "right" else "none") +
+    jaspGraphs::themeJaspRaw(legend.position = if (hasPriorOverlay) c(0.98, 0.98) else "none") +
+    ggplot2::theme(
+      legend.justification = c(1, 1),
+      legend.background = ggplot2::element_rect(fill = "white", colour = NA),
+      legend.key = ggplot2::element_blank()
+    ) +
     ggplot2::scale_x_continuous(breaks = xBreaks, limits = range(xBreaks)) +
-    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks))
+    ggplot2::scale_y_continuous(breaks = yScale$breaks, limits = yScale$limits)
 
   plot$plotObject <- p
   container[[plotName]] <- plot
@@ -807,8 +891,8 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 
   plot <- createJaspPlot(
     title = gettext("Posterior Predictive Distribution"),
-    width = 570,
-    height = 320,
+    width = 500,
+    height = 400,
     position = position,
     dependencies = jaspDeps(base)
   )
@@ -822,17 +906,35 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
                    ifelse(ppd_df$d_tot <= rql_count, "Middle", "Bad"))
   ppd_df$region <- factor(ppd_df$region, levels = c("Good", "Middle", "Bad"))
 
-  xBreaks <- jaspGraphs::getPrettyAxisBreaks(ppd_df$d_tot)
-  yBreaks <- jaspGraphs::getPrettyAxisBreaks(c(0, max(ppd_df$pmf)))
+  xScale <- .bsPPDXScale(ppd_df$d_tot)
+  xBreaks <- xScale$breaks
+  yScale <- .bsYScale(ppd_df$pmf)
+  visibleThresholds <- do.call(
+    rbind,
+    Filter(Negate(is.null), list(
+      .bsVisibleThreshold(aql_count + 0.5, "AQL", "left", xScale$limits[1], xScale$limits[2], min_offset = 0.75),
+      .bsVisibleThreshold(rql_count + 0.5, "RQL", "right", xScale$limits[1], xScale$limits[2], min_offset = 0.75)
+    ))
+  )
+  if (is.null(visibleThresholds))
+    visibleThresholds <- data.frame(x = numeric(0), label = character(0), label_x = numeric(0), hjust = numeric(0))
 
   p <- ggplot2::ggplot(ppd_df, ggplot2::aes(x = .data$d_tot, y = .data$pmf, fill = .data$region)) +
     ggplot2::geom_col(width = 0.8, color = "black", linewidth = 0.2) +
-    ggplot2::geom_vline(xintercept = aql_count + 0.5, linetype = "dashed", linewidth = 0.6) +
-    ggplot2::geom_vline(xintercept = rql_count + 0.5, linetype = "dashed", linewidth = 0.6) +
-    ggplot2::annotate("text", x = aql_count + 0.5, y = max(ppd_df$pmf),
-                      label = "AQL", vjust = -0.5, hjust = -0.1, size = 3) +
-    ggplot2::annotate("text", x = rql_count + 0.5, y = max(ppd_df$pmf),
-                      label = "RQL", vjust = -0.5, hjust = -0.1, size = 3) +
+    ggplot2::geom_vline(
+      data = visibleThresholds,
+      ggplot2::aes(xintercept = .data$x),
+      linetype = "dashed",
+      linewidth = 0.6,
+      inherit.aes = FALSE
+    ) +
+    ggplot2::geom_text(
+      data = visibleThresholds,
+      ggplot2::aes(x = .data$label_x, y = yScale$label_y, label = .data$label, hjust = .data$hjust),
+      vjust = 1,
+      size = 3,
+      inherit.aes = FALSE
+    ) +
     ggplot2::scale_fill_manual(
       values = c(Good = "grey75", Middle = "grey55", Bad = "grey35"),
       guide = "none"
@@ -843,8 +945,8 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
     ) +
     jaspGraphs::geom_rangeframe() +
     jaspGraphs::themeJaspRaw() +
-    ggplot2::scale_x_continuous(breaks = xBreaks, limits = range(xBreaks)) +
-    ggplot2::scale_y_continuous(breaks = yBreaks, limits = range(yBreaks))
+    ggplot2::scale_x_continuous(breaks = xBreaks, limits = xScale$limits) +
+    ggplot2::scale_y_continuous(breaks = yScale$breaks, limits = yScale$limits)
 
   plot$plotObject <- p
   container[["ppdPlot"]] <- plot
@@ -908,25 +1010,25 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
     createJaspContainer(title = gettext("Procedure"))
 
   introText <- gettextf(
-    "<h3></h3>
-    <p>The <b>main objective</b> of this Bayesian sampling procedure is to evaluate the quality of a lot by determining if the proportion of defects is lower than the <b>Rejectable Quality Level (RQL)</b>, which is currently set at <b>%1$.2f%%</b>.</p>
+    "<div style='line-height: 1.2;'>
+    <p style='margin: 0 0 8px 0;'>The <b>main objective</b> of this Bayesian sampling procedure is to evaluate the quality of a lot by determining if the proportion of defects is lower than the <b>Rejectable Quality Level (RQL)</b>, which is currently set at <b>%1$.2f%%</b>.</p>
 
-    <p>Two primary statistical hypotheses are formulated about the lot proportion defective (&theta;):
-    <ul>
+    <p style='margin: 0 0 4px 0;'>Two primary statistical hypotheses are formulated about the lot proportion defective (&theta;):</p>
+    <ul style='margin: 0 0 8px 20px;'>
       <li>The (null) hypothesis of intolerable quality H<sub>+</sub>: &theta; &ge; %1$.2f%% (user-defined)</li>
       <li>The (alternative) hypothesis of tolerable quality H<sub>-</sub>: &theta; < %1$.2f%% (user-defined)</li>
-    </ul></p>
+    </ul>
 
-    <p>Additionally, users have the option to perform a <b>Three-Hypothesis Test</b>, which partitions the quality levels into 'Good' (&le; AQL), 'Middle' (AQL < &theta; &le; RQL), and 'Bad' (> RQL) regions.</p>
+    <p style='margin: 0 0 8px 0;'>Additionally, users have the option to perform a <b>Three-Hypothesis Test</b>, which partitions the quality levels into 'Good' (&le; AQL), 'Middle' (AQL < &theta; &le; RQL), and 'Bad' (> RQL) regions.</p>
 
-    <p>The <b>Acceptable Quality Level (AQL)</b> is currently set at <b>%2$.2f%%</b>. This value represents the
+    <p style='margin: 0 0 8px 0;'>The <b>Acceptable Quality Level (AQL)</b> is currently set at <b>%2$.2f%%</b>. This value represents the
     quality level aimed for acceptance with high probability. These quality constraints can be adjusted in the Planning phase to reflect specific requirements.</p>
 
-    <h3>Stages</h3>
-    <p><b>1. Planning:</b> Determine a minimum sample size such that the sample provides sufficient evidence (a target Bayes factor) to achieve the specified sampling objectives.</p>
+    <p style='margin: 0 0 6px 0;'><b>Stages</b></p>
+    <p style='margin: 0 0 6px 0;'><b>1. Planning:</b> Determine a minimum sample size such that the sample provides sufficient evidence (a target Bayes factor) to achieve the specified sampling objectives.</p>
 
-    <p><b>2. Inference:</b> Evaluate observed data (sample size and defects) to update the prior belief into
-    a posterior distribution.</p>",
+    <p style='margin: 0;'><b>2. Inference:</b> Evaluate observed data to update the prior belief into
+    a posterior distribution. In this section, <b>n</b> denotes the sample size, <b>d</b> the observed number of defects in the sample, and <b>N</b> the lot size.</p></div>",
     rql, aql
   )
 
