@@ -26,6 +26,7 @@ Form
 	{
 		title: qsTr("1. Planning")
 		columns: 1
+		expanded: true
 
 		Group
 		{
