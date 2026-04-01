@@ -21,6 +21,11 @@
         "utils"
       ]
     },
+    "BH": {
+      "Package": "BH",
+      "Version": "1.90.0-1",
+      "Source": "Repository"
+    },
     "BayesFactor": {
       "Package": "BayesFactor",
       "Version": "0.9.12-4.7",
@@ -117,6 +122,11 @@
         "utils"
       ]
     },
+    "RcppParallel": {
+      "Package": "RcppParallel",
+      "Version": "5.1.11-1",
+      "Source": "Repository"
+    },
     "S7": {
       "Package": "S7",
       "Version": "0.2.1",
@@ -137,6 +147,11 @@
         "stats",
         "utils"
       ]
+    },
+    "StanHeaders": {
+      "Package": "StanHeaders",
+      "Version": "2.32.10",
+      "Source": "Repository"
     },
     "TTR": {
       "Package": "TTR",
@@ -1239,6 +1254,16 @@
         "xfun",
         "yaml"
       ]
+    },
+    "rstan": {
+      "Package": "rstan",
+      "Version": "2.32.7",
+      "Source": "Repository"
+    },
+    "rstantools": {
+      "Package": "rstantools",
+      "Version": "2.5.0",
+      "Source": "Repository"
     },
     "rvg": {
       "Package": "rvg",

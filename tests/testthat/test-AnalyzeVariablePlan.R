@@ -154,7 +154,7 @@ test_that("Analyze plan - OC Curve match", {
 ##                    5. Test for AOQ Curve                    --
 ##---------------------------------------------------------------
 test_that("Analyze plan - AOQ Curve match", {
-  skip_on_os(c("mac", "linux"))
+  skip("AOQ snapshot baselines are currently not maintained across CI platforms.")
   options <- jaspTools::analysisOptions("AnalyzeVariablePlan")
   options$lotSize <- 200
   options$sampleSize <- 4
