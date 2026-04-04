@@ -276,3 +276,330 @@ msgstr "Tüketici riski (β)"
 msgctxt "DecideVariableLots|"
 msgid "Standard deviation (historical)"
 msgstr "Standart sapma (tarihsel)"
+
+msgctxt "Description|"
+msgid "Bayesian Sampling"
+msgstr ""
+
+msgctxt "Description|"
+msgid "Bayesian State-Space Sampling"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "1. Planning"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Quality Constraints"
+msgstr ""
+
+#, fuzzy
+msgctxt "BayesianSampling|"
+msgid "Acceptable Quality Level (AQL)"
+msgstr "Kabul Edilebilir Kalite Düzeyi (AQL)"
+
+msgctxt "BayesianSampling|"
+msgid "Rejectable Quality Level (RQL)"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Prior Distribution (Beta)"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Impartial (Around the RQL)"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Custom prior mode"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Mode"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Uniform"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Custom"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "α"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "β"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Impartial (Three-region)"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Impartial (Three-region) Options"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Shape constraint"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Avoid U-shape (α ≥ 1 or β ≥ 1)"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Both α ≥ 1 and β ≥ 1"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "None (allow U-shape)"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "(Max) Sample size (n)"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Bayes factor (min)"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Output Options"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Plans table"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Prior plot"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Three-hypothesis BF table"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "2. Inference"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Use data to create posterior distribution"
+msgstr ""
+
+#, fuzzy
+msgctxt "BayesianSampling|"
+msgid "Sample size (n)"
+msgstr "Örneklem büyüklüğü (n)"
+
+msgctxt "BayesianSampling|"
+msgid "Observed number of defects (d)"
+msgstr ""
+
+#, fuzzy
+msgctxt "BayesianSampling|"
+msgid "Lot size (N)"
+msgstr "Lot büyüklüğü (N)"
+
+msgctxt "BayesianSampling|"
+msgid "Inference decision table"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Posterior plot"
+msgstr ""
+
+msgctxt "BayesianSampling|"
+msgid "Posterior predictive distribution plot"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Defect Count"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Sample Size (tested items)"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Lot Size (total items)"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Lot Number"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Predictor"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Model Type"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Without predictor"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "With predictor"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Settings"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Acceptance Limits"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Lower limit (AQL)"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Upper limit (RQL)"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Sudden Jump Tail Correction"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Enable sudden jump tail correction"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Correction weight (%)"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Decision Rule"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Accept if P(defects > RQL) <"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Reject if not accepted and P(defects < AQL) <"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Plots"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "State time series (defect rate)"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Posterior predictive for current lot"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Posterior for latest defect rate"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Posterior for predictor coefficient beta"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Model"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Prior initial defect rate"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "θ₁ alpha"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "θ₁ beta"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "State noise"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Half-normal SD"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Predictor coefficient"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Cauchy scale"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "MCMC Diagnostics"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Overview table"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Select parameters for summary table"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "All theta[t]"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Sigma (state noise)"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "y_pred (prediction)"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Beta (predictor coefficient)"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Advanced"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "MCMC"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Burnin"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Samples"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Chains"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Thin"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Seed"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Adapt Delta"
+msgstr ""
+
+msgctxt "BayesianSSMforAS|"
+msgid "Max tree depth"
+msgstr ""

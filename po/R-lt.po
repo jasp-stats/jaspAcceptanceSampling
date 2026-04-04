@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.95.0\n"
-"POT-Creation-Date: 2025-06-21 04:43\n"
+"POT-Creation-Date: 2026-04-04 05:10\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -55,19 +55,369 @@ msgstr ""
 msgid "If historical standard deviation is unknown, sample size has to be > 1."
 msgstr ""
 
-msgid "Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of the generated variable plan."
+msgid ""
+"Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of "
+"the generated variable plan."
 msgstr ""
 
-msgid "Lower limit for proportion non-conforming items needs to be smaller than the upper limit."
+msgid "The dataset is empty."
 msgstr ""
 
-msgid "Step size for proportion non-conforming items needs to be smaller than the difference between the upper and lower limits."
+msgid "The following assigned variables are missing from the dataset: %1$s."
 msgstr ""
 
-msgid "Step size of 0 is allowed only if the lower and upper limits of proportion non-conforming items are identical."
+msgid "%1$s cannot contain missing or non-finite values."
 msgstr ""
 
-msgid "For hypergeometric distribution, N * proportion non-conforming should all be integer values.\n\nCheck the values of N and proportion non-conforming."
+msgid "%1$s must contain whole numbers only."
+msgstr ""
+
+msgid "%1$s cannot contain negative values."
+msgstr ""
+
+msgid "Defect Count"
+msgstr ""
+
+msgid "Lot Size"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Predictor"
+msgstr ""
+
+msgid "Predictor must vary across lots when using the predictor model."
+msgstr ""
+
+msgid "Observed defects cannot exceed the sample size for any lot."
+msgstr ""
+
+msgid "Sample size cannot exceed the lot size for any lot."
+msgstr ""
+
+msgid "Sampling..."
+msgstr ""
+
+msgid "Estimation failed: %s"
+msgstr ""
+
+msgid "Posterior Summary (Current Lot)"
+msgstr ""
+
+msgid "Lot Nr."
+msgstr ""
+
+msgid "Obs. Defects"
+msgstr ""
+
+msgid "Median Pred. Defects"
+msgstr ""
+
+msgid "Mass < AQL"
+msgstr ""
+
+msgid "Mass > RQL"
+msgstr ""
+
+msgid "Decision"
+msgstr ""
+
+msgid ""
+"The Lot Number, Lot Size, or Defect Count is missing (NA) for the last lot."
+msgstr ""
+
+msgid "Consider to Continue"
+msgstr ""
+
+msgid "Consider to Accept"
+msgstr ""
+
+msgid "Consider to Reject"
+msgstr ""
+
+msgid "Defect Rate Over Time"
+msgstr ""
+
+msgid "Lot"
+msgstr ""
+
+msgid "Defect Rate (%%)"
+msgstr ""
+
+msgid "Posterior Predictive"
+msgstr ""
+
+msgid "Defects in Current Lot"
+msgstr ""
+
+msgid "Posterior Predictive Probability"
+msgstr ""
+
+msgid ""
+"Note. Tail correction adds a uniform sudden-jump component over the full lot-"
+"size range (0 to N), so this figure is zoomed to the uncorrected predictive "
+"range to keep the posterior shape readable."
+msgstr ""
+
+msgid "Posterior Defect Rate"
+msgstr ""
+
+msgid "Density"
+msgstr ""
+
+msgid "Beta Coefficient"
+msgstr ""
+
+msgid "Predictor Coefficient β"
+msgstr ""
+
+msgid "MCMC Diagnostics"
+msgstr ""
+
+msgid "Parameter"
+msgstr ""
+
+msgid "Mean"
+msgstr ""
+
+msgid "SD"
+msgstr ""
+
+msgid "ESS"
+msgstr ""
+
+msgid "R-hat"
+msgstr ""
+
+msgid "No parameters selected for the MCMC diagnostics table."
+msgstr ""
+
+msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
+msgstr ""
+
+msgid ""
+"Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. "
+"Please choose a lower mode, a lower RQL, or a different prior."
+msgstr ""
+
+msgid "Planning"
+msgstr ""
+
+msgid "Please ensure 0 < AQL < RQL < 1."
+msgstr ""
+
+msgid "Please provide a valid maximum sample size (> 0)."
+msgstr ""
+
+msgid "Please provide a valid minimum Bayes factor (> 0)."
+msgstr ""
+
+msgid ""
+"The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
+"or choose a different prior."
+msgstr ""
+
+msgid "No valid plans found satisfying the specified constraints."
+msgstr ""
+
+msgid "Inference"
+msgstr ""
+
+msgid "Please ensure the data are valid: n >= 0 and 0 <= d <= n."
+msgstr ""
+
+msgid "Lot size (N) must be at least as large as the sample size (n)."
+msgstr ""
+
+msgid "Strong evidence for accepting the lot."
+msgstr ""
+
+msgid "Moderate evidence for accepting the lot."
+msgstr ""
+
+msgid "Inconclusive evidence."
+msgstr ""
+
+msgid "Moderate evidence for rejecting the lot."
+msgstr ""
+
+msgid "Strong evidence for rejecting the lot."
+msgstr ""
+
+msgid ""
+"The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL "
+"of <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>Based on the observed sample, "
+"there is a <b>%4$.1f%%</b> predicted probability that the current lot of "
+"%5$d items contains at most %6$d total defects."
+msgstr ""
+
+msgid ""
+"<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is "
+"<b>%2$.2f</b>."
+msgstr ""
+
+msgid "Sampling Plans"
+msgstr ""
+
+msgid "Acceptance number (c)"
+msgstr ""
+
+msgid "Lowest sample size (n)"
+msgstr ""
+
+msgid "Prior P(θ < RQL)"
+msgstr ""
+
+msgid "Posterior P(θ < RQL)"
+msgstr ""
+
+msgid "Bayes factor"
+msgstr ""
+
+msgid "Three-Hypothesis Bayes Factors (at d = c)"
+msgstr ""
+
+msgid "Prior P(Good)"
+msgstr ""
+
+msgid "Post P(Good)"
+msgstr ""
+
+msgid "Prior P(Middle)"
+msgstr ""
+
+msgid "Post P(Middle)"
+msgstr ""
+
+msgid "Prior P(Bad)"
+msgstr ""
+
+msgid "Post P(Bad)"
+msgstr ""
+
+msgid "BF (Good vs Bad)"
+msgstr ""
+
+msgid "BF (Good vs Middle)"
+msgstr ""
+
+msgid "BF (Middle vs Bad)"
+msgstr ""
+
+msgid "Posterior Distribution"
+msgstr ""
+
+msgid "Prior Distribution"
+msgstr ""
+
+msgid "Lot Proportion Defective"
+msgstr ""
+
+msgid "Posterior Predictive Distribution"
+msgstr ""
+
+msgid "Total Defects in Lot"
+msgstr ""
+
+msgid "Probability"
+msgstr ""
+
+msgid "Inference Decision Table"
+msgstr ""
+
+msgid "PPD Good (≤ %1$d defects in Lot)"
+msgstr ""
+
+msgid "PPD Middle (> %1$d & ≤ %2$d defects)"
+msgstr ""
+
+msgid "PPD Bad (> %1$d defects in Lot)"
+msgstr ""
+
+msgid "Sample Size (n)"
+msgstr ""
+
+msgid "Defects (d)"
+msgstr ""
+
+msgid "AQL"
+msgstr ""
+
+msgid "RQL"
+msgstr ""
+
+msgid "Bayes Factor"
+msgstr ""
+
+msgid ""
+"Bayes factor interpretation: BF ≥ 10 (strong evidence for H−), 3 ≤ BF < 10 "
+"(moderate evidence for H−), 0.33 ≤ BF < 3 (inconclusive), 0.10 ≤ BF < 0.33 "
+"(moderate evidence for H+), BF < 0.10 (strong evidence for H+)."
+msgstr ""
+
+msgid "Procedure"
+msgstr ""
+
+msgid ""
+"<div style='line-height: 1.2;'>\n"
+"    <p style='margin: 0 0 8px 0;'>The <b>main objective</b> of this Bayesian "
+"sampling procedure is to evaluate the quality of a lot by determining if the "
+"proportion of defects is lower than the <b>Rejectable Quality Level (RQL)</"
+"b>, which is currently set at <b>%1$.2f%%</b>.</p>\n"
+"\n"
+"    <p style='margin: 0 0 4px 0;'>Two primary statistical hypotheses are "
+"formulated about the lot proportion defective (&theta;):</p>\n"
+"    <ul style='margin: 0 0 8px 20px;'>\n"
+"      <li>The (null) hypothesis of intolerable quality H<sub>+</sub>: "
+"&theta; &ge; %1$.2f%% (user-defined)</li>\n"
+"      <li>The (alternative) hypothesis of tolerable quality H<sub>-</sub>: "
+"&theta; < %1$.2f%% (user-defined)</li>\n"
+"    </ul>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'>Additionally, users have the option to "
+"perform a <b>Three-Hypothesis Test</b>, which partitions the quality levels "
+"into 'Good' (&le; AQL), 'Middle' (AQL < &theta; &le; RQL), and 'Bad' (> RQL) "
+"regions.</p>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'>The <b>Acceptable Quality Level (AQL)</b> "
+"is currently set at <b>%2$.2f%%</b>. This value represents the\n"
+"    quality level aimed for acceptance with high probability. These quality "
+"constraints can be adjusted in the Planning phase to reflect specific "
+"requirements.</p>\n"
+"\n"
+"    <p style='margin: 0 0 6px 0;'><b>Stages</b></p>\n"
+"    <p style='margin: 0 0 6px 0;'><b>1. Planning:</b> Determine a minimum "
+"sample size such that the sample provides sufficient evidence (a target "
+"Bayes factor) to achieve the specified sampling objectives.</p>\n"
+"\n"
+"    <p style='margin: 0;'><b>2. Inference:</b> Evaluate observed data to "
+"update the prior belief into\n"
+"    a posterior distribution. In this section, <b>n</b> denotes the sample "
+"size, <b>d</b> the observed number of defects in the sample, and <b>N</b> "
+"the lot size.</p></div>"
+msgstr ""
+
+msgid ""
+"Lower limit for proportion non-conforming items needs to be smaller than the "
+"upper limit."
+msgstr ""
+
+msgid ""
+"Step size for proportion non-conforming items needs to be smaller than the "
+"difference between the upper and lower limits."
+msgstr ""
+
+msgid ""
+"Step size of 0 is allowed only if the lower and upper limits of proportion "
+"non-conforming items are identical."
+msgstr ""
+
+msgid ""
+"For hypergeometric distribution, N * proportion non-conforming should all be "
+"integer values.\n"
+"\n"
+"Check the values of N and proportion non-conforming."
 msgstr ""
 
 msgid "Sample size (n) cannot be larger than the lot size (N)."
@@ -82,28 +432,43 @@ msgstr ""
 msgid "Rejection number (r) has to be larger than the acceptance number (c)."
 msgstr ""
 
-msgid "Cumulative sample size (n1+n2+...) cannot be larger than the lot size (N)."
+msgid ""
+"Cumulative sample size (n1+n2+...) cannot be larger than the lot size (N)."
 msgstr ""
 
-msgid "Final rejection number (r) needs to be 1 more than the final acceptance number (c)."
+msgid ""
+"Final rejection number (r) needs to be 1 more than the final acceptance "
+"number (c)."
 msgstr ""
 
-msgid "Rejection number (r) for every stage has to be larger than the corresponding acceptance number (c)."
+msgid ""
+"Rejection number (r) for every stage has to be larger than the corresponding "
+"acceptance number (c)."
 msgstr ""
 
-msgid "For all stages except the last stage, rejection numbers (r) have to be at at least 2 greater than the acceptance numbers (c).\n\n                                   Else, subsequent stages become redundant."
+msgid ""
+"For all stages except the last stage, rejection numbers (r) have to be at at "
+"least 2 greater than the acceptance numbers (c).\n"
+"\n"
+"                                   Else, subsequent stages become redundant."
 msgstr ""
 
-msgid "Acceptance numbers (c) are cumulative, so they need to be in a non-decreasing sequence."
+msgid ""
+"Acceptance numbers (c) are cumulative, so they need to be in a non-"
+"decreasing sequence."
 msgstr ""
 
-msgid "Rejection numbers (r) are cumulative, so they need to be in a non-decreasing sequence."
+msgid ""
+"Rejection numbers (r) are cumulative, so they need to be in a non-decreasing "
+"sequence."
 msgstr ""
 
 msgid "No valid values found in the plan. Check the inputs."
 msgstr ""
 
-msgid "AQL (Acceptable Quality Level) value should be lower than RQL (Rejectable Quality Level) value."
+msgid ""
+"AQL (Acceptable Quality Level) value should be lower than RQL (Rejectable "
+"Quality Level) value."
 msgstr ""
 
 msgid "1 - α (Producer's risk) has to be greater than β (consumer's risk)."
@@ -121,10 +486,14 @@ msgstr ""
 msgid "Actual P(accept)"
 msgstr ""
 
-msgid "Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the required probability of acceptance (%3$.3f) at AQL."
+msgid ""
+"Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the "
+"required probability of acceptance (%3$.3f) at AQL."
 msgstr ""
 
-msgid "Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the required probability of acceptance (%3$.3f) at RQL."
+msgid ""
+"Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the "
+"required probability of acceptance (%3$.3f) at RQL."
 msgstr ""
 
 msgid "Acceptance Probabilities"
@@ -187,22 +556,33 @@ msgstr ""
 msgid "Rejection Probability"
 msgstr ""
 
-msgid "If the number of defective items out of %1$d sampled is <= %2$d, accept the lot. Reject otherwise."
+msgid ""
+"If the number of defective items out of %1$d sampled is <= %2$d, accept the "
+"lot. Reject otherwise."
 msgstr ""
 
 msgid "Create Variable Plan"
 msgstr ""
 
-msgid "Z.LSL = (mean - LSL) / historical standard deviation\n\nAccept lot if Z.LSL >= k, otherwise reject."
+msgid ""
+"Z.LSL = (mean - LSL) / historical standard deviation\n"
+"\n"
+"Accept lot if Z.LSL >= k, otherwise reject."
 msgstr ""
 
-msgid "Variable plan generated for the current quality constraints is invalid. Modify the quality constraints."
+msgid ""
+"Variable plan generated for the current quality constraints is invalid. "
+"Modify the quality constraints."
 msgstr ""
 
-msgid "Variable plan generated for the current quality constraints has an invalid sample size (n). Modify the quality constraints."
+msgid ""
+"Variable plan generated for the current quality constraints has an invalid "
+"sample size (n). Modify the quality constraints."
 msgstr ""
 
-msgid "Variable plan generated for the current quality constraints has an invalid k value. Modify the quality constraints."
+msgid ""
+"Variable plan generated for the current quality constraints has an invalid k "
+"value. Modify the quality constraints."
 msgstr ""
 
 msgid "Accept or Reject Lot %s"
@@ -238,7 +618,9 @@ msgstr ""
 msgid "Can not accept or reject lot: sample size has to be greater than 1."
 msgstr ""
 
-msgid "Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, and historical standard deviation is <b>unknown</b>."
+msgid ""
+"Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, "
+"and historical standard deviation is <b>unknown</b>."
 msgstr ""
 
 msgid "<u>Decision:</u> <b>%s</b> lot."
