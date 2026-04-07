@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.18.1\n"
 "POT-Creation-Date: 2026-04-04 05:10\n"
-"PO-Revision-Date: 2024-11-12 06:48+0000\n"
+"PO-Revision-Date: 2026-04-08 12:09+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/gl/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.2\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 msgid "Single Sampling Plan"
 msgstr "Plan de Mostraxe Único"
@@ -64,159 +64,168 @@ msgstr ""
 "%2$.0f) do plan de variables xerado."
 
 msgid "The dataset is empty."
-msgstr ""
+msgstr "O conxunto de datos está baleiro."
 
 msgid "The following assigned variables are missing from the dataset: %1$s."
 msgstr ""
+"As seguintes variables asignadas están ausentes do conxunto de datos: %1$s."
 
 msgid "%1$s cannot contain missing or non-finite values."
-msgstr ""
+msgstr "%1$s non pode conter valores ausentes nin non finitos."
 
 msgid "%1$s must contain whole numbers only."
-msgstr ""
+msgstr "%1$s debe conter só números enteiros."
 
 msgid "%1$s cannot contain negative values."
-msgstr ""
+msgstr "%1$s non pode conter números negativos."
 
 msgid "Defect Count"
-msgstr ""
+msgstr "Reconto de defectos"
 
 msgid "Lot Size"
-msgstr ""
+msgstr "Tamaño do lote"
 
 msgid "Time"
-msgstr ""
+msgstr "Tempo"
 
 msgid "Predictor"
-msgstr ""
+msgstr "Preditor"
 
 msgid "Predictor must vary across lots when using the predictor model."
 msgstr ""
+"O preditor debe variar entre os lotes cando se usa o modelo do preditor."
 
 msgid "Observed defects cannot exceed the sample size for any lot."
 msgstr ""
+"Os defectos observados non poden exceder o tamaño da mostra para ningún lote."
 
-#, fuzzy
 msgid "Sample size cannot exceed the lot size for any lot."
-msgstr "O tamaño da mostra (n) non pode ser maior que o tamaño do lote (N)."
+msgstr "O tamaño da mostra non pode exceder o tamaño do lote, para ningún lote."
 
 msgid "Sampling..."
-msgstr ""
+msgstr "Mostraxe..."
 
 msgid "Estimation failed: %s"
-msgstr ""
+msgstr "Fallou a estimación: %s"
 
 msgid "Posterior Summary (Current Lot)"
-msgstr ""
+msgstr "Resumo posterior (Lote actual)"
 
 msgid "Lot Nr."
-msgstr ""
+msgstr "Lote Núm."
 
 msgid "Obs. Defects"
-msgstr ""
+msgstr "Defectos observ."
 
 msgid "Median Pred. Defects"
-msgstr ""
+msgstr "Mediana dos defectos pred."
 
 msgid "Mass < AQL"
-msgstr ""
+msgstr "Masa < NCA (AQL)"
 
 msgid "Mass > RQL"
-msgstr ""
+msgstr "Masa > NCR (RQL)"
 
 msgid "Decision"
-msgstr ""
+msgstr "Decisión"
 
 msgid ""
 "The Lot Number, Lot Size, or Defect Count is missing (NA) for the last lot."
 msgstr ""
+"O Número do lote, o Tamaño do lote ou o Reconto de lote está ausente (NA) "
+"para o último lote."
 
 msgid "Consider to Continue"
-msgstr ""
+msgstr "Considera o continuar"
 
 msgid "Consider to Accept"
-msgstr ""
+msgstr "Considera o aceptar"
 
 msgid "Consider to Reject"
-msgstr ""
+msgstr "Considera o rexeitar"
 
 msgid "Defect Rate Over Time"
-msgstr ""
+msgstr "Propoción de defectos no tempo"
 
 msgid "Lot"
-msgstr ""
+msgstr "Lote"
 
 msgid "Defect Rate (%%)"
-msgstr ""
+msgstr "Proporción de defectos (%%)"
 
 msgid "Posterior Predictive"
-msgstr ""
+msgstr "Preditivo posterior"
 
 msgid "Defects in Current Lot"
-msgstr ""
+msgstr "Defectos no lote actual"
 
-#, fuzzy
 msgid "Posterior Predictive Probability"
-msgstr "Probabilidade de Rexeite"
+msgstr "Probabilidade preditiva posterior"
 
 msgid ""
 "Note. Tail correction adds a uniform sudden-jump component over the full lot-"
 "size range (0 to N), so this figure is zoomed to the uncorrected predictive "
 "range to keep the posterior shape readable."
 msgstr ""
+"Nota: A corrección de colas engade unha compoñente uniforme de repentino "
+"incremento sobre o rango completo do tamaño do lote (0 a N); así esta figura "
+"se amplifica ao rango preditivo sen corrixir para manter lexible a forma "
+"posterior."
 
 msgid "Posterior Defect Rate"
-msgstr ""
+msgstr "Proporción posterior de defectos"
 
 msgid "Density"
-msgstr ""
+msgstr "Densidade"
 
 msgid "Beta Coefficient"
-msgstr ""
+msgstr "Coeficiente Beta"
 
 msgid "Predictor Coefficient β"
-msgstr ""
+msgstr "Coeficiente β do preditor"
 
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "Diagnósticos MCMC"
 
 msgid "Parameter"
-msgstr ""
+msgstr "Parámetro"
 
 msgid "Mean"
-msgstr ""
+msgstr "Media"
 
 msgid "SD"
-msgstr ""
+msgstr "DP"
 
 msgid "ESS"
-msgstr ""
+msgstr "SCR"
 
 msgid "R-hat"
-msgstr ""
+msgstr "R-circunflexo"
 
 msgid "No parameters selected for the MCMC diagnostics table."
-msgstr ""
+msgstr "Non hai parámetros seleccionados para a táboa de diagnósticos MCMC."
 
 msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
-msgstr ""
+msgstr "A moda previa (%1$.4f) debe estar entre 0 e o NCR (%2$.4f)."
 
 msgid ""
 "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. "
 "Please choose a lower mode, a lower RQL, or a different prior."
 msgstr ""
+"Non se pode xerar a previa imparcial para a moda %1$.4f e o NCR %2$.4f. Por "
+"favor, escolle unha moda menor, un NCR menor ou unha previa distinta."
 
 msgid "Planning"
-msgstr ""
+msgstr "Planificación"
 
 msgid "Please ensure 0 < AQL < RQL < 1."
-msgstr ""
+msgstr "Por favor, verifica que 0 < NCA < NCR < 1."
 
 msgid "Please provide a valid maximum sample size (> 0)."
-msgstr ""
+msgstr "Por favor, proporciona un tamaño mostral máximo válido (> 0)."
 
 msgid "Please provide a valid minimum Bayes factor (> 0)."
-msgstr ""
+msgstr "Por favor, proporciona un factor de Bayes mínimo válido (> 0)."
 
 msgid ""
 "The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
