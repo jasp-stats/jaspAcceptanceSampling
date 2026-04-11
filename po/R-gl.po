@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.18.1\n"
 "POT-Creation-Date: 2026-04-04 05:10\n"
-"PO-Revision-Date: 2026-04-08 12:09+0000\n"
+"PO-Revision-Date: 2026-04-12 08:12+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/gl/>\n"
@@ -231,23 +231,26 @@ msgid ""
 "The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
 "or choose a different prior."
 msgstr ""
+"A previa seleccionada produce parámetros Beta incorrectos. Por favor, axusta "
+"NCA/NCR ou elixe unha previa distinta."
 
-#, fuzzy
 msgid "No valid plans found satisfying the specified constraints."
-msgstr "Non se atoparon valores válidos no plan. Comproba as entradas."
+msgstr ""
+"Non se atoparon plans válidos que satisfagan as restricións especificadas."
 
 msgid "Inference"
-msgstr ""
+msgstr "Inferencia"
 
 msgid "Please ensure the data are valid: n >= 0 and 0 <= d <= n."
-msgstr ""
+msgstr "Por favor, asegúrate de que os datos son válidos: n >= 0 e 0 <= d <= n."
 
-#, fuzzy
 msgid "Lot size (N) must be at least as large as the sample size (n)."
-msgstr "O número de rexeite (r) non pode ser maior que o tamaño da mostra (n)."
+msgstr ""
+"O tamaño do lote (N) debe ser, cando menos, tan grande como o tamaño da "
+"mostra (n)."
 
 msgid "Strong evidence for accepting the lot."
-msgstr ""
+msgstr "Forte evidencia para aceptar o lote."
 
 msgid "Moderate evidence for accepting the lot."
 msgstr ""
