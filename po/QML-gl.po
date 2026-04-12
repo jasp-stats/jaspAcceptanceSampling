@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-12 08:12+0000\n"
+"PO-Revision-Date: 2026-04-12 22:14+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-qml/gl/>\n"
@@ -299,50 +299,49 @@ msgctxt "BayesianSampling|"
 msgid "Quality Constraints"
 msgstr "Restricións de calidade"
 
-#, fuzzy
 msgctxt "BayesianSampling|"
 msgid "Acceptable Quality Level (AQL)"
 msgstr "Nivel de Calidade Aceptable (NCA, AQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Rejectable Quality Level (RQL)"
-msgstr ""
+msgstr "Nivel de Calidade Rexeitable (NCR, RQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Prior Distribution (Beta)"
-msgstr ""
+msgstr "Distribución previa (Beta)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Around the RQL)"
-msgstr ""
+msgstr "Imparcial (preto do NCA)"
 
 msgctxt "BayesianSampling|"
 msgid "Custom prior mode"
-msgstr ""
+msgstr "Moda previa personalizada"
 
 msgctxt "BayesianSampling|"
 msgid "Mode"
-msgstr ""
+msgstr "Moda"
 
 msgctxt "BayesianSampling|"
 msgid "Uniform"
-msgstr ""
+msgstr "Uniforme"
 
 msgctxt "BayesianSampling|"
 msgid "Custom"
-msgstr ""
+msgstr "Personalizado"
 
 msgctxt "BayesianSampling|"
 msgid "α"
-msgstr ""
+msgstr "α"
 
 msgctxt "BayesianSampling|"
 msgid "β"
-msgstr ""
+msgstr "β"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region)"
-msgstr ""
+msgstr "Imparcial (rexión tres)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region) Options"
