@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.16.4\n"
 "POT-Creation-Date: 2026-04-04 05:10\n"
-"PO-Revision-Date: 2026-04-12 08:12+0000\n"
+"PO-Revision-Date: 2026-04-12 22:14+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/es/>\n"
@@ -259,19 +259,19 @@ msgstr ""
 "muestra (n)."
 
 msgid "Strong evidence for accepting the lot."
-msgstr "Fuerte evidencia para aceptar el lote."
+msgstr "Evidencia fuerte para aceptar el lote."
 
 msgid "Moderate evidence for accepting the lot."
-msgstr ""
+msgstr "Evidencia moderada para aceptar el lote."
 
 msgid "Inconclusive evidence."
-msgstr ""
+msgstr "Evidencia no concluyente."
 
 msgid "Moderate evidence for rejecting the lot."
-msgstr ""
+msgstr "Evidencia moderada para rechazar el lote."
 
 msgid "Strong evidence for rejecting the lot."
-msgstr ""
+msgstr "Evidencia fuerte para rechazar el lote."
 
 msgid ""
 "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL "
@@ -279,31 +279,36 @@ msgid ""
 "there is a <b>%4$.1f%%</b> predicted probability that the current lot of "
 "%5$d items contains at most %6$d total defects."
 msgstr ""
+"El <b>Factor de Bayes</b> a favor de la tasa de defectos del lote por debajo "
+"del NCR (RQL) de <b>%1$.2f</b> es <b>%2$.2f</b>. %3$s<br>Basado en la "
+"muestra observada, hay una probabilidad de predicción de <b>%4$.1f%%</b> de "
+"que el lote actual de %5$d elementos contenga al menos %6$d defectos en "
+"total."
 
 msgid ""
 "<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is "
 "<b>%2$.2f</b>."
 msgstr ""
+"El <u>Factor de Bayes</u> a favor de la proporción de defectos < <u>%1$.2f</"
+"u> es <b>%2$.2f</b>."
 
-#, fuzzy
 msgid "Sampling Plans"
-msgstr "Plan de Muestreo Único"
+msgstr "Planes de Muestreo"
 
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "Número de aceptaciones (c)"
 
-#, fuzzy
 msgid "Lowest sample size (n)"
-msgstr "Tamaño de la muestra"
+msgstr "Tamaño menor de la muestra (n)"
 
 msgid "Prior P(θ < RQL)"
-msgstr ""
+msgstr "P(θ < NCR) previa"
 
 msgid "Posterior P(θ < RQL)"
-msgstr ""
+msgstr "P(θ < NCR) posterior"
 
 msgid "Bayes factor"
-msgstr ""
+msgstr "Factor de Bayes"
 
 msgid "Three-Hypothesis Bayes Factors (at d = c)"
 msgstr ""
