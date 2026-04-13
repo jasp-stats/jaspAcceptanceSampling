@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.18.1\n"
 "POT-Creation-Date: 2026-04-04 05:10\n"
-"PO-Revision-Date: 2026-04-12 22:14+0000\n"
+"PO-Revision-Date: 2026-04-14 10:09+0000\n"
 "Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
 "Language-Team: Galician <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/gl/>\n"
@@ -302,81 +302,79 @@ msgid "Bayes factor"
 msgstr "Factor de Bayes"
 
 msgid "Three-Hypothesis Bayes Factors (at d = c)"
-msgstr ""
+msgstr "Factores de Bayes da hipótese tres (en d = c)"
 
 msgid "Prior P(Good)"
-msgstr ""
+msgstr "P(Boa) previa"
 
 msgid "Post P(Good)"
-msgstr ""
+msgstr "P(Boa) posterior"
 
 msgid "Prior P(Middle)"
-msgstr ""
+msgstr "P(Intermedia) previa"
 
 msgid "Post P(Middle)"
-msgstr ""
+msgstr "P(Intermedia) posterior"
 
 msgid "Prior P(Bad)"
-msgstr ""
+msgstr "P(Mala) previa"
 
 msgid "Post P(Bad)"
-msgstr ""
+msgstr "P(Mala) posterior"
 
 msgid "BF (Good vs Bad)"
-msgstr ""
+msgstr "FB (Boa vs Mala)"
 
 msgid "BF (Good vs Middle)"
-msgstr ""
+msgstr "FB (Boa vs Intermedia)"
 
 msgid "BF (Middle vs Bad)"
-msgstr ""
+msgstr "FB (Intermedia vs Mala)"
 
 msgid "Posterior Distribution"
-msgstr ""
+msgstr "Distribución posterior"
 
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Distribución previa"
 
 msgid "Lot Proportion Defective"
-msgstr ""
+msgstr "Proporción de lotes defectusos"
 
 msgid "Posterior Predictive Distribution"
-msgstr ""
+msgstr "Distribución Posterior Preditiva"
 
 msgid "Total Defects in Lot"
-msgstr ""
+msgstr "Defectos totais no lote"
 
-#, fuzzy
 msgid "Probability"
-msgstr "Probabilidade de Rexeite"
+msgstr "Probabilidade"
 
 msgid "Inference Decision Table"
-msgstr ""
+msgstr "Táboa de inferencia de decisións"
 
 msgid "PPD Good (≤ %1$d defects in Lot)"
-msgstr ""
+msgstr "DPP Boa (≤ %1$d defectos en lote)"
 
 msgid "PPD Middle (> %1$d & ≤ %2$d defects)"
-msgstr ""
+msgstr "DPP Intermdia (> %1$d & ≤ %2$d defectos)"
 
 msgid "PPD Bad (> %1$d defects in Lot)"
-msgstr ""
+msgstr "DPP Mala (> %1$d defectos en lote)"
 
-#, fuzzy
 msgid "Sample Size (n)"
-msgstr "Tamaño da mostra"
+msgstr "Tamaño da mostra (n)"
 
 msgid "Defects (d)"
-msgstr ""
+msgstr "Defectos (d)"
 
 msgid "AQL"
-msgstr ""
+msgstr "NCA (AQL)"
 
 msgid "RQL"
-msgstr ""
+msgstr "NCR (RQL)"
 
 msgid "Bayes Factor"
-msgstr ""
+msgstr "Factor de Bayes"
 
 msgid ""
 "Bayes factor interpretation: BF ≥ 10 (strong evidence for H−), 3 ≤ BF < 10 "
