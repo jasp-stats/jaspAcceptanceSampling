@@ -1,9 +1,15 @@
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-04-14 10:09+0000\n"
+"Last-Translator: ecadrian <ecadrian@hotmail.com>\n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17-dev\n"
 "X-Language: es\n"
 "X-Qt-Contexts: true\n"
 
@@ -279,158 +285,155 @@ msgstr "Nivel de Calidad Rechazable (RQL/LTPD)"
 
 msgctxt "Description|"
 msgid "Bayesian Sampling"
-msgstr ""
+msgstr "Muestreo bayesiano"
 
 msgctxt "Description|"
 msgid "Bayesian State-Space Sampling"
-msgstr ""
+msgstr "Muestreo bayesiano de Espacio de los Estados"
 
 msgctxt "BayesianSampling|"
 msgid "1. Planning"
-msgstr ""
+msgstr "1. Planificación"
 
 msgctxt "BayesianSampling|"
 msgid "Quality Constraints"
-msgstr ""
+msgstr "Restricciones de calidad"
 
-#, fuzzy
 msgctxt "BayesianSampling|"
 msgid "Acceptable Quality Level (AQL)"
 msgstr "Nivel de Calidad Aceptable (NCA, AQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Rejectable Quality Level (RQL)"
-msgstr ""
+msgstr "Nivel de Calidad Rechazable (NCR, RQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Prior Distribution (Beta)"
-msgstr ""
+msgstr "Distribución previa (Beta)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Around the RQL)"
-msgstr ""
+msgstr "Imparcial (carca del NCA)"
 
 msgctxt "BayesianSampling|"
 msgid "Custom prior mode"
-msgstr ""
+msgstr "Moda previa personalizada"
 
 msgctxt "BayesianSampling|"
 msgid "Mode"
-msgstr ""
+msgstr "Moda"
 
 msgctxt "BayesianSampling|"
 msgid "Uniform"
-msgstr ""
+msgstr "Uniforme"
 
 msgctxt "BayesianSampling|"
 msgid "Custom"
-msgstr ""
+msgstr "Personalizado"
 
 msgctxt "BayesianSampling|"
 msgid "α"
-msgstr ""
+msgstr "α"
 
 msgctxt "BayesianSampling|"
 msgid "β"
-msgstr ""
+msgstr "β"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region)"
-msgstr ""
+msgstr "Imparcial (región tres)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region) Options"
-msgstr ""
+msgstr "Opciones de imparcial (región tres)"
 
 msgctxt "BayesianSampling|"
 msgid "Shape constraint"
-msgstr ""
+msgstr "Restricción de forma"
 
 msgctxt "BayesianSampling|"
 msgid "Avoid U-shape (α ≥ 1 or β ≥ 1)"
-msgstr ""
+msgstr "Evitar forma en U (α ≥ 1 o β ≥ 1)"
 
 msgctxt "BayesianSampling|"
 msgid "Both α ≥ 1 and β ≥ 1"
-msgstr ""
+msgstr "Tanto α ≥ 1 como β ≥ 1"
 
 msgctxt "BayesianSampling|"
 msgid "None (allow U-shape)"
-msgstr ""
+msgstr "Ninguno (permite forma en U)"
 
 msgctxt "BayesianSampling|"
 msgid "(Max) Sample size (n)"
-msgstr ""
+msgstr "(Máx) Tamaño muestral (n)"
 
 msgctxt "BayesianSampling|"
 msgid "Bayes factor (min)"
-msgstr ""
+msgstr "Factor de Bayes (Mín)"
 
 msgctxt "BayesianSampling|"
 msgid "Output Options"
-msgstr ""
+msgstr "Opciones de salida"
 
 msgctxt "BayesianSampling|"
 msgid "Plans table"
-msgstr ""
+msgstr "Tabla de planes"
 
 msgctxt "BayesianSampling|"
 msgid "Prior plot"
-msgstr ""
+msgstr "Gráfico de previa"
 
 msgctxt "BayesianSampling|"
 msgid "Three-hypothesis BF table"
-msgstr ""
+msgstr "Tabla de FB de la hipótesis tres"
 
 msgctxt "BayesianSampling|"
 msgid "2. Inference"
-msgstr ""
+msgstr "2. Inferencia"
 
 msgctxt "BayesianSampling|"
 msgid "Use data to create posterior distribution"
-msgstr ""
+msgstr "Usar datos para generar la distribución posterior"
 
-#, fuzzy
 msgctxt "BayesianSampling|"
 msgid "Sample size (n)"
 msgstr "Tamaño muestral (n)"
 
 msgctxt "BayesianSampling|"
 msgid "Observed number of defects (d)"
-msgstr ""
+msgstr "Número observado de defectos (d)"
 
-#, fuzzy
 msgctxt "BayesianSampling|"
 msgid "Lot size (N)"
 msgstr "Tamaño del lote (N)"
 
 msgctxt "BayesianSampling|"
 msgid "Inference decision table"
-msgstr ""
+msgstr "Tabla de inferencia de decisiones"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Gráfico posterior"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior predictive distribution plot"
-msgstr ""
+msgstr "Gráfico de la distribución posterior predictiva"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Defect Count"
-msgstr ""
+msgstr "Recuento de defectos"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sample Size (tested items)"
-msgstr ""
+msgstr "Tamaño muestral (elementos probados)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Size (total items)"
-msgstr ""
+msgstr "Tamaño del lote (elementos totales)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Number"
-msgstr ""
+msgstr "Número de lote"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor"
@@ -438,11 +441,11 @@ msgstr "Predictor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model Type"
-msgstr ""
+msgstr "Tipo de modelo"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Without predictor"
-msgstr ""
+msgstr "Sin predictor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "With predictor"
