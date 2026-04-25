@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.16.4\n"
 "POT-Creation-Date: 2026-04-04 05:10\n"
-"PO-Revision-Date: 2025-11-03 09:51+0000\n"
+"PO-Revision-Date: 2026-04-19 07:09+0000\n"
 "Last-Translator: Johannes Keyser <joke@fsfe.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/de/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.1-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 msgid "Single Sampling Plan"
 msgstr "Einfacher Stichprobenplan"
@@ -37,7 +37,6 @@ msgstr "Kum. Stichprobenumfang"
 msgid "Acc. Number"
 msgstr "Ann.-Zahl"
 
-#, fuzzy
 msgid "Rej. Number"
 msgstr "Rück.-Zahl"
 
@@ -154,9 +153,8 @@ msgstr ""
 msgid "Defects in Current Lot"
 msgstr ""
 
-#, fuzzy
 msgid "Posterior Predictive Probability"
-msgstr "Rückweisewahrscheinlichkeit"
+msgstr "Posterior-prädiktive Wahrscheinlichkeit"
 
 msgid ""
 "Note. Tail correction adds a uniform sudden-jump component over the full lot-"
@@ -168,31 +166,31 @@ msgid "Posterior Defect Rate"
 msgstr ""
 
 msgid "Density"
-msgstr ""
+msgstr "Dichte"
 
 msgid "Beta Coefficient"
-msgstr ""
+msgstr "Beta-Koeffizient"
 
 msgid "Predictor Coefficient β"
-msgstr ""
+msgstr "Prädiktor-Koeffizent β"
 
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "MCMC-Diagnostiken"
 
 msgid "Parameter"
-msgstr ""
+msgstr "Parameter"
 
 msgid "Mean"
-msgstr ""
+msgstr "Mittelwert"
 
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 msgid "ESS"
-msgstr ""
+msgstr "ESS"
 
 msgid "R-hat"
-msgstr ""
+msgstr "R-Dach"
 
 msgid "No parameters selected for the MCMC diagnostics table."
 msgstr ""
