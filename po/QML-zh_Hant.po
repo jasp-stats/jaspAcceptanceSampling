@@ -1,15 +1,9 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-20 06:02+0000\n"
-"Last-Translator: 邱義云 <yiyun072392@gmail.com>\n"
-"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
-"projects/jasp/jaspacceptancesampling-qml/zh_Hant/>\n"
-"Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.7.dev0\n"
 "X-Language: zh_Hant\n"
 "X-Qt-Contexts: true\n"
 
@@ -257,13 +251,15 @@ msgctxt "DecideVariableLots|"
 msgid "Quality constraints"
 msgstr "品質限制"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "允收品質水準"
 
+#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
-msgstr ""
+msgstr "拒收品質水準"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Standard deviation (historical) known"
@@ -297,9 +293,10 @@ msgctxt "BayesianSampling|"
 msgid "Quality Constraints"
 msgstr ""
 
+#, fuzzy
 msgctxt "BayesianSampling|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "允收品質水準"
 
 msgctxt "BayesianSampling|"
 msgid "Rejectable Quality Level (RQL)"
