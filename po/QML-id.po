@@ -6,6 +6,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: id\n"
 "X-Qt-Contexts: true\n"
+"PO-Revision-Date: 2026-07-02 11:08+0000\n"
+"Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/id/>\n"
+"Language: id\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgctxt "Description|"
 msgid "Acceptance Sampling"
@@ -279,327 +285,324 @@ msgstr "Deviasi standar (historik)"
 
 msgctxt "Description|"
 msgid "Bayesian Sampling"
-msgstr ""
+msgstr "Pensampelan Bayes"
 
 msgctxt "Description|"
 msgid "Bayesian State-Space Sampling"
-msgstr ""
+msgstr "Pensampelan Spasi-Status Bayes"
 
 msgctxt "BayesianSampling|"
 msgid "1. Planning"
-msgstr ""
+msgstr "1. Perencanaan"
 
 msgctxt "BayesianSampling|"
 msgid "Quality Constraints"
-msgstr ""
+msgstr "Kendala Kualitas"
 
-#, fuzzy
 msgctxt "BayesianSampling|"
 msgid "Acceptable Quality Level (AQL)"
 msgstr "Tingkat Kualitas Dapat Diterima (AQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Rejectable Quality Level (RQL)"
-msgstr ""
+msgstr "Tingkat Kualitas dapat Ditolah (RQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Prior Distribution (Beta)"
-msgstr ""
+msgstr "Distribusi Priori (Beta)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Around the RQL)"
-msgstr ""
+msgstr "Imparsial (Sekitar RQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Custom prior mode"
-msgstr ""
+msgstr "Mode priori kustom"
 
 msgctxt "BayesianSampling|"
 msgid "Mode"
-msgstr ""
+msgstr "Mode"
 
 msgctxt "BayesianSampling|"
 msgid "Uniform"
-msgstr ""
+msgstr "Keseragaman"
 
 msgctxt "BayesianSampling|"
 msgid "Custom"
-msgstr ""
+msgstr "Kustom"
 
 msgctxt "BayesianSampling|"
 msgid "α"
-msgstr ""
+msgstr "α"
 
 msgctxt "BayesianSampling|"
 msgid "β"
-msgstr ""
+msgstr "β"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region)"
-msgstr ""
+msgstr "Imparsial (Tiga-wilayah)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region) Options"
-msgstr ""
+msgstr "Opsi Imparsial (Tiga-wilayah)"
 
 msgctxt "BayesianSampling|"
 msgid "Shape constraint"
-msgstr ""
+msgstr "Kendala bentuk"
 
 msgctxt "BayesianSampling|"
 msgid "Avoid U-shape (α ≥ 1 or β ≥ 1)"
-msgstr ""
+msgstr "Hindari bentuk-U (α ≥ 1 or β ≥ 1)"
 
 msgctxt "BayesianSampling|"
 msgid "Both α ≥ 1 and β ≥ 1"
-msgstr ""
+msgstr "Kedua α ≥ 1 dan β ≥ 1"
 
 msgctxt "BayesianSampling|"
 msgid "None (allow U-shape)"
-msgstr ""
+msgstr "Tidak ada (izinkan bentuk-U)"
 
 msgctxt "BayesianSampling|"
 msgid "(Max) Sample size (n)"
-msgstr ""
+msgstr "(Maks) Ukuran sampel (n)"
 
 msgctxt "BayesianSampling|"
 msgid "Bayes factor (min)"
-msgstr ""
+msgstr "Faktor Bayes (min)"
 
 msgctxt "BayesianSampling|"
 msgid "Output Options"
-msgstr ""
+msgstr "Opsi Luaran"
 
 msgctxt "BayesianSampling|"
 msgid "Plans table"
-msgstr ""
+msgstr "Tabel rencana"
 
 msgctxt "BayesianSampling|"
 msgid "Prior plot"
-msgstr ""
+msgstr "Diagram priori"
 
 msgctxt "BayesianSampling|"
 msgid "Three-hypothesis BF table"
-msgstr ""
+msgstr "Tabel BF tiga-hipotesis"
 
 msgctxt "BayesianSampling|"
 msgid "2. Inference"
-msgstr ""
+msgstr "1. Inferensi"
 
 msgctxt "BayesianSampling|"
 msgid "Use data to create posterior distribution"
-msgstr ""
+msgstr "Gunakan data untuk membuat distribusi posterior"
 
-#, fuzzy
 msgctxt "BayesianSampling|"
 msgid "Sample size (n)"
 msgstr "Ukuran sampel (n)"
 
 msgctxt "BayesianSampling|"
 msgid "Observed number of defects (d)"
-msgstr ""
+msgstr "Jumlah cacat terobservasi (d)"
 
-#, fuzzy
 msgctxt "BayesianSampling|"
 msgid "Lot size (N)"
 msgstr "Ukuran lot (N)"
 
 msgctxt "BayesianSampling|"
 msgid "Inference decision table"
-msgstr ""
+msgstr "Tabel keputusan inferensi"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Diagram posterior"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior predictive distribution plot"
-msgstr ""
+msgstr "Diagram distribusi prediktif posterior"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Defect Count"
-msgstr ""
+msgstr "Hitungan Cacat"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sample Size (tested items)"
-msgstr ""
+msgstr "Ukuran Efek (item teruji)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Size (total items)"
-msgstr ""
+msgstr "Ukuran Lot (total item)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Number"
-msgstr ""
+msgstr "Angka Lot"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor"
-msgstr ""
+msgstr "Prediktor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model Type"
-msgstr ""
+msgstr "Jenis Model"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Without predictor"
-msgstr ""
+msgstr "Tanpa prediktor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "With predictor"
-msgstr ""
+msgstr "Dengan prediktor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Settings"
-msgstr ""
+msgstr "Pengaturan"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Acceptance Limits"
-msgstr ""
+msgstr "Batas Penerimaan"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lower limit (AQL)"
-msgstr ""
+msgstr "Batas bawah (AQL)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Upper limit (RQL)"
-msgstr ""
+msgstr "Batas atas (RQL)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sudden Jump Tail Correction"
-msgstr ""
+msgstr "Koreksi Lonjakan Ekor Mendadak"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Enable sudden jump tail correction"
-msgstr ""
+msgstr "Aktifkan koreksi lonjakan ekor mendadak"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Correction weight (%)"
-msgstr ""
+msgstr "Berat koreksi (%)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Decision Rule"
-msgstr ""
+msgstr "Aturan Keputusan"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Accept if P(defects > RQL) <"
-msgstr ""
+msgstr "Terima jika P(mencacat > RQL) <"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Reject if not accepted and P(defects < AQL) <"
-msgstr ""
+msgstr "Tolak jika tidak diterima dan P(mencacat < AQL) <"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Plots"
-msgstr ""
+msgstr "Diagram"
 
 msgctxt "BayesianSSMforAS|"
 msgid "State time series (defect rate)"
-msgstr ""
+msgstr "Seri waktu status (tingkat cacat)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior predictive for current lot"
-msgstr ""
+msgstr "Prediktif posterior untuk lot saat ini"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for latest defect rate"
-msgstr ""
+msgstr "Posterior untuk tingkat cacat terbaru"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for predictor coefficient beta"
-msgstr ""
+msgstr "Posterior untuk beta koefisien prediktor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model"
-msgstr ""
+msgstr "Model"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Prior initial defect rate"
-msgstr ""
+msgstr "Tingkat cacat inisial priori"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ alpha"
-msgstr ""
+msgstr "θ₁ alfa"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ beta"
-msgstr ""
+msgstr "θ₁ beta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "State noise"
-msgstr ""
+msgstr "Noise status"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Half-normal SD"
-msgstr ""
+msgstr "Setengah-normal SD"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor coefficient"
-msgstr ""
+msgstr "Koefisien prediktor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Cauchy scale"
-msgstr ""
+msgstr "Skala Cauchy"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "Diagnostik MCMC"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Overview table"
-msgstr ""
+msgstr "Tabel ikhtisar"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Select parameters for summary table"
-msgstr ""
+msgstr "Pilih parameter untuk tabel ringkasan"
 
 msgctxt "BayesianSSMforAS|"
 msgid "All theta[t]"
-msgstr ""
+msgstr "Semua theta[t]"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sigma (state noise)"
-msgstr ""
+msgstr "Sigma (noise status)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "y_pred (prediction)"
-msgstr ""
+msgstr "y_pred (prediksi)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Beta (predictor coefficient)"
-msgstr ""
+msgstr "Beta (koefisien prediktor)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Advanced"
-msgstr ""
+msgstr "Lanjutan"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC"
-msgstr ""
+msgstr "MCMC"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Burnin"
-msgstr ""
+msgstr "Burnin"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Samples"
-msgstr ""
+msgstr "Sampel"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Chains"
-msgstr ""
+msgstr "Rantai"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Thin"
-msgstr ""
+msgstr "Tipis"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Seed"
-msgstr ""
+msgstr "Benih"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Adapt Delta"
-msgstr ""
+msgstr "Adaptasikan delta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Max tree depth"
-msgstr ""
+msgstr "Maks kedalaman pohon"
