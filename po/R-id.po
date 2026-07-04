@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.95.5\n"
 "POT-Creation-Date: 2026-04-04 05:10\n"
-"PO-Revision-Date: 2026-06-04 23:01+0000\n"
+"PO-Revision-Date: 2026-07-02 11:08+0000\n"
 "Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/id/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.6\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "Single Sampling Plan"
 msgstr "Satu Rencana Pensampelan"
@@ -64,121 +64,126 @@ msgstr ""
 "%2$.0f) rencana variabel terhasilkan."
 
 msgid "The dataset is empty."
-msgstr ""
+msgstr "Rangkaian data kosong."
 
 msgid "The following assigned variables are missing from the dataset: %1$s."
-msgstr ""
+msgstr "Variabel ditugaskan berikut hilang dari rangkaian data: %1$s."
 
 msgid "%1$s cannot contain missing or non-finite values."
-msgstr ""
+msgstr "%1$s tidak dapat berisi nilai hilang atau non-finit."
 
 msgid "%1$s must contain whole numbers only."
-msgstr ""
+msgstr "%1$s harus hanya berisi angka keseluruhan."
 
 msgid "%1$s cannot contain negative values."
-msgstr ""
+msgstr "%1$s tidak dapat berisi nilai negatif."
 
 msgid "Defect Count"
-msgstr ""
+msgstr "Hitungan Cacat"
 
 msgid "Lot Size"
-msgstr ""
+msgstr "Ukuran Lot"
 
 msgid "Time"
-msgstr ""
+msgstr "Waktu"
 
 msgid "Predictor"
-msgstr ""
+msgstr "Prediktor"
 
 msgid "Predictor must vary across lots when using the predictor model."
 msgstr ""
+"Prediktor harus bervariasi seluruh lot ketika menggunakan model prediktor."
 
 msgid "Observed defects cannot exceed the sample size for any lot."
 msgstr ""
+"Cacat terobservasi tidak dapat melampaui ukuran sampel untuk lot apa pun."
 
-#, fuzzy
 msgid "Sample size cannot exceed the lot size for any lot."
-msgstr "Ukuran sampel (n) tidak dapat lebih besar dari ukuran lot (N)."
+msgstr "Ukuran sampel tidak dapat melampaui ukuran lot untuk lot apa pun."
 
 msgid "Sampling..."
-msgstr ""
+msgstr "Mensampel..."
 
 msgid "Estimation failed: %s"
-msgstr ""
+msgstr "Estimasi gagal: %s"
 
 msgid "Posterior Summary (Current Lot)"
-msgstr ""
+msgstr "Ringkasan Posterior (Lot Saat Ini)"
 
 msgid "Lot Nr."
-msgstr ""
+msgstr "Nr. Lot"
 
 msgid "Obs. Defects"
-msgstr ""
+msgstr "Cacat Obs."
 
 msgid "Median Pred. Defects"
-msgstr ""
+msgstr "Cacat Pred. Median"
 
 msgid "Mass < AQL"
-msgstr ""
+msgstr "Massa < AQL"
 
 msgid "Mass > RQL"
-msgstr ""
+msgstr "Massq > RQL"
 
 msgid "Decision"
-msgstr ""
+msgstr "Keputusan"
 
 msgid ""
 "The Lot Number, Lot Size, or Defect Count is missing (NA) for the last lot."
 msgstr ""
+"Angka Lot, Ukuran Lot, atau Hitungan Cacat hilang (TA) untuk lot terakhir."
 
 msgid "Consider to Continue"
-msgstr ""
+msgstr "Pertimbangkan Melanjutkan"
 
 msgid "Consider to Accept"
-msgstr ""
+msgstr "Pertimbangkan Menerima"
 
 msgid "Consider to Reject"
-msgstr ""
+msgstr "Pertimbangkan Menolak"
 
 msgid "Defect Rate Over Time"
-msgstr ""
+msgstr "Tingkat Cacat Seiring Waktu"
 
 msgid "Lot"
-msgstr ""
+msgstr "Lot"
 
 msgid "Defect Rate (%%)"
-msgstr ""
+msgstr "Tingkat Cacat (%%)"
 
 msgid "Posterior Predictive"
-msgstr ""
+msgstr "Prediktif Posterior"
 
 msgid "Defects in Current Lot"
-msgstr ""
+msgstr "Cacat di Lot Saat Ini"
 
-#, fuzzy
 msgid "Posterior Predictive Probability"
-msgstr "Probabilitas Penolakan"
+msgstr "Probabilitas Prediktif Posterior"
 
 msgid ""
 "Note. Tail correction adds a uniform sudden-jump component over the full lot-"
 "size range (0 to N), so this figure is zoomed to the uncorrected predictive "
 "range to keep the posterior shape readable."
 msgstr ""
+"Catatan. Koreksi ekor menambahkan komponen lonjakan mendadak keseragaman "
+"terhadap rentang ukuran-lot lengkap (0 ke N), sehingga figur ini dizum ke "
+"rentang prediktif tidak terkoreksi untuk menjaga bentuk posterior dapat "
+"dibaca."
 
 msgid "Posterior Defect Rate"
-msgstr ""
+msgstr "Tingkat Cacat Posterior"
 
 msgid "Density"
 msgstr "Densitas"
 
 msgid "Beta Coefficient"
-msgstr ""
+msgstr "Koefisien Beta"
 
 msgid "Predictor Coefficient β"
-msgstr ""
+msgstr "Koefisien Prediktor β"
 
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "Diagnostik MCMC"
 
 msgid "Parameter"
 msgstr "Parameter"
@@ -190,67 +195,69 @@ msgid "SD"
 msgstr "SD"
 
 msgid "ESS"
-msgstr ""
+msgstr "ESS"
 
 msgid "R-hat"
 msgstr "R-hat"
 
 msgid "No parameters selected for the MCMC diagnostics table."
-msgstr ""
+msgstr "Tidak ada parameter dipilih untuk tabel diagnostik MCMC."
 
 msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
-msgstr ""
+msgstr "Mode priori (%1$.4f) harus berada antara 0 dan RQL (%2$.4f)."
 
 msgid ""
 "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. "
 "Please choose a lower mode, a lower RQL, or a different prior."
 msgstr ""
+"Tidak dapat membangun priori imparsial untuk mode %1$.4f dan RQL %2$.4f. "
+"Silakan pilih mode lebih rendah, RQL lebih rendah, atau priori berbeda."
 
 msgid "Planning"
-msgstr ""
+msgstr "Perencanaan"
 
 msgid "Please ensure 0 < AQL < RQL < 1."
-msgstr ""
+msgstr "Silakan pastikan 0 < AQL < RQL < 1."
 
 msgid "Please provide a valid maximum sample size (> 0)."
-msgstr ""
+msgstr "Silakan sediakan ukuran sampel maksimum valid (> 0)."
 
 msgid "Please provide a valid minimum Bayes factor (> 0)."
-msgstr ""
+msgstr "Silakan sediakan faktor Bayes minimum valid (> 0)."
 
 msgid ""
 "The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
 "or choose a different prior."
 msgstr ""
+"Priori terpilih menghasilkan parameter Beta tidak valid. Silakan sesuaikan "
+"AQL/RQL atau pilih priori berbeda."
 
-#, fuzzy
 msgid "No valid plans found satisfying the specified constraints."
-msgstr "Tidak ada nilai valid ditemukan di rencana. Periksa masukan."
+msgstr "Tidak ada rencana valid ditemukan memenuhi kendala tertentu."
 
 msgid "Inference"
-msgstr ""
+msgstr "Inferensi"
 
 msgid "Please ensure the data are valid: n >= 0 and 0 <= d <= n."
-msgstr ""
+msgstr "Silakan pastikan data valid: n >=0 dan 0 <= d <= n."
 
-#, fuzzy
 msgid "Lot size (N) must be at least as large as the sample size (n)."
-msgstr "Angka penolakan (r) tidak dapat lebih besar dari ukuran sampel (n)."
+msgstr "Ukuran lot (N) harus setidaknya sebesar ukuran sampel (n)."
 
 msgid "Strong evidence for accepting the lot."
-msgstr ""
+msgstr "Bukti kuat untuk menerima lot."
 
 msgid "Moderate evidence for accepting the lot."
-msgstr ""
+msgstr "Bukti moderat untuk menerima lot."
 
 msgid "Inconclusive evidence."
-msgstr ""
+msgstr "Bukti inkonklusif."
 
 msgid "Moderate evidence for rejecting the lot."
-msgstr ""
+msgstr "Bukti moderat untuk menolak lot."
 
 msgid "Strong evidence for rejecting the lot."
-msgstr ""
+msgstr "Bukti kuat untuk menolak lot."
 
 msgid ""
 "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL "
@@ -258,117 +265,122 @@ msgid ""
 "there is a <b>%4$.1f%%</b> predicted probability that the current lot of "
 "%5$d items contains at most %6$d total defects."
 msgstr ""
+"<b>Faktor Bayes</b> mendukung tingkat cacat lot berada di bawah RQL dari <b>"
+"%1$.2f</b> adalah <b>%2$.2f</b>. %3$s<br>Berdasarkan sampel terobservasi, "
+"ada <b>%4$.1f%%</b> memprediksikan probabilitas bahwa lot %5$d item saat ini "
+"berisi paling banyak %6$d total cacat."
 
 msgid ""
 "<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is "
 "<b>%2$.2f</b>."
 msgstr ""
+"<u>Faktor Bayes</u> mendukung proporsi dari cacat < <u>%1$.2f</u> adalah <b>"
+"%2$.2f</b>."
 
-#, fuzzy
 msgid "Sampling Plans"
-msgstr "Satu Rencana Pensampelan"
+msgstr "Rencana Pensampelan"
 
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "Angka penerimaan (c)"
 
-#, fuzzy
 msgid "Lowest sample size (n)"
-msgstr "Ukuran sampel"
+msgstr "Ukuran sampel terrendah (n)"
 
 msgid "Prior P(θ < RQL)"
-msgstr ""
+msgstr "Priori P(θ < RQL)"
 
 msgid "Posterior P(θ < RQL)"
-msgstr ""
+msgstr "Posterior P(θ < RQL)"
 
 msgid "Bayes factor"
-msgstr ""
+msgstr "Faktor Bayes"
 
 msgid "Three-Hypothesis Bayes Factors (at d = c)"
-msgstr ""
+msgstr "Faktor Bayes Tiga-Hipotesis (di d = c)"
 
 msgid "Prior P(Good)"
-msgstr ""
+msgstr "Priori P(Baik)"
 
 msgid "Post P(Good)"
-msgstr ""
+msgstr "Pasca P(Baik)"
 
 msgid "Prior P(Middle)"
-msgstr ""
+msgstr "Priori P(Tengah)"
 
 msgid "Post P(Middle)"
-msgstr ""
+msgstr "Pasca P(Tengah)"
 
 msgid "Prior P(Bad)"
-msgstr ""
+msgstr "Priori P(Buruk)"
 
 msgid "Post P(Bad)"
-msgstr ""
+msgstr "Pasca P(Buruk)"
 
 msgid "BF (Good vs Bad)"
-msgstr ""
+msgstr "BF (Baik vs Buruk)"
 
 msgid "BF (Good vs Middle)"
-msgstr ""
+msgstr "BF (Baik vs Tengah)"
 
 msgid "BF (Middle vs Bad)"
-msgstr ""
+msgstr "BF (Tengah vs Buruk)"
 
 msgid "Posterior Distribution"
-msgstr ""
+msgstr "Distribusi Posterior"
 
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Distribusi Priori"
 
 msgid "Lot Proportion Defective"
-msgstr ""
+msgstr "Defektif Proporsi Lot"
 
 msgid "Posterior Predictive Distribution"
 msgstr "Distribusi Prediktif Posterior"
 
 msgid "Total Defects in Lot"
-msgstr ""
+msgstr "Total Cacat di Lot"
 
-#, fuzzy
 msgid "Probability"
-msgstr "Probabilitas Penolakan"
+msgstr "Probabilitas"
 
 msgid "Inference Decision Table"
-msgstr ""
+msgstr "Tabel Keputusan Inferensi"
 
 msgid "PPD Good (≤ %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD Baik (≤ %1$d cacat di Lot)"
 
 msgid "PPD Middle (> %1$d & ≤ %2$d defects)"
-msgstr ""
+msgstr "PPD Tengah (> %1$d & ≤ %2$d cacat)"
 
 msgid "PPD Bad (> %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD Buruk (> %1$d cacat di Lot)"
 
-#, fuzzy
 msgid "Sample Size (n)"
-msgstr "Ukuran Sampel"
+msgstr "Ukuran Sampel (n)"
 
 msgid "Defects (d)"
-msgstr ""
+msgstr "Cacat (d)"
 
 msgid "AQL"
-msgstr ""
+msgstr "AQL"
 
 msgid "RQL"
-msgstr ""
+msgstr "RQL"
 
 msgid "Bayes Factor"
-msgstr ""
+msgstr "Faktor Bayes"
 
 msgid ""
 "Bayes factor interpretation: BF ≥ 10 (strong evidence for H−), 3 ≤ BF < 10 "
 "(moderate evidence for H−), 0.33 ≤ BF < 3 (inconclusive), 0.10 ≤ BF < 0.33 "
 "(moderate evidence for H+), BF < 0.10 (strong evidence for H+)."
 msgstr ""
+"Interpretasi faktor Bayes: BF ≥ 10 (bukti kuat untuk H–), 3 ≤ BF < 10 (bukti "
+"moderat untuk H–), 0.33 ≤ BF < 3 (inkonklusif), 0.10 ≤ BF < 0.33 (bukti "
+"moderat untuk H+), BF < 0.10 (bukti kuat untuk H+)."
 
 msgid "Procedure"
-msgstr ""
+msgstr "Prosedur"
 
 msgid ""
 "<div style='line-height: 1.2;'>\n"
@@ -408,6 +420,42 @@ msgid ""
 "size, <b>d</b> the observed number of defects in the sample, and <b>N</b> "
 "the lot size.</p></div>"
 msgstr ""
+"<div style='line-height: 1.2;'>\n"
+"    <p style='margin: 0 0 8px 0;'><b>Objektif utama</b> dari prosedur "
+"pensampelan Bayes ini adalah mengevaluasi kualitas dari lot dengan "
+"menentukan jika proporsi dari cacat lebih rendah dari <b>Tingkat Kualitas "
+"Dapat Ditolak (RQL)</b>, yang saat ini diatur di <b>%1$.2f%%</b>.</p>\n"
+"\n"
+"    <p style='margin: 0 0 4px 0;'>Dua hipotesis statistikal primer "
+"dirumuskan tentang defektif proporsi lot (&theta;):</p>\n"
+"    <ul style='margin: 0 0 8px 20px;'>\n"
+"      <li>Hipotesis (null) dari kualitas tidak dapat ditoleransi H<sub>+</"
+"sub>: &theta; &ge; %1$.2f%% (ditentukan pengguna)</li>\n"
+"      <li>Hipotesis (alternatif) dari kualitas dapat ditoleransi H <sub>-</"
+"sub>: &theta; < %1$.2f%% (ditentukan pengguna)</li>\n"
+"    </ul>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'>Secara tambahan, pengguna memiliki opsi "
+"untuk melakukan <b>Pengujian Tiga-Hipotesis</b>, yang mempartisi tingkat "
+"kualitas menjadi wilayah 'Baik' (&le; AQL), 'Tengah' (AQL < &theta; &le; RQL)"
+", dan 'Buruk' (> RQL).</p>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'><b>Tingkat Kualitas Dapat Diterima (AQL)</"
+"b> saat ini diatur di <b>%2$.2f%%</b>. Nilai ini merepresentasikan\n"
+"    tingkat kualitas bertujuan untuk penerimaan dengan probabilitas tinggi. "
+"Kendala kualitas ini dapat disesuaikan di fase Perencanaan untuk "
+"mencerminkan persyaratan spesifik.</p>\n"
+"\n"
+"    <p style='margin: 0 0 6px 0;'><b>Tahapan</b></p>\n"
+"    <p style='margin: 0 0 6px 0;'><b>1. Perencanaan:</b> Tentukan ukuran "
+"sampel minimum sedemikian sampel menyediakan bukti cukup (faktor Bayes "
+"target) untuk mencapai objektif pensampelan tertentu.</p>\n"
+"\n"
+"    <p style='margin: 0;'><b>2. Inferensi:</b> Evaluasikan data terobservasi "
+"untuk memperbarui keyakinan priori menjadi\n"
+"    distribusi posterior. Di bagian ini, <b>n</b> menandakan ukuran sampel, "
+"<b>d</b> jumlah cacat terobservasi di sampel, dan <b>N</b> ukuran lot.</p></"
+"div>"
 
 msgid ""
 "Lower limit for proportion non-conforming items needs to be smaller than the "
