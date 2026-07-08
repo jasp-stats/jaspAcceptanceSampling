@@ -6,6 +6,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: ja\n"
 "X-Qt-Contexts: true\n"
+"PO-Revision-Date: 2026-07-09 01:01+0000\n"
+"Last-Translator: Akira Harada <momoldo@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/ja/>\n"
+"Language: ja\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 msgctxt "Description|"
 msgid "Acceptance Sampling"
@@ -69,7 +75,7 @@ msgstr ""
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "サンプルサイズ(n)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "k"
@@ -81,23 +87,23 @@ msgstr ""
 
 msgctxt "Distribution|"
 msgid "Distribution"
-msgstr ""
+msgstr "分布"
 
 msgctxt "Distribution|"
 msgid "Binomial"
-msgstr ""
+msgstr "二項"
 
 msgctxt "Distribution|"
 msgid "Hypergeometric"
-msgstr ""
+msgstr "超幾何"
 
 msgctxt "Distribution|"
 msgid "Poisson"
-msgstr ""
+msgstr "ポワソン"
 
 msgctxt "OutputOptions|"
 msgid "Output options"
-msgstr ""
+msgstr "出力オプション"
 
 msgctxt "OutputOptions|"
 msgid "Summary table"
@@ -133,7 +139,7 @@ msgstr ""
 
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "サンプルサイズ(n)"
 
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
@@ -161,7 +167,7 @@ msgstr ""
 
 msgctxt "PlanSingle|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "サンプルサイズ(n)"
 
 msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
