@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.18.1\n"
 "POT-Creation-Date: 2026-04-04 05:10\n"
-"PO-Revision-Date: 2026-05-21 07:11+0000\n"
-"Last-Translator: Akira Harada <momoldo@gmail.com>\n"
+"PO-Revision-Date: 2026-07-28 05:01+0000\n"
+"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-r/ja/>\n"
 "Language: ja\n"
@@ -11,239 +11,252 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.6.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "Single Sampling Plan"
-msgstr ""
+msgstr "1回抜取方式"
 
 msgid "Multiple Sampling Plan"
-msgstr ""
+msgstr "多回抜取方式"
 
 msgid "Acceptance Sampling Plan"
-msgstr ""
+msgstr "抜取検査方式"
 
 msgid "Value"
 msgstr "値"
 
 msgid "Sample"
-msgstr "サンプル"
+msgstr "標本"
 
 msgid "Sample Size"
 msgstr "サンプルサイズ"
 
 msgid "Cum. Sample Size"
-msgstr ""
+msgstr "累積サンプルサイズ"
 
 msgid "Acc. Number"
-msgstr ""
+msgstr "合格判定個数"
 
 msgid "Rej. Number"
-msgstr ""
+msgstr "不合格判定個数"
 
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "計量抜取方式の分析"
 
 msgid "Variable Sampling Plan (Standard deviation assumed to be <b>%s</b>)"
-msgstr ""
+msgstr "計量抜取方式 (標準偏差は <b>%s</b>と仮定)"
 
 msgid "Sample size"
 msgstr "サンプルサイズ"
 
 msgid "Critical Distance (k)"
-msgstr ""
+msgstr "限界距離 (k)"
 
 msgid "If historical standard deviation is unknown, sample size has to be > 1."
-msgstr ""
+msgstr "過去の標準偏差が未知の場合、サンプルサイズは 1 より大きくなければなりません。"
 
 msgid ""
 "Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of "
 "the generated variable plan."
 msgstr ""
+"ロットサイズ (N = %1$.0f) は、生成された計量抜取方式のサンプルサイズ (n = "
+"%2$.0f) より小さくできません。"
 
 msgid "The dataset is empty."
-msgstr ""
+msgstr "データセットが空です。"
 
 msgid "The following assigned variables are missing from the dataset: %1$s."
-msgstr ""
+msgstr "次の割り当て済み変数がデータセットにありません: %1$s。"
 
 msgid "%1$s cannot contain missing or non-finite values."
-msgstr ""
+msgstr "%1$s に欠測値や有限でない値を含めることはできません。"
 
 msgid "%1$s must contain whole numbers only."
-msgstr ""
+msgstr "%1$s には整数のみを含めてください。"
 
 msgid "%1$s cannot contain negative values."
-msgstr ""
+msgstr "%1$s に負の値を含めることはできません。"
 
 msgid "Defect Count"
-msgstr ""
+msgstr "不適合品数"
 
 msgid "Lot Size"
-msgstr ""
+msgstr "ロットサイズ"
 
 msgid "Time"
-msgstr ""
+msgstr "時間"
 
 msgid "Predictor"
-msgstr ""
+msgstr "予測変数"
 
 msgid "Predictor must vary across lots when using the predictor model."
 msgstr ""
+"予測変数モデルを使う場合、予測変数はロットごとに異なる値をとる必要があります"
+"。"
 
 msgid "Observed defects cannot exceed the sample size for any lot."
-msgstr ""
+msgstr "観測された不適合品数が、どのロットでもサンプルサイズを超えてはいけません。"
 
 msgid "Sample size cannot exceed the lot size for any lot."
-msgstr ""
+msgstr "サンプルサイズが、どのロットでもロットサイズを超えてはいけません。"
 
 msgid "Sampling..."
-msgstr ""
+msgstr "サンプリングしています..."
 
 msgid "Estimation failed: %s"
-msgstr ""
+msgstr "推定に失敗しました: %s"
 
 msgid "Posterior Summary (Current Lot)"
-msgstr ""
+msgstr "事後要約 (現在のロット)"
 
 msgid "Lot Nr."
-msgstr ""
+msgstr "ロット番号"
 
 msgid "Obs. Defects"
-msgstr ""
+msgstr "観測された不適合品数"
 
 msgid "Median Pred. Defects"
-msgstr ""
+msgstr "予測不適合品数の中央値"
 
 msgid "Mass < AQL"
-msgstr ""
+msgstr "AQL 未満の質量"
 
 msgid "Mass > RQL"
-msgstr ""
+msgstr "RQL 超の質量"
 
 msgid "Decision"
-msgstr ""
+msgstr "判定"
 
 msgid ""
 "The Lot Number, Lot Size, or Defect Count is missing (NA) for the last lot."
 msgstr ""
+"最後のロットについて、ロット番号・ロットサイズ・不適合品数のいずれかが欠測 "
+"(NA) です。"
 
 msgid "Consider to Continue"
-msgstr ""
+msgstr "継続を検討"
 
 msgid "Consider to Accept"
-msgstr ""
+msgstr "合格を検討"
 
 msgid "Consider to Reject"
-msgstr ""
+msgstr "不合格を検討"
 
 msgid "Defect Rate Over Time"
-msgstr ""
+msgstr "不適合率の推移"
 
 msgid "Lot"
-msgstr ""
+msgstr "ロット"
 
 msgid "Defect Rate (%%)"
-msgstr ""
+msgstr "不適合率 (%%)"
 
 msgid "Posterior Predictive"
-msgstr ""
+msgstr "事後予測"
 
 msgid "Defects in Current Lot"
-msgstr ""
+msgstr "現在のロットの不適合品数"
 
 msgid "Posterior Predictive Probability"
-msgstr ""
+msgstr "事後予測確率"
 
 msgid ""
 "Note. Tail correction adds a uniform sudden-jump component over the full lot-"
 "size range (0 to N), so this figure is zoomed to the uncorrected predictive "
 "range to keep the posterior shape readable."
 msgstr ""
+"注. 裾の補正は、ロットサイズの全範囲 (0 から N) にわたって一様な急跳ね成分を"
+"加えます。そのため、この図は事後分布の形が読み取りやすいように、補正前の予測"
+"範囲に拡大しています。"
 
 msgid "Posterior Defect Rate"
-msgstr ""
+msgstr "事後不適合率"
 
 msgid "Density"
-msgstr ""
+msgstr "密度"
 
 msgid "Beta Coefficient"
-msgstr ""
+msgstr "ベータ係数"
 
 msgid "Predictor Coefficient β"
-msgstr ""
+msgstr "予測変数の係数 β"
 
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "MCMC診断"
 
 msgid "Parameter"
-msgstr ""
+msgstr "パラメータ"
 
 msgid "Mean"
-msgstr "平均値"
+msgstr "平均"
 
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 msgid "ESS"
-msgstr ""
+msgstr "ESS"
 
 msgid "R-hat"
-msgstr ""
+msgstr "R-hat"
 
 msgid "No parameters selected for the MCMC diagnostics table."
-msgstr ""
+msgstr "MCMC診断表に含めるパラメータが選ばれていません。"
 
 msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
-msgstr ""
+msgstr "事前分布の最頻値 (%1$.4f) は 0 と RQL (%2$.4f) の間でなければなりません。"
 
 msgid ""
 "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. "
 "Please choose a lower mode, a lower RQL, or a different prior."
 msgstr ""
+"最頻値 %1$.4f、RQL %2$.4f では中立な事前分布を構成できませんでした。最頻値を"
+"下げるか、RQL を下げるか、別の事前分布を選んでください。"
 
 msgid "Planning"
-msgstr ""
+msgstr "計画"
 
 msgid "Please ensure 0 < AQL < RQL < 1."
-msgstr ""
+msgstr "0 < AQL < RQL < 1 となるようにしてください。"
 
 msgid "Please provide a valid maximum sample size (> 0)."
-msgstr ""
+msgstr "有効な最大サンプルサイズ (> 0) を指定してください。"
 
 msgid "Please provide a valid minimum Bayes factor (> 0)."
-msgstr ""
+msgstr "有効な最小ベイズファクター (> 0) を指定してください。"
 
 msgid ""
 "The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
 "or choose a different prior."
 msgstr ""
+"選ばれた事前分布ではベータ分布のパラメータが不正になります。AQL/RQL を調整す"
+"るか、別の事前分布を選んでください。"
 
 msgid "No valid plans found satisfying the specified constraints."
-msgstr ""
+msgstr "指定された制約を満たす有効な抜取方式が見つかりませんでした。"
 
 msgid "Inference"
-msgstr ""
+msgstr "推論"
 
 msgid "Please ensure the data are valid: n >= 0 and 0 <= d <= n."
-msgstr ""
+msgstr "データが有効か確認してください: n >= 0 かつ 0 <= d <= n。"
 
 msgid "Lot size (N) must be at least as large as the sample size (n)."
-msgstr ""
+msgstr "ロットサイズ (N) は、少なくともサンプルサイズ (n) 以上でなければなりません。"
 
 msgid "Strong evidence for accepting the lot."
-msgstr ""
+msgstr "ロットを合格とする強い証拠があります。"
 
 msgid "Moderate evidence for accepting the lot."
-msgstr ""
+msgstr "ロットを合格とする中程度の証拠があります。"
 
 msgid "Inconclusive evidence."
-msgstr ""
+msgstr "決定的でない証拠です。"
 
 msgid "Moderate evidence for rejecting the lot."
-msgstr ""
+msgstr "ロットを不合格とする中程度の証拠があります。"
 
 msgid "Strong evidence for rejecting the lot."
-msgstr ""
+msgstr "ロットを不合格とする強い証拠があります。"
 
 msgid ""
 "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL "
@@ -251,115 +264,122 @@ msgid ""
 "there is a <b>%4$.1f%%</b> predicted probability that the current lot of "
 "%5$d items contains at most %6$d total defects."
 msgstr ""
+"ロットの不適合率が RQL の <b>%1$.2f</b> を下回るという仮説を支持する <b>"
+"ベイズファクター</b> は <b>%2$.2f</b>です。%3$s<br>観測された標本にもとづくと"
+"、%5$d 個からなる現在のロットに不適合品が合計 %6$d 個以下しか含まれない予測確"
+"率は <b>%4$.1f%%</b> です。"
 
 msgid ""
 "<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is "
 "<b>%2$.2f</b>."
 msgstr ""
+"不適合品の割合が<u>%1$.2f</u> 未満であることを支持する <u>ベイズファクター</"
+"u> は <b>%2$.2f</b>です。"
 
 msgid "Sampling Plans"
-msgstr ""
+msgstr "抜取方式"
 
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "合格判定個数 (c)"
 
-#, fuzzy
 msgid "Lowest sample size (n)"
-msgstr "サンプルサイズ"
+msgstr "最小サンプルサイズ (n)"
 
 msgid "Prior P(θ < RQL)"
-msgstr ""
+msgstr "事前 P(θ < RQL)"
 
 msgid "Posterior P(θ < RQL)"
-msgstr ""
+msgstr "事後 P(θ < RQL)"
 
 msgid "Bayes factor"
-msgstr ""
+msgstr "ベイズファクター"
 
 msgid "Three-Hypothesis Bayes Factors (at d = c)"
-msgstr ""
+msgstr "3仮説のベイズファクター (d = c のとき)"
 
 msgid "Prior P(Good)"
-msgstr ""
+msgstr "事前 P(良)"
 
 msgid "Post P(Good)"
-msgstr ""
+msgstr "事後 P(良)"
 
 msgid "Prior P(Middle)"
-msgstr ""
+msgstr "事前 P(中)"
 
 msgid "Post P(Middle)"
-msgstr ""
+msgstr "事後 P(中)"
 
 msgid "Prior P(Bad)"
-msgstr ""
+msgstr "事前 P(不良)"
 
 msgid "Post P(Bad)"
-msgstr ""
+msgstr "事後 P(不良)"
 
 msgid "BF (Good vs Bad)"
-msgstr ""
+msgstr "BF (良 vs 不良)"
 
 msgid "BF (Good vs Middle)"
-msgstr ""
+msgstr "BF (良 vs 中)"
 
 msgid "BF (Middle vs Bad)"
-msgstr ""
+msgstr "BF (中 vs 不良)"
 
 msgid "Posterior Distribution"
-msgstr ""
+msgstr "事後分布"
 
 msgid "Prior Distribution"
-msgstr ""
+msgstr "事前分布"
 
 msgid "Lot Proportion Defective"
-msgstr ""
+msgstr "ロットの不適合品率"
 
 msgid "Posterior Predictive Distribution"
-msgstr ""
+msgstr "事後予測分布"
 
 msgid "Total Defects in Lot"
-msgstr ""
+msgstr "ロット内の不適合品総数"
 
 msgid "Probability"
-msgstr ""
+msgstr "確率"
 
 msgid "Inference Decision Table"
-msgstr ""
+msgstr "推論による判定表"
 
 msgid "PPD Good (≤ %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD 良 (ロット内の不適合品が %1$d 個以下)"
 
 msgid "PPD Middle (> %1$d & ≤ %2$d defects)"
-msgstr ""
+msgstr "PPD 中 (不適合品が %1$d 個超 %2$d 個以下)"
 
 msgid "PPD Bad (> %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD 不良 (ロット内の不適合品が %1$d 個超)"
 
-#, fuzzy
 msgid "Sample Size (n)"
-msgstr "サンプルサイズ"
+msgstr "サンプルサイズ (n)"
 
 msgid "Defects (d)"
-msgstr ""
+msgstr "不適合品数 (d)"
 
 msgid "AQL"
-msgstr ""
+msgstr "AQL"
 
 msgid "RQL"
-msgstr ""
+msgstr "RQL"
 
 msgid "Bayes Factor"
-msgstr ""
+msgstr "ベイズファクター"
 
 msgid ""
 "Bayes factor interpretation: BF ≥ 10 (strong evidence for H−), 3 ≤ BF < 10 "
 "(moderate evidence for H−), 0.33 ≤ BF < 3 (inconclusive), 0.10 ≤ BF < 0.33 "
 "(moderate evidence for H+), BF < 0.10 (strong evidence for H+)."
 msgstr ""
+"ベイズファクターの解釈: BF ≥ 10 (H− の強い証拠)、3 ≤ BF < 10 (H− の中程度の証"
+"拠)、0.33 ≤ BF < 3 (決定的でない)、0.10 ≤ BF < 0.33 (H+ の中程度の証拠)、BF "
+"< 0.10 (H+ の強い証拠)。"
 
 msgid "Procedure"
-msgstr ""
+msgstr "手順"
 
 msgid ""
 "<div style='line-height: 1.2;'>\n"
@@ -399,21 +419,53 @@ msgid ""
 "size, <b>d</b> the observed number of defects in the sample, and <b>N</b> "
 "the lot size.</p></div>"
 msgstr ""
+"<div style='line-height: 1.2;'>\n"
+"    <p style='margin: 0 0 8px 0;'>このベイズ抜取検査の <b>主な目的</b> は、不"
+"適合品の割合が <b>不合格品質水準 (RQL)</b>を下回るかどうかを判定してロットの"
+"品質を評価することです。RQL は現在 <b>%1$.2f%%</b>に設定されています。</p>\n"
+"\n"
+"    <p style='margin: 0 0 4px 0;'>ロットの不適合品率 (&theta;) について、主に"
+"2つの統計的仮説を立てます。</p>\n"
+"    <ul style='margin: 0 0 8px 20px;'>\n"
+"      <li>品質が許容できないという(帰無)仮説 H<sub>+</sub>: &theta; &ge; "
+"%1$.2f%% (ユーザ指定)</li>\n"
+"      <li>品質が許容できるという(対立)仮説 H<sub>-</sub>: &theta; < %1$.2f%% "
+"(ユーザ指定)</li>\n"
+"    </ul>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'>さらに、品質水準を「良」(&le; AQL)・「中」"
+"(AQL < &theta; &le; RQL)・「不良」(> RQL) の領域に分ける <b>3仮説の検定</b>を"
+"行うこともできます。</p>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'> <b>合格品質水準 (AQL)</b> は現在 <b>"
+"%2$.2f%%</b>に設定されています。これは高い確率で\n"
+"    合格させたい品質の水準を表します。これらの品質の制約は、計画の段階で個別"
+"の要件に合わせて調整できます。</p>\n"
+"\n"
+"    <p style='margin: 0 0 6px 0;'><b>段階</b></p>\n"
+"    <p style='margin: 0 0 6px 0;'><b>1. 計画:</b> 指定した抜取検査の目的を達"
+"成するのに十分な証拠(目標とするベイズファクター)が得られるよう、最小の"
+"サンプルサイズを決めます。</p>\n"
+"\n"
+"    <p style='margin: 0;'><b>2. 推論:</b> 観測データを評価して、事前の信念"
+"を\n"
+"    事後分布へ更新します。この節では <b>n</b> はサンプルサイズ、 <b>d</b> は"
+"標本中の観測された不適合品数、 <b>N</b> はロットサイズを表します。</p></div>"
 
 msgid ""
 "Lower limit for proportion non-conforming items needs to be smaller than the "
 "upper limit."
-msgstr ""
+msgstr "不適合品の割合の下限は、上限より小さくなければなりません。"
 
 msgid ""
 "Step size for proportion non-conforming items needs to be smaller than the "
 "difference between the upper and lower limits."
-msgstr ""
+msgstr "不適合品の割合の刻み幅は、上限と下限の差より小さくなければなりません。"
 
 msgid ""
 "Step size of 0 is allowed only if the lower and upper limits of proportion "
 "non-conforming items are identical."
-msgstr ""
+msgstr "刻み幅 0 が許されるのは、不適合品の割合の下限と上限が等しい場合だけです。"
 
 msgid ""
 "For hypergeometric distribution, N * proportion non-conforming should all be "
@@ -421,32 +473,39 @@ msgid ""
 "\n"
 "Check the values of N and proportion non-conforming."
 msgstr ""
+"超幾何分布では、N × 不適合品の割合 がすべて整数値になる必要があります。\n"
+"\n"
+"N と不適合品の割合の値を確認してください。"
 
 msgid "Sample size (n) cannot be larger than the lot size (N)."
-msgstr ""
+msgstr "サンプルサイズ (n) はロットサイズ (N) より大きくできません。"
 
 msgid "Acceptance number (c) cannot be larger than the sample size (n)."
-msgstr ""
+msgstr "合格判定個数 (c) はサンプルサイズ (n) より大きくできません。"
 
 msgid "Rejection number (r) cannot be larger than the sample size (n)."
-msgstr ""
+msgstr "不合格判定個数 (r) はサンプルサイズ (n) より大きくできません。"
 
 msgid "Rejection number (r) has to be larger than the acceptance number (c)."
-msgstr ""
+msgstr "不合格判定個数 (r) は合格判定個数 (c) より大きくなければなりません。"
 
 msgid ""
 "Cumulative sample size (n1+n2+...) cannot be larger than the lot size (N)."
-msgstr ""
+msgstr "累積サンプルサイズ (n1+n2+...) はロットサイズ (N) より大きくできません。"
 
 msgid ""
 "Final rejection number (r) needs to be 1 more than the final acceptance "
 "number (c)."
 msgstr ""
+"最終段階の不合格判定個数 (r) は、最終段階の合格判定個数 (c) より 1 だけ大きく"
+"する必要があります。"
 
 msgid ""
 "Rejection number (r) for every stage has to be larger than the corresponding "
 "acceptance number (c)."
 msgstr ""
+"各段階の不合格判定個数 (r) は、対応する合格判定個数 (c) より大きくなければな"
+"りません。"
 
 msgid ""
 "For all stages except the last stage, rejection numbers (r) have to be at at "
@@ -454,176 +513,200 @@ msgid ""
 "\n"
 "                                   Else, subsequent stages become redundant."
 msgstr ""
+"最終段階を除くすべての段階では、不合格判定個数 (r) は合格判定個数 (c) より少"
+"なくとも 2 だけ大きくする必要があります。\n"
+"\n"
+"                                   そうでないと、後続の段階が意味をなさなくな"
+"ります。"
 
 msgid ""
 "Acceptance numbers (c) are cumulative, so they need to be in a non-"
 "decreasing sequence."
-msgstr ""
+msgstr "合格判定個数 (c) は累積値なので、非減少の並びである必要があります。"
 
 msgid ""
 "Rejection numbers (r) are cumulative, so they need to be in a non-decreasing "
 "sequence."
-msgstr ""
+msgstr "不合格判定個数 (r) は累積値なので、非減少の並びである必要があります。"
 
 msgid "No valid values found in the plan. Check the inputs."
-msgstr ""
+msgstr "この抜取方式に有効な値が見つかりません。入力を確認してください。"
 
 msgid ""
 "AQL (Acceptable Quality Level) value should be lower than RQL (Rejectable "
 "Quality Level) value."
-msgstr ""
+msgstr "AQL (合格品質水準) の値は、RQL (不合格品質水準) の値より小さくしてください。"
 
 msgid "1 - α (Producer's risk) has to be greater than β (consumer's risk)."
-msgstr ""
+msgstr "1 - α (生産者危険) は β (消費者危険) より大きくなければなりません。"
 
 msgid "Current plan <b>CAN %s</b> meet the specified risk point(s)."
-msgstr ""
+msgstr "現在の抜取方式は、指定された危険点を <b>満たすことが %s</b> 。"
 
 msgid "Proportion Non-conforming"
-msgstr ""
+msgstr "不適合品の割合"
 
 msgid "Required P(accept)"
-msgstr ""
+msgstr "必要な P(合格)"
 
 msgid "Actual P(accept)"
-msgstr ""
+msgstr "実際の P(合格)"
 
 msgid ""
 "Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the "
 "required probability of acceptance (%3$.3f) at AQL."
 msgstr ""
+"AQL (%2$.3f) における合格確率 (%1$.3f) が、AQL で必要な合格確率 (%3$.3f) よ"
+"り <b>低く</b> なっています。"
 
 msgid ""
 "Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the "
 "required probability of acceptance (%3$.3f) at RQL."
 msgstr ""
+"RQL (%2$.3f) における合格確率 (%1$.3f) が、RQL で必要な合格確率 (%3$.3f) よ"
+"り <b>高く</b> なっています。"
 
 msgid "Acceptance Probabilities"
-msgstr ""
+msgstr "合格確率"
 
 msgid "Prop. Non-conforming"
-msgstr ""
+msgstr "不適合品の割合"
 
 msgid "P(accept)"
-msgstr ""
+msgstr "P(合格)"
 
 msgid "OC (Operating Characteristics) Curve"
-msgstr ""
+msgstr "OC曲線 (検査特性曲線)"
 
 msgid "Probability of Acceptance"
-msgstr ""
+msgstr "合格確率"
 
 msgid "AOQ (Average Outgoing Quality) Curve"
-msgstr ""
+msgstr "AOQ曲線 (平均出検品質)"
 
 msgid "Can not calculate AOQ. Check the plan parameters."
-msgstr ""
+msgstr "AOQ を計算できません。抜取方式のパラメータを確認してください。"
 
 msgid "(Incoming) Proportion Non-conforming"
-msgstr ""
+msgstr "(受入時の) 不適合品の割合"
 
 msgid "Average Outgoing Quality"
-msgstr ""
+msgstr "平均出検品質"
 
 msgid "AOQL: %.3f"
-msgstr ""
+msgstr "AOQL: %.3f"
 
 msgid "ATI (Average Total Inspection) Curve"
-msgstr ""
+msgstr "ATI曲線 (平均総検査数)"
 
 msgid "Can not calculate ATI. Check the plan parameters."
-msgstr ""
+msgstr "ATI を計算できません。抜取方式のパラメータを確認してください。"
 
 msgid "Average Total Inspection"
-msgstr ""
+msgstr "平均総検査数"
 
 msgid "ASN (Average Sample Number) Curve"
-msgstr ""
+msgstr "ASN曲線 (平均サンプル数)"
 
 msgid "Can not calculate ASN. Check the plan parameters."
-msgstr ""
+msgstr "ASN を計算できません。抜取方式のパラメータを確認してください。"
 
 msgid "Average Sample Number"
-msgstr ""
+msgstr "平均サンプル数"
 
 msgid "Generated Sampling Plan"
-msgstr ""
+msgstr "生成された抜取方式"
 
 msgid "Acceptance probabilities at AQL and RQL"
-msgstr ""
+msgstr "AQL と RQL における合格確率"
 
 msgid "Acceptance Probability"
-msgstr ""
+msgstr "合格確率"
 
 msgid "Rejection Probability"
-msgstr ""
+msgstr "不合格確率"
 
 msgid ""
 "If the number of defective items out of %1$d sampled is <= %2$d, accept the "
 "lot. Reject otherwise."
 msgstr ""
+"%1$d 個の標本のうち不適合品が %2$d 個以下ならロットを合格とし、そうでなければ"
+"不合格とします。"
 
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "計量抜取方式の作成"
 
 msgid ""
 "Z.LSL = (mean - LSL) / historical standard deviation\n"
 "\n"
 "Accept lot if Z.LSL >= k, otherwise reject."
 msgstr ""
+"Z.LSL = (平均 - LSL) / 過去の標準偏差\n"
+"\n"
+"Z.LSL >= k ならロットを合格とし、そうでなければ不合格とします。"
 
 msgid ""
 "Variable plan generated for the current quality constraints is invalid. "
 "Modify the quality constraints."
 msgstr ""
+"現在の品質の制約に対して生成された計量抜取方式は不正です。品質の制約を変更し"
+"てください。"
 
 msgid ""
 "Variable plan generated for the current quality constraints has an invalid "
 "sample size (n). Modify the quality constraints."
 msgstr ""
+"現在の品質の制約に対して生成された計量抜取方式は、サンプルサイズ (n) が不正で"
+"す。品質の制約を変更してください。"
 
 msgid ""
 "Variable plan generated for the current quality constraints has an invalid k "
 "value. Modify the quality constraints."
 msgstr ""
+"現在の品質の制約に対して生成された計量抜取方式は、k の値が不正です。品質の制"
+"約を変更してください。"
 
 msgid "Accept or Reject Lot %s"
-msgstr ""
+msgstr "ロット %s の合格・不合格判定"
 
 msgid "Sample Mean"
-msgstr ""
+msgstr "標本平均"
 
 msgid "Sample Standard Deviation"
-msgstr ""
+msgstr "標本標準偏差"
 
 msgid "Historical Standard Deviation"
-msgstr ""
+msgstr "過去の標準偏差"
 
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "下側規格限界 (LSL)"
 
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "上側規格限界 (USL)"
 
 msgid "Z.LSL"
-msgstr ""
+msgstr "Z.LSL"
 
 msgid "Z.USL"
-msgstr ""
+msgstr "Z.USL"
 
 msgid "Sample standard deviation has to be greater than 0."
-msgstr ""
+msgstr "標本標準偏差は 0 より大きくなければなりません。"
 
 msgid "Sample mean is invalid."
-msgstr ""
+msgstr "標本平均が不正です。"
 
 msgid "Can not accept or reject lot: sample size has to be greater than 1."
 msgstr ""
+"ロットの合格・不合格を判定できません: サンプルサイズは 1 より大きくなければな"
+"りません。"
 
 msgid ""
 "Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, "
 "and historical standard deviation is <b>unknown</b>."
 msgstr ""
+"LSL と USL の <b>両方</b> が与えられ、かつ過去の標準偏差が <b>未知</b> の場合"
+"、サンプルサイズは <b>1 より大きく</b>なければなりません。"
 
 msgid "<u>Decision:</u> <b>%s</b> lot."
-msgstr ""
+msgstr "<u>判定:</u> ロットを <b>%s</b> 。"
