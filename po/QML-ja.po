@@ -6,66 +6,72 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Language: ja\n"
 "X-Qt-Contexts: true\n"
+"PO-Revision-Date: 2026-07-28 08:02+0000\n"
+"Last-Translator: Koji Kosugi <kosugitti@gmail.com>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-qml/ja/>\n"
+"Language: ja\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgctxt "Description|"
 msgid "Acceptance Sampling"
-msgstr ""
+msgstr "抜取検査"
 
 msgctxt "Description|"
 msgid "Sampling for acceptance"
-msgstr ""
+msgstr "合否判定のための抜取検査"
 
 msgctxt "Description|"
 msgid "Attribute Sampling"
-msgstr ""
+msgstr "計数抜取検査"
 
 msgctxt "Description|"
 msgid "Create Attribute Plan"
-msgstr ""
+msgstr "計数抜取方式を作成"
 
 msgctxt "Description|"
 msgid "Analyze Attribute Plan"
-msgstr ""
+msgstr "計数抜取方式を分析"
 
 msgctxt "Description|"
 msgid "Variable Sampling"
-msgstr ""
+msgstr "計量抜取検査"
 
 msgctxt "Description|"
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "計量抜取方式を作成"
 
 msgctxt "Description|"
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "計量抜取方式を分析"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots"
-msgstr ""
+msgstr "ロットの合格・不合格判定"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots (k-method)"
-msgstr ""
+msgstr "ロットの合格・不合格判定 (k法)"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Single Sampling Plan"
-msgstr ""
+msgstr "1回抜取方式"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess attribute plan"
-msgstr ""
+msgstr "計数抜取方式を評価"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Multiple Sampling Plan"
-msgstr ""
+msgstr "多回抜取方式"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess sampling plan"
-msgstr ""
+msgstr "抜取方式を評価"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "ロットサイズ (N)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Sample size (n)"
@@ -73,11 +79,11 @@ msgstr "サンプルサイズ(n)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "k"
-msgstr ""
+msgstr "k"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Assess variable plan"
-msgstr ""
+msgstr "計量抜取方式を評価"
 
 msgctxt "Distribution|"
 msgid "Distribution"
@@ -101,35 +107,35 @@ msgstr "出力オプション"
 
 msgctxt "OutputOptions|"
 msgid "Summary table"
-msgstr ""
+msgstr "要約表"
 
 msgctxt "OutputOptions|"
 msgid "OC curve"
-msgstr ""
+msgstr "OC曲線"
 
 msgctxt "OutputOptions|"
 msgid "AOQ curve (plan with rectification)"
-msgstr ""
+msgstr "AOQ曲線 (選別付きの方式)"
 
 msgctxt "OutputOptions|"
 msgid "ATI curve (plan with rectification)"
-msgstr ""
+msgstr "ATI曲線 (選別付きの方式)"
 
 msgctxt "OutputOptions|"
 msgid "ASN curve"
-msgstr ""
+msgstr "ASN曲線"
 
 msgctxt "PlanMultiple|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "ロットサイズ (N)"
 
 msgctxt "PlanMultiple|"
 msgid "Number of stages"
-msgstr ""
+msgstr "段階の数"
 
 msgctxt "PlanMultiple|"
 msgid "Stage"
-msgstr ""
+msgstr "段階"
 
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
@@ -137,27 +143,27 @@ msgstr "サンプルサイズ(n)"
 
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "合格判定個数 (c)"
 
 msgctxt "PlanMultiple|"
 msgid "Rejection number (r)"
-msgstr ""
+msgstr "不合格判定個数 (r)"
 
 msgctxt "PlanMultiple|"
 msgid "n %d"
-msgstr ""
+msgstr "n %d"
 
 msgctxt "PlanMultiple|"
 msgid "c %d"
-msgstr ""
+msgstr "c %d"
 
 msgctxt "PlanMultiple|"
 msgid "r %d"
-msgstr ""
+msgstr "r %d"
 
 msgctxt "PlanSingle|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "ロットサイズ (N)"
 
 msgctxt "PlanSingle|"
 msgid "Sample size (n)"
@@ -165,438 +171,436 @@ msgstr "サンプルサイズ(n)"
 
 msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "合格判定個数 (c)"
 
 msgctxt "PlanSingle|"
 msgid "Rejection number (r)"
-msgstr ""
+msgstr "不合格判定個数 (r)"
 
 msgctxt "ProbDefect|"
 msgid "Proportion non-conforming items"
-msgstr ""
+msgstr "不適合品の割合"
 
 msgctxt "ProbDefect|"
 msgid "From"
-msgstr ""
+msgstr "開始"
 
 msgctxt "ProbDefect|"
 msgid "To"
-msgstr ""
+msgstr "終了"
 
 msgctxt "ProbDefect|"
 msgid "Step size"
-msgstr ""
+msgstr "刻み幅"
 
 msgctxt "RiskPoints|"
 msgid "Quality constraints"
-msgstr ""
+msgstr "品質の制約"
 
 msgctxt "RiskPoints|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "合格品質水準 (AQL)"
 
 msgctxt "RiskPoints|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
-msgstr ""
+msgstr "不合格品質水準 (RQL / LTPD)"
 
 msgctxt "CreateAttributePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "ロットサイズ (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "ロットサイズ (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Standard Deviation (Historical) known"
-msgstr ""
+msgstr "標準偏差 (過去の値) が既知"
 
 msgctxt "DecideVariableLots|"
 msgid "Measurement"
-msgstr ""
+msgstr "測定値"
 
 msgctxt "DecideVariableLots|"
 msgid "Specify sample statistics directly (used if dataset is not available)"
-msgstr ""
+msgstr "標本統計量を直接指定する(データセットがない場合に使います)"
 
-#, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
 msgstr "サンプルサイズ(n)"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample mean"
-msgstr ""
+msgstr "標本平均"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample standard deviation"
-msgstr ""
+msgstr "標本標準偏差"
 
 msgctxt "DecideVariableLots|"
 msgid "k                        "
-msgstr ""
+msgstr "k                        "
 
 msgctxt "DecideVariableLots|"
 msgid "Specification limits"
-msgstr ""
+msgstr "規格限界"
 
 msgctxt "DecideVariableLots|"
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "下側規格限界 (LSL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "上側規格限界 (USL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Quality constraints"
-msgstr ""
+msgstr "品質の制約"
 
 msgctxt "DecideVariableLots|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "合格品質水準 (AQL)"
 
 msgctxt "DecideVariableLots|"
 msgid "Rejectable Quality Level (RQL / LTPD)"
-msgstr ""
+msgstr "不合格品質水準 (RQL / LTPD)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Standard deviation (historical) known"
-msgstr ""
+msgstr "標準偏差 (過去の値) が既知"
 
 msgctxt "RiskPoints|"
 msgid "Producer's risk (α)"
-msgstr ""
+msgstr "生産者危険 (α)"
 
 msgctxt "RiskPoints|"
 msgid "Consumer's risk (β)"
-msgstr ""
+msgstr "消費者危険 (β)"
 
 msgctxt "DecideVariableLots|"
 msgid "Standard deviation (historical)"
-msgstr ""
+msgstr "標準偏差 (過去の値)"
 
 msgctxt "Description|"
 msgid "Bayesian Sampling"
-msgstr ""
+msgstr "ベイズ抜取検査"
 
 msgctxt "Description|"
 msgid "Bayesian State-Space Sampling"
-msgstr ""
+msgstr "ベイズ状態空間抜取検査"
 
 msgctxt "BayesianSampling|"
 msgid "1. Planning"
-msgstr ""
+msgstr "1. 計画"
 
 msgctxt "BayesianSampling|"
 msgid "Quality Constraints"
-msgstr ""
+msgstr "品質の制約"
 
 msgctxt "BayesianSampling|"
 msgid "Acceptable Quality Level (AQL)"
-msgstr ""
+msgstr "合格品質水準 (AQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Rejectable Quality Level (RQL)"
-msgstr ""
+msgstr "不合格品質水準 (RQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Prior Distribution (Beta)"
-msgstr ""
+msgstr "事前分布 (ベータ)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Around the RQL)"
-msgstr ""
+msgstr "中立 (RQL のまわり)"
 
 msgctxt "BayesianSampling|"
 msgid "Custom prior mode"
-msgstr ""
+msgstr "事前分布の最頻値を指定"
 
 msgctxt "BayesianSampling|"
 msgid "Mode"
-msgstr ""
+msgstr "最頻値"
 
 msgctxt "BayesianSampling|"
 msgid "Uniform"
-msgstr ""
+msgstr "一様"
 
 msgctxt "BayesianSampling|"
 msgid "Custom"
-msgstr ""
+msgstr "カスタム"
 
 msgctxt "BayesianSampling|"
 msgid "α"
-msgstr ""
+msgstr "α"
 
 msgctxt "BayesianSampling|"
 msgid "β"
-msgstr ""
+msgstr "β"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region)"
-msgstr ""
+msgstr "中立 (3領域)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region) Options"
-msgstr ""
+msgstr "中立 (3領域) のオプション"
 
 msgctxt "BayesianSampling|"
 msgid "Shape constraint"
-msgstr ""
+msgstr "形状の制約"
 
 msgctxt "BayesianSampling|"
 msgid "Avoid U-shape (α ≥ 1 or β ≥ 1)"
-msgstr ""
+msgstr "U字形を避ける (α ≥ 1 または β ≥ 1)"
 
 msgctxt "BayesianSampling|"
 msgid "Both α ≥ 1 and β ≥ 1"
-msgstr ""
+msgstr "α ≥ 1 かつ β ≥ 1"
 
 msgctxt "BayesianSampling|"
 msgid "None (allow U-shape)"
-msgstr ""
+msgstr "なし (U字形を許す)"
 
 msgctxt "BayesianSampling|"
 msgid "(Max) Sample size (n)"
-msgstr ""
+msgstr "(最大) サンプルサイズ (n)"
 
 msgctxt "BayesianSampling|"
 msgid "Bayes factor (min)"
-msgstr ""
+msgstr "ベイズファクター (最小)"
 
 msgctxt "BayesianSampling|"
 msgid "Output Options"
-msgstr ""
+msgstr "出力オプション"
 
 msgctxt "BayesianSampling|"
 msgid "Plans table"
-msgstr ""
+msgstr "抜取方式の表"
 
 msgctxt "BayesianSampling|"
 msgid "Prior plot"
-msgstr ""
+msgstr "事前分布のプロット"
 
 msgctxt "BayesianSampling|"
 msgid "Three-hypothesis BF table"
-msgstr ""
+msgstr "3仮説のBF表"
 
 msgctxt "BayesianSampling|"
 msgid "2. Inference"
-msgstr ""
+msgstr "2. 推論"
 
 msgctxt "BayesianSampling|"
 msgid "Use data to create posterior distribution"
-msgstr ""
+msgstr "データを使って事後分布を作る"
 
-#, fuzzy
 msgctxt "BayesianSampling|"
 msgid "Sample size (n)"
 msgstr "サンプルサイズ(n)"
 
 msgctxt "BayesianSampling|"
 msgid "Observed number of defects (d)"
-msgstr ""
+msgstr "観測された不適合品数 (d)"
 
 msgctxt "BayesianSampling|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "ロットサイズ (N)"
 
 msgctxt "BayesianSampling|"
 msgid "Inference decision table"
-msgstr ""
+msgstr "推論による判定表"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "事後分布のプロット"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior predictive distribution plot"
-msgstr ""
+msgstr "事後予測分布のプロット"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Defect Count"
-msgstr ""
+msgstr "不適合品数"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sample Size (tested items)"
-msgstr ""
+msgstr "サンプルサイズ (検査した個数)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Size (total items)"
-msgstr ""
+msgstr "ロットサイズ (総個数)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Number"
-msgstr ""
+msgstr "ロット番号"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor"
-msgstr ""
+msgstr "予測変数"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model Type"
-msgstr ""
+msgstr "モデルの種類"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Without predictor"
-msgstr ""
+msgstr "予測変数なし"
 
 msgctxt "BayesianSSMforAS|"
 msgid "With predictor"
-msgstr ""
+msgstr "予測変数あり"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Acceptance Limits"
-msgstr ""
+msgstr "合格の限界"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lower limit (AQL)"
-msgstr ""
+msgstr "下限 (AQL)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Upper limit (RQL)"
-msgstr ""
+msgstr "上限 (RQL)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sudden Jump Tail Correction"
-msgstr ""
+msgstr "急な跳ねに対する裾の補正"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Enable sudden jump tail correction"
-msgstr ""
+msgstr "急な跳ねに対する裾の補正を有効にする"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Correction weight (%)"
-msgstr ""
+msgstr "補正の重み (%)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Decision Rule"
-msgstr ""
+msgstr "判定規則"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Accept if P(defects > RQL) <"
-msgstr ""
+msgstr "次の場合に合格とする P(不適合 > RQL) <"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Reject if not accepted and P(defects < AQL) <"
-msgstr ""
+msgstr "合格でなく、かつ次の場合に不合格とする P(不適合 < AQL) <"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Plots"
-msgstr ""
+msgstr "プロット"
 
 msgctxt "BayesianSSMforAS|"
 msgid "State time series (defect rate)"
-msgstr ""
+msgstr "状態の時系列 (不適合率)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior predictive for current lot"
-msgstr ""
+msgstr "現在のロットの事後予測"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for latest defect rate"
-msgstr ""
+msgstr "最新の不適合率の事後分布"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for predictor coefficient beta"
-msgstr ""
+msgstr "予測変数の係数 beta の事後分布"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model"
-msgstr ""
+msgstr "モデル"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Prior initial defect rate"
-msgstr ""
+msgstr "初期不適合率の事前分布"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ alpha"
-msgstr ""
+msgstr "θ₁ alpha"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ beta"
-msgstr ""
+msgstr "θ₁ beta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "State noise"
-msgstr ""
+msgstr "状態ノイズ"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Half-normal SD"
-msgstr ""
+msgstr "半正規分布のSD"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor coefficient"
-msgstr ""
+msgstr "予測変数の係数"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Cauchy scale"
-msgstr ""
+msgstr "コーシー分布の尺度"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "MCMC診断"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Overview table"
-msgstr ""
+msgstr "一覧表"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Select parameters for summary table"
-msgstr ""
+msgstr "要約表に含めるパラメータを選ぶ"
 
 msgctxt "BayesianSSMforAS|"
 msgid "All theta[t]"
-msgstr ""
+msgstr "すべての theta[t]"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sigma (state noise)"
-msgstr ""
+msgstr "Sigma (状態ノイズ)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "y_pred (prediction)"
-msgstr ""
+msgstr "y_pred (予測)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Beta (predictor coefficient)"
-msgstr ""
+msgstr "Beta (予測変数の係数)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Advanced"
-msgstr ""
+msgstr "詳細"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC"
-msgstr ""
+msgstr "MCMC"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Burnin"
-msgstr ""
+msgstr "バーンイン"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Samples"
-msgstr ""
+msgstr "サンプル"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Chains"
-msgstr ""
+msgstr "チェイン"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Thin"
-msgstr ""
+msgstr "Thin(間引き)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Seed"
-msgstr ""
+msgstr "シード"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Adapt Delta"
-msgstr ""
+msgstr "Adapt Delta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Max tree depth"
-msgstr ""
+msgstr "最大ツリー深度"
