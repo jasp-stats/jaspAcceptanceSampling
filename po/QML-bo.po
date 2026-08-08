@@ -259,8 +259,7 @@ msgstr "འཇལ་བ།"
 #, fuzzy
 msgctxt "DecideVariableLots|"
 msgid "Specify sample statistics directly (used if dataset is not available)"
-msgstr ""
-"མ་དཔེའི་སྡོམ་རྩིས་ཐད་ཀར་གསལ་བཀོད་བྱེད་པ། (གཞི་གྲངས་ཚོགས་པ་མེད་ན་བེད་སྤྱོད་བྱེད།)"
+msgstr "མ་དཔེའི་སྡོམ་རྩིས་ཐད་ཀར་གསལ་བཀོད་བྱེད་པ། (གཞི་གྲངས་ཚོགས་པ་མེད་ན་བེད་སྤྱོད་བྱེད།)"
 
 #, fuzzy
 msgctxt "DecideVariableLots|"
