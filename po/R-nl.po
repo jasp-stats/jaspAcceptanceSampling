@@ -65,96 +65,96 @@ msgstr ""
 "%2$.0f) van het gegenereerde variabele plan."
 
 msgid "The dataset is empty."
-msgstr ""
+msgstr "De dataset is leeg."
 
 msgid "The following assigned variables are missing from the dataset: %1$s."
-msgstr ""
+msgstr "De volgende toegewezen variabelen ontbreken in de dataset: %1$s."
 
 msgid "%1$s cannot contain missing or non-finite values."
-msgstr ""
+msgstr "%1$s mag geen ontbrekende of niet-eindige waarden bevatten."
 
 msgid "%1$s must contain whole numbers only."
-msgstr ""
+msgstr "%1$s mag alleen hele getallen bevatten."
 
 msgid "%1$s cannot contain negative values."
-msgstr ""
+msgstr "%1$s mag geen negatieve waarden bevatten."
 
 msgid "Defect Count"
-msgstr ""
+msgstr "Aantal defecten"
 
 msgid "Lot Size"
-msgstr ""
+msgstr "Partijgrootte"
 
 msgid "Time"
-msgstr ""
+msgstr "Tijd"
 
 msgid "Predictor"
-msgstr ""
+msgstr "Predictor"
 
 msgid "Predictor must vary across lots when using the predictor model."
-msgstr ""
+msgstr "De predictor moet variëren tussen de partijen bij gebruik van het predictormodel."
 
 msgid "Observed defects cannot exceed the sample size for any lot."
-msgstr ""
+msgstr "Het aantal waargenomen defecten mag voor geen enkele partij groter zijn dan de steekproefomvang."
 
 #, fuzzy
 msgid "Sample size cannot exceed the lot size for any lot."
 msgstr "De steekproefgrootte (n) kan niet groter zijn dan de lot grootte (N)."
 
 msgid "Sampling..."
-msgstr ""
+msgstr "Bemonstering..."
 
 msgid "Estimation failed: %s"
-msgstr ""
+msgstr "Schatting mislukt: %s"
 
 msgid "Posterior Summary (Current Lot)"
-msgstr ""
+msgstr "Posterieure samenvatting (huidige partij)"
 
 msgid "Lot Nr."
-msgstr ""
+msgstr "Partij nr."
 
 msgid "Obs. Defects"
-msgstr ""
+msgstr "Waargenomen defecten"
 
 msgid "Median Pred. Defects"
-msgstr ""
+msgstr "Mediaan voorspelde defecten"
 
 msgid "Mass < AQL"
-msgstr ""
+msgstr "Massa < AQL"
 
 msgid "Mass > RQL"
-msgstr ""
+msgstr "Massa > RQL"
 
 msgid "Decision"
-msgstr ""
+msgstr "Beslissing"
 
 msgid ""
 "The Lot Number, Lot Size, or Defect Count is missing (NA) for the last lot."
-msgstr ""
+msgstr "Het partijnummer, de partijgrootte of het aantal defecten ontbreekt (NA) voor de laatste partij."
 
 msgid "Consider to Continue"
-msgstr ""
+msgstr "Overweeg door te gaan"
 
 msgid "Consider to Accept"
-msgstr ""
+msgstr "Overweeg te accepteren"
 
 msgid "Consider to Reject"
-msgstr ""
+msgstr "Overweeg af te wijzen"
 
 msgid "Defect Rate Over Time"
-msgstr ""
+msgstr "Defectpercentage over de tijd"
 
 msgid "Lot"
-msgstr ""
+msgstr "Partij"
 
 msgid "Defect Rate (%%)"
-msgstr ""
+msgstr "Defectpercentage (%%)"
 
 msgid "Posterior Predictive"
-msgstr ""
+msgstr "Posterieur-predictief"
 
 msgid "Defects in Current Lot"
-msgstr ""
+msgstr "Defecten in de huidige partij"
 
 #, fuzzy
 msgid "Posterior Predictive Probability"
@@ -164,212 +164,212 @@ msgid ""
 "Note. Tail correction adds a uniform sudden-jump component over the full lot-"
 "size range (0 to N), so this figure is zoomed to the uncorrected predictive "
 "range to keep the posterior shape readable."
-msgstr ""
+msgstr "Noot. De staartcorrectie voegt een uniforme sprongcomponent toe over het volledige partijgroottebereik (0 tot N); daarom is deze figuur ingezoomd op het ongecorrigeerde predictieve bereik om de posterieure vorm leesbaar te houden."
 
 msgid "Posterior Defect Rate"
-msgstr ""
+msgstr "Posterieur defectpercentage"
 
 msgid "Density"
-msgstr ""
+msgstr "Dichtheid"
 
 msgid "Beta Coefficient"
-msgstr ""
+msgstr "Bèta-coëfficiënt"
 
 msgid "Predictor Coefficient β"
-msgstr ""
+msgstr "Predictorcoëfficiënt β"
 
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "MCMC-diagnostiek"
 
 msgid "Parameter"
-msgstr ""
+msgstr "Parameter"
 
 msgid "Mean"
-msgstr ""
+msgstr "Gemiddelde"
 
 msgid "SD"
-msgstr ""
+msgstr "SD"
 
 msgid "ESS"
-msgstr ""
+msgstr "ESS"
 
 msgid "R-hat"
-msgstr ""
+msgstr "R-hat"
 
 msgid "No parameters selected for the MCMC diagnostics table."
-msgstr ""
+msgstr "Geen parameters geselecteerd voor de MCMC-diagnostiektabel."
 
 msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
-msgstr ""
+msgstr "De prior-mode (%1$.4f) moet tussen 0 en de RQL (%2$.4f) liggen."
 
 msgid ""
 "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. "
 "Please choose a lower mode, a lower RQL, or a different prior."
-msgstr ""
+msgstr "Kon de onpartijdige prior voor mode %1$.4f en RQL %2$.4f niet construeren. Kies een lagere mode, een lagere RQL of een andere prior."
 
 msgid "Planning"
-msgstr ""
+msgstr "Planning"
 
 msgid "Please ensure 0 < AQL < RQL < 1."
-msgstr ""
+msgstr "Zorg ervoor dat 0 < AQL < RQL < 1."
 
 msgid "Please provide a valid maximum sample size (> 0)."
-msgstr ""
+msgstr "Geef een geldige maximale steekproefomvang op (> 0)."
 
 msgid "Please provide a valid minimum Bayes factor (> 0)."
-msgstr ""
+msgstr "Geef een geldige minimale Bayes-factor op (> 0)."
 
 msgid ""
 "The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
 "or choose a different prior."
-msgstr ""
+msgstr "De geselecteerde prior resulteert in ongeldige bèta-parameters. Pas de AQL/RQL aan of kies een andere prior."
 
 #, fuzzy
 msgid "No valid plans found satisfying the specified constraints."
 msgstr "Geen valide waarden gevonden in het plan. Controleer de inputs."
 
 msgid "Inference"
-msgstr ""
+msgstr "Inferentie"
 
 msgid "Please ensure the data are valid: n >= 0 and 0 <= d <= n."
-msgstr ""
+msgstr "Controleer dat de data geldig zijn: n >= 0 en 0 <= d <= n."
 
 #, fuzzy
 msgid "Lot size (N) must be at least as large as the sample size (n)."
 msgstr "Afwijs nummer kan niet groter zijn dan de steekproefgrootte (n)."
 
 msgid "Strong evidence for accepting the lot."
-msgstr ""
+msgstr "Sterk bewijs om de partij te accepteren."
 
 msgid "Moderate evidence for accepting the lot."
-msgstr ""
+msgstr "Matig bewijs om de partij te accepteren."
 
 msgid "Inconclusive evidence."
-msgstr ""
+msgstr "Niet-overtuigend bewijs."
 
 msgid "Moderate evidence for rejecting the lot."
-msgstr ""
+msgstr "Matig bewijs om de partij af te wijzen."
 
 msgid "Strong evidence for rejecting the lot."
-msgstr ""
+msgstr "Sterk bewijs om de partij af te wijzen."
 
 msgid ""
 "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL "
 "of <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>Based on the observed sample, "
 "there is a <b>%4$.1f%%</b> predicted probability that the current lot of "
 "%5$d items contains at most %6$d total defects."
-msgstr ""
+msgstr "De <b>Bayes-factor</b> voor het defectpercentage van de partij lager dan de RQL van <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>Op basis van de waargenomen steekproef is er een voorspelde waarschijnlijkheid van <b>%4$.1f%%</b> dat de huidige partij van %5$d items maximaal %6$d totale defecten bevat."
 
 msgid ""
 "<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is "
 "<b>%2$.2f</b>."
-msgstr ""
+msgstr "<u>Bayes-factor</u> voor het aandeel defecten < <u>%1$.2f</u> is <b>%2$.2f</b>."
 
 #, fuzzy
 msgid "Sampling Plans"
 msgstr "Enkel Sampling Plan"
 
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "Acceptatiegetal (c)"
 
 #, fuzzy
 msgid "Lowest sample size (n)"
 msgstr "Steekproefgrootte"
 
 msgid "Prior P(θ < RQL)"
-msgstr ""
+msgstr "Prior P(θ < RQL)"
 
 msgid "Posterior P(θ < RQL)"
-msgstr ""
+msgstr "Posterieur P(θ < RQL)"
 
 msgid "Bayes factor"
-msgstr ""
+msgstr "Bayes-factor"
 
 msgid "Three-Hypothesis Bayes Factors (at d = c)"
-msgstr ""
+msgstr "Bayes-factoren voor drie hypothesen (bij d = c)"
 
 msgid "Prior P(Good)"
-msgstr ""
+msgstr "Prior P(Goed)"
 
 msgid "Post P(Good)"
-msgstr ""
+msgstr "Post P(Goed)"
 
 msgid "Prior P(Middle)"
-msgstr ""
+msgstr "Prior P(Midden)"
 
 msgid "Post P(Middle)"
-msgstr ""
+msgstr "Post P(Midden)"
 
 msgid "Prior P(Bad)"
-msgstr ""
+msgstr "Prior P(Slecht)"
 
 msgid "Post P(Bad)"
-msgstr ""
+msgstr "Post P(Slecht)"
 
 msgid "BF (Good vs Bad)"
-msgstr ""
+msgstr "BF (Goed vs Slecht)"
 
 msgid "BF (Good vs Middle)"
-msgstr ""
+msgstr "BF (Goed vs Midden)"
 
 msgid "BF (Middle vs Bad)"
-msgstr ""
+msgstr "BF (Midden vs Slecht)"
 
 msgid "Posterior Distribution"
-msgstr ""
+msgstr "Posterieure verdeling"
 
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Priorverdeling"
 
 msgid "Lot Proportion Defective"
-msgstr ""
+msgstr "Aandeel defecte items in de partij"
 
 msgid "Posterior Predictive Distribution"
-msgstr ""
+msgstr "Posterieur-predictieve verdeling"
 
 msgid "Total Defects in Lot"
-msgstr ""
+msgstr "Totaal defecten in de partij"
 
 #, fuzzy
 msgid "Probability"
 msgstr "Afwijzingskans"
 
 msgid "Inference Decision Table"
-msgstr ""
+msgstr "Beslissingstabel voor inferentie"
 
 msgid "PPD Good (≤ %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD Goed (≤ %1$d defecten in de partij)"
 
 msgid "PPD Middle (> %1$d & ≤ %2$d defects)"
-msgstr ""
+msgstr "PPD Midden (> %1$d en ≤ %2$d defecten)"
 
 msgid "PPD Bad (> %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD Slecht (> %1$d defecten in de partij)"
 
 #, fuzzy
 msgid "Sample Size (n)"
 msgstr "Steekproefgrootte"
 
 msgid "Defects (d)"
-msgstr ""
+msgstr "Defecten (d)"
 
 msgid "AQL"
-msgstr ""
+msgstr "AQL"
 
 msgid "RQL"
-msgstr ""
+msgstr "RQL"
 
 msgid "Bayes Factor"
-msgstr ""
+msgstr "Bayes-factor"
 
 msgid ""
 "Bayes factor interpretation: BF ≥ 10 (strong evidence for H−), 3 ≤ BF < 10 "
 "(moderate evidence for H−), 0.33 ≤ BF < 3 (inconclusive), 0.10 ≤ BF < 0.33 "
 "(moderate evidence for H+), BF < 0.10 (strong evidence for H+)."
-msgstr ""
+msgstr "Interpretatie van de Bayes-factor: BF ≥ 10 (sterk bewijs voor H−), 3 ≤ BF < 10 (matig bewijs voor H−), 0.33 ≤ BF < 3 (niet-overtuigend), 0.10 ≤ BF < 0.33 (matig bewijs voor H+), BF < 0.10 (sterk bewijs voor H+)."
 
 msgid "Procedure"
-msgstr ""
+msgstr "Procedure"
 
 msgid ""
 "<div style='line-height: 1.2;'>\n"
@@ -408,7 +408,7 @@ msgid ""
 "    a posterior distribution. In this section, <b>n</b> denotes the sample "
 "size, <b>d</b> the observed number of defects in the sample, and <b>N</b> "
 "the lot size.</p></div>"
-msgstr ""
+msgstr "<div style='line-height: 1.2;'>\\n    <p style='margin: 0 0 8px 0;'>Het <b>hoofddoel</b> van deze Bayesiaanse bemonsteringsprocedure is het beoordelen van de kwaliteit van een partij door te bepalen of het aandeel defecten lager is dan het <b>afkeurbaar kwaliteitsniveau (RQL)</b>, dat momenteel is vastgesteld op <b>%1$.2f%%</b>.</p>\\n\\n    <p style='margin: 0 0 4px 0;'>Er worden twee primaire statistische hypothesen geformuleerd over het aandeel defecte items in de partij (&theta;):</p>\\n    <ul style='margin: 0 0 8px 20px;'>\\n      <li>De (nul)hypothese van ontoelaatbare kwaliteit H<sub>+</sub>: &theta; &ge; %1$.2f%% (door gebruiker gedefinieerd)</li>\\n      <li>De (alternatieve) hypothese van toelaatbare kwaliteit H<sub>-</sub>: &theta; < %1$.2f%% (door gebruiker gedefinieerd)</li>\\n    </ul>\\n\\n    <p style='margin: 0 0 8px 0;'>Daarnaast hebben gebruikers de mogelijkheid om een <b>driehypothesetoets</b> uit te voeren, die de kwaliteitsniveaus opsplitst in 'Goed' (&le; AQL), 'Midden' (AQL < &theta; &le; RQL) en 'Slecht' (> RQL) gebieden.</p>\\n\\n    <p style='margin: 0 0 8px 0;'>Het <b>aanvaardbaar kwaliteitsniveau (AQL)</b> is momenteel vastgesteld op <b>%2$.2f%%</b>. Deze waarde vertegenwoordigt het\\n    kwaliteitsniveau dat wordt nagestreefd voor acceptatie met grote waarschijnlijkheid. Deze kwaliteitsbeperkingen kunnen in de planningsfase worden aangepast om aan specifieke vereisten te voldoen.</p>\\n\\n    <p style='margin: 0 0 6px 0;'><b>Fasen</b></p>\\n    <p style='margin: 0 0 6px 0;'><b>1. Planning:</b> Bepaal een minimale steekproefomvang zodanig dat de steekproef voldoende bewijs levert (een beoogde Bayes-factor) om de gespecificeerde bemonsteringsdoelstellingen te bereiken.</p>\\n\\n    <p style='margin: 0;'><b>2. Inferentie:</b> Evalueer waargenomen data om de prior-overtuiging bij te werken tot\\n    een posterieure verdeling. In deze sectie staat <b>n</b> voor de steekproefomvang, <b>d</b> voor het aantal waargenomen defecten in de steekproef en <b>N</b> voor de partijgrootte.</p></div>"
 
 msgid ""
 "Lower limit for proportion non-conforming items needs to be smaller than the "

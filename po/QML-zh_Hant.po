@@ -209,15 +209,15 @@ msgstr "批量 (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Standard Deviation (Historical) known"
-msgstr ""
+msgstr "標準差（歷史）已知"
 
 msgctxt "DecideVariableLots|"
 msgid "Measurement"
-msgstr ""
+msgstr "量測"
 
 msgctxt "DecideVariableLots|"
 msgid "Specify sample statistics directly (used if dataset is not available)"
-msgstr ""
+msgstr "直接指定樣本統計量（資料集不可用時使用）"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
@@ -233,11 +233,11 @@ msgstr "樣本標準差"
 
 msgctxt "DecideVariableLots|"
 msgid "k                        "
-msgstr ""
+msgstr "k                        "
 
 msgctxt "DecideVariableLots|"
 msgid "Specification limits"
-msgstr ""
+msgstr "規格界限"
 
 msgctxt "DecideVariableLots|"
 msgid "Lower Specification Limit (LSL)"
@@ -263,35 +263,35 @@ msgstr "拒收品質水準"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Standard deviation (historical) known"
-msgstr ""
+msgstr "標準差（歷史）已知"
 
 msgctxt "RiskPoints|"
 msgid "Producer's risk (α)"
-msgstr ""
+msgstr "生產者風險（α）"
 
 msgctxt "RiskPoints|"
 msgid "Consumer's risk (β)"
-msgstr ""
+msgstr "消費者風險（β）"
 
 msgctxt "DecideVariableLots|"
 msgid "Standard deviation (historical)"
-msgstr ""
+msgstr "標準差（歷史）"
 
 msgctxt "Description|"
 msgid "Bayesian Sampling"
-msgstr ""
+msgstr "貝氏抽樣"
 
 msgctxt "Description|"
 msgid "Bayesian State-Space Sampling"
-msgstr ""
+msgstr "貝氏狀態空間抽樣"
 
 msgctxt "BayesianSampling|"
 msgid "1. Planning"
-msgstr ""
+msgstr "1. 計畫"
 
 msgctxt "BayesianSampling|"
 msgid "Quality Constraints"
-msgstr ""
+msgstr "品質限制"
 
 #, fuzzy
 msgctxt "BayesianSampling|"
@@ -300,304 +300,304 @@ msgstr "允收品質水準"
 
 msgctxt "BayesianSampling|"
 msgid "Rejectable Quality Level (RQL)"
-msgstr ""
+msgstr "拒收品質水準（RQL）"
 
 msgctxt "BayesianSampling|"
 msgid "Prior Distribution (Beta)"
-msgstr ""
+msgstr "先驗分配（Beta）"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Around the RQL)"
-msgstr ""
+msgstr "無偏（圍繞 RQL）"
 
 msgctxt "BayesianSampling|"
 msgid "Custom prior mode"
-msgstr ""
+msgstr "自訂先驗眾數"
 
 msgctxt "BayesianSampling|"
 msgid "Mode"
-msgstr ""
+msgstr "眾數"
 
 msgctxt "BayesianSampling|"
 msgid "Uniform"
-msgstr ""
+msgstr "均勻"
 
 msgctxt "BayesianSampling|"
 msgid "Custom"
-msgstr ""
+msgstr "自訂"
 
 msgctxt "BayesianSampling|"
 msgid "α"
-msgstr ""
+msgstr "α"
 
 msgctxt "BayesianSampling|"
 msgid "β"
-msgstr ""
+msgstr "β"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region)"
-msgstr ""
+msgstr "無偏（三區域）"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region) Options"
-msgstr ""
+msgstr "無偏（三區域）選項"
 
 msgctxt "BayesianSampling|"
 msgid "Shape constraint"
-msgstr ""
+msgstr "形狀約束"
 
 msgctxt "BayesianSampling|"
 msgid "Avoid U-shape (α ≥ 1 or β ≥ 1)"
-msgstr ""
+msgstr "避免 U 形（α ≥ 1 或 β ≥ 1）"
 
 msgctxt "BayesianSampling|"
 msgid "Both α ≥ 1 and β ≥ 1"
-msgstr ""
+msgstr "α ≥ 1 且 β ≥ 1"
 
 msgctxt "BayesianSampling|"
 msgid "None (allow U-shape)"
-msgstr ""
+msgstr "無（允許 U 形）"
 
 msgctxt "BayesianSampling|"
 msgid "(Max) Sample size (n)"
-msgstr ""
+msgstr "（最大）樣本數（n）"
 
 msgctxt "BayesianSampling|"
 msgid "Bayes factor (min)"
-msgstr ""
+msgstr "貝氏因子（最小）"
 
 msgctxt "BayesianSampling|"
 msgid "Output Options"
-msgstr ""
+msgstr "輸出選項"
 
 msgctxt "BayesianSampling|"
 msgid "Plans table"
-msgstr ""
+msgstr "計畫表"
 
 msgctxt "BayesianSampling|"
 msgid "Prior plot"
-msgstr ""
+msgstr "先驗圖"
 
 msgctxt "BayesianSampling|"
 msgid "Three-hypothesis BF table"
-msgstr ""
+msgstr "三假說貝氏因子表"
 
 msgctxt "BayesianSampling|"
 msgid "2. Inference"
-msgstr ""
+msgstr "2. 推論"
 
 msgctxt "BayesianSampling|"
 msgid "Use data to create posterior distribution"
-msgstr ""
+msgstr "使用資料建立後驗分配"
 
 msgctxt "BayesianSampling|"
 msgid "Sample size (n)"
-msgstr ""
+msgstr "樣本數（n）"
 
 msgctxt "BayesianSampling|"
 msgid "Observed number of defects (d)"
-msgstr ""
+msgstr "觀察到的缺陷數（d）"
 
 msgctxt "BayesianSampling|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "批量（N）"
 
 msgctxt "BayesianSampling|"
 msgid "Inference decision table"
-msgstr ""
+msgstr "推論決策表"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "後驗圖"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior predictive distribution plot"
-msgstr ""
+msgstr "後驗預測分配圖"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Defect Count"
-msgstr ""
+msgstr "缺陷數"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sample Size (tested items)"
-msgstr ""
+msgstr "樣本數（檢驗項目）"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Size (total items)"
-msgstr ""
+msgstr "批量（總項目數）"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Number"
-msgstr ""
+msgstr "批號"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor"
-msgstr ""
+msgstr "預測變數"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model Type"
-msgstr ""
+msgstr "模型類型"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Without predictor"
-msgstr ""
+msgstr "不含預測變數"
 
 msgctxt "BayesianSSMforAS|"
 msgid "With predictor"
-msgstr ""
+msgstr "含預測變數"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Acceptance Limits"
-msgstr ""
+msgstr "允收界限"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lower limit (AQL)"
-msgstr ""
+msgstr "下限（AQL）"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Upper limit (RQL)"
-msgstr ""
+msgstr "上限（RQL）"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sudden Jump Tail Correction"
-msgstr ""
+msgstr "突跳尾部校正"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Enable sudden jump tail correction"
-msgstr ""
+msgstr "啟用突跳尾部校正"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Correction weight (%)"
-msgstr ""
+msgstr "校正權重（%）"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Decision Rule"
-msgstr ""
+msgstr "決策規則"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Accept if P(defects > RQL) <"
-msgstr ""
+msgstr "若 P(缺陷 > RQL) < 則允收"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Reject if not accepted and P(defects < AQL) <"
-msgstr ""
+msgstr "若未允收且 P(缺陷 < AQL) < 則拒收"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Plots"
-msgstr ""
+msgstr "圖"
 
 msgctxt "BayesianSSMforAS|"
 msgid "State time series (defect rate)"
-msgstr ""
+msgstr "狀態時間序列（缺陷率）"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior predictive for current lot"
-msgstr ""
+msgstr "當前批的後驗預測"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for latest defect rate"
-msgstr ""
+msgstr "最新缺陷率的後驗"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for predictor coefficient beta"
-msgstr ""
+msgstr "預測變數係數 beta 的後驗"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model"
-msgstr ""
+msgstr "模型"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Prior initial defect rate"
-msgstr ""
+msgstr "先驗初始缺陷率"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ alpha"
-msgstr ""
+msgstr "θ₁ alpha"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ beta"
-msgstr ""
+msgstr "θ₁ beta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "State noise"
-msgstr ""
+msgstr "狀態雜訊"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Half-normal SD"
-msgstr ""
+msgstr "半常態標準差"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor coefficient"
-msgstr ""
+msgstr "預測變數係數"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Cauchy scale"
-msgstr ""
+msgstr "柯西尺度"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "MCMC 診斷"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Overview table"
-msgstr ""
+msgstr "總覽表"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Select parameters for summary table"
-msgstr ""
+msgstr "選擇彙總表參數"
 
 msgctxt "BayesianSSMforAS|"
 msgid "All theta[t]"
-msgstr ""
+msgstr "所有 theta[t]"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sigma (state noise)"
-msgstr ""
+msgstr "Sigma（狀態雜訊）"
 
 msgctxt "BayesianSSMforAS|"
 msgid "y_pred (prediction)"
-msgstr ""
+msgstr "y_pred（預測）"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Beta (predictor coefficient)"
-msgstr ""
+msgstr "Beta（預測變數係數）"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Advanced"
-msgstr ""
+msgstr "進階"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC"
-msgstr ""
+msgstr "MCMC"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Burnin"
-msgstr ""
+msgstr "預熱期"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Samples"
-msgstr ""
+msgstr "樣本"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Chains"
-msgstr ""
+msgstr "鏈"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Thin"
-msgstr ""
+msgstr "稀疏化"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Seed"
-msgstr ""
+msgstr "種子"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Adapt Delta"
-msgstr ""
+msgstr "Adapt Delta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Max tree depth"
-msgstr ""
+msgstr "最大樹深度"

@@ -21,23 +21,23 @@ msgstr "Attribut-Stichproben"
 
 msgctxt "Description|"
 msgid "Create Attribute Plan"
-msgstr ""
+msgstr "Attribut-Prüfplan erstellen"
 
 msgctxt "Description|"
 msgid "Analyze Attribute Plan"
-msgstr ""
+msgstr "Attribut-Prüfplan analysieren"
 
 msgctxt "Description|"
 msgid "Variable Sampling"
-msgstr ""
+msgstr "Variablen-Stichprobenprüfung"
 
 msgctxt "Description|"
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "Variablen-Prüfplan erstellen"
 
 msgctxt "Description|"
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "Variablen-Prüfplan analysieren"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots"
@@ -53,7 +53,7 @@ msgstr "Einfacher Stichprobenplan"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess attribute plan"
-msgstr ""
+msgstr "Attribut-Prüfplan bewerten"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Multiple Sampling Plan"
@@ -61,7 +61,7 @@ msgstr "Mehrfacher Stichprobenplan"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess sampling plan"
-msgstr ""
+msgstr "Stichprobenplan bewerten"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Lot size (N)"
@@ -77,7 +77,7 @@ msgstr "k"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Assess variable plan"
-msgstr ""
+msgstr "Variablen-Prüfplan bewerten"
 
 msgctxt "Distribution|"
 msgid "Distribution"
@@ -109,15 +109,15 @@ msgstr "OC-Kurve"
 
 msgctxt "OutputOptions|"
 msgid "AOQ curve (plan with rectification)"
-msgstr ""
+msgstr "AOQ-Kurve (Plan mit Nacharbeit)"
 
 msgctxt "OutputOptions|"
 msgid "ATI curve (plan with rectification)"
-msgstr ""
+msgstr "ATI-Kurve (Plan mit Nacharbeit)"
 
 msgctxt "OutputOptions|"
 msgid "ASN curve"
-msgstr ""
+msgstr "ASN-Kurve"
 
 msgctxt "PlanMultiple|"
 msgid "Lot size (N)"
@@ -125,11 +125,11 @@ msgstr "Losumfang (N)"
 
 msgctxt "PlanMultiple|"
 msgid "Number of stages"
-msgstr ""
+msgstr "Anzahl der Stufen"
 
 msgctxt "PlanMultiple|"
 msgid "Stage"
-msgstr ""
+msgstr "Stufe"
 
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
@@ -300,7 +300,7 @@ msgstr "Annehmbare Qualitätsgrenzlage (AQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Rejectable Quality Level (RQL)"
-msgstr ""
+msgstr "Rückzuweisende Qualitätsgrenzlage (RQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Prior Distribution (Beta)"
@@ -308,7 +308,7 @@ msgstr "Prior-Verteilung (Beta)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Around the RQL)"
-msgstr ""
+msgstr "Unvoreingenommen (um das RQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Custom prior mode"
@@ -336,19 +336,19 @@ msgstr "β"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region)"
-msgstr ""
+msgstr "Unvoreingenommen (Drei-Bereiche)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region) Options"
-msgstr ""
+msgstr "Optionen: Unvoreingenommen (Drei-Bereiche)"
 
 msgctxt "BayesianSampling|"
 msgid "Shape constraint"
-msgstr ""
+msgstr "Formbeschränkung"
 
 msgctxt "BayesianSampling|"
 msgid "Avoid U-shape (α ≥ 1 or β ≥ 1)"
-msgstr ""
+msgstr "U-Form vermeiden (α ≥ 1 oder β ≥ 1)"
 
 msgctxt "BayesianSampling|"
 msgid "Both α ≥ 1 and β ≥ 1"
@@ -412,67 +412,67 @@ msgstr "Posterior-Diagramm"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior predictive distribution plot"
-msgstr ""
+msgstr "Posterior-prädiktives Verteilungsdiagramm"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Defect Count"
-msgstr ""
+msgstr "Fehleranzahl"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sample Size (tested items)"
-msgstr ""
+msgstr "Stichprobenumfang (geprüfte Teile)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Size (total items)"
-msgstr ""
+msgstr "Losgröße (Gesamtzahl der Teile)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Number"
-msgstr ""
+msgstr "Losnummer"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor"
-msgstr ""
+msgstr "Prädiktor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model Type"
-msgstr ""
+msgstr "Modelltyp"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Without predictor"
-msgstr ""
+msgstr "Ohne Prädiktor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "With predictor"
-msgstr ""
+msgstr "Mit Prädiktor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Acceptance Limits"
-msgstr ""
+msgstr "Annahmegrenzen"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lower limit (AQL)"
-msgstr ""
+msgstr "Untere Grenze (AQL)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Upper limit (RQL)"
-msgstr ""
+msgstr "Obere Grenze (RQL)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sudden Jump Tail Correction"
-msgstr ""
+msgstr "Sprung-Randkorrektur"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Enable sudden jump tail correction"
-msgstr ""
+msgstr "Sprung-Randkorrektur aktivieren"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Correction weight (%)"
-msgstr ""
+msgstr "Korrekturgewicht (%)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Decision Rule"
@@ -496,108 +496,108 @@ msgstr "Zustands-Zeitreihe (Defekt-Rate)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior predictive for current lot"
-msgstr ""
+msgstr "Posterior-prädiktiv für das aktuelle Los"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for latest defect rate"
-msgstr ""
+msgstr "Posterior für die letzte Fehlerrate"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for predictor coefficient beta"
-msgstr ""
+msgstr "Posterior für den Prädiktor-Koeffizienten Beta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model"
-msgstr ""
+msgstr "Modell"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Prior initial defect rate"
-msgstr ""
+msgstr "Prior der anfänglichen Fehlerrate"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ alpha"
-msgstr ""
+msgstr "θ₁ alpha"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ beta"
-msgstr ""
+msgstr "θ₁ beta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "State noise"
-msgstr ""
+msgstr "Zustandsrauschen"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Half-normal SD"
-msgstr ""
+msgstr "Halbnormal-SD"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor coefficient"
-msgstr ""
+msgstr "Prädiktor-Koeffizient"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Cauchy scale"
-msgstr ""
+msgstr "Cauchy-Skala"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "MCMC-Diagnostiken"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Overview table"
-msgstr ""
+msgstr "Übersichtstabelle"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Select parameters for summary table"
-msgstr ""
+msgstr "Parameter für die Übersichtstabelle auswählen"
 
 msgctxt "BayesianSSMforAS|"
 msgid "All theta[t]"
-msgstr ""
+msgstr "Alle theta[t]"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sigma (state noise)"
-msgstr ""
+msgstr "Sigma (Zustandsrauschen)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "y_pred (prediction)"
-msgstr ""
+msgstr "y_pred (Vorhersage)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Beta (predictor coefficient)"
-msgstr ""
+msgstr "Beta (Prädiktor-Koeffizient)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Advanced"
-msgstr ""
+msgstr "Erweitert"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC"
-msgstr ""
+msgstr "MCMC"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Burnin"
-msgstr ""
+msgstr "Warm-up (Burn-in)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Samples"
-msgstr ""
+msgstr "Stichproben"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Chains"
-msgstr ""
+msgstr "Ketten"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Thin"
-msgstr ""
+msgstr "Ausdünnen (Thinning)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Seed"
-msgstr ""
+msgstr "Zufallsstartwert (Seed)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Adapt Delta"
-msgstr ""
+msgstr "Adapt Delta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Max tree depth"
-msgstr ""
+msgstr "Maximale Baumtiefe"

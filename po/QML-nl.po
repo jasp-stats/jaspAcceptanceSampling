@@ -279,19 +279,19 @@ msgstr "Standaarddeviatie (historisch)"
 
 msgctxt "Description|"
 msgid "Bayesian Sampling"
-msgstr ""
+msgstr "Bayesiaanse bemonstering"
 
 msgctxt "Description|"
 msgid "Bayesian State-Space Sampling"
-msgstr ""
+msgstr "Bayesiaanse state-space-bemonstering"
 
 msgctxt "BayesianSampling|"
 msgid "1. Planning"
-msgstr ""
+msgstr "1. Planning"
 
 msgctxt "BayesianSampling|"
 msgid "Quality Constraints"
-msgstr ""
+msgstr "Kwaliteitsbeperkingen"
 
 #, fuzzy
 msgctxt "BayesianSampling|"
@@ -300,95 +300,95 @@ msgstr "Acceptabel Kwaliteitsniveau (AQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Rejectable Quality Level (RQL)"
-msgstr ""
+msgstr "Afkeurbaar kwaliteitsniveau (RQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Prior Distribution (Beta)"
-msgstr ""
+msgstr "Priorverdeling (beta)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Around the RQL)"
-msgstr ""
+msgstr "Onpartijdig (rond de RQL)"
 
 msgctxt "BayesianSampling|"
 msgid "Custom prior mode"
-msgstr ""
+msgstr "Aangepaste prior-modus"
 
 msgctxt "BayesianSampling|"
 msgid "Mode"
-msgstr ""
+msgstr "Modus"
 
 msgctxt "BayesianSampling|"
 msgid "Uniform"
-msgstr ""
+msgstr "Uniform"
 
 msgctxt "BayesianSampling|"
 msgid "Custom"
-msgstr ""
+msgstr "Aangepast"
 
 msgctxt "BayesianSampling|"
 msgid "α"
-msgstr ""
+msgstr "α"
 
 msgctxt "BayesianSampling|"
 msgid "β"
-msgstr ""
+msgstr "β"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region)"
-msgstr ""
+msgstr "Onpartijdig (drie regio's)"
 
 msgctxt "BayesianSampling|"
 msgid "Impartial (Three-region) Options"
-msgstr ""
+msgstr "Opties voor onpartijdig (drie regio's)"
 
 msgctxt "BayesianSampling|"
 msgid "Shape constraint"
-msgstr ""
+msgstr "Vormbeperking"
 
 msgctxt "BayesianSampling|"
 msgid "Avoid U-shape (α ≥ 1 or β ≥ 1)"
-msgstr ""
+msgstr "Vermijd U-vorm (α ≥ 1 of β ≥ 1)"
 
 msgctxt "BayesianSampling|"
 msgid "Both α ≥ 1 and β ≥ 1"
-msgstr ""
+msgstr "Zowel α ≥ 1 als β ≥ 1"
 
 msgctxt "BayesianSampling|"
 msgid "None (allow U-shape)"
-msgstr ""
+msgstr "Geen (laat U-vorm toe)"
 
 msgctxt "BayesianSampling|"
 msgid "(Max) Sample size (n)"
-msgstr ""
+msgstr "(Max) steekproefomvang (n)"
 
 msgctxt "BayesianSampling|"
 msgid "Bayes factor (min)"
-msgstr ""
+msgstr "Bayes-factor (min)"
 
 msgctxt "BayesianSampling|"
 msgid "Output Options"
-msgstr ""
+msgstr "Uitvoeropties"
 
 msgctxt "BayesianSampling|"
 msgid "Plans table"
-msgstr ""
+msgstr "Plannentabel"
 
 msgctxt "BayesianSampling|"
 msgid "Prior plot"
-msgstr ""
+msgstr "Priorplot"
 
 msgctxt "BayesianSampling|"
 msgid "Three-hypothesis BF table"
-msgstr ""
+msgstr "BF-tabel voor drie hypothesen"
 
 msgctxt "BayesianSampling|"
 msgid "2. Inference"
-msgstr ""
+msgstr "2. Inferentie"
 
 msgctxt "BayesianSampling|"
 msgid "Use data to create posterior distribution"
-msgstr ""
+msgstr "Gebruik data om een posterieure verdeling te creëren"
 
 #, fuzzy
 msgctxt "BayesianSampling|"
@@ -397,7 +397,7 @@ msgstr "Steekproefgrootte (n)"
 
 msgctxt "BayesianSampling|"
 msgid "Observed number of defects (d)"
-msgstr ""
+msgstr "Waargenomen aantal defecten (d)"
 
 #, fuzzy
 msgctxt "BayesianSampling|"
@@ -406,200 +406,200 @@ msgstr "Partijgrootte (N)"
 
 msgctxt "BayesianSampling|"
 msgid "Inference decision table"
-msgstr ""
+msgstr "Beslissingstabel voor inferentie"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior plot"
-msgstr ""
+msgstr "Posterieurplot"
 
 msgctxt "BayesianSampling|"
 msgid "Posterior predictive distribution plot"
-msgstr ""
+msgstr "Plot van de posterieur-predictieve verdeling"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Defect Count"
-msgstr ""
+msgstr "Aantal defecten"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sample Size (tested items)"
-msgstr ""
+msgstr "Steekproefomvang (geteste items)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Size (total items)"
-msgstr ""
+msgstr "Partijgrootte (totaal aantal items)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lot Number"
-msgstr ""
+msgstr "Partijnummer"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor"
-msgstr ""
+msgstr "Predictor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model Type"
-msgstr ""
+msgstr "Modeltype"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Without predictor"
-msgstr ""
+msgstr "Zonder predictor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "With predictor"
-msgstr ""
+msgstr "Met predictor"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Settings"
-msgstr ""
+msgstr "Instellingen"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Acceptance Limits"
-msgstr ""
+msgstr "Acceptatielimieten"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Lower limit (AQL)"
-msgstr ""
+msgstr "Ondergrens (AQL)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Upper limit (RQL)"
-msgstr ""
+msgstr "Bovengrens (RQL)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sudden Jump Tail Correction"
-msgstr ""
+msgstr "Staartcorrectie voor plotselinge sprong"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Enable sudden jump tail correction"
-msgstr ""
+msgstr "Staartcorrectie voor plotselinge sprong inschakelen"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Correction weight (%)"
-msgstr ""
+msgstr "Correctiegewicht (%)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Decision Rule"
-msgstr ""
+msgstr "Beslissingsregel"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Accept if P(defects > RQL) <"
-msgstr ""
+msgstr "Accepteer als P(defecten > RQL) <"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Reject if not accepted and P(defects < AQL) <"
-msgstr ""
+msgstr "Wijs af indien niet geaccepteerd en P(defecten < AQL) <"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Plots"
-msgstr ""
+msgstr "Plots"
 
 msgctxt "BayesianSSMforAS|"
 msgid "State time series (defect rate)"
-msgstr ""
+msgstr "State-tijdreeks (defectpercentage)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior predictive for current lot"
-msgstr ""
+msgstr "Posterieur-predictief voor de huidige partij"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for latest defect rate"
-msgstr ""
+msgstr "Posterieur voor het nieuwste defectpercentage"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Posterior for predictor coefficient beta"
-msgstr ""
+msgstr "Posterieur voor de predictorcoëfficiënt bèta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Model"
-msgstr ""
+msgstr "Model"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Prior initial defect rate"
-msgstr ""
+msgstr "Prior initieel defectpercentage"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ alpha"
-msgstr ""
+msgstr "θ₁-alfa"
 
 msgctxt "BayesianSSMforAS|"
 msgid "θ₁ beta"
-msgstr ""
+msgstr "θ₁-bèta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "State noise"
-msgstr ""
+msgstr "Staatruis"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Half-normal SD"
-msgstr ""
+msgstr "Halfnormale SD"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Predictor coefficient"
-msgstr ""
+msgstr "Predictorcoëfficiënt"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Cauchy scale"
-msgstr ""
+msgstr "Cauchy-schaal"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "MCMC-diagnostiek"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Overview table"
-msgstr ""
+msgstr "Overzichtstabel"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Select parameters for summary table"
-msgstr ""
+msgstr "Selecteer parameters voor de samenvattingstabel"
 
 msgctxt "BayesianSSMforAS|"
 msgid "All theta[t]"
-msgstr ""
+msgstr "Alle theta[t]"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Sigma (state noise)"
-msgstr ""
+msgstr "Sigma (staatruis)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "y_pred (prediction)"
-msgstr ""
+msgstr "y_pred (voorspelling)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Beta (predictor coefficient)"
-msgstr ""
+msgstr "Bèta (predictorcoëfficiënt)"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Advanced"
-msgstr ""
+msgstr "Geavanceerd"
 
 msgctxt "BayesianSSMforAS|"
 msgid "MCMC"
-msgstr ""
+msgstr "MCMC"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Burnin"
-msgstr ""
+msgstr "Burn-in"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Samples"
-msgstr ""
+msgstr "Samples"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Chains"
-msgstr ""
+msgstr "Kettingen"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Thin"
-msgstr ""
+msgstr "Thin"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Seed"
-msgstr ""
+msgstr "Zaad"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Adapt Delta"
-msgstr ""
+msgstr "Adapt Delta"
 
 msgctxt "BayesianSSMforAS|"
 msgid "Max tree depth"
-msgstr ""
+msgstr "Maximale boomdiepte"
