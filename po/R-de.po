@@ -41,57 +41,58 @@ msgid "Rej. Number"
 msgstr "Rück.-Zahl"
 
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "Variablenprüfplan analysieren"
 
 msgid "Variable Sampling Plan (Standard deviation assumed to be <b>%s</b>)"
-msgstr ""
+msgstr "Variablen-Stichprobenplan (Standardabweichung als <b>%s</b> angenommen)"
 
 msgid "Sample size"
 msgstr "Stichprobenumfang"
 
 msgid "Critical Distance (k)"
-msgstr ""
+msgstr "Kritischer Abstand (k)"
 
 msgid "If historical standard deviation is unknown, sample size has to be > 1."
-msgstr ""
+msgstr "Ist die historische Standardabweichung unbekannt, muss der Stichprobenumfang > 1 sein."
 
 msgid ""
 "Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of "
 "the generated variable plan."
 msgstr ""
+"Der Losumfang (N = %1$.0f) kann nicht kleiner als der Stichprobenumfang (n = %2$.0f) des erzeugten Variablenplans sein."
 
 msgid "The dataset is empty."
-msgstr ""
+msgstr "Der Datensatz ist leer."
 
 msgid "The following assigned variables are missing from the dataset: %1$s."
-msgstr ""
+msgstr "Die folgenden zugewiesenen Variablen fehlen im Datensatz: %1$s."
 
 msgid "%1$s cannot contain missing or non-finite values."
-msgstr ""
+msgstr "%1$s darf keine fehlenden oder nicht endlichen Werte enthalten."
 
 msgid "%1$s must contain whole numbers only."
-msgstr ""
+msgstr "%1$s darf nur ganze Zahlen enthalten."
 
 msgid "%1$s cannot contain negative values."
-msgstr ""
+msgstr "%1$s darf keine negativen Werte enthalten."
 
 msgid "Defect Count"
-msgstr ""
+msgstr "Fehleranzahl"
 
 msgid "Lot Size"
-msgstr ""
+msgstr "Losgröße"
 
 msgid "Time"
-msgstr ""
+msgstr "Zeit"
 
 msgid "Predictor"
-msgstr ""
+msgstr "Prädiktor"
 
 msgid "Predictor must vary across lots when using the predictor model."
-msgstr ""
+msgstr "Bei Verwendung des Prädiktormodells muss der Prädiktor über die Lose variieren."
 
 msgid "Observed defects cannot exceed the sample size for any lot."
-msgstr ""
+msgstr "Die beobachteten Fehler dürfen für kein Los den Stichprobenumfang überschreiten."
 
 #, fuzzy
 msgid "Sample size cannot exceed the lot size for any lot."
@@ -99,59 +100,60 @@ msgstr ""
 "Der Stichprobenumfang (n) kann nicht größer als der Losumfang (N) sein."
 
 msgid "Sampling..."
-msgstr ""
+msgstr "Stichprobenziehen..."
 
 msgid "Estimation failed: %s"
-msgstr ""
+msgstr "Schätzung fehlgeschlagen: %s"
 
 msgid "Posterior Summary (Current Lot)"
-msgstr ""
+msgstr "Posterior-Zusammenfassung (aktuelles Los)"
 
 msgid "Lot Nr."
-msgstr ""
+msgstr "Los-Nr."
 
 msgid "Obs. Defects"
-msgstr ""
+msgstr "Beob. Fehler"
 
 msgid "Median Pred. Defects"
-msgstr ""
+msgstr "Median vorher. Fehler"
 
 msgid "Mass < AQL"
-msgstr ""
+msgstr "Masse < AQL"
 
 msgid "Mass > RQL"
-msgstr ""
+msgstr "Masse > RQL"
 
 msgid "Decision"
-msgstr ""
+msgstr "Entscheidung"
 
 msgid ""
 "The Lot Number, Lot Size, or Defect Count is missing (NA) for the last lot."
 msgstr ""
+"Die Losnummer, die Losgröße oder die Fehleranzahl fehlt (NA) für das letzte Los."
 
 msgid "Consider to Continue"
-msgstr ""
+msgstr "Stichproben fortsetzen"
 
 msgid "Consider to Accept"
-msgstr ""
+msgstr "Los annehmen"
 
 msgid "Consider to Reject"
-msgstr ""
+msgstr "Los ablehnen"
 
 msgid "Defect Rate Over Time"
-msgstr ""
+msgstr "Fehlerrate im Zeitverlauf"
 
 msgid "Lot"
-msgstr ""
+msgstr "Los"
 
 msgid "Defect Rate (%%)"
-msgstr ""
+msgstr "Fehlerrate (%%)"
 
 msgid "Posterior Predictive"
-msgstr ""
+msgstr "Posterior-prädiktiv"
 
 msgid "Defects in Current Lot"
-msgstr ""
+msgstr "Fehler im aktuellen Los"
 
 msgid "Posterior Predictive Probability"
 msgstr "Posterior-prädiktive Wahrscheinlichkeit"
@@ -161,9 +163,10 @@ msgid ""
 "size range (0 to N), so this figure is zoomed to the uncorrected predictive "
 "range to keep the posterior shape readable."
 msgstr ""
+"Hinweis. Die Randkorrektur fügt eine gleichförmige Sprungkomponente über den gesamten Losgrößenbereich (0 bis N) hinzu; daher ist diese Abbildung auf den unkorrigierten prädiktiven Bereich vergrößert, um die Posterior-Form lesbar zu halten."
 
 msgid "Posterior Defect Rate"
-msgstr ""
+msgstr "Posteriore Fehlerrate"
 
 msgid "Density"
 msgstr "Dichte"
@@ -193,62 +196,64 @@ msgid "R-hat"
 msgstr "R-Dach"
 
 msgid "No parameters selected for the MCMC diagnostics table."
-msgstr ""
+msgstr "Es wurden keine Parameter für die MCMC-Diagnosetabelle ausgewählt."
 
 msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
-msgstr ""
+msgstr "Der Prior-Modus (%1$.4f) muss zwischen 0 und dem RQL (%2$.4f) liegen."
 
 msgid ""
 "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. "
 "Please choose a lower mode, a lower RQL, or a different prior."
 msgstr ""
+"Der unvoreingenommene Prior für Modus %1$.4f und RQL %2$.4f konnte nicht erstellt werden. Bitte wählen Sie einen niedrigeren Modus, ein niedrigeres RQL oder einen anderen Prior."
 
 msgid "Planning"
-msgstr ""
+msgstr "Planung"
 
 msgid "Please ensure 0 < AQL < RQL < 1."
-msgstr ""
+msgstr "Bitte stellen Sie sicher, dass 0 < AQL < RQL < 1."
 
 msgid "Please provide a valid maximum sample size (> 0)."
-msgstr ""
+msgstr "Bitte geben Sie einen gültigen maximalen Stichprobenumfang (> 0) an."
 
 msgid "Please provide a valid minimum Bayes factor (> 0)."
-msgstr ""
+msgstr "Bitte geben Sie einen gültigen minimalen Bayes-Faktor (> 0) an."
 
 msgid ""
 "The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
 "or choose a different prior."
 msgstr ""
+"Der ausgewählte Prior führt zu ungültigen Beta-Parametern. Bitte passen Sie AQL/RQL an oder wählen Sie einen anderen Prior."
 
 #, fuzzy
 msgid "No valid plans found satisfying the specified constraints."
 msgstr "Keine gültigen Werte im Plan gefunden. Überprüfen Sie die Eingaben."
 
 msgid "Inference"
-msgstr ""
+msgstr "Inferenz"
 
 msgid "Please ensure the data are valid: n >= 0 and 0 <= d <= n."
-msgstr ""
+msgstr "Bitte stellen Sie sicher, dass die Daten gültig sind: n >= 0 und 0 <= d <= n."
 
 #, fuzzy
 msgid "Lot size (N) must be at least as large as the sample size (n)."
 msgstr ""
-"Die Rückweisezahl (r) kann nicht größer als der Stichprobenumfang (n) sein."
+"Der Losumfang (N) muss mindestens so groß wie der Stichprobenumfang (n) sein."
 
 msgid "Strong evidence for accepting the lot."
-msgstr ""
+msgstr "Starke Evidenz für das Annehmen des Loses."
 
 msgid "Moderate evidence for accepting the lot."
-msgstr ""
+msgstr "Mäßige Evidenz für das Annehmen des Loses."
 
 msgid "Inconclusive evidence."
-msgstr ""
+msgstr "Nicht aussagekräftige Evidenz."
 
 msgid "Moderate evidence for rejecting the lot."
-msgstr ""
+msgstr "Mäßige Evidenz für das Ablehnen des Loses."
 
 msgid "Strong evidence for rejecting the lot."
-msgstr ""
+msgstr "Starke Evidenz für das Ablehnen des Loses."
 
 msgid ""
 "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL "
@@ -256,117 +261,120 @@ msgid ""
 "there is a <b>%4$.1f%%</b> predicted probability that the current lot of "
 "%5$d items contains at most %6$d total defects."
 msgstr ""
+"Der <b>Bayes-Faktor</b> dafür, dass die Fehlerrate des Loses unter dem RQL von <b>%1$.2f</b> liegt, beträgt <b>%2$.2f</b>. %3$s<br>Auf Basis der beobachteten Stichprobe gibt es eine <b>%4$.1f%%</b>-vorhergesagte Wahrscheinlichkeit, dass das aktuelle Los von %5$d Teilen höchstens %6$d Fehler insgesamt enthält."
 
 msgid ""
 "<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is "
 "<b>%2$.2f</b>."
 msgstr ""
+"Der <u>Bayes-Faktor</u> dafür, dass der Anteil der Fehler < <u>%1$.2f</u> ist, beträgt <b>%2$.2f</b>."
 
 #, fuzzy
 msgid "Sampling Plans"
 msgstr "Einfacher Stichprobenplan"
 
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "Annahmezahl (c)"
 
 #, fuzzy
 msgid "Lowest sample size (n)"
 msgstr "Stichprobenumfang"
 
 msgid "Prior P(θ < RQL)"
-msgstr ""
+msgstr "Prior P(θ < RQL)"
 
 msgid "Posterior P(θ < RQL)"
-msgstr ""
+msgstr "Posterior P(θ < RQL)"
 
 msgid "Bayes factor"
-msgstr ""
+msgstr "Bayes-Faktor"
 
 msgid "Three-Hypothesis Bayes Factors (at d = c)"
-msgstr ""
+msgstr "Drei-Hypothesen-Bayes-Faktoren (bei d = c)"
 
 msgid "Prior P(Good)"
-msgstr ""
+msgstr "Prior P(Gut)"
 
 msgid "Post P(Good)"
-msgstr ""
+msgstr "Post P(Gut)"
 
 msgid "Prior P(Middle)"
-msgstr ""
+msgstr "Prior P(Mittel)"
 
 msgid "Post P(Middle)"
-msgstr ""
+msgstr "Post P(Mittel)"
 
 msgid "Prior P(Bad)"
-msgstr ""
+msgstr "Prior P(Schlecht)"
 
 msgid "Post P(Bad)"
-msgstr ""
+msgstr "Post P(Schlecht)"
 
 msgid "BF (Good vs Bad)"
-msgstr ""
+msgstr "BF (Gut vs. Schlecht)"
 
 msgid "BF (Good vs Middle)"
-msgstr ""
+msgstr "BF (Gut vs. Mittel)"
 
 msgid "BF (Middle vs Bad)"
-msgstr ""
+msgstr "BF (Mittel vs. Schlecht)"
 
 msgid "Posterior Distribution"
-msgstr ""
+msgstr "Posterior-Verteilung"
 
 msgid "Prior Distribution"
-msgstr ""
+msgstr "Prior-Verteilung"
 
 msgid "Lot Proportion Defective"
-msgstr ""
+msgstr "Fehleranteil im Los"
 
 msgid "Posterior Predictive Distribution"
-msgstr ""
+msgstr "Posterior-prädiktive Verteilung"
 
 msgid "Total Defects in Lot"
-msgstr ""
+msgstr "Gesamtfehler im Los"
 
 #, fuzzy
 msgid "Probability"
 msgstr "Rückweisewahrscheinlichkeit"
 
 msgid "Inference Decision Table"
-msgstr ""
+msgstr "Inferenz-Entscheidungstabelle"
 
 msgid "PPD Good (≤ %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD Gut (≤ %1$d Fehler im Los)"
 
 msgid "PPD Middle (> %1$d & ≤ %2$d defects)"
-msgstr ""
+msgstr "PPD Mittel (> %1$d & ≤ %2$d Fehler)"
 
 msgid "PPD Bad (> %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD Schlecht (> %1$d Fehler im Los)"
 
 #, fuzzy
 msgid "Sample Size (n)"
 msgstr "Stichprobenumfang"
 
 msgid "Defects (d)"
-msgstr ""
+msgstr "Fehler (d)"
 
 msgid "AQL"
-msgstr ""
+msgstr "AQL"
 
 msgid "RQL"
-msgstr ""
+msgstr "RQL"
 
 msgid "Bayes Factor"
-msgstr ""
+msgstr "Bayes-Faktor"
 
 msgid ""
 "Bayes factor interpretation: BF ≥ 10 (strong evidence for H−), 3 ≤ BF < 10 "
 "(moderate evidence for H−), 0.33 ≤ BF < 3 (inconclusive), 0.10 ≤ BF < 0.33 "
 "(moderate evidence for H+), BF < 0.10 (strong evidence for H+)."
 msgstr ""
+"Interpretation des Bayes-Faktors: BF ≥ 10 (starke Evidenz für H−), 3 ≤ BF < 10 (mäßige Evidenz für H−), 0.33 ≤ BF < 3 (nicht aussagekräftig), 0.10 ≤ BF < 0.33 (mäßige Evidenz für H+), BF < 0.10 (starke Evidenz für H+)."
 
 msgid "Procedure"
-msgstr ""
+msgstr "Vorgehen"
 
 msgid ""
 "<div style='line-height: 1.2;'>\n"
@@ -405,7 +413,7 @@ msgid ""
 "    a posterior distribution. In this section, <b>n</b> denotes the sample "
 "size, <b>d</b> the observed number of defects in the sample, and <b>N</b> "
 "the lot size.</p></div>"
-msgstr ""
+msgstr "<div style='line-height: 1.2;'>\n    <p style='margin: 0 0 8px 0;'>Das <b>Hauptziel</b> dieses Bayes'schen Stichprobenverfahrens ist es, die Qualität eines Loses zu bewerten, indem bestimmt wird, ob der Anteil der Fehler niedriger ist als die <b>rückzuweisende Qualitätsgrenzlage (RQL)</b>, die aktuell auf <b>%1$.2f%%</b> gesetzt ist.</p>\n\n    <p style='margin: 0 0 4px 0;'>Zwei primäre statistische Hypothesen werden über den Fehleranteil im Los (&theta;) formuliert:</p>\n    <ul style='margin: 0 0 8px 20px;'>\n      <li>Die (Null-)Hypothese unerträglicher Qualität H<sub>+</sub>: &theta; &ge; %1$.2f%% (benutzerdefiniert)</li>\n      <li>Die (Alternativ-)Hypothese tolerierbarer Qualität H<sub>-</sub>: &theta; < %1$.2f%% (benutzerdefiniert)</li>\n    </ul>\n\n    <p style='margin: 0 0 8px 0;'>Zusätzlich haben Benutzer die Möglichkeit, einen <b>Drei-Hypothesen-Test</b> durchzuführen, der die Qualitätsstufen in 'Gut' (&le; AQL), 'Mittel' (AQL < &theta; &le; RQL) und 'Schlecht' (> RQL) unterteilt.</p>\n\n    <p style='margin: 0 0 8px 0;'>Die <b>annehmbare Qualitätsgrenzlage (AQL)</b> ist aktuell auf <b>%2$.2f%%</b> gesetzt. Dieser Wert stellt die Qualitätsstufe dar, die für eine Annahme mit hoher Wahrscheinlichkeit angestrebt wird. Diese Qualitätsbeschränkungen können in der Phase „Planung“ angepasst werden, um spezifische Anforderungen widerzuspiegeln.</p>\n\n    <p style='margin: 0 0 6px 0;'><b>Stufen</b></p>\n    <p style='margin: 0 0 6px 0;'><b>1. Planung:</b> Bestimmen Sie einen Mindeststichprobenumfang, sodass die Stichprobe ausreichend Evidenz (einen Ziel-Bayes-Faktor) liefert, um die festgelegten Stichprobenziele zu erreichen.</p>\n\n    <p style='margin: 0;'><b>2. Inferenz:</b> Werten Sie beobachtete Daten aus, um die Prior-Überzeugung zu einer Posterioren-Verteilung zu aktualisieren. In diesem Abschnitt bezeichnet <b>n</b> den Stichprobenumfang, <b>d</b> die beobachtete Anzahl der Fehler in der Stichprobe und <b>N</b> die Losgröße.</p></div>"
 
 msgid ""
 "Lower limit for proportion non-conforming items needs to be smaller than the "
@@ -434,7 +442,7 @@ msgid ""
 "integer values.\n"
 "\n"
 "Check the values of N and proportion non-conforming."
-msgstr ""
+msgstr "Bei der hypergeometrischen Verteilung sollten N * Anteil der fehlerhaften Einheiten ganze Zahlen ergeben.\n\nÜberprüfen Sie die Werte von N und des Anteils fehlerhafter Einheiten."
 
 msgid "Sample size (n) cannot be larger than the lot size (N)."
 msgstr ""
@@ -476,7 +484,7 @@ msgid ""
 "least 2 greater than the acceptance numbers (c).\n"
 "\n"
 "                                   Else, subsequent stages become redundant."
-msgstr ""
+msgstr "Für alle Stufen außer der letzten müssen die Rückweisezahlen (r) mindestens 2 größer sein als die Annahmezahlen (c).\n\n                                   Andernfalls werden nachfolgende Stufen überflüssig."
 
 msgid ""
 "Acceptance numbers (c) are cumulative, so they need to be in a non-"
@@ -506,7 +514,7 @@ msgid "1 - α (Producer's risk) has to be greater than β (consumer's risk)."
 msgstr "1 - α (Lieferantenrisiko) muss größer sein als β (Abnehmerrisiko)."
 
 msgid "Current plan <b>CAN %s</b> meet the specified risk point(s)."
-msgstr ""
+msgstr "Der aktuelle Plan <b>KANN %s</b> die festgelegten Risikopunkte erfüllen."
 
 msgid "Proportion Non-conforming"
 msgstr "Fehlerhafter Anteil"
@@ -544,7 +552,7 @@ msgid "OC (Operating Characteristics) Curve"
 msgstr "Kurve der Operationscharakteristik (OC)"
 
 msgid "Probability of Acceptance"
-msgstr ""
+msgstr "Annahmewahrscheinlichkeit"
 
 msgid "AOQ (Average Outgoing Quality) Curve"
 msgstr "Kurve des Durchschlupfs (AOQ)"
@@ -553,14 +561,14 @@ msgid "Can not calculate AOQ. Check the plan parameters."
 msgstr "Kann AOQ nicht berechnen. Überprüfen Sie die Planparameter."
 
 msgid "(Incoming) Proportion Non-conforming"
-msgstr ""
+msgstr "(Eingangs-)Anteil nicht konformer Einheiten"
 
 #, fuzzy
 msgid "Average Outgoing Quality"
 msgstr "Mittlere Ausgangs-Qualität"
 
 msgid "AOQL: %.3f"
-msgstr ""
+msgstr "AOQL: %.3f"
 
 msgid "ATI (Average Total Inspection) Curve"
 msgstr "Kurve der durchschnittlichen Gesamtprüfung (ATI)"
@@ -572,14 +580,14 @@ msgid "Average Total Inspection"
 msgstr "Durchschnittliche Gesamtprüfung"
 
 msgid "ASN (Average Sample Number) Curve"
-msgstr ""
+msgstr "Kurve der durchschnittlichen Stichprobenzahl (ASN)"
 
 #, fuzzy
 msgid "Can not calculate ASN. Check the plan parameters."
 msgstr "Kann ASN nicht berechnen. Prüfen Sie die Planparameter."
 
 msgid "Average Sample Number"
-msgstr ""
+msgstr "Durchschnittliche Stichprobenzahl"
 
 #, fuzzy
 msgid "Generated Sampling Plan"
@@ -597,34 +605,34 @@ msgstr "Rückweisewahrscheinlichkeit"
 msgid ""
 "If the number of defective items out of %1$d sampled is <= %2$d, accept the "
 "lot. Reject otherwise."
-msgstr ""
+msgstr "Wenn die Anzahl der fehlerhaften Teile von %1$d geprüften Teilen <= %2$d ist, nehmen Sie das Los an. Andernfalls lehnen Sie es ab."
 
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "Variablenprüfplan erstellen"
 
 msgid ""
 "Z.LSL = (mean - LSL) / historical standard deviation\n"
 "\n"
 "Accept lot if Z.LSL >= k, otherwise reject."
-msgstr ""
+msgstr "Z.LSL = (Mittelwert - LSL) / historische Standardabweichung\n\nNehmen Sie das Los an, wenn Z.LSL >= k, andernfalls lehnen Sie es ab."
 
 msgid ""
 "Variable plan generated for the current quality constraints is invalid. "
 "Modify the quality constraints."
-msgstr ""
+msgstr "Der für die aktuellen Qualitätsbedingungen erzeugte Variablenplan ist ungültig. Ändern Sie die Qualitätsbedingungen."
 
 msgid ""
 "Variable plan generated for the current quality constraints has an invalid "
 "sample size (n). Modify the quality constraints."
-msgstr ""
+msgstr "Der für die aktuellen Qualitätsbedingungen erzeugte Variablenplan hat einen ungültigen Stichprobenumfang (n). Ändern Sie die Qualitätsbedingungen."
 
 msgid ""
 "Variable plan generated for the current quality constraints has an invalid k "
 "value. Modify the quality constraints."
-msgstr ""
+msgstr "Der für die aktuellen Qualitätsbedingungen erzeugte Variablenplan hat einen ungültigen k-Wert. Ändern Sie die Qualitätsbedingungen."
 
 msgid "Accept or Reject Lot %s"
-msgstr ""
+msgstr "Los %s annehmen oder ablehnen"
 
 msgid "Sample Mean"
 msgstr "Stichprobenmittelwert"
@@ -633,19 +641,19 @@ msgid "Sample Standard Deviation"
 msgstr "Stichproben-Standardabweichung"
 
 msgid "Historical Standard Deviation"
-msgstr ""
+msgstr "Historische Standardabweichung"
 
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "Untere Spezifikationsgrenze (LSL)"
 
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "Obere Spezifikationsgrenze (USL)"
 
 msgid "Z.LSL"
-msgstr ""
+msgstr "Z.LSL"
 
 msgid "Z.USL"
-msgstr ""
+msgstr "Z.USL"
 
 msgid "Sample standard deviation has to be greater than 0."
 msgstr "Stichproben-Standardabweichung muss größer als 0 sein."
@@ -654,15 +662,15 @@ msgid "Sample mean is invalid."
 msgstr "Stichprobenmittelwert ist ungültig."
 
 msgid "Can not accept or reject lot: sample size has to be greater than 1."
-msgstr ""
+msgstr "Los kann nicht angenommen oder abgelehnt werden: Der Stichprobenumfang muss größer als 1 sein."
 
 msgid ""
 "Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, "
 "and historical standard deviation is <b>unknown</b>."
-msgstr ""
+msgstr "Der Stichprobenumfang muss <b>> 1</b> sein, wenn <b>sowohl</b> LSL als auch USL angegeben werden und die historische Standardabweichung <b>unbekannt</b> ist."
 
 msgid "<u>Decision:</u> <b>%s</b> lot."
-msgstr ""
+msgstr "<u>Entscheidung:</u> <b>%s</b> Los."
 
 #~ msgid ""
 #~ "%s\n"
