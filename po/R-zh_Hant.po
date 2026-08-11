@@ -26,154 +26,154 @@ msgid "Value"
 msgstr "數值"
 
 msgid "Sample"
-msgstr ""
+msgstr "樣本"
 
 msgid "Sample Size"
-msgstr ""
+msgstr "樣本數"
 
 msgid "Cum. Sample Size"
-msgstr ""
+msgstr "累計樣本數"
 
 msgid "Acc. Number"
-msgstr ""
+msgstr "允收數"
 
 msgid "Rej. Number"
-msgstr ""
+msgstr "拒絕數"
 
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "分析變數方案"
 
 msgid "Variable Sampling Plan (Standard deviation assumed to be <b>%s</b>)"
-msgstr ""
+msgstr "變數抽樣方案（假設標準差為 <b>%s</b>）"
 
 msgid "Sample size"
 msgstr "樣本數"
 
 msgid "Critical Distance (k)"
-msgstr ""
+msgstr "臨界距離（k）"
 
 msgid "If historical standard deviation is unknown, sample size has to be > 1."
-msgstr ""
+msgstr "若歷史標準差未知，樣本數必須大於 1。"
 
 msgid ""
 "Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of "
 "the generated variable plan."
-msgstr ""
+msgstr "批量（N = %1$.0f）不能小於所產生的變數方案之樣本數（n = %2$.0f）。"
 
 msgid "The dataset is empty."
-msgstr ""
+msgstr "資料集為空。"
 
 msgid "The following assigned variables are missing from the dataset: %1$s."
-msgstr ""
+msgstr "下列指定的變數在資料集中不存在：%1$s。"
 
 msgid "%1$s cannot contain missing or non-finite values."
-msgstr ""
+msgstr "%1$s 不能包含遺漏值或非有限值。"
 
 msgid "%1$s must contain whole numbers only."
-msgstr ""
+msgstr "%1$s 只能包含整數。"
 
 msgid "%1$s cannot contain negative values."
-msgstr ""
+msgstr "%1$s 不能包含負值。"
 
 msgid "Defect Count"
-msgstr ""
+msgstr "缺陷數"
 
 msgid "Lot Size"
-msgstr ""
+msgstr "批量"
 
 msgid "Time"
-msgstr ""
+msgstr "時間"
 
 msgid "Predictor"
-msgstr ""
+msgstr "預測變數"
 
 msgid "Predictor must vary across lots when using the predictor model."
-msgstr ""
+msgstr "使用預測變數模型時，預測變數在各批之間必須有所變化。"
 
 msgid "Observed defects cannot exceed the sample size for any lot."
-msgstr ""
+msgstr "任何批的觀察到缺陷數不能超過其樣本數。"
 
 msgid "Sample size cannot exceed the lot size for any lot."
-msgstr ""
+msgstr "任何批的樣本數不能超過其批量。"
 
 msgid "Sampling..."
-msgstr ""
+msgstr "抽樣中..."
 
 msgid "Estimation failed: %s"
-msgstr ""
+msgstr "估計失敗：%s"
 
 msgid "Posterior Summary (Current Lot)"
-msgstr ""
+msgstr "後驗摘要（當前批）"
 
 msgid "Lot Nr."
-msgstr ""
+msgstr "批號"
 
 msgid "Obs. Defects"
-msgstr ""
+msgstr "觀察到缺陷數"
 
 msgid "Median Pred. Defects"
-msgstr ""
+msgstr "中位數預測缺陷數"
 
 msgid "Mass < AQL"
-msgstr ""
+msgstr "機率質量 < AQL"
 
 msgid "Mass > RQL"
-msgstr ""
+msgstr "機率質量 > RQL"
 
 msgid "Decision"
-msgstr ""
+msgstr "決策"
 
 msgid ""
 "The Lot Number, Lot Size, or Defect Count is missing (NA) for the last lot."
-msgstr ""
+msgstr "最後一批的批號、批量或缺陷數遺漏（NA）。"
 
 msgid "Consider to Continue"
-msgstr ""
+msgstr "考慮繼續"
 
 msgid "Consider to Accept"
-msgstr ""
+msgstr "考慮允收"
 
 msgid "Consider to Reject"
-msgstr ""
+msgstr "考慮拒收"
 
 msgid "Defect Rate Over Time"
-msgstr ""
+msgstr "隨時間變化的缺陷率"
 
 msgid "Lot"
-msgstr ""
+msgstr "批"
 
 msgid "Defect Rate (%%)"
-msgstr ""
+msgstr "缺陷率（%%）"
 
 msgid "Posterior Predictive"
-msgstr ""
+msgstr "後驗預測"
 
 msgid "Defects in Current Lot"
-msgstr ""
+msgstr "當前批中的缺陷"
 
 msgid "Posterior Predictive Probability"
-msgstr ""
+msgstr "後驗預測機率"
 
 msgid ""
 "Note. Tail correction adds a uniform sudden-jump component over the full lot-"
 "size range (0 to N), so this figure is zoomed to the uncorrected predictive "
 "range to keep the posterior shape readable."
-msgstr ""
+msgstr "註。尾部校正在整個批量範圍（0 到 N）上加上了均勻的突跳成分，因此此圖放大到未校正的預測範圍，以保持後驗形狀可讀。"
 
 msgid "Posterior Defect Rate"
-msgstr ""
+msgstr "後驗缺陷率"
 
 msgid "Density"
 msgstr "密度"
 
 msgid "Beta Coefficient"
-msgstr ""
+msgstr "Beta 係數"
 
 msgid "Predictor Coefficient β"
-msgstr ""
+msgstr "預測變數係數 β"
 
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "MCMC 診斷"
 
 msgid "Parameter"
 msgstr "參數"
@@ -185,182 +185,182 @@ msgid "SD"
 msgstr "標準差"
 
 msgid "ESS"
-msgstr ""
+msgstr "ESS"
 
 msgid "R-hat"
-msgstr ""
+msgstr "R-hat"
 
 msgid "No parameters selected for the MCMC diagnostics table."
-msgstr ""
+msgstr "未為 MCMC 診斷表選擇任何參數。"
 
 msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
-msgstr ""
+msgstr "先驗眾數（%1$.4f）必須介於 0 與 RQL（%2$.4f）之間。"
 
 msgid ""
 "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. "
 "Please choose a lower mode, a lower RQL, or a different prior."
-msgstr ""
+msgstr "無法為眾數 %1$.4f 與 RQL %2$.4f 建構無偏先驗。請選擇較低的眾數、較低的 RQL 或不同的先驗。"
 
 msgid "Planning"
-msgstr ""
+msgstr "計畫"
 
 msgid "Please ensure 0 < AQL < RQL < 1."
-msgstr ""
+msgstr "請確保 0 < AQL < RQL < 1。"
 
 msgid "Please provide a valid maximum sample size (> 0)."
-msgstr ""
+msgstr "請提供有效的最大樣本數（> 0）。"
 
 msgid "Please provide a valid minimum Bayes factor (> 0)."
-msgstr ""
+msgstr "請提供有效的最小貝氏因子（> 0）。"
 
 msgid ""
 "The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
 "or choose a different prior."
-msgstr ""
+msgstr "所選的先驗導致無效的 Beta 參數。請調整 AQL/RQL 或選擇不同的先驗。"
 
 msgid "No valid plans found satisfying the specified constraints."
-msgstr ""
+msgstr "未找到滿足指定約束條件的有效方案。"
 
 msgid "Inference"
-msgstr ""
+msgstr "推論"
 
 msgid "Please ensure the data are valid: n >= 0 and 0 <= d <= n."
-msgstr ""
+msgstr "請確保資料有效：n >= 0 且 0 <= d <= n。"
 
 msgid "Lot size (N) must be at least as large as the sample size (n)."
-msgstr ""
+msgstr "批量（N）必須至少與樣本數（n）一樣大。"
 
 msgid "Strong evidence for accepting the lot."
-msgstr ""
+msgstr "接受該批的強力證據。"
 
 msgid "Moderate evidence for accepting the lot."
-msgstr ""
+msgstr "接受該批的中度證據。"
 
 msgid "Inconclusive evidence."
-msgstr ""
+msgstr "證據不足。"
 
 msgid "Moderate evidence for rejecting the lot."
-msgstr ""
+msgstr "拒絕該批的中度證據。"
 
 msgid "Strong evidence for rejecting the lot."
-msgstr ""
+msgstr "拒絕該批的強力證據。"
 
 msgid ""
 "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL "
 "of <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>Based on the observed sample, "
 "there is a <b>%4$.1f%%</b> predicted probability that the current lot of "
 "%5$d items contains at most %6$d total defects."
-msgstr ""
+msgstr "支持該批缺陷率低於 RQL <b>%1$.2f</b> 的<b>貝氏因子</b>為 <b>%2$.2f</b>。%3$s<br>根據觀察到的樣本，當前批 <b>%5$d</b> 個項目中至多有 <b>%6$d</b> 個總缺陷的<b>%4$.1f%%</b> 預測機率。"
 
 msgid ""
 "<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is "
 "<b>%2$.2f</b>."
-msgstr ""
+msgstr "支持缺陷比例 < <u>%1$.2f</u> 的<u>貝氏因子</u>為 <b>%2$.2f</b>。"
 
 #, fuzzy
 msgid "Sampling Plans"
 msgstr "單次抽樣計畫"
 
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "允收數（c）"
 
 #, fuzzy
 msgid "Lowest sample size (n)"
 msgstr "樣本數"
 
 msgid "Prior P(θ < RQL)"
-msgstr ""
+msgstr "先驗 P(θ < RQL)"
 
 msgid "Posterior P(θ < RQL)"
-msgstr ""
+msgstr "後驗 P(θ < RQL)"
 
 msgid "Bayes factor"
 msgstr "貝氏因子"
 
 msgid "Three-Hypothesis Bayes Factors (at d = c)"
-msgstr ""
+msgstr "三假說貝氏因子（d = c 時）"
 
 msgid "Prior P(Good)"
-msgstr ""
+msgstr "先驗 P(良好)"
 
 msgid "Post P(Good)"
-msgstr ""
+msgstr "後驗 P(良好)"
 
 msgid "Prior P(Middle)"
-msgstr ""
+msgstr "先驗 P(中等)"
 
 msgid "Post P(Middle)"
-msgstr ""
+msgstr "後驗 P(中等)"
 
 msgid "Prior P(Bad)"
-msgstr ""
+msgstr "先驗 P(不良)"
 
 msgid "Post P(Bad)"
-msgstr ""
+msgstr "後驗 P(不良)"
 
 msgid "BF (Good vs Bad)"
-msgstr ""
+msgstr "BF（良好 對 不良）"
 
 msgid "BF (Good vs Middle)"
-msgstr ""
+msgstr "BF（良好 對 中等）"
 
 msgid "BF (Middle vs Bad)"
-msgstr ""
+msgstr "BF（中等 對 不良）"
 
 msgid "Posterior Distribution"
-msgstr ""
+msgstr "後驗分配"
 
 msgid "Prior Distribution"
 msgstr "先驗分配"
 
 msgid "Lot Proportion Defective"
-msgstr ""
+msgstr "批次不良比例"
 
 msgid "Posterior Predictive Distribution"
-msgstr ""
+msgstr "後驗預測分配"
 
 msgid "Total Defects in Lot"
-msgstr ""
+msgstr "批量中的總缺陷數"
 
 msgid "Probability"
 msgstr "機率"
 
 msgid "Inference Decision Table"
-msgstr ""
+msgstr "推論決策表"
 
 msgid "PPD Good (≤ %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD 良好（批量中 ≤ %1$d 個缺陷）"
 
 msgid "PPD Middle (> %1$d & ≤ %2$d defects)"
-msgstr ""
+msgstr "PPD 中等（> %1$d 且 ≤ %2$d 個缺陷）"
 
 msgid "PPD Bad (> %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD 不良（批量中 > %1$d 個缺陷）"
 
 #, fuzzy
 msgid "Sample Size (n)"
 msgstr "樣本數"
 
 msgid "Defects (d)"
-msgstr ""
+msgstr "缺陷（d）"
 
 msgid "AQL"
-msgstr ""
+msgstr "AQL"
 
 msgid "RQL"
-msgstr ""
+msgstr "RQL"
 
 msgid "Bayes Factor"
-msgstr ""
+msgstr "貝氏因子"
 
 msgid ""
 "Bayes factor interpretation: BF ≥ 10 (strong evidence for H−), 3 ≤ BF < 10 "
 "(moderate evidence for H−), 0.33 ≤ BF < 3 (inconclusive), 0.10 ≤ BF < 0.33 "
 "(moderate evidence for H+), BF < 0.10 (strong evidence for H+)."
-msgstr ""
+msgstr "貝氏因子判讀：BF ≥ 10（支持 H− 的強力證據），3 ≤ BF < 10（支持 H− 的中度證據），0.33 ≤ BF < 3（證據不足），0.10 ≤ BF < 0.33（支持 H+ 的中度證據），BF < 0.10（支持 H+ 的強力證據）。"
 
 msgid "Procedure"
-msgstr ""
+msgstr "程序"
 
 msgid ""
 "<div style='line-height: 1.2;'>\n"
@@ -400,231 +400,250 @@ msgid ""
 "size, <b>d</b> the observed number of defects in the sample, and <b>N</b> "
 "the lot size.</p></div>"
 msgstr ""
+"<div style='line-height: 1.2;'>\n"
+"    <p style='margin: 0 0 8px 0;'>此貝氏抽樣程序的<b>主要目標</b>是藉由判斷缺陷比例是否低於<b>拒收品質水準（RQL）</b>來評估一批的品質，目前設定為 <b>%1$.2f%%</b>。</p>\n"
+"\n"
+"    <p style='margin: 0 0 4px 0;'>關於批次不良比例（&theta;）提出了兩個主要的統計假說：</p>\n"
+"    <ul style='margin: 0 0 8px 20px;'>\n"
+"      <li>不可容忍品質的（虛無）假說 H<sub>+</sub>：&theta; &ge; %1$.2f%%（使用者定義）</li>\n"
+"      <li>可容忍品質的（對立）假說 H<sub>-</sub>：&theta; < %1$.2f%%（使用者定義）</li>\n"
+"    </ul>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'>此外，使用者可以選擇進行<b>三假說檢定</b>，將品質水準劃分為『良好』（&le; AQL）、『中等』（AQL < &theta; &le; RQL）與『不良』（> RQL）三個區域。</p>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'>目前<b>允收品質水準（AQL）</b>設定為 <b>%2$.2f%%</b>。此數值代表\n"
+"    以高機率允收為目標的品質水準。這些品質限制可在計畫階段調整以符合特定需求。</p>\n"
+"\n"
+"    <p style='margin: 0 0 6px 0;'><b>階段</b></p>\n"
+"    <p style='margin: 0 0 6px 0;'><b>1. 計畫：</b>決定最小樣本數，使樣本能提供足夠的證據（目標貝氏因子）以達成指定的抽樣目標。</p>\n"
+"\n"
+"    <p style='margin: 0;'><b>2. 推論：</b>評估觀察到的資料，將先驗信念更新為\n"
+"    後驗分配。在本節中，<b>n</b> 代表樣本數，<b>d</b> 代表樣本中觀察到的缺陷數，<b>N</b> 代表批量。</p></div>"
 
 msgid ""
 "Lower limit for proportion non-conforming items needs to be smaller than the "
 "upper limit."
-msgstr ""
+msgstr "不良品比例的下限必須小於上限。"
 
 msgid ""
 "Step size for proportion non-conforming items needs to be smaller than the "
 "difference between the upper and lower limits."
-msgstr ""
+msgstr "不良品比例的間距必須小於上限與下限的差值。"
 
 msgid ""
 "Step size of 0 is allowed only if the lower and upper limits of proportion "
 "non-conforming items are identical."
-msgstr ""
+msgstr "只有當不良品比例的下限與上限相同時，才允許間距為 0。"
 
 msgid ""
 "For hypergeometric distribution, N * proportion non-conforming should all be "
 "integer values.\n"
 "\n"
 "Check the values of N and proportion non-conforming."
-msgstr ""
+msgstr "對於超幾何分配，N * 不良品比例必須全為整數。\n\n請檢查 N 與不良品比例的值。"
 
 msgid "Sample size (n) cannot be larger than the lot size (N)."
-msgstr ""
+msgstr "樣本數（n）不能大於批量（N）。"
 
 msgid "Acceptance number (c) cannot be larger than the sample size (n)."
-msgstr ""
+msgstr "允收數（c）不能大於樣本數（n）。"
 
 msgid "Rejection number (r) cannot be larger than the sample size (n)."
-msgstr ""
+msgstr "拒絕數（r）不能大於樣本數（n）。"
 
 msgid "Rejection number (r) has to be larger than the acceptance number (c)."
-msgstr ""
+msgstr "拒絕數（r）必須大於允收數（c）。"
 
 msgid ""
 "Cumulative sample size (n1+n2+...) cannot be larger than the lot size (N)."
-msgstr ""
+msgstr "累計樣本數（n1+n2+...）不能大於批量（N）。"
 
 msgid ""
 "Final rejection number (r) needs to be 1 more than the final acceptance "
 "number (c)."
-msgstr ""
+msgstr "最終拒絕數（r）必須比最終允收數（c）多 1。"
 
 msgid ""
 "Rejection number (r) for every stage has to be larger than the corresponding "
 "acceptance number (c)."
-msgstr ""
+msgstr "每一階段的拒絕數（r）必須大於對應的允收數（c）。"
 
 msgid ""
 "For all stages except the last stage, rejection numbers (r) have to be at at "
 "least 2 greater than the acceptance numbers (c).\n"
 "\n"
 "                                   Else, subsequent stages become redundant."
-msgstr ""
+msgstr "除最後一個階段外，所有階段的拒絕數（r）必須至少比允收數（c）大 2。\n\n                                   否則後續階段會變成多餘。"
 
 msgid ""
 "Acceptance numbers (c) are cumulative, so they need to be in a non-"
 "decreasing sequence."
-msgstr ""
+msgstr "允收數（c）是累計的，因此必須為非遞減序列。"
 
 msgid ""
 "Rejection numbers (r) are cumulative, so they need to be in a non-decreasing "
 "sequence."
-msgstr ""
+msgstr "拒絕數（r）是累計的，因此必須為非遞減序列。"
 
 msgid "No valid values found in the plan. Check the inputs."
-msgstr ""
+msgstr "方案中找不到有效的數值。請檢查輸入。"
 
 msgid ""
 "AQL (Acceptable Quality Level) value should be lower than RQL (Rejectable "
 "Quality Level) value."
-msgstr ""
+msgstr "AQL（允收品質水準）值應低於 RQL（拒收品質水準）值。"
 
 msgid "1 - α (Producer's risk) has to be greater than β (consumer's risk)."
-msgstr ""
+msgstr "1 - α（生產者風險）必須大於 β（消費者風險）。"
 
 msgid "Current plan <b>CAN %s</b> meet the specified risk point(s)."
-msgstr ""
+msgstr "當前方案<b>能%s</b>滿足指定的風險點。"
 
 msgid "Proportion Non-conforming"
-msgstr ""
+msgstr "不良品比例"
 
 msgid "Required P(accept)"
-msgstr ""
+msgstr "要求 P(允收)"
 
 msgid "Actual P(accept)"
-msgstr ""
+msgstr "實際 P(允收)"
 
 msgid ""
 "Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the "
 "required probability of acceptance (%3$.3f) at AQL."
-msgstr ""
+msgstr "在 AQL（%2$.3f）下的允收機率（%1$.3f）<b>低於</b>在 AQL 下的要求允收機率（%3$.3f）。"
 
 msgid ""
 "Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the "
 "required probability of acceptance (%3$.3f) at RQL."
-msgstr ""
+msgstr "在 RQL（%2$.3f）下的允收機率（%1$.3f）<b>高於</b>在 RQL 下的要求允收機率（%3$.3f）。"
 
 msgid "Acceptance Probabilities"
-msgstr ""
+msgstr "允收機率"
 
 msgid "Prop. Non-conforming"
-msgstr ""
+msgstr "不良品比例"
 
 msgid "P(accept)"
-msgstr ""
+msgstr "P(允收)"
 
 msgid "OC (Operating Characteristics) Curve"
-msgstr ""
+msgstr "OC（作業特性）曲線"
 
 msgid "Probability of Acceptance"
-msgstr ""
+msgstr "允收機率"
 
 msgid "AOQ (Average Outgoing Quality) Curve"
-msgstr ""
+msgstr "AOQ（平均出廠品質）曲線"
 
 msgid "Can not calculate AOQ. Check the plan parameters."
-msgstr ""
+msgstr "無法計算 AOQ。請檢查方案參數。"
 
 msgid "(Incoming) Proportion Non-conforming"
-msgstr ""
+msgstr "（進廠）不良品比例"
 
 msgid "Average Outgoing Quality"
-msgstr ""
+msgstr "平均出廠品質"
 
 msgid "AOQL: %.3f"
-msgstr ""
+msgstr "AOQL：%.3f"
 
 msgid "ATI (Average Total Inspection) Curve"
-msgstr ""
+msgstr "ATI（平均總檢驗量）曲線"
 
 msgid "Can not calculate ATI. Check the plan parameters."
-msgstr ""
+msgstr "無法計算 ATI。請檢查方案參數。"
 
 msgid "Average Total Inspection"
-msgstr ""
+msgstr "平均總檢驗量"
 
 msgid "ASN (Average Sample Number) Curve"
-msgstr ""
+msgstr "ASN（平均樣本數）曲線"
 
 msgid "Can not calculate ASN. Check the plan parameters."
-msgstr ""
+msgstr "無法計算 ASN。請檢查方案參數。"
 
 msgid "Average Sample Number"
-msgstr ""
+msgstr "平均樣本數"
 
 msgid "Generated Sampling Plan"
-msgstr ""
+msgstr "產生的抽樣方案"
 
 msgid "Acceptance probabilities at AQL and RQL"
-msgstr ""
+msgstr "在 AQL 與 RQL 的允收機率"
 
 msgid "Acceptance Probability"
-msgstr ""
+msgstr "允收機率"
 
 msgid "Rejection Probability"
-msgstr ""
+msgstr "拒收機率"
 
 msgid ""
 "If the number of defective items out of %1$d sampled is <= %2$d, accept the "
 "lot. Reject otherwise."
-msgstr ""
+msgstr "若在 %1$d 個抽樣項目中的缺陷數 <= %2$d，則允收該批；否則拒收。"
 
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "建立變數方案"
 
 msgid ""
 "Z.LSL = (mean - LSL) / historical standard deviation\n"
 "\n"
 "Accept lot if Z.LSL >= k, otherwise reject."
-msgstr ""
+msgstr "Z.LSL = (平均數 - LSL) / 歷史標準差\n\n若 Z.LSL >= k 則允收該批，否則拒收。"
 
 msgid ""
 "Variable plan generated for the current quality constraints is invalid. "
 "Modify the quality constraints."
-msgstr ""
+msgstr "為當前品質限制所產生的變數方案無效。請修改品質限制。"
 
 msgid ""
 "Variable plan generated for the current quality constraints has an invalid "
 "sample size (n). Modify the quality constraints."
-msgstr ""
+msgstr "為當前品質限制所產生的變數方案具有無效的樣本數（n）。請修改品質限制。"
 
 msgid ""
 "Variable plan generated for the current quality constraints has an invalid k "
 "value. Modify the quality constraints."
-msgstr ""
+msgstr "為當前品質限制所產生的變數方案具有無效的 k 值。請修改品質限制。"
 
 msgid "Accept or Reject Lot %s"
-msgstr ""
+msgstr "允收或拒收批次 %s"
 
 msgid "Sample Mean"
-msgstr ""
+msgstr "樣本平均數"
 
 msgid "Sample Standard Deviation"
-msgstr ""
+msgstr "樣本標準差"
 
 msgid "Historical Standard Deviation"
-msgstr ""
+msgstr "歷史標準差"
 
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "規格下限（LSL）"
 
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "規格上限（USL）"
 
 msgid "Z.LSL"
-msgstr ""
+msgstr "Z.LSL"
 
 msgid "Z.USL"
-msgstr ""
+msgstr "Z.USL"
 
 msgid "Sample standard deviation has to be greater than 0."
-msgstr ""
+msgstr "樣本標準差必須大於 0。"
 
 msgid "Sample mean is invalid."
-msgstr ""
+msgstr "樣本平均數無效。"
 
 msgid "Can not accept or reject lot: sample size has to be greater than 1."
-msgstr ""
+msgstr "無法允收或拒收批次：樣本數必須大於 1。"
 
 msgid ""
 "Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, "
 "and historical standard deviation is <b>unknown</b>."
-msgstr ""
+msgstr "若提供了<b>兩個</b> LSL 與 USL，且歷史標準差<b>未知</b>，則樣本數必須<b>> 1</b>。"
 
 msgid "<u>Decision:</u> <b>%s</b> lot."
-msgstr ""
+msgstr "<u>決策：</u><b>%s</b> 批次。"
