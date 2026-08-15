@@ -217,7 +217,9 @@ msgstr "Mesure"
 
 msgctxt "DecideVariableLots|"
 msgid "Specify sample statistics directly (used if dataset is not available)"
-msgstr "Spécifier directement les statistiques de l'échantillon (utilisé si les données ne sont pas disponibles)"
+msgstr ""
+"Spécifier directement les statistiques de l'échantillon (utilisé si les "
+"données ne sont pas disponibles)"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
@@ -599,3 +601,7 @@ msgstr "Adapt Delta"
 msgctxt "BayesianSSMforAS|"
 msgid "Max tree depth"
 msgstr "Profondeur max de l'arbre"
+
+msgctxt "Description|"
+msgid "Analyze Variable Plan"
+msgstr ""
