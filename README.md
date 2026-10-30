@@ -38,7 +38,7 @@ The organization of the analyses within the Acceptance Sampling module in JASP i
 
 **Bayesian Planning and Inference:** Plan acceptance sampling studies using Beta-Binomial models with customizable priors (uniform, custom, impartial). Perform Bayesian inference on observed lot data with posterior updating, Bayes factor evidence assessment, and posterior predictive distributions.
 
-**Bayesian State-Space Model:** Track defect rates over time using a dynamic state-space model estimated via Stan. Supports covariates, posterior distribution visualization, and predictive inference for ongoing quality monitoring.
+**Bayesian State-Space Model:** Track defect rates across lots with a two-component innovation mixture that allows ordinary variation and occasional larger changes. Supports a standardized predictor, configurable priors, automatic computational diagnostics and prediction of the total defects in the current lot. See the [analysis help](inst/help/BayesianSSMforAS.md) for the model, decision rule and updating behavior.
 
 **Visualization:** OC curves, AOQ curves, ATI curves, ASN curves for classical plans. Prior/posterior density plots, posterior predictive distributions, and state trajectory plots for Bayesian analyses.
 
@@ -46,3 +46,40 @@ The organization of the analyses within the Acceptance Sampling module in JASP i
 
 - Henrik Godmann (Bayesian analyses)
 - JASP Team (Classical analyses)
+
+## Developing the Stan models
+
+Edit `inst/stan/simple.stan` or `inst/stan/complex.stan`. A normal source-package
+installation runs `configure` (`configure.win` on Windows), which regenerates the
+model C++ before compilation. No hand-editing of generated model headers is needed.
+The generation uses the public
+[`rstantools::rstan_config()` API](https://mc-stan.org/rstantools/reference/rstan_config.html)
+in a temporary directory, preserving this package's custom loader and compiler settings.
+Changes to the transport or its include header also trigger model recompilation.
+
+To regenerate the files for a commit, run from the package root:
+
+```sh
+Rscript --vanilla tools/update-stan.R --write
+Rscript --vanilla tools/update-stan.R --check
+Rscript --vanilla tools/test-stan-build.R
+R CMD INSTALL --preclean .
+```
+
+Use the project's `renv.lock` toolchain for checked-in generated code. Include the
+regenerated `src/stanExports_*.h`, `src/stanExports_*.cc` and `src/RcppExports.cpp`
+with the source change when they differ. The CI generation check runs **before**
+installation, so automatic regeneration cannot hide outdated checked-in files.
+It fails with a repair command when the files differ. A deliberate generator
+upgrade can also change generated output; regenerate and review it with that
+updated toolchain.
+
+Restart R or the JASP engine after installing a rebuilt package: an existing
+process can still hold its previous DLL and cached Stan objects. `--preclean`
+also avoids reusing objects after a compiler or dependency upgrade. The numerical
+model tests exercise both installed models with the development fallback disabled.
+These build checks supplement those tests; they do not establish statistical
+validity by themselves.
+
+Changing a prior's numeric settings in JASP only refits the model. It does not
+require regeneration or compilation.

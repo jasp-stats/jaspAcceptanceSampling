@@ -27,38 +27,53 @@ namespace model_simple_namespace {
 using stan::model::model_base_crtp;
 using namespace stan::math;
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 31> locations_array__ =
+static constexpr std::array<const char*, 46> locations_array__ =
   {" (found before start of program)",
-  " (in 'simple', line 13, column 2 to column 32)",
-  " (in 'simple', line 15, column 2 to column 26)",
-  " (in 'simple', line 17, column 2 to column 20)",
-  " (in 'simple', line 20, column 2 to column 15)",
-  " (in 'simple', line 21, column 2 to column 18)",
-  " (in 'simple', line 22, column 2 to column 18)",
-  " (in 'simple', line 35, column 2 to column 13)",
-  " (in 'simple', line 23, column 2 to column 26)",
-  " (in 'simple', line 24, column 2 to column 24)",
-  " (in 'simple', line 25, column 2 to column 40)",
-  " (in 'simple', line 26, column 2 to column 24)",
-  " (in 'simple', line 38, column 2 to column 54)",
-  " (in 'simple', line 29, column 2 to column 50)",
-  " (in 'simple', line 30, column 2 to column 40)",
-  " (in 'simple', line 31, column 2 to column 26)",
-  " (in 'simple', line 32, column 2 to column 25)",
-  " (in 'simple', line 2, column 2 to column 17)",
-  " (in 'simple', line 3, column 8 to column 9)",
-  " (in 'simple', line 3, column 2 to column 26)",
-  " (in 'simple', line 4, column 8 to column 9)",
-  " (in 'simple', line 4, column 2 to column 26)",
-  " (in 'simple', line 5, column 8 to column 9)",
-  " (in 'simple', line 5, column 2 to column 26)",
-  " (in 'simple', line 7, column 2 to column 31)",
-  " (in 'simple', line 8, column 2 to column 31)",
+  " (in 'simple', line 20, column 2 to column 32)",
+  " (in 'simple', line 21, column 2 to column 26)",
+  " (in 'simple', line 22, column 2 to column 20)",
+  " (in 'simple', line 25, column 2 to column 18)",
+  " (in 'simple', line 26, column 2 to column 15)",
+  " (in 'simple', line 27, column 2 to column 18)",
+  " (in 'simple', line 43, column 2 to column 58)",
+  " (in 'simple', line 44, column 2 to column 34)",
+  " (in 'simple', line 30, column 6 to line 31, column 73)",
+  " (in 'simple', line 29, column 4 to line 31, column 73)",
+  " (in 'simple', line 28, column 2 to line 31, column 73)",
+  " (in 'simple', line 32, column 2 to column 24)",
+  " (in 'simple', line 33, column 13 to column 51)",
+  " (in 'simple', line 33, column 2 to column 51)",
+  " (in 'simple', line 34, column 2 to column 24)",
+  " (in 'simple', line 47, column 6 to line 48, column 94)",
+  " (in 'simple', line 49, column 6 to column 82)",
+  " (in 'simple', line 50, column 6 to column 72)",
+  " (in 'simple', line 46, column 23 to line 51, column 5)",
+  " (in 'simple', line 46, column 4 to line 51, column 5)",
+  " (in 'simple', line 45, column 2 to line 51, column 5)",
+  " (in 'simple', line 37, column 2 to column 48)",
+  " (in 'simple', line 38, column 2 to column 40)",
+  " (in 'simple', line 39, column 2 to column 23)",
+  " (in 'simple', line 40, column 2 to column 28)",
+  " (in 'simple', line 5, column 2 to column 17)",
+  " (in 'simple', line 6, column 8 to column 9)",
+  " (in 'simple', line 6, column 2 to column 26)",
+  " (in 'simple', line 7, column 8 to column 9)",
+  " (in 'simple', line 7, column 2 to column 26)",
+  " (in 'simple', line 8, column 8 to column 9)",
+  " (in 'simple', line 8, column 2 to column 26)",
   " (in 'simple', line 9, column 2 to column 31)",
-  " (in 'simple', line 17, column 9 to column 12)",
-  " (in 'simple', line 20, column 9 to column 10)",
-  " (in 'simple', line 21, column 9 to column 10)",
-  " (in 'simple', line 22, column 9 to column 12)"};
+  " (in 'simple', line 10, column 2 to column 31)",
+  " (in 'simple', line 11, column 2 to column 31)",
+  " (in 'simple', line 14, column 2 to column 31)",
+  " (in 'simple', line 15, column 2 to column 27)",
+  " (in 'simple', line 17, column 36 to column 66)",
+  " (in 'simple', line 17, column 4 to column 66)",
+  " (in 'simple', line 16, column 2 to line 17, column 66)",
+  " (in 'simple', line 22, column 9 to column 12)",
+  " (in 'simple', line 25, column 9 to column 12)",
+  " (in 'simple', line 26, column 9 to column 10)",
+  " (in 'simple', line 27, column 9 to column 10)",
+  " (in 'simple', line 44, column 9 to column 12)"};
 #include <stan_meta_header.hpp>
 class model_simple final : public model_base_crtp<model_simple> {
 private:
@@ -69,8 +84,11 @@ private:
   double prior_theta1_a;
   double prior_theta1_b;
   double prior_sigma_sd;
+  double jump_probability;
+  double jump_extra_sd;
   int z_raw_1dim__;
   int eta_1dim__;
+  int jump_responsibility_1dim__;
 public:
   ~model_simple() {}
   model_simple(stan::io::var_context& context__, unsigned int
@@ -92,87 +110,120 @@ public:
     try {
       int pos__ = std::numeric_limits<int>::min();
       pos__ = 1;
-      current_statement__ = 17;
+      current_statement__ = 26;
       context__.validate_dims("data initialization", "T", "int",
         std::vector<size_t>{});
       T = std::numeric_limits<int>::min();
-      current_statement__ = 17;
+      current_statement__ = 26;
       T = context__.vals_i("T")[(1 - 1)];
-      current_statement__ = 17;
+      current_statement__ = 26;
       stan::math::check_greater_or_equal(function__, "T", T, 1);
-      current_statement__ = 18;
+      current_statement__ = 27;
       stan::math::validate_non_negative_index("s", "T", T);
-      current_statement__ = 19;
+      current_statement__ = 28;
       context__.validate_dims("data initialization", "s", "int",
         std::vector<size_t>{static_cast<size_t>(T)});
       s = std::vector<int>(T, std::numeric_limits<int>::min());
-      current_statement__ = 19;
+      current_statement__ = 28;
       s = context__.vals_i("s");
-      current_statement__ = 19;
+      current_statement__ = 28;
       stan::math::check_greater_or_equal(function__, "s", s, 0);
-      current_statement__ = 20;
+      current_statement__ = 29;
       stan::math::validate_non_negative_index("n", "T", T);
-      current_statement__ = 21;
+      current_statement__ = 30;
       context__.validate_dims("data initialization", "n", "int",
         std::vector<size_t>{static_cast<size_t>(T)});
       n = std::vector<int>(T, std::numeric_limits<int>::min());
-      current_statement__ = 21;
+      current_statement__ = 30;
       n = context__.vals_i("n");
-      current_statement__ = 21;
+      current_statement__ = 30;
       stan::math::check_greater_or_equal(function__, "n", n, 0);
-      current_statement__ = 22;
+      current_statement__ = 31;
       stan::math::validate_non_negative_index("y", "T", T);
-      current_statement__ = 23;
+      current_statement__ = 32;
       context__.validate_dims("data initialization", "y", "int",
         std::vector<size_t>{static_cast<size_t>(T)});
       y = std::vector<int>(T, std::numeric_limits<int>::min());
-      current_statement__ = 23;
+      current_statement__ = 32;
       y = context__.vals_i("y");
-      current_statement__ = 23;
+      current_statement__ = 32;
       stan::math::check_greater_or_equal(function__, "y", y, 0);
-      current_statement__ = 24;
+      current_statement__ = 33;
       context__.validate_dims("data initialization", "prior_theta1_a",
         "double", std::vector<size_t>{});
       prior_theta1_a = std::numeric_limits<double>::quiet_NaN();
-      current_statement__ = 24;
+      current_statement__ = 33;
       prior_theta1_a = context__.vals_r("prior_theta1_a")[(1 - 1)];
-      current_statement__ = 24;
+      current_statement__ = 33;
       stan::math::check_greater_or_equal(function__, "prior_theta1_a",
         prior_theta1_a, 0);
-      current_statement__ = 25;
+      current_statement__ = 34;
       context__.validate_dims("data initialization", "prior_theta1_b",
         "double", std::vector<size_t>{});
       prior_theta1_b = std::numeric_limits<double>::quiet_NaN();
-      current_statement__ = 25;
+      current_statement__ = 34;
       prior_theta1_b = context__.vals_r("prior_theta1_b")[(1 - 1)];
-      current_statement__ = 25;
+      current_statement__ = 34;
       stan::math::check_greater_or_equal(function__, "prior_theta1_b",
         prior_theta1_b, 0);
-      current_statement__ = 26;
+      current_statement__ = 35;
       context__.validate_dims("data initialization", "prior_sigma_sd",
         "double", std::vector<size_t>{});
       prior_sigma_sd = std::numeric_limits<double>::quiet_NaN();
-      current_statement__ = 26;
+      current_statement__ = 35;
       prior_sigma_sd = context__.vals_r("prior_sigma_sd")[(1 - 1)];
-      current_statement__ = 26;
+      current_statement__ = 35;
       stan::math::check_greater_or_equal(function__, "prior_sigma_sd",
         prior_sigma_sd, 0);
-      current_statement__ = 27;
+      current_statement__ = 36;
+      jump_probability = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 36;
+      jump_probability = 0.05;
+      current_statement__ = 37;
+      jump_extra_sd = std::numeric_limits<double>::quiet_NaN();
+      current_statement__ = 37;
+      jump_extra_sd = 1.5;
+      current_statement__ = 40;
+      for (int t = 1; t <= T; ++t) {
+        current_statement__ = 39;
+        if ((stan::math::primitive_value(
+               stan::math::logical_gt(
+                 stan::model::rvalue(y, "y", stan::model::index_uni(t)),
+                 stan::model::rvalue(n, "n", stan::model::index_uni(t))))
+            ||
+            stan::math::primitive_value(
+              stan::math::logical_gt(
+                stan::model::rvalue(n, "n", stan::model::index_uni(t)),
+                stan::model::rvalue(s, "s", stan::model::index_uni(t)))))) {
+          current_statement__ = 38;
+          std::stringstream errmsg_stream__;
+          stan::math::stan_print(&errmsg_stream__, "Require y <= n <= s");
+          throw std::domain_error(errmsg_stream__.str());
+        }
+      }
+      current_statement__ = 41;
       z_raw_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 27;
+      current_statement__ = 41;
       z_raw_1dim__ = (T - 1);
-      current_statement__ = 27;
+      current_statement__ = 41;
       stan::math::validate_non_negative_index("z_raw", "T - 1", z_raw_1dim__);
-      current_statement__ = 28;
-      stan::math::validate_non_negative_index("mu", "T", T);
-      current_statement__ = 29;
-      stan::math::validate_non_negative_index("theta", "T", T);
-      current_statement__ = 30;
+      current_statement__ = 42;
       eta_1dim__ = std::numeric_limits<int>::min();
-      current_statement__ = 30;
+      current_statement__ = 42;
       eta_1dim__ = (T - 1);
-      current_statement__ = 30;
+      current_statement__ = 42;
       stan::math::validate_non_negative_index("eta", "T - 1", eta_1dim__);
+      current_statement__ = 43;
+      stan::math::validate_non_negative_index("mu", "T", T);
+      current_statement__ = 44;
+      stan::math::validate_non_negative_index("theta", "T", T);
+      current_statement__ = 45;
+      jump_responsibility_1dim__ = std::numeric_limits<int>::min();
+      current_statement__ = 45;
+      jump_responsibility_1dim__ = (T - 1);
+      current_statement__ = 45;
+      stan::math::validate_non_negative_index("jump_responsibility", "T - 1",
+        jump_responsibility_1dim__);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
@@ -219,39 +270,51 @@ public:
       current_statement__ = 3;
       z_raw = in__.template read<
                 Eigen::Matrix<local_scalar_t__,-1,1>>(z_raw_1dim__);
+      Eigen::Matrix<local_scalar_t__,-1,1> eta =
+        Eigen::Matrix<local_scalar_t__,-1,1>::Constant(eta_1dim__,
+          DUMMY_VAR__);
       Eigen::Matrix<local_scalar_t__,-1,1> mu =
         Eigen::Matrix<local_scalar_t__,-1,1>::Constant(T, DUMMY_VAR__);
       Eigen::Matrix<local_scalar_t__,-1,1> theta =
         Eigen::Matrix<local_scalar_t__,-1,1>::Constant(T, DUMMY_VAR__);
-      Eigen::Matrix<local_scalar_t__,-1,1> eta =
-        Eigen::Matrix<local_scalar_t__,-1,1>::Constant(eta_1dim__,
-          DUMMY_VAR__);
-      current_statement__ = 8;
-      stan::model::assign(eta, stan::math::multiply(sigma_eta, z_raw),
-        "assigning variable eta");
-      current_statement__ = 9;
+      current_statement__ = 11;
+      if (stan::math::logical_gt(T, 1)) {
+        current_statement__ = 10;
+        for (int t = 1; t <= (T - 1); ++t) {
+          current_statement__ = 9;
+          stan::model::assign(eta,
+            normal_mixture_transport(
+              stan::model::rvalue(z_raw, "z_raw", stan::model::index_uni(t)),
+              sigma_eta, jump_probability, jump_extra_sd, pstream__),
+            "assigning variable eta", stan::model::index_uni(t));
+        }
+      }
+      current_statement__ = 12;
       stan::model::assign(mu, stan::math::logit(theta1),
         "assigning variable mu", stan::model::index_uni(1));
-      current_statement__ = 10;
-      stan::model::assign(mu,
-        stan::math::add(
-          stan::model::rvalue(mu, "mu", stan::model::index_uni(1)),
-          stan::math::cumulative_sum(eta)), "assigning variable mu",
-        stan::model::index_min_max(2, T));
-      current_statement__ = 11;
+      current_statement__ = 14;
+      if (stan::math::logical_gt(T, 1)) {
+        current_statement__ = 13;
+        stan::model::assign(mu,
+          stan::math::add(
+            stan::model::rvalue(mu, "mu", stan::model::index_uni(1)),
+            stan::math::cumulative_sum(eta)), "assigning variable mu",
+          stan::model::index_min_max(2, T));
+      }
+      current_statement__ = 15;
       stan::model::assign(theta, stan::math::inv_logit(mu),
         "assigning variable theta");
       {
-        current_statement__ = 13;
+        current_statement__ = 22;
         lp_accum__.add(stan::math::beta_lpdf<propto__>(theta1,
                          prior_theta1_a, prior_theta1_b));
-        current_statement__ = 14;
+        current_statement__ = 23;
         lp_accum__.add(stan::math::normal_lpdf<propto__>(sigma_eta, 0,
                          prior_sigma_sd));
-        current_statement__ = 15;
-        lp_accum__.add(stan::math::normal_lpdf<propto__>(z_raw, 0, 1));
-        current_statement__ = 16;
-        lp_accum__.add(stan::math::binomial_lpmf<propto__>(y, n, theta));
+        current_statement__ = 24;
+        lp_accum__.add(stan::math::std_normal_lpdf<propto__>(z_raw));
+        current_statement__ = 25;
+        lp_accum__.add(stan::math::binomial_logit_lpmf<propto__>(y, n, mu));
       }
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
@@ -304,14 +367,14 @@ public:
       current_statement__ = 3;
       z_raw = in__.template read<
                 Eigen::Matrix<local_scalar_t__,-1,1>>(z_raw_1dim__);
+      Eigen::Matrix<double,-1,1> eta =
+        Eigen::Matrix<double,-1,1>::Constant(eta_1dim__,
+          std::numeric_limits<double>::quiet_NaN());
       Eigen::Matrix<double,-1,1> mu =
         Eigen::Matrix<double,-1,1>::Constant(T,
           std::numeric_limits<double>::quiet_NaN());
       Eigen::Matrix<double,-1,1> theta =
         Eigen::Matrix<double,-1,1>::Constant(T,
-          std::numeric_limits<double>::quiet_NaN());
-      Eigen::Matrix<double,-1,1> eta =
-        Eigen::Matrix<double,-1,1>::Constant(eta_1dim__,
           std::numeric_limits<double>::quiet_NaN());
       out__.write(theta1);
       out__.write(sigma_eta);
@@ -321,38 +384,78 @@ public:
             stan::math::primitive_value(emit_generated_quantities__)))) {
         return ;
       }
-      current_statement__ = 8;
-      stan::model::assign(eta, stan::math::multiply(sigma_eta, z_raw),
-        "assigning variable eta");
-      current_statement__ = 9;
+      current_statement__ = 11;
+      if (stan::math::logical_gt(T, 1)) {
+        current_statement__ = 10;
+        for (int t = 1; t <= (T - 1); ++t) {
+          current_statement__ = 9;
+          stan::model::assign(eta,
+            normal_mixture_transport(
+              stan::model::rvalue(z_raw, "z_raw", stan::model::index_uni(t)),
+              sigma_eta, jump_probability, jump_extra_sd, pstream__),
+            "assigning variable eta", stan::model::index_uni(t));
+        }
+      }
+      current_statement__ = 12;
       stan::model::assign(mu, stan::math::logit(theta1),
         "assigning variable mu", stan::model::index_uni(1));
-      current_statement__ = 10;
-      stan::model::assign(mu,
-        stan::math::add(
-          stan::model::rvalue(mu, "mu", stan::model::index_uni(1)),
-          stan::math::cumulative_sum(eta)), "assigning variable mu",
-        stan::model::index_min_max(2, T));
-      current_statement__ = 11;
+      current_statement__ = 14;
+      if (stan::math::logical_gt(T, 1)) {
+        current_statement__ = 13;
+        stan::model::assign(mu,
+          stan::math::add(
+            stan::model::rvalue(mu, "mu", stan::model::index_uni(1)),
+            stan::math::cumulative_sum(eta)), "assigning variable mu",
+          stan::model::index_min_max(2, T));
+      }
+      current_statement__ = 15;
       stan::model::assign(theta, stan::math::inv_logit(mu),
         "assigning variable theta");
       if (emit_transformed_parameters__) {
+        out__.write(eta);
         out__.write(mu);
         out__.write(theta);
-        out__.write(eta);
       }
       if (stan::math::logical_negation(emit_generated_quantities__)) {
         return ;
       }
       int y_pred = std::numeric_limits<int>::min();
-      current_statement__ = 12;
+      current_statement__ = 7;
       y_pred = (stan::model::rvalue(y, "y", stan::model::index_uni(T)) +
         stan::math::binomial_rng(
           (stan::model::rvalue(s, "s", stan::model::index_uni(T)) -
           stan::model::rvalue(n, "n", stan::model::index_uni(T))),
           stan::model::rvalue(theta, "theta", stan::model::index_uni(T)),
           base_rng__));
+      Eigen::Matrix<double,-1,1> jump_responsibility =
+        Eigen::Matrix<double,-1,1>::Constant(jump_responsibility_1dim__,
+          std::numeric_limits<double>::quiet_NaN());
+      current_statement__ = 21;
+      if (stan::math::logical_gt(T, 1)) {
+        current_statement__ = 20;
+        for (int t = 1; t <= (T - 1); ++t) {
+          double broad = std::numeric_limits<double>::quiet_NaN();
+          current_statement__ = 16;
+          broad = (stan::math::log(jump_probability) +
+            stan::math::normal_lpdf<false>(
+              stan::model::rvalue(eta, "eta", stan::model::index_uni(t)), 0,
+              stan::math::sqrt((stan::math::square(sigma_eta) +
+                stan::math::square(jump_extra_sd)))));
+          double regular = std::numeric_limits<double>::quiet_NaN();
+          current_statement__ = 17;
+          regular = (stan::math::log1m(jump_probability) +
+            stan::math::normal_lpdf<false>(
+              stan::model::rvalue(eta, "eta", stan::model::index_uni(t)), 0,
+              sigma_eta));
+          current_statement__ = 18;
+          stan::model::assign(jump_responsibility,
+            stan::math::exp((broad - stan::math::log_sum_exp(broad, regular))),
+            "assigning variable jump_responsibility",
+            stan::model::index_uni(t));
+        }
+      }
       out__.write(y_pred);
+      out__.write(jump_responsibility);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
     }
@@ -452,12 +555,12 @@ public:
                   emit_generated_quantities__ = true) const {
     names__ = std::vector<std::string>{"theta1", "sigma_eta", "z_raw"};
     if (emit_transformed_parameters__) {
-      std::vector<std::string> temp{"mu", "theta", "eta"};
+      std::vector<std::string> temp{"eta", "mu", "theta"};
       names__.reserve(names__.size() + temp.size());
       names__.insert(names__.end(), temp.begin(), temp.end());
     }
     if (emit_generated_quantities__) {
-      std::vector<std::string> temp{"y_pred"};
+      std::vector<std::string> temp{"y_pred", "jump_responsibility"};
       names__.reserve(names__.size() + temp.size());
       names__.insert(names__.end(), temp.begin(), temp.end());
     }
@@ -471,14 +574,17 @@ public:
                 std::vector<size_t>{static_cast<size_t>(z_raw_1dim__)}};
     if (emit_transformed_parameters__) {
       std::vector<std::vector<size_t>>
-        temp{std::vector<size_t>{static_cast<size_t>(T)},
+        temp{std::vector<size_t>{static_cast<size_t>(eta_1dim__)},
              std::vector<size_t>{static_cast<size_t>(T)},
-             std::vector<size_t>{static_cast<size_t>(eta_1dim__)}};
+             std::vector<size_t>{static_cast<size_t>(T)}};
       dimss__.reserve(dimss__.size() + temp.size());
       dimss__.insert(dimss__.end(), temp.begin(), temp.end());
     }
     if (emit_generated_quantities__) {
-      std::vector<std::vector<size_t>> temp{std::vector<size_t>{}};
+      std::vector<std::vector<size_t>>
+        temp{std::vector<size_t>{},
+             std::vector<size_t>{static_cast<size_t>(
+                                   jump_responsibility_1dim__)}};
       dimss__.reserve(dimss__.size() + temp.size());
       dimss__.insert(dimss__.end(), temp.begin(), temp.end());
     }
@@ -494,6 +600,10 @@ public:
         std::to_string(sym1__));
     }
     if (emit_transformed_parameters__) {
+      for (int sym1__ = 1; sym1__ <= eta_1dim__; ++sym1__) {
+        param_names__.emplace_back(std::string() + "eta" + '.' +
+          std::to_string(sym1__));
+      }
       for (int sym1__ = 1; sym1__ <= T; ++sym1__) {
         param_names__.emplace_back(std::string() + "mu" + '.' +
           std::to_string(sym1__));
@@ -502,13 +612,13 @@ public:
         param_names__.emplace_back(std::string() + "theta" + '.' +
           std::to_string(sym1__));
       }
-      for (int sym1__ = 1; sym1__ <= eta_1dim__; ++sym1__) {
-        param_names__.emplace_back(std::string() + "eta" + '.' +
-          std::to_string(sym1__));
-      }
     }
     if (emit_generated_quantities__) {
       param_names__.emplace_back(std::string() + "y_pred");
+      for (int sym1__ = 1; sym1__ <= jump_responsibility_1dim__; ++sym1__) {
+        param_names__.emplace_back(std::string() + "jump_responsibility" +
+          '.' + std::to_string(sym1__));
+      }
     }
   }
   inline void
@@ -522,6 +632,10 @@ public:
         std::to_string(sym1__));
     }
     if (emit_transformed_parameters__) {
+      for (int sym1__ = 1; sym1__ <= eta_1dim__; ++sym1__) {
+        param_names__.emplace_back(std::string() + "eta" + '.' +
+          std::to_string(sym1__));
+      }
       for (int sym1__ = 1; sym1__ <= T; ++sym1__) {
         param_names__.emplace_back(std::string() + "mu" + '.' +
           std::to_string(sym1__));
@@ -530,20 +644,20 @@ public:
         param_names__.emplace_back(std::string() + "theta" + '.' +
           std::to_string(sym1__));
       }
-      for (int sym1__ = 1; sym1__ <= eta_1dim__; ++sym1__) {
-        param_names__.emplace_back(std::string() + "eta" + '.' +
-          std::to_string(sym1__));
-      }
     }
     if (emit_generated_quantities__) {
       param_names__.emplace_back(std::string() + "y_pred");
+      for (int sym1__ = 1; sym1__ <= jump_responsibility_1dim__; ++sym1__) {
+        param_names__.emplace_back(std::string() + "jump_responsibility" +
+          '.' + std::to_string(sym1__));
+      }
     }
   }
   inline std::string get_constrained_sizedtypes() const {
-    return std::string("[{\"name\":\"theta1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_eta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"z_raw\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(z_raw_1dim__) + "},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(T) + "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(T) + "},\"block\":\"transformed_parameters\"},{\"name\":\"eta\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(eta_1dim__) + "},\"block\":\"transformed_parameters\"},{\"name\":\"y_pred\",\"type\":{\"name\":\"int\"},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"theta1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_eta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"z_raw\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(z_raw_1dim__) + "},\"block\":\"parameters\"},{\"name\":\"eta\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(eta_1dim__) + "},\"block\":\"transformed_parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(T) + "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(T) + "},\"block\":\"transformed_parameters\"},{\"name\":\"y_pred\",\"type\":{\"name\":\"int\"},\"block\":\"generated_quantities\"},{\"name\":\"jump_responsibility\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(jump_responsibility_1dim__) + "},\"block\":\"generated_quantities\"}]");
   }
   inline std::string get_unconstrained_sizedtypes() const {
-    return std::string("[{\"name\":\"theta1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_eta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"z_raw\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(z_raw_1dim__) + "},\"block\":\"parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(T) + "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(T) + "},\"block\":\"transformed_parameters\"},{\"name\":\"eta\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(eta_1dim__) + "},\"block\":\"transformed_parameters\"},{\"name\":\"y_pred\",\"type\":{\"name\":\"int\"},\"block\":\"generated_quantities\"}]");
+    return std::string("[{\"name\":\"theta1\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"sigma_eta\",\"type\":{\"name\":\"real\"},\"block\":\"parameters\"},{\"name\":\"z_raw\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(z_raw_1dim__) + "},\"block\":\"parameters\"},{\"name\":\"eta\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(eta_1dim__) + "},\"block\":\"transformed_parameters\"},{\"name\":\"mu\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(T) + "},\"block\":\"transformed_parameters\"},{\"name\":\"theta\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(T) + "},\"block\":\"transformed_parameters\"},{\"name\":\"y_pred\",\"type\":{\"name\":\"int\"},\"block\":\"generated_quantities\"},{\"name\":\"jump_responsibility\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(jump_responsibility_1dim__) + "},\"block\":\"generated_quantities\"}]");
   }
   // Begin method overload boilerplate
   template <typename RNG> inline void
@@ -553,9 +667,10 @@ public:
               emit_generated_quantities = true, std::ostream*
               pstream = nullptr) const {
     const size_t num_params__ = ((1 + 1) + z_raw_1dim__);
-    const size_t num_transformed = emit_transformed_parameters * (((T + T) +
-      eta_1dim__));
-    const size_t num_gen_quantities = emit_generated_quantities * (1);
+    const size_t num_transformed = emit_transformed_parameters *
+      (((eta_1dim__ + T) + T));
+    const size_t num_gen_quantities = emit_generated_quantities * ((1 +
+      jump_responsibility_1dim__));
     const size_t num_to_write = num_params__ + num_transformed +
       num_gen_quantities;
     std::vector<int> params_i;
@@ -571,9 +686,10 @@ public:
               emit_generated_quantities = true, std::ostream*
               pstream = nullptr) const {
     const size_t num_params__ = ((1 + 1) + z_raw_1dim__);
-    const size_t num_transformed = emit_transformed_parameters * (((T + T) +
-      eta_1dim__));
-    const size_t num_gen_quantities = emit_generated_quantities * (1);
+    const size_t num_transformed = emit_transformed_parameters *
+      (((eta_1dim__ + T) + T));
+    const size_t num_gen_quantities = emit_generated_quantities * ((1 +
+      jump_responsibility_1dim__));
     const size_t num_to_write = num_params__ + num_transformed +
       num_gen_quantities;
     vars = std::vector<double>(num_to_write,

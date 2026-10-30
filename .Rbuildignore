@@ -5,3 +5,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.travis\.yml$
+^tempAI$
+^inst/stan/.*\.rds$
