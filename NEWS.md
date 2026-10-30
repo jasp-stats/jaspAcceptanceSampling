@@ -16,6 +16,15 @@
 
 # jaspAcceptanceSampling (development version)
 
+## Changed
+* Bayesian State-Space Sampling accepts multiple numeric covariates with additive effects, separate standardization and independent coefficient priors using one adjustable Cauchy scale. Coefficient outputs identify each covariate, and redundant covariates are rejected.
+* Clarified state-space prior and decision-threshold labels and expanded the help with model equations, predictor interpretation, strict decision rules, smoothing/refitting behavior and predictive plot limits. Statistical settings and calculations are unchanged.
+* Bayesian State-Space Sampling now uses a two-component innovation mixture instead of the Gaussian state model and post-hoc predictive correction supplied in the earlier beta. Recalculating saved beta analyses fits the new model, so results may differ. Applicable data assignments, priors, MCMC settings and decision thresholds are preserved; the removed correction settings are no longer used.
+
+## Fixed
+* State-space coefficient density curves extend beyond the sampled range instead of stopping at the central 99% interval, preventing visibly cut-off tails when plot axes are expanded. Posterior draws and coefficient summaries are unchanged.
+* Saved state-space fits without the current model-version marker are discarded before recalculation, preventing reuse of an older model's posterior samples.
+
 
 
 ---

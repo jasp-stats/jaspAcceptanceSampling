@@ -7,11 +7,9 @@
 .asSSM_getStanModel <- local({
   cache <- new.env(parent = emptyenv())
   .stanFile <- function(model_name) {
-    path <- file.path("stan", paste0(model_name, ".stan"))
-    if (!file.exists(path))
+    path <- system.file("stan", paste0(model_name, ".stan"), package = "jaspAcceptanceSampling")
+    if (!nzchar(path))
       path <- file.path("inst", "stan", paste0(model_name, ".stan"))
-    if (!file.exists(path))
-      path <- system.file("stan", paste0(model_name, ".stan"), package = "jaspAcceptanceSampling")
 
     if (!nzchar(path) || !file.exists(path))
       stop("Stan model file not found for model: ", model_name, call. = FALSE)
@@ -101,10 +99,14 @@
       .precompiled(model_name, stan_file),
       error = function(e) {
         if (isTRUE(getOption("jaspAcceptanceSampling.allowStanFallback", FALSE))) {
+          header <- normalizePath(file.path(dirname(stan_file), "..", "include", "mixture_transport.hpp"),
+                                  winslash = "/", mustWork = TRUE)
           return(rstan::stan_model(
             file = stan_file,
             model_name = paste0("jaspAcceptanceSampling_", model_name),
-            auto_write = TRUE
+            allow_undefined = TRUE,
+            includes = paste0('\n#include "', header, '"\n'),
+            auto_write = FALSE
           ))
         }
         stop(

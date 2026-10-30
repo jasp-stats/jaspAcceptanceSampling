@@ -7,7 +7,7 @@ test_that("BayesianSSMforAS - analysis uses time-sorted data", {
   options$ssm_sampleSize <- "n"
   options$ssm_total <- "N"
   options$ssm_time <- "time"
-  options$ssm_scaleModel <- "WithoutPredictor"
+  options$ssm_predictor <- ""
 
   options$ssm_statePlot <- FALSE
   options$ssm_predictionPlot <- FALSE
@@ -33,12 +33,14 @@ test_that("BayesianSSMforAS - analysis uses time-sorted data", {
   csvPath <- tempfile(fileext = ".csv")
   utils::write.csv(ssmData, csvPath, row.names = FALSE)
 
-  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options)
+  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options, view = FALSE)
 
   expect_equal(results$status, "complete")
   expect_true("summaryTable" %in% names(results$results))
-  expect_equal(results$results$summaryTable$data[[1]]$t, 30)
+  expect_equal(results$results$summaryTable$data[[1]]$t, "30")
   expect_equal(results$results$summaryTable$data[[1]]$y, 3)
+  expect_false(options$ssm_printDiagnostics)
+  expect_true("samplerDiagnostics" %in% names(results$results))
 })
 
 test_that("BayesianSSMforAS - options load", {
@@ -46,23 +48,32 @@ test_that("BayesianSSMforAS - options load", {
 
   expect_true(is.list(options))
   expect_true("ssm_count" %in% names(options))
-  expect_true("ssm_scaleModel" %in% names(options))
+  expect_true("ssm_predictor" %in% names(options))
+  expect_length(getFromNamespace(".asSSM_predictorNames", "jaspAcceptanceSampling")(options), 0L)
+  expect_identical(options$ssm_printDiagnostics, FALSE)
+  expect_equal(options$ssm_advancedMcmcAdaptDelta, 0.97)
+  expect_equal(options$ssm_advancedMcmcMaxTreeDepth, 15)
+  expect_false("ssm_scaleModel" %in% names(options))
+  expect_false(any(c("ssm_postHocCorrection", "ssm_postHocCorrectionWeight") %in% names(options)))
 })
 
-test_that("BayesianSSMforAS - summary table is generated", {
+test_that("BayesianSSMforAS - an empty predictor selects the base model", {
   options <- jaspTools::analysisOptions("BayesianSSMforAS")
 
   options$ssm_count <- "count"
   options$ssm_sampleSize <- "n"
   options$ssm_total <- "N"
   options$ssm_time <- "time"
-  options$ssm_scaleModel <- "WithoutPredictor"
+  options$ssm_predictor <- ""
+  options$ssm_scaleModel <- "WithPredictor" # Obsolete saved selector is ignored.
 
   options$ssm_statePlot <- FALSE
   options$ssm_predictionPlot <- FALSE
   options$ssm_posteriorDistPlot <- FALSE
-  options$ssm_plotBeta <- FALSE
-  options$ssm_showMcmcSummary <- FALSE
+  options$ssm_plotBeta <- TRUE
+  options$ssm_showMcmcSummary <- TRUE
+  options$ssm_showSigma <- TRUE
+  options$ssm_showBeta <- TRUE
 
   # Keep test runtime short while still exercising Stan sampling and result wiring.
   options$ssm_advancedMcmcBurnin <- 100
@@ -84,10 +95,14 @@ test_that("BayesianSSMforAS - summary table is generated", {
   csvPath <- tempfile(fileext = ".csv")
   utils::write.csv(ssmData, csvPath, row.names = FALSE)
 
-  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options)
+  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options, view = FALSE)
 
   expect_equal(results$status, "complete")
   expect_true("summaryTable" %in% names(results$results))
+  expect_false("betaPlot" %in% names(results$results))
+  parameters <- vapply(results$results$mcmcSummary$data, function(row) row$parameter, character(1))
+  expect_true("sigma_eta" %in% parameters)
+  expect_false("beta_predictor" %in% parameters)
 
   summaryRows <- results$results$summaryTable$data
   expect_equal(length(summaryRows), 1)
@@ -96,22 +111,20 @@ test_that("BayesianSSMforAS - summary table is generated", {
   expect_true(is.numeric(summaryRows[[1]]$massRQL))
 })
 
-test_that("BayesianSSMforAS - tail correction is deterministic across reruns", {
+test_that("BayesianSSMforAS - predictive summary is deterministic across reruns", {
   options <- jaspTools::analysisOptions("BayesianSSMforAS")
 
   options$ssm_count <- "count"
   options$ssm_sampleSize <- "n"
   options$ssm_total <- "N"
   options$ssm_time <- "time"
-  options$ssm_scaleModel <- "WithoutPredictor"
+  options$ssm_predictor <- ""
 
   options$ssm_statePlot <- FALSE
   options$ssm_predictionPlot <- FALSE
   options$ssm_posteriorDistPlot <- FALSE
   options$ssm_plotBeta <- FALSE
   options$ssm_showMcmcSummary <- FALSE
-  options$ssm_postHocCorrection <- TRUE
-  options$ssm_postHocCorrectionWeight <- 5
 
   options$ssm_advancedMcmcBurnin <- 100
   options$ssm_advancedMcmcSamples <- 100
@@ -131,8 +144,8 @@ test_that("BayesianSSMforAS - tail correction is deterministic across reruns", {
   csvPath <- tempfile(fileext = ".csv")
   utils::write.csv(ssmData, csvPath, row.names = FALSE)
 
-  results1 <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options)
-  results2 <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options)
+  results1 <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options, view = FALSE)
+  results2 <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options, view = FALSE)
 
   summary1 <- results1$results$summaryTable$data[[1]]
   summary2 <- results2$results$summaryTable$data[[1]]
@@ -150,7 +163,7 @@ test_that("BayesianSSMforAS - invalid lot inputs fail gracefully before Stan", {
   options$ssm_sampleSize <- "n"
   options$ssm_total <- "N"
   options$ssm_time <- "time"
-  options$ssm_scaleModel <- "WithoutPredictor"
+  options$ssm_predictor <- ""
 
   options$ssm_statePlot <- FALSE
   options$ssm_predictionPlot <- FALSE
@@ -176,10 +189,12 @@ test_that("BayesianSSMforAS - invalid lot inputs fail gracefully before Stan", {
   csvPath <- tempfile(fileext = ".csv")
   utils::write.csv(invalidData, csvPath, row.names = FALSE)
 
-  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options)
+  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options, view = FALSE)
 
   expect_equal(results$status, "complete")
   expect_true("placeholder" %in% names(results$results))
+  expect_identical(results$results$placeholder$status, "error")
+  expect_match(results$results$placeholder$error$errorMessage, "defects cannot exceed")
   expect_false("summaryTable" %in% names(results$results))
 })
 
@@ -190,7 +205,6 @@ test_that("BayesianSSMforAS - constant predictor fails gracefully before Stan", 
   options$ssm_sampleSize <- "n"
   options$ssm_total <- "N"
   options$ssm_time <- "time"
-  options$ssm_scaleModel <- "WithPredictor"
   options$ssm_predictor <- "temp"
 
   options$ssm_statePlot <- FALSE
@@ -218,9 +232,52 @@ test_that("BayesianSSMforAS - constant predictor fails gracefully before Stan", 
   csvPath <- tempfile(fileext = ".csv")
   utils::write.csv(invalidData, csvPath, row.names = FALSE)
 
-  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options)
+  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options, view = FALSE)
 
   expect_equal(results$status, "complete")
   expect_true("placeholder" %in% names(results$results))
+  expect_identical(results$results$placeholder$status, "error")
+  expect_match(results$results$placeholder$error$errorMessage, "must vary")
   expect_false("summaryTable" %in% names(results$results))
+})
+
+
+test_that("BayesianSSMforAS - assigning a predictor selects the predictor model and outputs", {
+  options <- jaspTools::analysisOptions("BayesianSSMforAS")
+  options$ssm_count <- "count"
+  options$ssm_sampleSize <- "n"
+  options$ssm_total <- "N"
+  options$ssm_time <- "time"
+  options$ssm_predictor <- "temp"
+  options$ssm_scaleModel <- "WithoutPredictor" # Obsolete saved selector is ignored.
+
+  options$ssm_statePlot <- FALSE
+  options$ssm_predictionPlot <- FALSE
+  options$ssm_posteriorDistPlot <- FALSE
+  options$ssm_plotBeta <- TRUE
+  options$ssm_showMcmcSummary <- TRUE
+  options$ssm_showBeta <- TRUE
+
+  options$ssm_advancedMcmcBurnin <- 100
+  options$ssm_advancedMcmcSamples <- 100
+  options$ssm_advancedMcmcChains <- 1
+  options$ssm_advancedMcmcThin <- 1
+  options$ssm_advancedMcmcSeed <- 123
+  options$ssm_advancedMcmcAdaptDelta <- 0.9
+  options$ssm_advancedMcmcMaxTreeDepth <- 8
+
+  ssmData <- data.frame(
+    count = c(1, 0, 2, 1, 1), n = rep(20, 5), N = rep(100, 5),
+    time = 1:5, temp = c(20, 21, 19, 22, 20)
+  )
+  csvPath <- tempfile(fileext = ".csv")
+  utils::write.csv(ssmData, csvPath, row.names = FALSE)
+  results <- jaspTools::runAnalysis("BayesianSSMforAS", csvPath, options, view = FALSE)
+
+  expect_equal(results$status, "complete")
+  expect_true("summaryTable" %in% names(results$results))
+  expect_true("betaPlot" %in% names(results$results))
+  expect_true("mcmcSummary" %in% names(results$results))
+  parameters <- vapply(results$results$mcmcSummary$data, function(row) row$parameter, character(1))
+  expect_true("beta_predictor[1] (temp)" %in% parameters)
 })
