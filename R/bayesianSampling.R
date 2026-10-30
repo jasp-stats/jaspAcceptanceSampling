@@ -46,7 +46,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   c(
     "inferPosteriorinfer",
 
-    "aqlplan", "rqlplan", "priorplan", "alphaplan", "betaplan",
+    "aqlplan", "rqlplan", "min_bfplan", "priorplan", "alphaplan", "betaplan",
     "impartialCustomModeplan", "impartialModeplan",
     "impartialThreeConstraintplan",
 
@@ -136,6 +136,26 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
     return(NA_real_)
 
   bf
+}
+
+.bsAcceptanceNumber <- function(n, rql, min_bf, alpha, beta) {
+  if (!is.finite(n) || !is.finite(rql) || !is.finite(min_bf) ||
+      !is.finite(alpha) || !is.finite(beta) || n < 0 || min_bf <= 0) {
+    return(NA_integer_)
+  }
+
+  prior_cdf_rql <- .bsClipProb(pbeta(rql, alpha, beta))
+  prior_odds <- prior_cdf_rql / (1 - prior_cdf_rql)
+
+  c <- as.integer(floor(n))
+  while (c >= 0) {
+    bf <- .bsCalculateBF(rql, n, c, alpha, beta, prior_odds)
+    if (is.finite(bf) && bf >= min_bf)
+      return(c)
+    c <- c - 1L
+  }
+
+  NA_integer_
 }
 
 # Utility functions
@@ -527,7 +547,16 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   )
 
   if (is.null(plans) || nrow(plans) == 0) {
-    container$setError(gettext("No valid plans found satisfying the specified constraints."))
+    # Compute the maximum attainable BF (best case: n = max_n, d = 0)
+    prior_cdf_rql <- .bsClipProb(pbeta(rql, priorParams$alpha, priorParams$beta))
+    prior_odds    <- prior_cdf_rql / (1 - prior_cdf_rql)
+    max_attainable_bf <- .bsCalculateBF(rql, max_n, 0, priorParams$alpha, priorParams$beta, prior_odds)
+    if (!is.finite(max_attainable_bf)) max_attainable_bf <- 0
+
+    container$setError(gettextf(
+      "No sampling plan found. With the current prior (Beta(%1$.2f, %2$.2f)) and maximum sample size (n = %3$d), the maximum attainable Bayes factor is %4$.2f. Consider increasing the maximum sample size, lowering the required Bayes factor, or adjusting the prior.",
+      priorParams$alpha, priorParams$beta, as.integer(max_n), max_attainable_bf
+    ))
     return()
   }
 
@@ -601,9 +630,15 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   # Data
   n <- options$data_ninfer
   d <- options$data_dinfer
+  min_bf <- options$min_bfplan
 
   if (!is.finite(n) || !is.finite(d) || n < 0 || d < 0 || d > n) {
     container$setError(gettext("Please ensure the data are valid: n >= 0 and 0 <= d <= n."))
+    return()
+  }
+
+  if (!is.finite(min_bf) || min_bf <= 0) {
+    container$setError(gettext("Please provide a valid minimum Bayes factor (> 0)."))
     return()
   }
 
@@ -629,10 +664,11 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 
   # Compute PPD region probabilities (Beta-Binomial)
   ppd <- .bsPPDRegionProbs(n, d, N, aql, rql, priorParams$alpha, priorParams$beta)
+  acceptanceNumber <- .bsAcceptanceNumber(n, rql, min_bf, priorParams$alpha, priorParams$beta)
 
   if (isTRUE(options$showInferenceTableinfer)) {
     .bsInferenceDecisionTable(container, n, d, N, aql, rql,
-                              bf, ppd,
+                              bf, ppd, acceptanceNumber,
                               position = 0, base = "showInferenceTableinfer")
 
     # Decision summary text below the table
@@ -653,7 +689,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 
     summaryText <- createJaspHtml(
       text = gettextf(
-        "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL of <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>Based on the observed sample, there is a <b>%4$.1f%%</b> predicted probability that the current lot of %5$d items contains at most %6$d total defects.",
+        "The <b>Bayes factor</b> in favor of the lot proportion defective being below the RQL of <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>Based on the observed sample, there is a <b>%4$.1f%%</b> predicted probability that the current lot of %5$d items contains at most %6$d total defectives.",
         rql, bf, bfInterpretation,
         ppdGoodMiddle * 100, as.integer(N), rql_count
       ),
@@ -673,7 +709,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 
     bfText <- createJaspHtml(
       text = gettextf(
-        "<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is <b>%2$.2f</b>.",
+        "<u>Bayes factor</u> in favor of proportion defective < <u>%1$.2f</u> is <b>%2$.2f</b>.",
         rql, bf
       ),
       position = 2,
@@ -734,6 +770,8 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   table$addColumnInfo(name = "bf_odds", title = gettext("Bayes factor"),           type = "number")
 
   table$setData(plans2[c("c", "n", "prior_p", "post_p", "bf_odds")])
+
+  table$addFootnote(gettextf("Prior distribution: Beta(%1$.3f, %2$.3f).", alpha, beta))
 
   container[["planTable"]] <- table
 }
@@ -940,7 +978,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
       guide = "none"
     ) +
     ggplot2::labs(
-      x = gettext("Total Defects in Lot"),
+      x = gettext("Total Defectives in Lot"),
       y = gettext("Probability")
     ) +
     jaspGraphs::geom_rangeframe() +
@@ -953,7 +991,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 }
 
 .bsInferenceDecisionTable <- function(container, n, d, N, aql, rql,
-                                       bf, ppd,
+                                       bf, ppd, acceptanceNumber,
                                        position, base) {
   
   table <- createJaspTable(
@@ -969,13 +1007,14 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   aql_count <- floor(aql * N)
   rql_count <- floor(rql * N)
   
-  ppd_good_label   <- gettextf("PPD Good (\u2264 %1$d defects in Lot)", aql_count)
-  ppd_middle_label  <- gettextf("PPD Middle (> %1$d & \u2264 %2$d defects)", aql_count, rql_count)
-  ppd_bad_label     <- gettextf("PPD Bad (> %1$d defects in Lot)", rql_count)
+  ppd_good_label   <- gettextf("PPD Good (\u2264 %1$d defectives in Lot)", aql_count)
+  ppd_middle_label  <- gettextf("PPD Middle (> %1$d & \u2264 %2$d defectives)", aql_count, rql_count)
+  ppd_bad_label     <- gettextf("PPD Bad (> %1$d defectives in Lot)", rql_count)
   
   table[["col_1"]] <- c(
     gettext("Sample Size (n)"),
-    gettext("Defects (d)"),
+    gettext("Defectives (d)"),
+    gettext("Acceptance number (c)"),
     gettext("AQL"),
     gettext("RQL"),
     gettext("Bayes Factor"),
@@ -987,6 +1026,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
   table[["col_2"]] <- c(
     as.character(n),
     as.character(d),
+    if (is.na(acceptanceNumber)) gettext("Not available") else as.character(acceptanceNumber),
     sprintf("%.3f", aql),
     sprintf("%.3f", rql),
     sprintf("%.3f", bf),
@@ -1011,7 +1051,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
 
   introText <- gettextf(
     "<div style='line-height: 1.2;'>
-    <p style='margin: 0 0 8px 0;'>The <b>main objective</b> of this Bayesian sampling procedure is to evaluate the quality of a lot by determining if the proportion of defects is lower than the <b>Rejectable Quality Level (RQL)</b>, which is currently set at <b>%1$.2f%%</b>.</p>
+    <p style='margin: 0 0 8px 0;'>The <b>main objective</b> of this Bayesian sampling procedure is to evaluate the quality of a lot by determining if the proportion defective is lower than the <b>Rejectable Quality Level (RQL)</b>, which is currently set at <b>%1$.2f%%</b>.</p>
 
     <p style='margin: 0 0 4px 0;'>Two primary statistical hypotheses are formulated about the lot proportion defective (&theta;):</p>
     <ul style='margin: 0 0 8px 20px;'>
@@ -1028,7 +1068,7 @@ BayesianSampling <- function(jaspResults, dataset = NULL, options, ...) {
     <p style='margin: 0 0 6px 0;'><b>1. Planning:</b> Determine a minimum sample size such that the sample provides sufficient evidence (a target Bayes factor) to achieve the specified sampling objectives.</p>
 
     <p style='margin: 0;'><b>2. Inference:</b> Evaluate observed data to update the prior belief into
-    a posterior distribution. In this section, <b>n</b> denotes the sample size, <b>d</b> the observed number of defects in the sample, and <b>N</b> the lot size.</p></div>",
+    a posterior distribution. In this section, <b>n</b> denotes the sample size, <b>d</b> the observed number of defectives in the sample, and <b>N</b> the lot size.</p></div>",
     rql, aql
   )
 

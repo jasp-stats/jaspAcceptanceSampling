@@ -195,7 +195,7 @@ Form
 
 				IntegerField {
 					name: "data_dinfer"
-					label: qsTr("Observed number of defects (d)")
+					label: qsTr("Observed number of defectives (d)")
 					defaultValue: 0
 					min: 0
 					max: parseInt(data_n.value)
