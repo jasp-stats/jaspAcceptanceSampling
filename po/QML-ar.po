@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-28 04:16+0000\n"
-"Last-Translator: Sulaiman A <67igltrpe@mozmail.com>\n"
+"PO-Revision-Date: 2026-11-11 18:34+0000\n"
+"Last-Translator: Asim Fahad Mahfouz Al-Subhi "
+"<fahadalsubhi@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/jasp/"
 "jaspacceptancesampling-qml/ar/>\n"
 "Language: ar\n"
@@ -10,84 +11,84 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 5.2-dev\n"
+"X-Generator: Weblate 2026.11.2.dev0\n"
 "X-Qt-Contexts: true\n"
 
 msgctxt "Description|"
 msgid "Acceptance Sampling"
-msgstr "أخذ عينات القبول"
+msgstr "معاينة القبول"
 
 msgctxt "Description|"
 msgid "Sampling for acceptance"
-msgstr "أخذ العينات للقبول"
+msgstr "معاينة القبول"
 
 msgctxt "Description|"
 msgid "Attribute Sampling"
-msgstr "أخذ عينات السمات"
+msgstr "معاينة الصفات"
 
 msgctxt "Description|"
 msgid "Create Attribute Plan"
-msgstr "إنشاء خطة السمات"
+msgstr "إنشاء خطة معاينة الصفات"
 
 msgctxt "Description|"
 msgid "Analyze Attribute Plan"
-msgstr "تحليل خطة السمات"
+msgstr "تحليل خطة معاينة الصفات"
 
 msgctxt "Description|"
 msgid "Variable Sampling"
-msgstr "أخذ العينات المتغيرة"
+msgstr "المعاينة بالمتغيرات"
 
 msgctxt "Description|"
 msgid "Create Variable Plan"
-msgstr "إنشاء خطة متغير"
+msgstr "إنشاء خطة المعاينة بالمتغيرات"
 
 msgctxt "Description|"
 msgid "Analyze Variable Plan"
-msgstr "تحليل خطة متغير"
+msgstr "تحليل خطة المعاينة بالمتغيرات"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots"
-msgstr "قبول / رفض الكميات"
+msgstr "قبول/رفض الدفعات"
 
 msgctxt "Description|"
 msgid "Accept/Reject Lots (k-method)"
-msgstr ""
+msgstr "قبول/رفض الدفعات (طريقة k)"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Single Sampling Plan"
-msgstr "خطة أخذ عينات واحدة"
+msgstr "خطة معاينة مفردة"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess attribute plan"
-msgstr "تقييم خطة السمات"
+msgstr "تقييم خطة معاينة الصفات"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Multiple Sampling Plan"
-msgstr "خطة أخذ العينات المتعددة"
+msgstr "خطة معاينة متعددة"
 
 msgctxt "AnalyzeAttributePlan|"
 msgid "Assess sampling plan"
-msgstr "تقييم خطة أخذ العينات"
+msgstr "تقييم خطة المعاينة"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "حجم الدفعة (N)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Sample size (n)"
-msgstr "حجم العينة (ن)"
+msgstr "حجم العينة (n)"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "k"
-msgstr ""
+msgstr "k"
 
 msgctxt "AnalyzeVariablePlan|"
 msgid "Assess variable plan"
-msgstr "تقييم خطة المتغير"
+msgstr "تقييم خطة المعاينة بالمتغيرات"
 
 msgctxt "Distribution|"
 msgid "Distribution"
-msgstr "توزيع"
+msgstr "التوزيع"
 
 msgctxt "Distribution|"
 msgid "Binomial"
@@ -95,11 +96,11 @@ msgstr "ذو الحدين"
 
 msgctxt "Distribution|"
 msgid "Hypergeometric"
-msgstr ""
+msgstr "فوق هندسي"
 
 msgctxt "Distribution|"
 msgid "Poisson"
-msgstr ""
+msgstr "بواسون"
 
 msgctxt "OutputOptions|"
 msgid "Output options"
@@ -111,23 +112,23 @@ msgstr "جدول التلخيص"
 
 msgctxt "OutputOptions|"
 msgid "OC curve"
-msgstr ""
+msgstr "منحنى خصائص التشغيل OC"
 
 msgctxt "OutputOptions|"
 msgid "AOQ curve (plan with rectification)"
-msgstr ""
+msgstr "منحنى AOQ (خطة بفحص تصحيحي)"
 
 msgctxt "OutputOptions|"
 msgid "ATI curve (plan with rectification)"
-msgstr ""
+msgstr "منحنى ATI (خطة بفحص تصحيحي)"
 
 msgctxt "OutputOptions|"
 msgid "ASN curve"
-msgstr ""
+msgstr "منحنى ASN"
 
 msgctxt "PlanMultiple|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "حجم الدفعة (N)"
 
 msgctxt "PlanMultiple|"
 msgid "Number of stages"
@@ -139,43 +140,43 @@ msgstr "مرحلة"
 
 msgctxt "PlanMultiple|"
 msgid "Sample size (n)"
-msgstr "حجم العينة (ن)"
+msgstr "حجم العينة (n)"
 
 msgctxt "PlanMultiple|"
 msgid "Acceptance number (c)"
-msgstr "رقم القبول (ج)"
+msgstr "عدد القبول (c)"
 
 msgctxt "PlanMultiple|"
 msgid "Rejection number (r)"
-msgstr "رقم الرفض (ص)"
+msgstr "عدد الرفض (r)"
 
 msgctxt "PlanMultiple|"
 msgid "n %d"
-msgstr ""
+msgstr "n %d"
 
 msgctxt "PlanMultiple|"
 msgid "c %d"
-msgstr ""
+msgstr "c %d"
 
 msgctxt "PlanMultiple|"
 msgid "r %d"
-msgstr ""
+msgstr "r %d"
 
 msgctxt "PlanSingle|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "حجم الدفعة (N)"
 
 msgctxt "PlanSingle|"
 msgid "Sample size (n)"
-msgstr "حجم العينة (ن)"
+msgstr "حجم العينة (n)"
 
 msgctxt "PlanSingle|"
 msgid "Acceptance number (c)"
-msgstr "رقم القبول (ج)"
+msgstr "عدد القبول (c)"
 
 msgctxt "PlanSingle|"
 msgid "Rejection number (r)"
-msgstr "رقم الرفض (ص)"
+msgstr "عدد الرفض (r)"
 
 msgctxt "ProbDefect|"
 msgid "Proportion non-conforming items"
@@ -187,7 +188,7 @@ msgstr "من"
 
 msgctxt "ProbDefect|"
 msgid "To"
-msgstr "الى"
+msgstr "إلى"
 
 msgctxt "ProbDefect|"
 msgid "Step size"
@@ -207,11 +208,11 @@ msgstr "مستوى الجودة المرفوض (RQL / LTPD)"
 
 msgctxt "CreateAttributePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "حجم الدفعة (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Lot size (N)"
-msgstr ""
+msgstr "حجم الدفعة (N)"
 
 msgctxt "CreateVariablePlan|"
 msgid "Standard Deviation (Historical) known"
@@ -227,7 +228,7 @@ msgstr "تحديد إحصائيات العينة مباشرة (تُستخدم ف
 
 msgctxt "DecideVariableLots|"
 msgid "Sample size (n)"
-msgstr "حجم العينة (ن)"
+msgstr "حجم العينة (n)"
 
 msgctxt "DecideVariableLots|"
 msgid "Sample mean"
@@ -239,7 +240,7 @@ msgstr "الانحراف المعياري للعينة"
 
 msgctxt "DecideVariableLots|"
 msgid "k                        "
-msgstr ""
+msgstr "k                        "
 
 msgctxt "DecideVariableLots|"
 msgid "Specification limits"
