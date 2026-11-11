@@ -2,528 +2,611 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.96.4\n"
 "POT-Creation-Date: 2026-04-25 05:22\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-11-11 19:10+0000\n"
+"Last-Translator: Fahad Mahfouz Al-Subhi "
+"<fahadalsubhi@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Arabic <https://hosted.weblate.org/projects/jasp/"
+"jaspacceptancesampling-r/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 2026.11.2.dev0\n"
 
 msgid "Single Sampling Plan"
-msgstr ""
+msgstr "خطة معاينة مفردة"
 
 msgid "Multiple Sampling Plan"
-msgstr ""
+msgstr "خطة معاينة متعددة"
 
 msgid "Acceptance Sampling Plan"
-msgstr ""
+msgstr "خطة معاينة القبول"
 
 msgid "Value"
-msgstr ""
+msgstr "القيمة"
 
 msgid "Sample"
-msgstr ""
+msgstr "العينة"
 
 msgid "Sample Size"
-msgstr ""
+msgstr "حجم العينة"
 
 msgid "Cum. Sample Size"
-msgstr ""
+msgstr "حجم العينة التراكمي"
 
 msgid "Acc. Number"
-msgstr ""
+msgstr "عدد القبول"
 
 msgid "Rej. Number"
-msgstr ""
+msgstr "عدد الرفض"
 
 msgid "Analyze Variable Plan"
-msgstr ""
+msgstr "تحليل خطة المعاينة بالمتغيرات"
 
 msgid "Variable Sampling Plan (Standard deviation assumed to be <b>%s</b>)"
-msgstr ""
+msgstr "خطة المعاينة بالمتغيرات (بافتراض أن الانحراف المعياري <b>%s</b>)"
 
 msgid "Sample size"
-msgstr ""
+msgstr "حجم العينة"
 
 msgid "Critical Distance (k)"
-msgstr ""
+msgstr "المسافة الحرجة (k)"
 
 msgid "If historical standard deviation is unknown, sample size has to be > 1."
 msgstr ""
+"وإذا كان الانحراف المعياري التاريخي غير معروف، فإن حجم العينة يجب أن يكون > 1."
 
 msgid "Lot size (N = %1$.0f) cannot be smaller than the sample size (n = %2$.0f) of the generated variable plan."
 msgstr ""
+"لا يمكن أن يكون حجم الدفعة (N = %1$.0f) أصغر من حجم العينة (n = %2$.0f) في "
+"خطة المعاينة بالمتغيرات المولّدة."
 
 msgid "The dataset is empty."
-msgstr ""
+msgstr "البيانات فارغة."
 
 msgid "The following assigned variables are missing from the dataset: %1$s."
-msgstr ""
+msgstr "المتغيرات التالية المخصصة مفقودة من مجموعة البيانات: %1$s."
 
 msgid "%1$s cannot contain missing or non-finite values."
-msgstr ""
+msgstr "لا يمكن أن يحتوي %1$s على قيم مفقودة أو غير منتهية."
 
 msgid "%1$s must contain whole numbers only."
-msgstr ""
+msgstr "يجب أن يحتوي %1$s على أعداد صحيحة فقط."
 
 msgid "%1$s cannot contain negative values."
-msgstr ""
+msgstr "لا يمكن أن يحتوي %1$s على قيم سالبة."
 
 msgid "Defect Count"
-msgstr ""
+msgstr "عدد العيوب"
 
 msgid "Lot Size"
-msgstr ""
+msgstr "حجم الدفعة"
 
 msgid "Time"
-msgstr ""
+msgstr "الزمن"
 
 msgid "Predictor"
-msgstr ""
+msgstr "المتنبئ"
 
 msgid "Predictor must vary across lots when using the predictor model."
 msgstr ""
+"يجب أن تتباين قيم المتغير المتنبئ بين الدفعات عند استخدام نموذج المتنبئ."
 
 msgid "Observed defects cannot exceed the sample size for any lot."
-msgstr ""
+msgstr "لا يجوز أن يتجاوز عدد العيوب المشاهدة حجم العينة لأي دفعة."
 
 msgid "Sample size cannot exceed the lot size for any lot."
-msgstr ""
+msgstr "لا يمكن أن يتجاوز حجم العينة حجم الدفعة لأي دفعة."
 
 msgid "Sampling..."
-msgstr ""
+msgstr "المعاينة..."
 
 msgid "Estimation failed: %s"
-msgstr ""
+msgstr "فشل التقدير: %s"
 
 msgid "Posterior Summary (Current Lot)"
-msgstr ""
+msgstr "ملخص التوزيع البعدي (الدفعة الحالية)"
 
 msgid "Lot Nr."
-msgstr ""
+msgstr "رقم الدفعة"
 
 msgid "Obs. Defects"
-msgstr ""
+msgstr "عدد العيوب المشاهدة"
 
 msgid "Median Pred. Defects"
-msgstr ""
+msgstr "وسيط عدد العيوب المتنبّأ به"
 
 msgid "Mass < AQL"
-msgstr ""
+msgstr "الكتلة الاحتمالية < AQL"
 
 msgid "Mass > RQL"
-msgstr ""
+msgstr "الكتلة الاحتمالية > RQL"
 
 msgid "Decision"
-msgstr ""
+msgstr "قرار"
 
 msgid "The Lot Number, Lot Size, or Defect Count is missing (NA) for the last lot."
-msgstr ""
+msgstr "رقم الدفعة أو حجمها أو عدد العيوب مفقود (NA) في الدفعة الأخيرة."
 
 msgid "Consider to Continue"
-msgstr ""
+msgstr "النظر في المتابعة"
 
 msgid "Consider to Accept"
-msgstr ""
+msgstr "النظر في القبول"
 
 msgid "Consider to Reject"
-msgstr ""
+msgstr "النظر في الرفض"
 
 msgid "Defect Rate Over Time"
-msgstr ""
+msgstr "معدل العيوب عبر الزمن"
 
 msgid "Lot"
-msgstr ""
+msgstr "دفعة"
 
 msgid "Defect Rate (%%)"
-msgstr ""
+msgstr "معدل العيوب (%%)"
 
 msgid "Posterior Predictive"
-msgstr ""
+msgstr "التنبؤ البعدي"
 
 msgid "Defects in Current Lot"
-msgstr ""
+msgstr "العيوب في الدفعة الحالية"
 
 msgid "Posterior Predictive Probability"
-msgstr ""
+msgstr "الاحتمال التنبؤي البعدي"
 
 msgid "Note. Tail correction adds a uniform sudden-jump component over the full lot-size range (0 to N), so this figure is zoomed to the uncorrected predictive range to keep the posterior shape readable."
 msgstr ""
+"ملاحظة: يضيف تصحيح الذيل مكوّن قفزة مفاجئة منتظمًا على نطاق حجم الدفعة كاملًا (0 "
+"إلى N)، لذا يُقرَّب الشكل إلى النطاق التنبؤي غير المصحح لإبقاء شكل التوزيع "
+"البعدي واضحًا."
 
 msgid "Posterior Defect Rate"
-msgstr ""
+msgstr "معدل العيوب البعدي"
 
 msgid "Density"
-msgstr ""
+msgstr "الكثافة"
 
 msgid "Beta Coefficient"
-msgstr ""
+msgstr "معامل بيتا"
 
 msgid "Predictor Coefficient β"
-msgstr ""
+msgstr "معامل المتنبئ β"
 
 msgid "MCMC Diagnostics"
-msgstr ""
+msgstr "تشخيصات مونت كارلو بسلسلة ماركوف (MCMC)"
 
 msgid "Parameter"
-msgstr ""
+msgstr "المعلمة"
 
 msgid "Mean"
-msgstr ""
+msgstr "المتوسط"
 
 msgid "SD"
-msgstr ""
+msgstr "الانحراف المعياري (SD)"
 
 msgid "ESS"
-msgstr ""
+msgstr "ESS"
 
 msgid "R-hat"
-msgstr ""
+msgstr "R-hat"
 
 msgid "No parameters selected for the MCMC diagnostics table."
-msgstr ""
+msgstr "لم تُحدَّد معلمات لجدول تشخيصات MCMC."
 
 msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
 msgstr ""
+"يجب أن يقع المنوال القبلي (%1$.4f) بين 0 ومستوى الجودة المرفوض (RQL) (%2$.4f)"
+"."
 
 msgid "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. Please choose a lower mode, a lower RQL, or a different prior."
 msgstr ""
+"تعذر بناء التوزيع القبلي المحايد لمنوال %1$.4f ومستوى جودة مرفوض RQL قدره "
+"%2$.4f. اختر منوالًا أقل أو RQL أقل أو توزيعًا قبليًا مختلفًا."
 
 msgid "Planning"
-msgstr ""
+msgstr "التخطيط"
 
 msgid "Please ensure 0 < AQL < RQL < 1."
-msgstr ""
+msgstr "يرجى التأكد من أن 0 < AQL < RQL < 1."
 
 msgid "Please provide a valid maximum sample size (> 0)."
-msgstr ""
+msgstr "يرجى تقديم حجم عينة أقصى صالح (> 0)."
 
 msgid "Please provide a valid minimum Bayes factor (> 0)."
-msgstr ""
+msgstr "يرجى تقديم حد أدنى من عامل بايز صالح (> 0)."
 
 msgid "The selected prior results in invalid Beta parameters. Please adjust AQL/RQL or choose a different prior."
 msgstr ""
+"ينتج عن التوزيع القبلي المحدد معلمات بيتا غير صالحة. يرجى ضبط AQL/RQL أو "
+"اختيار توزيع قبلي آخر."
 
 msgid "No valid plans found satisfying the specified constraints."
-msgstr ""
+msgstr "لم يعثر على أي خطط صالحة تفي بالقيود المحددة."
 
 msgid "Inference"
-msgstr ""
+msgstr "الاستدلال"
 
 msgid "Please ensure the data are valid: n >= 0 and 0 <= d <= n."
-msgstr ""
+msgstr "يرجى التأكد من صلاحية البيانات: n >= 0 و0 <= d <= n."
 
 msgid "Lot size (N) must be at least as large as the sample size (n)."
-msgstr ""
+msgstr "يجب ألا يقل حجم الدفعة (N) عن حجم العينة (n)."
 
 msgid "Strong evidence for accepting the lot."
-msgstr ""
+msgstr "دليل قوي لقبول الدفعة."
 
 msgid "Moderate evidence for accepting the lot."
-msgstr ""
+msgstr "دليل متوسط القوة لقبول الدفعة."
 
 msgid "Inconclusive evidence."
-msgstr ""
+msgstr "دليل غير حاسم."
 
 msgid "Moderate evidence for rejecting the lot."
-msgstr ""
+msgstr "دليل متوسط القوة لرفض الدفعة."
 
 msgid "Strong evidence for rejecting the lot."
-msgstr ""
+msgstr "دليل قوي لرفض الدفعة."
 
 msgid "The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL of <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>Based on the observed sample, there is a <b>%4$.1f%%</b> predicted probability that the current lot of %5$d items contains at most %6$d total defects."
 msgstr ""
+"<b>عامل بايز</b> لصالح كون معدل عيوب الدفعة أدنى من مستوى الجودة المرفوض <b>"
+"%1$.2f</b> هو <b>%2$.2f</b>. %3$s<br>استنادًا إلى العينة المشاهَدة، يبلغ "
+"الاحتمال التنبؤي <b>%4$.1f%%</b> بأن تحتوي الدفعة الحالية ذات %5$d وحدات على "
+"إجمالي عيوب لا يتجاوز %6$d."
 
 msgid "<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is <b>%2$.2f</b>."
-msgstr ""
+msgstr "<u>عامل بايز</u> لصالح نسبة عيوب < <u>%1$.2f</u> هو <b>%2$.2f</b>."
 
 msgid "Sampling Plans"
-msgstr ""
+msgstr "خطط أخذ العينات"
 
 msgid "Acceptance number (c)"
-msgstr ""
+msgstr "عدد القبول (c)"
 
 msgid "Lowest sample size (n)"
-msgstr ""
+msgstr "أدنى حجم للعينة (n)"
 
 msgid "Prior P(θ < RQL)"
-msgstr ""
+msgstr "قبلي P(θ < RQL)"
 
 msgid "Posterior P(θ < RQL)"
-msgstr ""
+msgstr "بعدي P(θ < RQL)"
 
 msgid "Bayes factor"
-msgstr ""
+msgstr "عامل بايز"
 
 msgid "Three-Hypothesis Bayes Factors (at d = c)"
-msgstr ""
+msgstr "عوامل بايز للفرضيات الثلاث (عند d = c)"
 
 msgid "Prior P(Good)"
-msgstr ""
+msgstr "قبلي P(Good)"
 
 msgid "Post P(Good)"
-msgstr ""
+msgstr "بعدي: P(Good)"
 
 msgid "Prior P(Middle)"
-msgstr ""
+msgstr "قبلي P(Middle)"
 
 msgid "Post P(Middle)"
-msgstr ""
+msgstr "بعدي: P(Middle)"
 
 msgid "Prior P(Bad)"
-msgstr ""
+msgstr "قبلي P(Bad)"
 
 msgid "Post P(Bad)"
-msgstr ""
+msgstr "بعدي: P(Bad)"
 
 msgid "BF (Good vs Bad)"
-msgstr ""
+msgstr "عامل بايز (جيد مقابل سيئ)"
 
 msgid "BF (Good vs Middle)"
-msgstr ""
+msgstr "عامل بايز (جيد مقابل متوسط)"
 
 msgid "BF (Middle vs Bad)"
-msgstr ""
+msgstr "عامل بايز (متوسط مقابل سيئ)"
 
 msgid "Posterior Distribution"
-msgstr ""
+msgstr "التوزيع البعدي"
 
 msgid "Prior Distribution"
-msgstr ""
+msgstr "التوزيع القبلي"
 
 msgid "Lot Proportion Defective"
-msgstr ""
+msgstr "نسبة الوحدات المعيبة في الدفعة"
 
 msgid "Posterior Predictive Distribution"
-msgstr ""
+msgstr "التوزيع التنبؤي البعدي"
 
 msgid "Total Defects in Lot"
-msgstr ""
+msgstr "إجمالي العيوب في الدفعة"
 
 msgid "Probability"
-msgstr ""
+msgstr "الاحتمال"
 
 msgid "Inference Decision Table"
-msgstr ""
+msgstr "جدول قرار الاستدلال"
 
 msgid "PPD Good (≤ %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD جيد (≤ %1$d عيبًا في الدفعة)"
 
 msgid "PPD Middle (> %1$d & ≤ %2$d defects)"
-msgstr ""
+msgstr "PPD متوسط (> %1$d و≤ %2$d من العيوب)"
 
 msgid "PPD Bad (> %1$d defects in Lot)"
-msgstr ""
+msgstr "PPD رديء (> %1$d عيبًا في الدفعة)"
 
 msgid "Sample Size (n)"
-msgstr ""
+msgstr "حجم العينة (n)"
 
 msgid "Defects (d)"
-msgstr ""
+msgstr "العيوب (d)"
 
 msgid "AQL"
-msgstr ""
+msgstr "AQL"
 
 msgid "RQL"
-msgstr ""
+msgstr "RQL"
 
 msgid "Bayes Factor"
-msgstr ""
+msgstr "عامل بايز"
 
 msgid "Bayes factor interpretation: BF ≥ 10 (strong evidence for H−), 3 ≤ BF < 10 (moderate evidence for H−), 0.33 ≤ BF < 3 (inconclusive), 0.10 ≤ BF < 0.33 (moderate evidence for H+), BF < 0.10 (strong evidence for H+)."
 msgstr ""
+"تفسير عامل بايز: BF ≥ 10 (دليل قوي لصالح H−)، 3 ≤ BF < 10 (متوسط لصالح H−)، "
+"0.33 ≤ BF < 3 (غير حاسم)، 0.10 ≤ BF < 0.33 (متوسط لصالح H+)، BF < 0.10 (قوي "
+"لصالح H+)."
 
 msgid "Procedure"
-msgstr ""
+msgstr "الإجراء"
 
 msgid "<div style='line-height: 1.2;'>\n    <p style='margin: 0 0 8px 0;'>The <b>main objective</b> of this Bayesian sampling procedure is to evaluate the quality of a lot by determining if the proportion of defects is lower than the <b>Rejectable Quality Level (RQL)</b>, which is currently set at <b>%1$.2f%%</b>.</p>\n\n    <p style='margin: 0 0 4px 0;'>Two primary statistical hypotheses are formulated about the lot proportion defective (&theta;):</p>\n    <ul style='margin: 0 0 8px 20px;'>\n      <li>The (null) hypothesis of intolerable quality H<sub>+</sub>: &theta; &ge; %1$.2f%% (user-defined)</li>\n      <li>The (alternative) hypothesis of tolerable quality H<sub>-</sub>: &theta; < %1$.2f%% (user-defined)</li>\n    </ul>\n\n    <p style='margin: 0 0 8px 0;'>Additionally, users have the option to perform a <b>Three-Hypothesis Test</b>, which partitions the quality levels into 'Good' (&le; AQL), 'Middle' (AQL < &theta; &le; RQL), and 'Bad' (> RQL) regions.</p>\n\n    <p style='margin: 0 0 8px 0;'>The <b>Acceptable Quality Level (AQL)</b> is currently set at <b>%2$.2f%%</b>. This value represents the\n    quality level aimed for acceptance with high probability. These quality constraints can be adjusted in the Planning phase to reflect specific requirements.</p>\n\n    <p style='margin: 0 0 6px 0;'><b>Stages</b></p>\n    <p style='margin: 0 0 6px 0;'><b>1. Planning:</b> Determine a minimum sample size such that the sample provides sufficient evidence (a target Bayes factor) to achieve the specified sampling objectives.</p>\n\n    <p style='margin: 0;'><b>2. Inference:</b> Evaluate observed data to update the prior belief into\n    a posterior distribution. In this section, <b>n</b> denotes the sample size, <b>d</b> the observed number of defects in the sample, and <b>N</b> the lot size.</p></div>"
 msgstr ""
+"<div style='line-height: 1.2;'>\n"
+"    <p style='margin: 0 0 8px 0;'><b>الهدف الأساسي</b> لإجراء المعاينة "
+"البايزية هذا تقييم جودة الدفعة بتحديد ما إذا كانت نسبة العيوب أدنى من <b>"
+"مستوى الجودة المرفوض (RQL)</b>، المحدد حاليًا عند <b>%1$.2f%%</b>.</p>\n"
+"\n"
+"    <p style='margin: 0 0 4px 0;'>تُصاغ فرضيتان إحصائيتان أساسيتان عن نسبة "
+"العيوب في الدفعة (&theta;):</p>\n"
+"    <ul style='margin: 0 0 8px 20px;'>\n"
+"      <li>الفرضية (الصفرية) للجودة غير الممكن تحملها H<sub>+</sub>: &theta; "
+"&ge; %1$.2f%% (يحددها المستخدم)</li>\n"
+"      <li>الفرضية (البديلة) للجودة الممكن تحملها H<sub>-</sub>: &theta; < "
+"%1$.2f%% (يحددها المستخدم)</li>\n"
+"    </ul>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'>يمكن أيضًا إجراء <b>اختبار ثلاث فرضيات</b>، "
+"يقسم مستويات الجودة إلى مناطق «جيد» (&le; AQL)، و«متوسط» (AQL < &theta; &le; "
+"RQL)، و«رديء» (> RQL).</p>\n"
+"\n"
+"    <p style='margin: 0 0 8px 0;'>حُدد <b>مستوى الجودة المقبول (AQL)</b> "
+"حاليًا عند <b>%2$.2f%%</b>. يمثل مستوى الجودة المراد قبوله باحتمال مرتفع. "
+"يمكن تعديل قيود الجودة في مرحلة التخطيط لتعكس المتطلبات المحددة.</p>\n"
+"\n"
+"    <p style='margin: 0 0 6px 0;'><b>المراحل</b></p>\n"
+"    <p style='margin: 0 0 6px 0;'><b>1. التخطيط:</b> تحديد أدنى حجم عينة "
+"يوفر دليلًا كافيًا (عامل بايز مستهدفًا) لتحقيق أهداف المعاينة المحددة.</p>\n"
+"\n"
+"    <p style='margin: 0;'><b>2. الاستدلال:</b> تقييم البيانات المشاهَدة لتحديث "
+"الاعتقاد القبلي إلى توزيع بعدي. يمثل <b>n</b> حجم العينة، و<b>d</b> عدد "
+"العيوب المشاهَدة فيها، و<b>N</b> حجم الدفعة.</p></div>"
 
 msgid "Lower limit for proportion non-conforming items needs to be smaller than the upper limit."
-msgstr ""
+msgstr "يجب أن يكون الحد الأدنى لنسبة البنود غير المطابقة أصغر من الحد الأعلى."
 
 msgid "Step size for proportion non-conforming items needs to be smaller than the difference between the upper and lower limits."
 msgstr ""
+"يجب أن تكون خطوة نسبة البنود غير المطابقة أصغر من الفرق بين الحدين الأعلى "
+"والأدنى."
 
 msgid "Step size of 0 is allowed only if the lower and upper limits of proportion non-conforming items are identical."
 msgstr ""
+"تُسمح خطوة قدرها 0 فقط عند تطابق الحدين الأدنى والأعلى لنسبة البنود غير "
+"المطابقة."
 
 msgid "For hypergeometric distribution, N * proportion non-conforming should all be integer values.\n\nCheck the values of N and proportion non-conforming."
 msgstr ""
+"في التوزيع فوق الهندسي، يجب أن تكون جميع قيم N * نسبة البنود غير المطابقة "
+"أعدادًا صحيحة.\n"
+"\n"
+"تحقق من قيم N ونسبة البنود غير المطابقة."
 
 msgid "Sample size (n) cannot be larger than the lot size (N)."
-msgstr ""
+msgstr "لا يمكن أن يتجاوز حجم العينة (n) حجم الدفعة (N)."
 
 msgid "Acceptance number (c) cannot be larger than the sample size (n)."
-msgstr ""
+msgstr "لا يمكن أن يتجاوز عدد القبول (c) حجم العينة (n)."
 
 msgid "Rejection number (r) cannot be larger than the sample size (n)."
-msgstr ""
+msgstr "لا يمكن أن يتجاوز عدد الرفض (r) حجم العينة (n)."
 
 msgid "Rejection number (r) has to be larger than the acceptance number (c)."
-msgstr ""
+msgstr "يجب أن يكون عدد الرفض (r) أكبر من عدد القبول (c)."
 
 msgid "Cumulative sample size (n1+n2+...) cannot be larger than the lot size (N)."
-msgstr ""
+msgstr "لا يمكن أن يتجاوز حجم العينة التراكمي (n1+n2+...) حجم الدفعة (N)."
 
 msgid "Final rejection number (r) needs to be 1 more than the final acceptance number (c)."
-msgstr ""
+msgstr "يجب أن يزيد عدد الرفض النهائي (r) على عدد القبول النهائي (c) بمقدار 1."
 
 msgid "Rejection number (r) for every stage has to be larger than the corresponding acceptance number (c)."
-msgstr ""
+msgstr "يجب أن يكون عدد الرفض (r) لكل مرحلة أكبر من عدد القبول (c) المقابل."
 
 msgid "For all stages except the last stage, rejection numbers (r) have to be at at least 2 greater than the acceptance numbers (c).\n\n                                   Else, subsequent stages become redundant."
 msgstr ""
+"في جميع المراحل عدا الأخيرة، يجب أن تتجاوز أعداد الرفض (r) أعداد القبول (c) "
+"بمقدار 2 على الأقل.\n"
+"\n"
+"                                   وإلا أصبحت المراحل اللاحقة زائدة عن الحاجة."
 
 msgid "Acceptance numbers (c) are cumulative, so they need to be in a non-decreasing sequence."
-msgstr ""
+msgstr "أعداد القبول (c) تراكمية، لذا يجب أن تشكّل متتالية غير متناقصة."
 
 msgid "Rejection numbers (r) are cumulative, so they need to be in a non-decreasing sequence."
-msgstr ""
+msgstr "أعداد الرفض (r) تراكمية، لذا يجب أن تشكل متتالية غير متناقصة."
 
 msgid "No valid values found in the plan. Check the inputs."
-msgstr ""
+msgstr "لا توجد قيم صالحة في الخطة. افحص المدخلات."
 
 msgid "AQL (Acceptable Quality Level) value should be lower than RQL (Rejectable Quality Level) value."
 msgstr ""
+"يجب أن تكون قيمة AQL (مستوى الجودة المقبول) أصغر من قيمة RQL (مستوى الجودة "
+"المرفوض)."
 
 msgid "1 - α (Producer's risk) has to be greater than β (consumer's risk)."
-msgstr ""
+msgstr "يجب أن يكون 1 - α (مخاطر المُنتِج) أكبر من β (مخاطر المستهلك)."
 
 msgid "Current plan <b>CAN %s</b> meet the specified risk point(s)."
-msgstr ""
+msgstr "حالة استيفاء خطة المعاينة الحالية لنقاط المخاطر المحددة: <b>CAN %s</b>."
 
 msgid "Proportion Non-conforming"
-msgstr ""
+msgstr "نسبة عدم المطابقة"
 
 msgid "Required P(accept)"
-msgstr ""
+msgstr "قيمة P(accept) المطلوبة"
 
 msgid "Actual P(accept)"
-msgstr ""
+msgstr "احتمال القبول الفعلي P(accept)"
 
 msgid "Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the required probability of acceptance (%3$.3f) at AQL."
 msgstr ""
+"احتمال القبول (%1$.3f) عند AQL (%2$.3f) <b>أقل</b> من احتمال القبول المطلوب "
+"(%3$.3f) عند AQL."
 
 msgid "Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the required probability of acceptance (%3$.3f) at RQL."
 msgstr ""
+"احتمال القبول (%1$.3f) عند RQL (%2$.3f) <b>أعلى</b> من احتمال القبول المطلوب "
+"(%3$.3f) عند RQL."
 
 msgid "Acceptance Probabilities"
-msgstr ""
+msgstr "احتمالات القبول"
 
 msgid "Prop. Non-conforming"
-msgstr ""
+msgstr "نسبة عدم المطابقة"
 
 msgid "P(accept)"
-msgstr ""
+msgstr "P(accept)"
 
 msgid "OC (Operating Characteristics) Curve"
-msgstr ""
+msgstr "منحنى خصائص التشغيل (OC)"
 
 msgid "Probability of Acceptance"
-msgstr ""
+msgstr "احتمال القبول"
 
 msgid "AOQ (Average Outgoing Quality) Curve"
-msgstr ""
+msgstr "منحنى متوسط جودة المخرجات (AOQ)"
 
 msgid "Can not calculate AOQ. Check the plan parameters."
-msgstr ""
+msgstr "تعذّر حساب AOQ. تحقق من معلمات الخطة."
 
 msgid "(Incoming) Proportion Non-conforming"
-msgstr ""
+msgstr "نسبة الوحدات الواردة غير المطابقة"
 
 msgid "Average Outgoing Quality"
-msgstr ""
+msgstr "متوسط جودة المخرجات"
 
 msgid "AOQL: %.3f"
-msgstr ""
+msgstr "AOQL: %.3f"
 
 msgid "ATI (Average Total Inspection) Curve"
-msgstr ""
+msgstr "منحنى متوسط إجمالي الوحدات المفحوصة (ATI)"
 
 msgid "Can not calculate ATI. Check the plan parameters."
-msgstr ""
+msgstr "تعذّر حساب ATI. تحقق من معلمات الخطة."
 
 msgid "Average Total Inspection"
-msgstr ""
+msgstr "متوسط إجمالي الوحدات المفحوصة"
 
 msgid "ASN (Average Sample Number) Curve"
-msgstr ""
+msgstr "منحنى متوسط حجم العينة (ASN)"
 
 msgid "Can not calculate ASN. Check the plan parameters."
-msgstr ""
+msgstr "تعذّر حساب ASN. تحقق من معلمات الخطة."
 
 msgid "Average Sample Number"
-msgstr ""
+msgstr "متوسط حجم العينة"
 
 msgid "Generated Sampling Plan"
-msgstr ""
+msgstr "خطة المعاينة المولّدة"
 
 msgid "Acceptance probabilities at AQL and RQL"
-msgstr ""
+msgstr "احتمالات القبول عند AQL وRQL"
 
 msgid "Acceptance Probability"
-msgstr ""
+msgstr "احتمال القبول"
 
 msgid "Rejection Probability"
-msgstr ""
+msgstr "احتمال الرفض"
 
 msgid "If the number of defective items out of %1$d sampled is <= %2$d, accept the lot. Reject otherwise."
 msgstr ""
+"إذا كان عدد البنود المعيبة من أصل %1$d بندًا في العينة <= %2$d، فاقبل الدفعة. "
+"وإلا فارفضها."
 
 msgid "Create Variable Plan"
-msgstr ""
+msgstr "إنشاء خطة المعاينة بالمتغيرات"
 
 msgid "Z.LSL = (mean - LSL) / historical standard deviation\n\nAccept lot if Z.LSL >= k, otherwise reject."
 msgstr ""
+"Z.LSL = (mean - LSL) / الانحراف المعياري التاريخي\n"
+"\n"
+"تُقبل الدفعة إذا كان Z.LSL >= k، وإلا تُرفض."
 
 msgid "Variable plan generated for the current quality constraints is invalid. Modify the quality constraints."
 msgstr ""
+"خطة المعاينة بالمتغيرات المولّدة لقيود الجودة الحالية غير صالحة. عدّل قيود "
+"الجودة."
 
 msgid "Variable plan generated for the current quality constraints has an invalid sample size (n). Modify the quality constraints."
 msgstr ""
+"حجم العينة (n) في خطة المعاينة بالمتغيرات المولّدة لقيود الجودة الحالية غير "
+"صالح. عدّل قيود الجودة."
 
 msgid "Variable plan generated for the current quality constraints has an invalid k value. Modify the quality constraints."
 msgstr ""
+"قيمة k في خطة المعاينة بالمتغيرات المولّدة لقيود الجودة الحالية غير صالحة. "
+"عدّل قيود الجودة."
 
 msgid "Accept or Reject Lot %s"
-msgstr ""
+msgstr "قبول أو رفض الدفعة %s"
 
 msgid "Sample Mean"
-msgstr ""
+msgstr "متوسط العينة"
 
 msgid "Sample Standard Deviation"
-msgstr ""
+msgstr "الانحراف المعياري للعينة"
 
 msgid "Historical Standard Deviation"
-msgstr ""
+msgstr "الانحراف المعياري التاريخي"
 
 msgid "Lower Specification Limit (LSL)"
-msgstr ""
+msgstr "الحد الأدنى للمواصفات (LSL)"
 
 msgid "Upper Specification Limit (USL)"
-msgstr ""
+msgstr "حد المواصفات الأعلى (USL)"
 
 msgid "Z.LSL"
-msgstr ""
+msgstr "Z.LSL"
 
 msgid "Z.USL"
-msgstr ""
+msgstr "Z.USL"
 
 msgid "Sample standard deviation has to be greater than 0."
-msgstr ""
+msgstr "يجب أن يكون الانحراف المعياري للعينة أكبر من 0."
 
 msgid "Sample mean is invalid."
-msgstr ""
+msgstr "متوسط العينة غير صالح."
 
 msgid "Can not accept or reject lot: sample size has to be greater than 1."
-msgstr ""
+msgstr "يتعذّر قبول الدفعة أو رفضها: يجب أن يكون حجم العينة أكبر من 1."
 
 msgid "Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, and historical standard deviation is <b>unknown</b>."
 msgstr ""
+"يجب أن يكون حجم العينة <b>> 1</b> عند تقديم <b>كلا</b> الحدين LSL وUSL مع كون "
+"الانحراف المعياري التاريخي <b>غير معلوم</b>."
 
 msgid "<u>Decision:</u> <b>%s</b> lot."
-msgstr ""
+msgstr "<u>القرار:</u> <b>%s</b> الدفعة."
