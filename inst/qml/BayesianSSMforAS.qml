@@ -223,7 +223,7 @@ Form
 		CheckBox
 		{
 			name: "plotStateTimeSeries"
-			label: qsTr("State time series (defect rate)")
+			label: qsTr("Latent state trajectory")
 			checked: true
 			info: qsTr("Defect-rate state trajectory over lots: posterior means with pointwise 95% credible intervals.")
 		}
