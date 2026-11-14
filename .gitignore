@@ -63,3 +63,6 @@ _processedLockFile.lock
 
 # Runtime Stan caches
 /inst/stan/**/*.rds
+
+# Local AI working notes and scratch files
+tempAI/
