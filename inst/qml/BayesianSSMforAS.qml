@@ -51,7 +51,127 @@ Form
 			"calculated probabilities remain in the table.\n- **Predictor Coefficients** (automatically shown when " +
 			"covariates are included): posterior mean, median, and equal-tailed 95% credible interval (2.5th and 97.5th " +
 			"percentiles) for each coefficient. These describe changes in the log-odds of a defect per one SD increase " +
-			"in the covariate, holding the latent baseline and other covariates fixed.")
+			"in the covariate, holding the latent baseline and other covariates fixed.") + "\n\n" +
+		"## " + qsTr("Decision Rule") + "\n\n" +
+		qsTr("AQL and RQL are defect **proportions**, entered between 0 and 1. For example, an AQL of 0.025 " +
+			"corresponds to 25 defects in a lot of size 1,000. Let %1 be the total number of defects in the " +
+			"current lot, %2 its size, and %3 all supplied observations. The decision uses the posterior " +
+			"predictive probabilities").arg("D<sub>T</sub>").arg("s<sub>T</sub>").arg("<b>D</b>") + "\n\n" +
+		"<p>L = P(D<sub>T</sub> &lt; AQL \u00d7 s<sub>T</sub> | <b>D</b>)<br>" +
+			"H = P(D<sub>T</sub> &gt; RQL \u00d7 s<sub>T</sub> | <b>D</b>).</p>\n\n" +
+		qsTr("Let a be the **Acceptance threshold** (default 0.10) and r the **Rejection threshold** (default 0.05). " +
+			"The result is:") + "\n\n" +
+		qsTr("- **Consider to Accept** if H &lt; a.\n- **Consider to Reject** if H &gt; a and L &lt; r.\n- **Consider to " +
+			"Continue** otherwise.") + "\n\n" +
+		qsTr("The fields beside **Accept if** and **Reject if** set a and r, respectively. The rejection label also " +
+			"displays the current value of a, so both required conditions are visible.") + "\n\n" +
+		qsTr("All inequalities are strict. In particular, H = a gives Continue. Counts exactly at a quality limit are " +
+			"excluded from its corresponding strict tail. Products within floating-point precision of an integer are " +
+			"treated as that integer; genuinely fractional count limits are not rounded. These probabilities concern the " +
+			"total defects in the finite lot, including observed and uninspected items, rather than the latent defect " +
+			"probability alone. The count-based expressions also apply to a zero-size lot, for which a defect proportion " +
+			"is undefined.") + "\n\n" +
+		qsTr("The thresholds express model-based posterior decision criteria. They do not by themselves guarantee " +
+			"frequentist producer's or consumer's error rates across repeated samples.") + "\n\n" +
+		"## " + qsTr("Plots") + "\n\n" +
+		"### " + qsTr("Reading the State Trajectory") + "\n\n" +
+		qsTr("The trajectory shows the lot-specific defect probabilities, including any covariate contributions. It " +
+			"conditions on all supplied observations. Estimates for earlier lots therefore use later supplied " +
+			"observations as well: this is **smoothing**. They can change when more lots are added and should not be " +
+			"read as the estimates or decisions that would have been available when each earlier lot was inspected. The " +
+			"current lot is the last lot in the supplied sequence; its prediction uses observations available in that " +
+			"dataset.") + "\n\n" +
+		"### " + qsTr("Prediction for the Current Lot") + "\n\n" +
+		qsTr("For current lot %1, with %2 total items, %3 inspected and %4 observed defects, the model predicts " +
+			"the remaining defects %5 and total %6 as").arg("T").arg("s<sub>T</sub>").arg("n<sub>T</sub>").arg("y<sub>T</sub>").arg("Y<sub>rem,T</sub>").arg("D<sub>T</sub>") + "\n\n" +
+		"<p>Y<sub>rem,T</sub> | \u03b8<sub>T</sub> \u223c Binomial(s<sub>T</sub> \u2212 n<sub>T</sub>, \u03b8<sub>T</sub>)<br>" +
+			"D<sub>T</sub> = y<sub>T</sub> + Y<sub>rem,T</sub>.</p>\n\n" +
+		qsTr("The posterior predictive distribution averages this conditional distribution over the posterior " +
+			"uncertainty in %1. It combines uncertainty about the defect probability with binomial variability " +
+			"among the uninspected items.").arg("\u03b8<sub>T</sub>") + "\n\n" +
+		qsTr("The predictive plot displays approximately the central 99.8% range (0.1st\u201399.9th percentiles), expanded to " +
+			"include AQL/RQL count limits and rounded axis limits. Very small tails may fall outside the displayed " +
+			"range. The bins contain equal numbers of whole defect counts, with one bar per count for short ranges. Bars " +
+			"show the probability mass in each bin and are **not renormalized** after selecting the display range. The " +
+			"summary probabilities and decision always use the full predictive distribution, including any undisplayed " +
+			"tails.") + "\n\n" +
+		qsTr("Valid predictions range from the observed defect count to that count plus the number of uninspected items; " +
+			"a fully inspected lot has probability one at its observed total. If predictive draws are missing, " +
+			"non-finite, noninteger or outside this range, or their probabilities do not sum to one, the analysis " +
+			"reports an error instead of an acceptance decision. A divergent transition alone does not make a predictive " +
+			"draw invalid; these draws are retained and their computational warnings should be investigated.") + "\n\n" +
+		"### " + qsTr("Predictor Coefficient Plots") + "\n\n" +
+		qsTr("The coefficient density plots use all posterior draws and extend beyond the sampled range so that the tails " +
+			"approach zero. The default axes also include zero as a reference. Adjusting the axes changes the display, " +
+			"not the posterior draws or coefficient summaries. With weakly identified effects, Cauchy tails can make " +
+			"coefficient means and SDs unstable or undefined. Inspect the computational diagnostics and assess prior " +
+			"sensitivity before interpreting such summaries.") + "\n\n" +
+		"## " + qsTr("Model") + "\n\n" +
+		qsTr("For lot %1, let %2 be its observed defects, %3 its inspected items and %4 its latent defect " +
+			"probability. The observation model is").arg("\u2113").arg("y<sub>\u2113</sub>").arg("n<sub>\u2113</sub>").arg("\u03b8<sub>\u2113</sub>") + "\n\n" +
+		"<p>y<sub>\u2113</sub> | \u03b8<sub>\u2113</sub> \u223c Binomial(n<sub>\u2113</sub>, \u03b8<sub>\u2113</sub>).</p>\n\n" +
+		qsTr("Let %1 denote the initial baseline probability (the %2 prior controls in the interface) and %3 the " +
+			"baseline log odds. Across lots,").arg("p<sub>0</sub>").arg("\u03b8<sub>1</sub>").arg("\u03bd<sub>\u2113</sub>") + "\n\n" +
+		"<p>\u03bd<sub>1</sub> = logit(p<sub>0</sub>)<br>" +
+			"\u03bd<sub>\u2113</sub> = \u03bd<sub>\u2113\u22121</sub> + \u03b7<sub>\u2113</sub>, \u2113 = 2, \u2026, T,</p>\n\n" +
+		qsTr("with innovations") + "\n\n" +
+		"<p>\u03b7<sub>\u2113</sub> | \u03c3<sub>\u03b7</sub> \u223c " +
+			"(1 \u2212 q) N(0, \u03c3<sub>\u03b7</sub><sup>2</sup>) + q N(0, \u03c3<sub>\u03b7</sub><sup>2</sup> + \u03b4<sup>2</sup>)<br>" +
+			"q = 0.05, \u03b4 = 1.5.</p>\n\n" +
+		qsTr("The second argument of %1 is its variance. The regular component has SD %2, the **baseline " +
+			"innovation scale** estimated from the data. The broad component has SD %3 and accommodates larger " +
+			"changes. Both are centered at zero, allowing quality to improve or deteriorate. The baseline scale " +
+			"is not the SD of the entire mixture.").arg("N").arg("\u03c3<sub>\u03b7</sub>").arg("\u221a(\u03c3<sub>\u03b7</sub><sup>2</sup> + 1.5<sup>2</sup>)") + "\n\n" +
+		qsTr("The mixture weight %1 and additional spread %2 are fixed model settings; %2 is on the logit scale. " +
+			"Conditional on the shared baseline scale, innovations are independent draws from this mixture. A " +
+			"particular transition can receive stronger posterior support for the broad component, but the shared " +
+			"prior weight stays at 0.05. The model does not estimate probabilities of switching between " +
+			"persistent regimes.").arg("q").arg("\u03b4") + "\n\n" +
+		qsTr("Without predictors, %1. With %2 numeric covariates,").arg("\u03b8<sub>\u2113</sub> = logit<sup>\u22121</sup>(\u03bd<sub>\u2113</sub>)").arg("K") + "\n\n" +
+		"<p>\u03b8<sub>\u2113</sub> = logit<sup>\u22121</sup>(\u03bd<sub>\u2113</sub> + " +
+			"\u2211<sub>k=1</sub><sup>K</sup> \u03b2<sub>k</sub> X<sub>\u2113k</sub><sup>*</sup>)<br>" +
+			"X<sub>\u2113k</sub><sup>*</sup> = (X<sub>\u2113k</sub> \u2212 mean(X<sub>k</sub>)) / SD(X<sub>k</sub>),</p>\n\n" +
+		qsTr("where %1 is covariate %2's sample SD over the supplied lots and each coefficient %3 is shared across " +
+			"lots. Equivalently, the vector of log odds is %4, where %5 contains the standardized covariate " +
+			"columns. No additional intercept is included because the latent baseline already supplies it.").arg("SD(X<sub>k</sub>)").arg("k").arg("\u03b2<sub>k</sub>").arg("<b>\u03bc</b> = <b>\u03bd</b> + X<b>\u03b2</b>").arg("X") + "\n\n" +
+		qsTr("A one-SD increase in covariate %1 changes the log odds by %2, holding the other covariates and the " +
+			"baseline fixed; it multiplies the odds by %3. In this mode, %4 is the first lot's baseline " +
+			"probability when all covariates are at their means, and its actual defect probability also includes " +
+			"the combined covariate contribution.").arg("k").arg("\u03b2<sub>k</sub>").arg("exp(\u03b2<sub>k</sub>)").arg("p<sub>0</sub>") + "\n\n" +
+		"### " + qsTr("Priors") + "\n\n" +
+		qsTr("The following priors are independent. Their hyperparameters are adjustable in the Model section.") + "\n\n" +
+		qsTr("| Parameter | Prior | Default settings |\n" +
+			"|---|---|---|\n" +
+			"| Initial baseline probability %1 | Beta | Shape parameters 1 and 1 (uniform) |\n" +
+			"| Baseline innovation scale %2 | Half-normal | Scale 1 |\n" +
+			"| Each predictor coefficient %3 | Independent Cauchy, centered at zero | Common scale 0.707 |").arg("p<sub>0</sub>").arg("\u03c3<sub>\u03b7</sub>").arg("\u03b2<sub>k</sub>") + "\n\n" +
+		qsTr("Adding covariates can broaden the prior on their combined contribution to the log odds even when the " +
+			"individual coefficient scale stays unchanged. The model does not automatically increase shrinkage as more " +
+			"covariates are added. Choose covariates and priors using relevant process knowledge and assess sensitivity " +
+			"when the series is short or effects are weakly identified.") + "\n\n" +
+		"## " + qsTr("MCMC Diagnostics") + "\n\n" +
+		qsTr("Check computational diagnostics before interpreting the results. Select **MCMC Diagnostics \u2192 Diagnostic " +
+			"report** to see the full report. The checks run even when this option is off, and any warnings remain " +
+			"visible alongside the results. All retained post-warmup draws are used, including those associated with " +
+			"divergent transitions. Warnings qualify the posterior summaries and decisions; they do not remove draws or " +
+			"suppress these outputs.") + "\n\n" +
+		qsTr("The checks assess all sampled parameters: the initial baseline log odds (`mu1`), baseline innovation scale, " +
+			"variables used to construct the innovations (`z_raw`), and every predictor coefficient when present. They " +
+			"report divergences, maximum-treedepth hits, rank-normalized split R-hat (the maximum of its folded and " +
+			"unfolded versions), bulk ESS, tail ESS, and per-chain E-BFMI. RStan's `Rhat()`, `ess_bulk()` and " +
+			"`ess_tail()` functions calculate the mixing diagnostics from iteration-ordered chains. E-BFMI is " +
+			"`mean(diff(energy)^2) / var(energy)`, calculated separately for each chain.") + "\n\n" +
+		qsTr("Warnings flag any retained divergence or treedepth hit, R-hat at or above 1.01, bulk or tail ESS below 100 " +
+			"times the number of chains, and E-BFMI below 0.3. These are screening thresholds, not guarantees of " +
+			"convergence. Divergences and poor mixing can compromise estimates; treedepth saturation can reduce " +
+			"efficiency. See [Stan's diagnostic guidance](https://mc-stan.org/learn-stan/diagnostics-warnings.html) for " +
+			"investigation and remedies.") + "\n\n" +
+		qsTr("A single chain cannot establish between-chain agreement, so the rank-normalized split R-hat check is " +
+			"unavailable. At least six retained draws per chain are required before computing the mixing diagnostics; " +
+			"this is only a computational minimum. Constant or non-finite sampled-parameter chains and missing " +
+			"diagnostics trigger explicit qualifications. Constant generated quantities, such as a known total after " +
+			"complete inspection, do not by themselves indicate sampler failure. Unavailable checks should not be " +
+			"interpreted as evidence of convergence.")
 
 	VariablesForm
 	{
@@ -89,6 +209,7 @@ Form
 			info: qsTr("Unique numeric sequence/order index for each lot, with measurement type **Scale** or **Ordinal**. Ordinal " +
 					"columns must have numeric labels; their numeric values determine the order, regardless of category-level " +
 					"order. Ordered text labels are not supported.")
+			toolTip: qsTr("Unique numeric index giving the order of the lots (Scale, or Ordinal with numeric labels).")
 		}
 		AssignedVariablesList
 		{
@@ -101,6 +222,7 @@ Form
 					"coefficient prior scale can be set under Model before assigning covariates; coefficient plots and " +
 					"diagnostic controls are shown when covariates are assigned. Categorical predictors and interaction terms " +
 					"are not supported.")
+			toolTip: qsTr("Optional numeric covariates with additive effects in the model; leave empty to fit without predictors.")
 		}
 	}
 
@@ -108,26 +230,8 @@ Form
 	{
 		columns: 1
 		rowSpacing: jaspTheme.rowGridSpacing
-		info: qsTr("AQL and RQL are defect **proportions**, entered between 0 and 1. For example, an AQL of 0.025 " +
-			"corresponds to 25 defects in a lot of size 1,000. Let %1 be the total number of defects in the " +
-			"current lot, %2 its size, and %3 all supplied observations. The decision uses the posterior " +
-			"predictive probabilities").arg("D<sub>T</sub>").arg("s<sub>T</sub>").arg("<b>D</b>") + "\n\n" +
-			"<p>L = P(D<sub>T</sub> &lt; AQL \u00d7 s<sub>T</sub> | <b>D</b>)<br>" +
-				"H = P(D<sub>T</sub> &gt; RQL \u00d7 s<sub>T</sub> | <b>D</b>).</p>\n\n" +
-			qsTr("Let a be the **Acceptance threshold** (default 0.10) and r the **Rejection threshold** (default 0.05). " +
-				"The result is:") + "\n\n" +
-			qsTr("- **Consider to Accept** if H &lt; a.\n- **Consider to Reject** if H &gt; a and L &lt; r.\n- **Consider to " +
-				"Continue** otherwise.") + "\n\n" +
-			qsTr("The fields beside **Accept if** and **Reject if** set a and r, respectively. The rejection label also " +
-				"displays the current value of a, so both required conditions are visible.") + "\n\n" +
-			qsTr("All inequalities are strict. In particular, H = a gives Continue. Counts exactly at a quality limit are " +
-				"excluded from its corresponding strict tail. Products within floating-point precision of an integer are " +
-				"treated as that integer; genuinely fractional count limits are not rounded. These probabilities concern the " +
-				"total defects in the finite lot, including observed and uninspected items, rather than the latent defect " +
-				"probability alone. The count-based expressions also apply to a zero-size lot, for which a defect proportion " +
-				"is undefined.") + "\n\n" +
-			qsTr("The thresholds express model-based posterior decision criteria. They do not by themselves guarantee " +
-				"frequentist producer's or consumer's error rates across repeated samples.")
+		info: qsTr("Quality levels and thresholds on posterior predictive probabilities that determine the decision: " +
+			"Consider to Accept, Consider to Reject or Consider to Continue.")
 
 		Group
 		{
@@ -165,6 +269,7 @@ Form
 				label: qsTr("Accept if P(above RQL) <")
 				info: qsTr("Acceptance threshold a (default 0.10). Consider to Accept when H &lt; a, where H is the posterior " +
 						"predictive probability that the total defects in the current lot exceed RQL times its size.")
+				toolTip: qsTr("Acceptance threshold a (default 0.10): Consider to Accept when P(above RQL) is below a.")
 				defaultValue: 0.10; min: 0; max: 1
 			}
 			DoubleField
@@ -174,6 +279,8 @@ Form
 				info: qsTr("Rejection threshold r (default 0.05). Consider to Reject when H &gt; a and L &lt; r, where H is the " +
 						"posterior predictive probability that total defects exceed RQL times the lot size and L is the " +
 						"probability that they are below AQL times the lot size. Equality to the acceptance threshold gives Continue.")
+				toolTip: qsTr("Rejection threshold r (default 0.05): Consider to Reject when P(above RQL) exceeds the acceptance " +
+					"threshold a and P(below AQL) is below r.")
 				defaultValue: 0.05; min: 0; max: 1
 			}
 			Label
@@ -187,38 +294,7 @@ Form
 	{
 		title: qsTr("Plots")
 		columns: 1
-		info: "### " + qsTr("Reading the State Trajectory") + "\n\n" +
-			qsTr("The trajectory shows the lot-specific defect probabilities, including any covariate contributions. It " +
-				"conditions on all supplied observations. Estimates for earlier lots therefore use later supplied " +
-				"observations as well: this is **smoothing**. They can change when more lots are added and should not be " +
-				"read as the estimates or decisions that would have been available when each earlier lot was inspected. The " +
-				"current lot is the last lot in the supplied sequence; its prediction uses observations available in that " +
-				"dataset.") + "\n\n" +
-			"### " + qsTr("Prediction for the Current Lot") + "\n\n" +
-			qsTr("For current lot %1, with %2 total items, %3 inspected and %4 observed defects, the model predicts " +
-				"the remaining defects %5 and total %6 as").arg("T").arg("s<sub>T</sub>").arg("n<sub>T</sub>").arg("y<sub>T</sub>").arg("Y<sub>rem,T</sub>").arg("D<sub>T</sub>") + "\n\n" +
-			"<p>Y<sub>rem,T</sub> | \u03b8<sub>T</sub> \u223c Binomial(s<sub>T</sub> \u2212 n<sub>T</sub>, \u03b8<sub>T</sub>)<br>" +
-				"D<sub>T</sub> = y<sub>T</sub> + Y<sub>rem,T</sub>.</p>\n\n" +
-			qsTr("The posterior predictive distribution averages this conditional distribution over the posterior " +
-				"uncertainty in %1. It combines uncertainty about the defect probability with binomial variability " +
-				"among the uninspected items.").arg("\u03b8<sub>T</sub>") + "\n\n" +
-			qsTr("The predictive plot displays approximately the central 99.8% range (0.1st\u201399.9th percentiles), expanded to " +
-				"include AQL/RQL count limits and rounded axis limits. Very small tails may fall outside the displayed " +
-				"range. The bins contain equal numbers of whole defect counts, with one bar per count for short ranges. Bars " +
-				"show the probability mass in each bin and are **not renormalized** after selecting the display range. The " +
-				"summary probabilities and decision always use the full predictive distribution, including any undisplayed " +
-				"tails.") + "\n\n" +
-			qsTr("Valid predictions range from the observed defect count to that count plus the number of uninspected items; " +
-				"a fully inspected lot has probability one at its observed total. If predictive draws are missing, " +
-				"non-finite, noninteger or outside this range, or their probabilities do not sum to one, the analysis " +
-				"reports an error instead of an acceptance decision. A divergent transition alone does not make a predictive " +
-				"draw invalid; these draws are retained and their computational warnings should be investigated.") + "\n\n" +
-			"### " + qsTr("Predictor Coefficient Plots") + "\n\n" +
-			qsTr("The coefficient density plots use all posterior draws and extend beyond the sampled range so that the tails " +
-				"approach zero. The default axes also include zero as a reference. Adjusting the axes changes the display, " +
-				"not the posterior draws or coefficient summaries. With weakly identified effects, Cauchy tails can make " +
-				"coefficient means and SDs unstable or undefined. Inspect the computational diagnostics and assess prior " +
-				"sensitivity before interpreting such summaries.")
+		info: qsTr("Plot the defect-rate trajectory, the prediction for the current lot and posterior distributions.")
 
 		CheckBox
 		{
@@ -235,6 +311,7 @@ Form
 			info: qsTr("Posterior predictive distribution of total defects in the current lot: observed defects plus predicted " +
 					"defects among its uninspected items. It cannot contain fewer defects than already observed; after " +
 					"inspecting the entire lot, its total defect count is known.")
+			toolTip: qsTr("Posterior predictive distribution of total defects in the current lot, including its uninspected items.")
 		}
 		CheckBox
 		{
@@ -255,48 +332,7 @@ Form
 	{
 		title: qsTr("Model")
 		columns: 1
-		info: qsTr("For lot %1, let %2 be its observed defects, %3 its inspected items and %4 its latent defect " +
-			"probability. The observation model is").arg("\u2113").arg("y<sub>\u2113</sub>").arg("n<sub>\u2113</sub>").arg("\u03b8<sub>\u2113</sub>") + "\n\n" +
-			"<p>y<sub>\u2113</sub> | \u03b8<sub>\u2113</sub> \u223c Binomial(n<sub>\u2113</sub>, \u03b8<sub>\u2113</sub>).</p>\n\n" +
-			qsTr("Let %1 denote the initial baseline probability (the %2 prior controls in the interface) and %3 the " +
-				"baseline log odds. Across lots,").arg("p<sub>0</sub>").arg("\u03b8<sub>1</sub>").arg("\u03bd<sub>\u2113</sub>") + "\n\n" +
-			"<p>\u03bd<sub>1</sub> = logit(p<sub>0</sub>)<br>" +
-				"\u03bd<sub>\u2113</sub> = \u03bd<sub>\u2113\u22121</sub> + \u03b7<sub>\u2113</sub>, \u2113 = 2, \u2026, T,</p>\n\n" +
-			qsTr("with innovations") + "\n\n" +
-			"<p>\u03b7<sub>\u2113</sub> | \u03c3<sub>\u03b7</sub> \u223c " +
-				"(1 \u2212 q) N(0, \u03c3<sub>\u03b7</sub><sup>2</sup>) + q N(0, \u03c3<sub>\u03b7</sub><sup>2</sup> + \u03b4<sup>2</sup>)<br>" +
-				"q = 0.05, \u03b4 = 1.5.</p>\n\n" +
-			qsTr("The second argument of %1 is its variance. The regular component has SD %2, the **baseline " +
-				"innovation scale** estimated from the data. The broad component has SD %3 and accommodates larger " +
-				"changes. Both are centered at zero, allowing quality to improve or deteriorate. The baseline scale " +
-				"is not the SD of the entire mixture.").arg("N").arg("\u03c3<sub>\u03b7</sub>").arg("\u221a(\u03c3<sub>\u03b7</sub><sup>2</sup> + 1.5<sup>2</sup>)") + "\n\n" +
-			qsTr("The mixture weight %1 and additional spread %2 are fixed model settings; %2 is on the logit scale. " +
-				"Conditional on the shared baseline scale, innovations are independent draws from this mixture. A " +
-				"particular transition can receive stronger posterior support for the broad component, but the shared " +
-				"prior weight stays at 0.05. The model does not estimate probabilities of switching between " +
-				"persistent regimes.").arg("q").arg("\u03b4") + "\n\n" +
-			qsTr("Without predictors, %1. With %2 numeric covariates,").arg("\u03b8<sub>\u2113</sub> = logit<sup>\u22121</sup>(\u03bd<sub>\u2113</sub>)").arg("K") + "\n\n" +
-			"<p>\u03b8<sub>\u2113</sub> = logit<sup>\u22121</sup>(\u03bd<sub>\u2113</sub> + " +
-				"\u2211<sub>k=1</sub><sup>K</sup> \u03b2<sub>k</sub> X<sub>\u2113k</sub><sup>*</sup>)<br>" +
-				"X<sub>\u2113k</sub><sup>*</sup> = (X<sub>\u2113k</sub> \u2212 mean(X<sub>k</sub>)) / SD(X<sub>k</sub>),</p>\n\n" +
-			qsTr("where %1 is covariate %2's sample SD over the supplied lots and each coefficient %3 is shared across " +
-				"lots. Equivalently, the vector of log odds is %4, where %5 contains the standardized covariate " +
-				"columns. No additional intercept is included because the latent baseline already supplies it.").arg("SD(X<sub>k</sub>)").arg("k").arg("\u03b2<sub>k</sub>").arg("<b>\u03bc</b> = <b>\u03bd</b> + X<b>\u03b2</b>").arg("X") + "\n\n" +
-			qsTr("A one-SD increase in covariate %1 changes the log odds by %2, holding the other covariates and the " +
-				"baseline fixed; it multiplies the odds by %3. In this mode, %4 is the first lot's baseline " +
-				"probability when all covariates are at their means, and its actual defect probability also includes " +
-				"the combined covariate contribution.").arg("k").arg("\u03b2<sub>k</sub>").arg("exp(\u03b2<sub>k</sub>)").arg("p<sub>0</sub>") + "\n\n" +
-			"### " + qsTr("Priors") + "\n\n" +
-			qsTr("The following priors are independent. Their hyperparameters are adjustable in the Model section.") + "\n\n" +
-			qsTr("| Parameter | Prior | Default settings |\n" +
-				"|---|---|---|\n" +
-				"| Initial baseline probability %1 | Beta | Shape parameters 1 and 1 (uniform) |\n" +
-				"| Baseline innovation scale %2 | Half-normal | Scale 1 |\n" +
-				"| Each predictor coefficient %3 | Independent Cauchy, centered at zero | Common scale 0.707 |").arg("p<sub>0</sub>").arg("\u03c3<sub>\u03b7</sub>").arg("\u03b2<sub>k</sub>") + "\n\n" +
-			qsTr("Adding covariates can broaden the prior on their combined contribution to the log odds even when the " +
-				"individual coefficient scale stays unchanged. The model does not automatically increase shrinkage as more " +
-				"covariates are added. Choose covariates and priors using relevant process knowledge and assess sensitivity " +
-				"when the series is short or effects are weakly identified.")
+		info: qsTr("Priors for the initial baseline probability, the baseline innovation scale and the predictor coefficients.")
 
 		Group
 		{
@@ -333,6 +369,8 @@ Form
 					"restricting it to positive values; it is not the SD of the resulting half-normal distribution. This " +
 					"control sets the width of the prior for %1, which is estimated from the data. The half-normal prior " +
 					"favors smaller baseline scales while allowing larger values.").arg("\u03c3<sub>\u03b7</sub>")
+				toolTip: qsTr("Scale of the half-normal prior on the baseline innovation scale (SD of the underlying normal before " +
+					"truncation).")
 				defaultValue: 1; min: 0.01
 			}
 		}
@@ -352,6 +390,8 @@ Form
 						"units, the coefficient is %1, and its prior scale is the chosen Cauchy scale divided by %2. Because " +
 						"covariates are standardized over the supplied dataset at each fit, appending lots can change these " +
 						"original-unit priors.").arg("\u03b2<sub>k</sub> / SD(X<sub>k</sub>)").arg("SD(X<sub>k</sub>)")
+				toolTip: qsTr("Common scale of the zero-centered Cauchy priors on the predictor coefficients, per one SD of each " +
+					"covariate.")
 				defaultValue: 0.707; min: 0.01
 			}
 		}
@@ -361,28 +401,7 @@ Form
 	{
 		title: qsTr("MCMC Diagnostics")
 		columns: 1
-		info: qsTr("Check computational diagnostics before interpreting the results. Select **MCMC Diagnostics \u2192 Diagnostic " +
-				"report** to see the full report. The checks run even when this option is off, and any warnings remain " +
-				"visible alongside the results. All retained post-warmup draws are used, including those associated with " +
-				"divergent transitions. Warnings qualify the posterior summaries and decisions; they do not remove draws or " +
-				"suppress these outputs.") + "\n\n" +
-			qsTr("The checks assess all sampled parameters: the initial baseline log odds (`mu1`), baseline innovation scale, " +
-				"variables used to construct the innovations (`z_raw`), and every predictor coefficient when present. They " +
-				"report divergences, maximum-treedepth hits, rank-normalized split R-hat (the maximum of its folded and " +
-				"unfolded versions), bulk ESS, tail ESS, and per-chain E-BFMI. RStan's `Rhat()`, `ess_bulk()` and " +
-				"`ess_tail()` functions calculate the mixing diagnostics from iteration-ordered chains. E-BFMI is " +
-				"`mean(diff(energy)^2) / var(energy)`, calculated separately for each chain.") + "\n\n" +
-			qsTr("Warnings flag any retained divergence or treedepth hit, R-hat at or above 1.01, bulk or tail ESS below 100 " +
-				"times the number of chains, and E-BFMI below 0.3. These are screening thresholds, not guarantees of " +
-				"convergence. Divergences and poor mixing can compromise estimates; treedepth saturation can reduce " +
-				"efficiency. See [Stan's diagnostic guidance](https://mc-stan.org/learn-stan/diagnostics-warnings.html) for " +
-				"investigation and remedies.") + "\n\n" +
-			qsTr("A single chain cannot establish between-chain agreement, so the rank-normalized split R-hat check is " +
-				"unavailable. At least six retained draws per chain are required before computing the mixing diagnostics; " +
-				"this is only a computational minimum. Constant or non-finite sampled-parameter chains and missing " +
-				"diagnostics trigger explicit qualifications. Constant generated quantities, such as a known total after " +
-				"complete inspection, do not by themselves indicate sampler failure. Unavailable checks should not be " +
-				"interpreted as evidence of convergence.")
+		info: qsTr("Computational diagnostics for the sampler; warnings are shown even when these outputs are off.")
 
 		CheckBox
 		{
@@ -394,6 +413,7 @@ Form
 					"off by default. The checks always run, and warnings about problems or unavailable checks are shown " +
 					"regardless of this option. **Overview table** separately displays posterior summaries and traditional MCMC " +
 					"diagnostics for the selected parameters.")
+			toolTip: qsTr("Show sampler and convergence checks for all sampled parameters.")
 		}
 
 		CheckBox
@@ -407,6 +427,7 @@ Form
 					"traditional raw-draw ESS and unranked split R-hat, which differ from the rank-based diagnostics in " +
 					"the full computational report. Undefined diagnostics for constant generated quantities should not be " +
 					"read as successful convergence checks.").arg("\u03c3<sub>\u03b7</sub>")
+			toolTip: qsTr("Show the mean, SD, ESS, and R-hat for the selected parameters.")
 		}
 
 		Group
@@ -483,6 +504,7 @@ Form
 					qsTr("With Thinning greater than 1, divergence and treedepth counts cover only retained transitions; events in " +
 						"omitted iterations cannot be counted. E-BFMI is unavailable because saved energies are not consecutive. Use " +
 						"Thinning = 1 for complete sampler checks.")
+				toolTip: qsTr("Thinning interval; use 1 for complete sampler checks.")
 			}
 			IntegerField
 			{

@@ -68,6 +68,7 @@
 * Single-lot state plots show a point and credible interval. Degenerate posterior draws and malformed coefficient draw arrays produce explicit plot errors instead of misleading density curves.
 * State-space coefficient density curves extend beyond the sampled range instead of stopping at the central 99% interval, preventing visibly cut-off tails when plot axes are expanded. Posterior draws and coefficient summaries are unchanged.
 * Saved state-space fits without the current model-version marker are discarded before recalculation, preventing reuse of an older model's posterior samples.
+* Hovering over sections and options in the Bayesian analyses shows a short tooltip instead of the full help text. Each section's help keeps a one-sentence summary; the detailed explanations of the decision rule, plots, model and MCMC diagnostics, and the remaining planning and inference notes, are now at the end of the help page.
 
 
 
