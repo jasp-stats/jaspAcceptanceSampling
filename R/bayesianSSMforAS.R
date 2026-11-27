@@ -526,7 +526,7 @@ bayesianSSMforAS <- BayesianSSMforAS
 .asSSM_plotState <- function(jaspResults, dataset, options) {
   plot <- jaspResults[["ssm_statePlot"]]
   if (is.null(plot)) {
-    plot <- createJaspPlot(title = gettext("Defect Rate Over Time"), width = 600, height = 400)
+    plot <- createJaspPlot(title = gettext("Latent State Trajectory"), width = 600, height = 400)
     plot$dependOn(c(
       .asSSM_getFitDependencies(),
       "plotStateTimeSeries"
