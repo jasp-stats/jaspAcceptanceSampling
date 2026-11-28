@@ -32,6 +32,7 @@
 * Bayesian State-Space Sampling now uses a two-component innovation mixture instead of the Gaussian state model and post-hoc predictive correction supplied in the earlier beta. Recalculating saved beta analyses fits the new model, so results may differ. Applicable data assignments, priors, MCMC settings and decision thresholds are preserved; the removed correction settings are no longer used.
 
 * New state-space analyses default to an adaptation target of 0.97 and a maximum tree depth of 15. Saved explicit sampler settings are retained.
+* The state-space trajectory plot is now titled Latent State Trajectory, and its checkbox is labelled Latent state trajectory.
 * State-space model selection now follows the covariate assignments. A saved beta analysis with a retained covariate assignment uses that covariate on recalculation, even if its old model selector was set to exclude predictors. Clear the assignment to fit the model without covariates.
 
 ## Fixed
@@ -68,6 +69,7 @@
 * Single-lot state plots show a point and credible interval. Degenerate posterior draws and malformed coefficient draw arrays produce explicit plot errors instead of misleading density curves.
 * State-space coefficient density curves extend beyond the sampled range instead of stopping at the central 99% interval, preventing visibly cut-off tails when plot axes are expanded. Posterior draws and coefficient summaries are unchanged.
 * Saved state-space fits without the current model-version marker are discarded before recalculation, preventing reuse of an older model's posterior samples.
+* Hovering over sections and options in the Bayesian analyses shows a short tooltip instead of the full help text. Each section's help keeps a one-sentence summary; the detailed explanations of the decision rule, plots, model and MCMC diagnostics, and the remaining planning and inference notes, are now at the end of the help page.
 
 
 

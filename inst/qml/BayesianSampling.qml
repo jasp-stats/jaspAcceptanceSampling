@@ -43,7 +43,13 @@ Form
 		"passes the same probability checks.") + "\n\n" +
 		qsTr("Beta-binomial count probabilities are evaluated using adjacent-count ratios and normalized over " +
 		"their full support. This avoids loss of precision for highly concentrated priors without changing " +
-		"the posterior predictive model.")
+		"the posterior predictive model.") + "\n\n" +
+		"## " + qsTr("1. Planning") + "\n\n" +
+		qsTr("In the standard two-hypothesis workflow, planning targets evidence about whether the lot proportion " +
+		"defective is below the RQL.") + "\n\n" +
+		"## " + qsTr("2. Inference") + "\n\n" +
+		qsTr("Invalid sample counts, lot sizes or Bayes-factor targets produce an explanatory error; correcting the " +
+		"inputs restores the results.")
 
 	// -----------------------------------------------------------------------------
 	// 1. Planning
@@ -51,9 +57,7 @@ Form
 	Section
 	{
 		title: qsTr("1. Planning")
-		info: qsTr("Choose the quality limits, prior distribution, maximum sample size and minimum Bayes-factor target. " +
-			"In the standard two-hypothesis workflow, planning targets evidence about whether the lot proportion " +
-			"defective is below the RQL.")
+		info: qsTr("Choose the quality limits, prior distribution, maximum sample size and minimum Bayes-factor target.")
 		columns: 1
 		expanded: true
 
@@ -69,6 +73,7 @@ Form
 					"is specified. The prior assigns 50% probability below RQL and 50% above it. For a U-shaped impartial " +
 					"prior, AQL instead sets the interior minimum unless a custom minimum is specified. In the " +
 					"three-hypothesis workflow, AQL separates the Good and Middle regions.")
+				toolTip: qsTr("Acceptable quality level (AQL), expressed as a proportion defective between 0 and 1.")
 				defaultValue: 0.05
 				min: 0
 				max: 1
@@ -83,6 +88,8 @@ Form
 					"two-hypothesis planning and inference.") + "\n\n" +
 					qsTr("Also called the lot tolerance percent defective (LTPD). Enter a proportion between 0 and 1 " +
 						"(for example, 0.10 means 10%).")
+				toolTip: qsTr("Proportion-defective threshold for unacceptable quality and the main threshold used in " +
+					"two-hypothesis planning and inference.")
 				defaultValue: 0.15
 				min: 0
 				max: 1
@@ -111,6 +118,7 @@ Form
 					"peak or a U-shaped prior with an interior minimum between the endpoint peaks. The location defaults " +
 					"to AQL. Incompatible combinations produce an error; the analysis does not automatically change the " +
 					"shape, location or probability split.")
+				toolTip:	qsTr("Assigns 50% prior probability below RQL and 50% above it.")
 				checked:	true
 			}
 
@@ -133,6 +141,7 @@ Form
 						"RQL must be strictly between 0 and 1.") + "\n\n" +
 						qsTr("A location and RQL both equal to 0.5 leave infinitely many priors of either shape possible. Choose " +
 						"Custom to specify the desired parameters.")
+					toolTip:	qsTr("Unimodal places the prior peak at the location; U-shaped places an interior minimum there.")
 
 					indexDefaultValue: 0
 					values: [
@@ -274,6 +283,7 @@ Form
 					"for planning and for the acceptance number and target status reported under Inference. Equality " +
 					"meets the target; not reaching it does not by itself imply rejection. A target at or below 1 can be " +
 					"reached without evidence favoring a proportion defective below the RQL.")
+				toolTip: qsTr("Minimum target Bayes factor in favor of a proportion defective below the RQL.")
 				defaultValue: 30
 				min: 1/10000
 				max: 10000
@@ -298,6 +308,7 @@ Form
 					"Bayes-factor target yield no feasible plan. Adaptive grids resolve narrow peaks and both tails. If " +
 					"the density diverges at 0 or 1, its curve continues beyond the finite vertical display range; this " +
 					"affects only the display, not probabilities or Bayes factors.")
+				toolTip: qsTr("Plot the selected Beta prior.")
 			}
 			CheckBox
 			{
@@ -315,8 +326,7 @@ Form
 	{
 		title: qsTr("2. Inference")
 		info: qsTr("Use the selected prior and observed sample to compute the posterior distribution, Bayes-factor " +
-			"evidence and posterior predictive lot-quality probabilities. Invalid sample counts, lot sizes or " +
-			"Bayes-factor targets produce an explanatory error; correcting the inputs restores the results.")
+			"evidence and posterior predictive lot-quality probabilities.")
 		columns: 1
 		id: infer
 
@@ -331,6 +341,7 @@ Form
 					"satisfy 0 <= d <= n <= N. The input fields retain inconsistent counts so that the analysis can " +
 					"explain the problem. If d exceeds n or n exceeds N, correct whichever entry was mistaken; dependent " +
 					"inference results return after the inputs are valid.")
+				toolTip: qsTr("Update the selected Beta prior using the sample size n and observed defectives d.")
 			}
 
 			Group
@@ -382,6 +393,7 @@ Form
 						"reported separately. Both use the unrounded Bayes factor. The acceptance number c is the largest " +
 						"observed defect count at the specified inference sample size that meets the target. \"Not available\" " +
 						"means that no count meets it at that sample size.")
+					toolTip: qsTr("Show posterior Bayes-factor evidence, target status and the acceptance number c.")
 				}
 				CheckBox
 				{
@@ -391,6 +403,7 @@ Form
 						"resolve narrow peaks and both tails. If the density diverges at 0 or 1, its curve continues beyond " +
 						"the finite vertical display range; this affects only the display, not probabilities or Bayes " +
 						"factors.")
+					toolTip: qsTr("Plot the updated Beta posterior and its Bayes-factor evidence and target status.")
 				}
 				CheckBox
 				{
